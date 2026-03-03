@@ -10,22 +10,6 @@
 			#main .inner { padding-top: 2rem; }
 			#header .logo { font-size: 1.35rem; }
 			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; }
-
-			.project-details summary {
-				cursor: pointer;
-				font-weight: 700;
-				margin-top: 0.75rem;
-			}
-			.project-details summary::-webkit-details-marker { display: none; }
-			.project-details summary::before {
-				content: "▶";
-				display: inline-block;
-				margin-right: 0.5rem;
-			}
-			.project-details[open] summary::before { content: "▼"; }
-			.project-details .details-body { margin-top: 0.75rem; }
-
-			article { scroll-margin-top: 110px; }
 		</style>
 	</head>
 
@@ -48,107 +32,60 @@
 							<h2>Revenue Operations Systems</h2>
 						</header>
 
-						<p>
-							No formal engineering background. These systems were built through hands-on iteration and “vibe coding”
-							(using AI to draft logic/content, then personally implementing and testing changes in workflows).
-						</p>
-
 						<div class="posts">
 
-							<article id="roe-pip">
-								<h3>SDR Governance: Rules of Engagement + PIP Framework</h3>
-								<p><strong>Purpose:</strong> Standardize ownership rules, cross-sell boundaries, and performance accountability.</p>
-								<p><strong>What I did:</strong> Authored governance documentation and created a structured PIP framework adopted internally.</p>
-
-								<details class="project-details">
-									<summary>View details</summary>
-									<div class="details-body">
-										<ul>
-											<li>Defined lead ownership rules and time-bound ownership logic (documented as enforceable process).</li>
-											<li>Documented cross-product outreach decision rules to reduce duplicate outreach risk.</li>
-											<li>Created a structured PIP framework tied to performance expectations.</li>
-										</ul>
-									</div>
-								</details>
+							<article>
+								<h3>SDR Rules of Engagement & Performance Governance Framework</h3>
+								<p><strong>What it solved:</strong> Unclear ownership and cross-product boundaries created friction and duplicate outreach risk.</p>
+								<p><strong>What I built:</strong> Enforceable rules + Salesforce Flow ownership expiration + formal PIP framework documentation.</p>
+								<ul class="actions">
+									<li><a href="projects/roe.html" class="button">Project Details</a></li>
+								</ul>
 							</article>
 
-							<article id="allocation-crosssell">
-								<h3>Customer Allocation + Controlled Cross-Sell Outreach (Google Sheets)</h3>
-								<p><strong>Purpose:</strong> Controlled ownership/routing to prevent duplicate outreach and reduce account conflicts.</p>
-								<p><strong>What I did:</strong> Built a centralized allocation structure and expanded it into a controlled cross-sell assignment system.</p>
-
-								<details class="project-details">
-									<summary>View details</summary>
-									<div class="details-body">
-										<ul>
-											<li>Centralized master sheet for distributing customer accounts with controlled visibility.</li>
-											<li>Structured assignment and reassignment to prevent duplicate outreach.</li>
-										</ul>
-									</div>
-								</details>
+							<article>
+								<h3>Salesforce Demo Email Capture Automation</h3>
+								<p><strong>What it solved:</strong> Demo attendee email was not reliably captured where marketing needed it.</p>
+								<p><strong>What I built:</strong> Record-triggered Flow that copied the email into the Opportunity field used for HubSpot sync.</p>
+								<ul class="actions">
+									<li><a href="projects/demo-email.html" class="button">Project Details</a></li>
+								</ul>
 							</article>
 
-							<article id="demo-email-capture">
-								<h3>Salesforce Workflow Automation: Demo Email Capture (HubSpot Enrollment Support)</h3>
-								<p><strong>Purpose:</strong> Reduce manual copying of demo attendee email data and improve consistency for marketing workflows.</p>
-								<p><strong>What I did:</strong> Implemented a record-triggered Salesforce Flow tied to “Client Demo” events to populate an Opportunity email field used for HubSpot sync/enrollment.</p>
-
-								<details class="project-details">
-									<summary>View details</summary>
-									<div class="details-body">
-										<ul>
-											<li>Trigger: “Client Demo” event created.</li>
-											<li>Action: populate Opportunity email field used for HubSpot sync/enrollment.</li>
-										</ul>
-									</div>
-								</details>
+							<article>
+								<h3>Real-Time Demo Booking Notifications</h3>
+								<p><strong>What it solved:</strong> Stakeholders lacked immediate visibility into booked demos without manual checking.</p>
+								<p><strong>What I built:</strong> Event-triggered notification logic scoped to relevant records to avoid noise.</p>
+								<ul class="actions">
+									<li><a href="projects/demo-notifications.html" class="button">Project Details</a></li>
+								</ul>
 							</article>
 
-							<article id="demo-notifications">
-								<h3>Salesforce Workflow Automation: Real-Time Demo Booking Notifications</h3>
-								<p><strong>Purpose:</strong> Provide immediate visibility when demos are booked.</p>
-								<p><strong>What I did:</strong> Built a record-triggered notification flow scoped to “Client Demo” events.</p>
-
-								<details class="project-details">
-									<summary>View details</summary>
-									<div class="details-body">
-										<ul>
-											<li>Trigger: demo event created.</li>
-											<li>Action: send notification to defined recipients/channel.</li>
-										</ul>
-									</div>
-								</details>
+							<article>
+								<h3>Customer Allocation & Cross-Sell Governance</h3>
+								<p><strong>What it solved:</strong> Cross-sell outreach had no clear ownership model, creating overlap and conflicts.</p>
+								<p><strong>What I built:</strong> Allocation tiers + hold states + reassignment structure + cross-product protections.</p>
+								<ul class="actions">
+									<li><a href="projects/allocation.html" class="button">Project Details</a></li>
+								</ul>
 							</article>
 
-							<article id="account-enrichment">
+							<article>
 								<h3>CRM Data Enrichment Initiative (~9,000 Accounts)</h3>
-								<p><strong>Purpose:</strong> Improve segmentation and targeting by filling missing/outdated firmographic fields.</p>
-								<p><strong>What I did:</strong> Exported accounts, enriched key fields, mapped by Account ID, and coordinated structured re-import with IT.</p>
-
-								<details class="project-details">
-									<summary>View details</summary>
-									<div class="details-body">
-										<ul>
-											<li>Updated fields: FTE, website, location, time zone (as available).</li>
-											<li>Used Account ID mapping for safe re-import alignment.</li>
-										</ul>
-									</div>
-								</details>
+								<p><strong>What it solved:</strong> Missing firmographic data reduced segmentation quality and SDR targeting precision.</p>
+								<p><strong>What I built:</strong> Export → normalize → map by Account ID → structured re-import with IT.</p>
+								<ul class="actions">
+									<li><a href="projects/enrichment.html" class="button">Project Details</a></li>
+								</ul>
 							</article>
 
-							<article id="fte-lookup">
-								<h3>Instant FTE Lookup for Prospecting (In-Sheet Workflow)</h3>
-								<p><strong>Purpose:</strong> Remove repeated external lookups during prospecting.</p>
-								<p><strong>What I did:</strong> Embedded an FTE lookup dataset into an SDR working sheet to reduce context switching.</p>
-
-								<details class="project-details">
-									<summary>View details</summary>
-									<div class="details-body">
-										<ul>
-											<li>Documented time improvement from ~30s to ~3s per lookup.</li>
-										</ul>
-									</div>
-								</details>
+							<article>
+								<h3>Conference Lead Cleanup & Redistribution</h3>
+								<p><strong>What it solved:</strong> Raw event lead lists were not aligned to product/team ownership, slowing follow-up.</p>
+								<p><strong>What I built:</strong> Cleanup + categorization + redistribution by product interest and ownership rules.</p>
+								<ul class="actions">
+									<li><a href="projects/lead-cleanup.html" class="button">Project Details</a></li>
+								</ul>
 							</article>
 
 						</div>
@@ -182,16 +119,6 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				if (!window.location.hash) return;
-				const target = document.querySelector(window.location.hash);
-				if (!target) return;
-				const details = target.querySelector("details");
-				if (details) details.setAttribute("open", true);
-			});
-		</script>
 
 	</body>
 </html>
