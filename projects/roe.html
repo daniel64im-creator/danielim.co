@@ -32,37 +32,50 @@
 					<section>
 						<header class="major"><h2>Context</h2></header>
 						<ul>
-							<li>Sales Development team environment with multiple SDRs and multiple AEs across products and regions.</li>
-							<li>No consistent rules for lead ownership expiration, cross-product boundaries, or performance intervention.</li>
+							<li>Sole SDR Team Lead managing 11–15 SDRs supporting 7–15 Account Executives across multiple products and regions.</li>
+							<li>No defined expiration logic for lead ownership.</li>
+							<li>No structured cross-product enforcement model.</li>
+							<li>Performance management lacked formal intervention standards.</li>
 						</ul>
 
 						<header class="major section-title"><h2>Structural Problems</h2></header>
 						<ul>
-							<li>Ownership ambiguity caused internal conflict and duplicate outreach risk.</li>
-							<li>Cross-sell rules were inconsistent and hard to enforce.</li>
-							<li>Performance management lacked consistent standards and documentation.</li>
+							<li>Duplicate outreach risk due to ownership ambiguity.</li>
+							<li>Cross-sell conflicts across active opportunities.</li>
+							<li>Escalations caused by unclear communication boundaries.</li>
+							<li>Inconsistent performance accountability.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Built</h2></header>
+						<header class="major section-title"><h2>Architecture Built</h2></header>
 						<ul>
-							<li><strong>Lead ownership lifecycle rule:</strong> SDRs could assign themselves as Lead Owner for a fixed 14-day window.</li>
-							<li><strong>Salesforce Flow enforcement:</strong> Ownership was automatically removed at day 14 and labeled as expired (no manual override).</li>
-							<li><strong>Opportunity and cross-sell guardrails:</strong> Documented decision logic for when outreach is allowed and which contacts must be protected.</li>
-							<li><strong>PIP framework:</strong> Documented performance improvement standards and timelines in collaboration with leadership/HR (formalized and stored as internal documentation).</li>
+							<li><strong>Lead Ownership Lifecycle:</strong> SDR self-assignment allowed for exactly 14 days at the Lead object level.</li>
+							<li><strong>Salesforce Flow Enforcement:</strong> Automated removal of ownership at day 14; relabeled as expired; no manual override permitted.</li>
+							<li><strong>Opportunity Guardrails:</strong> Decision-tree framework evaluating open opportunity stage, product overlap, and protected contacts.</li>
+							<li><strong>Cross-Sell Controls:</strong> Allowed expansion outreach while protecting contacts tied to active opportunities.</li>
+							<li><strong>PIP Framework:</strong> Formalized performance improvement standards triggered by defined quota thresholds; documented in Confluence and integrated into onboarding.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Governance & Enforcement</h2></header>
+						<ul>
+							<li>Automation handled ownership expiration.</li>
+							<li>Structured onboarding reinforced decision logic.</li>
+							<li>Direct intervention enforced violations immediately.</li>
+							<li>No reliance on informal memory-based rules.</li>
 						</ul>
 
 						<header class="major section-title"><h2>Impact</h2></header>
 						<ul>
-							<li>Reduced duplicate outreach incidents and escalations caused by unclear boundaries.</li>
-							<li>Created repeatable governance standards for onboarding and enforcement.</li>
-							<li>Made accountability expectations explicit instead of informal.</li>
+							<li>Eliminated duplicate demo booking incidents tied to ownership ambiguity.</li>
+							<li>Reduced internal escalations across SDR and AE teams.</li>
+							<li>Standardized performance accountability across up to 15 SDRs.</li>
+							<li>Created repeatable governance framework for onboarding.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Would Improve Next</h2></header>
+						<header class="major section-title"><h2>Next Improvements</h2></header>
 						<ul>
-							<li>Automated stale-opportunity checks to reduce manual review.</li>
-							<li>Lightweight logging/dashboarding for violations and exceptions.</li>
-							<li>Stronger object-level protections where appropriate (without over-restricting reps).</li>
+							<li>Automated stale-opportunity detection.</li>
+							<li>Violation logging dashboard.</li>
+							<li>Additional object-level protections without restricting productivity.</li>
 						</ul>
 
 						<ul class="actions section-title">
