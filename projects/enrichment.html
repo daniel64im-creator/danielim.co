@@ -26,34 +26,54 @@
 
 					<section>
 						<div class="page-title">CRM Data Enrichment Initiative (~9,000 Accounts)</div>
-						<p>Data cleanup and enrichment to improve segmentation, targeting, and reporting reliability.</p>
+						<p>Large-scale firmographic cleanup and structured re-import to improve segmentation, targeting precision, and reporting integrity.</p>
 					</section>
 
 					<section>
-						<header class="major"><h2>Problem</h2></header>
+						<header class="major"><h2>Context</h2></header>
 						<ul>
-							<li>Thousands of Accounts had missing or outdated firmographics (FTE, website, time zone, location fields).</li>
-							<li>This reduced targeting accuracy and made reporting less reliable.</li>
+							<li>Salesforce account base contained thousands of records with missing, inconsistent, or outdated firmographic fields.</li>
+							<li>Key fields affected: FTE, website domain, state, country, and time zone.</li>
+							<li>Inconsistent data reduced targeting precision and reporting reliability across SDR and AE workflows.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Did</h2></header>
+						<header class="major section-title"><h2>Structural Problems</h2></header>
 						<ul>
-							<li><strong>Exported:</strong> Pulled the account population for cleanup.</li>
-							<li><strong>Enriched:</strong> Filled missing/outdated fields (FTE, website, state, country, time zone).</li>
-							<li><strong>Mapped by ID:</strong> Updates were keyed by Salesforce Account ID to avoid mismatches.</li>
-							<li><strong>Re-imported with IT:</strong> Coordinated structured upload to preserve data integrity.</li>
+							<li>Incomplete segmentation criteria for territory and vertical analysis.</li>
+							<li>Inaccurate time zone data affecting outreach timing.</li>
+							<li>Reporting dashboards reflecting inconsistent or null values.</li>
+							<li>No documented enrichment cadence or QA process.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Architecture Built</h2></header>
+						<ul>
+							<li><strong>Population Export:</strong> Pulled full account dataset requiring cleanup.</li>
+							<li><strong>Field Standardization:</strong> Normalized FTE ranges, standardized website formatting, corrected state/country naming conventions.</li>
+							<li><strong>ID-Based Mapping:</strong> All updates keyed strictly by Salesforce Account ID to eliminate mismatch risk.</li>
+							<li><strong>Structured Re-Import:</strong> Coordinated controlled upload with IT to preserve data integrity and avoid overwrite conflicts.</li>
+							<li><strong>Pre-Import QA:</strong> Reviewed subsets for formatting consistency and duplicate risk prior to upload.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Governance & Controls</h2></header>
+						<ul>
+							<li>Strict ID-based updates prevented record misalignment.</li>
+							<li>Manual validation before import reduced systemic overwrite risk.</li>
+							<li>Structured coordination prevented field-level corruption.</li>
 						</ul>
 
 						<header class="major section-title"><h2>Impact</h2></header>
 						<ul>
-							<li>Improved targeting accuracy and segmentation quality.</li>
-							<li>Improved reporting confidence by reducing missing/inconsistent firmographics.</li>
+							<li>Improved segmentation accuracy across ~9,000 accounts.</li>
+							<li>Increased confidence in territory, vertical, and size-based reporting.</li>
+							<li>Reduced SDR friction caused by missing firmographic context.</li>
+							<li>Strengthened CRM as a reliable operational source of truth.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Would Improve Next</h2></header>
+						<header class="major section-title"><h2>Next Improvements</h2></header>
 						<ul>
-							<li>Document a recurring enrichment cadence and ownership (monthly/quarterly refresh).</li>
-							<li>Add lightweight QA sampling and exception logging.</li>
+							<li>Implement recurring enrichment cadence (quarterly refresh).</li>
+							<li>Introduce lightweight QA sampling dashboard.</li>
+							<li>Automate validation checks for required firmographic fields.</li>
 						</ul>
 
 						<ul class="actions section-title">

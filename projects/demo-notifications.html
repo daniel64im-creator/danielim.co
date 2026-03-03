@@ -26,33 +26,52 @@
 
 					<section>
 						<div class="page-title">Real-Time Demo Booking Notifications</div>
-						<p>Visibility system to notify stakeholders when demos are booked without requiring manual monitoring.</p>
+						<p>Event-triggered visibility system to notify stakeholders when demos are booked without requiring manual monitoring.</p>
 					</section>
 
 					<section>
-						<header class="major"><h2>Problem</h2></header>
+						<header class="major"><h2>Context</h2></header>
 						<ul>
-							<li>Demos were being booked, but leadership/stakeholders lacked immediate visibility unless they checked manually.</li>
-							<li>Over-notifying would create noise and reduce usefulness.</li>
+							<li>Demos were being booked regularly but leadership lacked immediate visibility.</li>
+							<li>Stakeholders relied on manual dashboard checks or Slack follow-ups.</li>
+							<li>Over-notification risk could reduce signal quality.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Built</h2></header>
+						<header class="major section-title"><h2>Structural Problems</h2></header>
 						<ul>
-							<li><strong>Event-triggered notification logic:</strong> Sends notifications when the right “demo booked” signal is created.</li>
-							<li><strong>Scoped filtering:</strong> Limited to specific record types/conditions to avoid noise.</li>
-							<li><strong>Operational goal:</strong> Fast visibility with controlled volume.</li>
+							<li>No automated alerting layer tied to confirmed demo bookings.</li>
+							<li>Manual monitoring introduced delays and inconsistency.</li>
+							<li>Unfiltered notifications would create operational noise.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Architecture Built</h2></header>
+						<ul>
+							<li><strong>Event-Triggered Logic:</strong> Automation activated when a defined “demo booked” condition was met.</li>
+							<li><strong>Scoped Filtering:</strong> Limited to specific record types and conditions to avoid noise.</li>
+							<li><strong>Targeted Recipients:</strong> Notifications sent only to relevant stakeholders.</li>
+							<li><strong>Signal Control:</strong> Structured logic prevented duplicate or irrelevant alerts.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Governance & Controls</h2></header>
+						<ul>
+							<li>Conditional logic enforced strict qualification of what constitutes a valid demo booking.</li>
+							<li>Controlled distribution reduced unnecessary visibility spam.</li>
+							<li>Aligned notification trigger directly to operational milestone.</li>
 						</ul>
 
 						<header class="major section-title"><h2>Impact</h2></header>
 						<ul>
-							<li>Improved operational visibility into demo activity.</li>
-							<li>Reduced manual checking and “did we book anything?” ambiguity.</li>
+							<li>Improved real-time visibility into booked demos.</li>
+							<li>Reduced reliance on manual monitoring.</li>
+							<li>Increased transparency for leadership without increasing noise.</li>
+							<li>Strengthened alignment between SDR activity and management awareness.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Would Improve Next</h2></header>
+						<header class="major section-title"><h2>Next Improvements</h2></header>
 						<ul>
 							<li>Add simple reporting on notification volume and coverage.</li>
-							<li>Define exception handling for duplicates or reschedules.</li>
+							<li>Implement duplicate detection logic for reschedules.</li>
+							<li>Introduce exception tracking for missed trigger scenarios.</li>
 						</ul>
 
 						<ul class="actions section-title">

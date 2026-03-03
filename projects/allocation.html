@@ -26,34 +26,54 @@
 
 					<section>
 						<div class="page-title">Customer Allocation & Cross-Sell Governance</div>
-						<p>Ownership structure to reduce conflicts and prevent duplicate outreach across products.</p>
+						<p>Structured ownership and expansion framework to reduce internal conflict, protect active opportunities, and prevent duplicate outreach.</p>
 					</section>
 
 					<section>
-						<header class="major"><h2>Problem</h2></header>
+						<header class="major"><h2>Context</h2></header>
 						<ul>
-							<li>Expansion and cross-sell outreach had unclear ownership, creating overlap and friction.</li>
-							<li>Contacts tied to active opportunities needed protection from unrelated outreach.</li>
+							<li>Multi-product sales environment with overlapping expansion opportunities.</li>
+							<li>Accounts could have simultaneous activity across different product lines.</li>
+							<li>No clearly enforced cross-product ownership structure.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Built</h2></header>
+						<header class="major section-title"><h2>Structural Problems</h2></header>
 						<ul>
-							<li><strong>Ownership tiers:</strong> Defined who can work which accounts and under what conditions.</li>
-							<li><strong>Hold states:</strong> Temporary “holds” to prevent simultaneous outreach during handoffs or active work.</li>
-							<li><strong>Cross-product boundaries:</strong> Allowed outreach into accounts while protecting contacts actively involved in other open opportunities.</li>
-							<li><strong>Reassignment model:</strong> Clear path for moving ownership without losing visibility.</li>
+							<li>Ambiguity over who could work expansion within shared accounts.</li>
+							<li>Contacts tied to active opportunities were not formally protected.</li>
+							<li>Manual handoffs created visibility gaps and friction between teams.</li>
+							<li>Duplicate outreach risk across products.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Architecture Built</h2></header>
+						<ul>
+							<li><strong>Ownership Tiers:</strong> Defined structured rules determining which roles could work which accounts and under what conditions.</li>
+							<li><strong>Hold States:</strong> Temporary “hold” classifications to prevent simultaneous outreach during active work or transition periods.</li>
+							<li><strong>Cross-Product Guardrails:</strong> Allowed Product B outreach while protecting contacts actively involved in Product A open opportunities.</li>
+							<li><strong>Reassignment Model:</strong> Clear process for ownership transfers without losing account visibility or historical context.</li>
+							<li><strong>Decision Logic Documentation:</strong> Formalized allowable outreach conditions to reduce reliance on informal judgment.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Governance & Controls</h2></header>
+						<ul>
+							<li>Structured documentation reinforced consistent enforcement.</li>
+							<li>Clear boundaries reduced subjective interpretation of “who can work what.”</li>
+							<li>Manual review process ensured alignment during complex edge cases.</li>
 						</ul>
 
 						<header class="major section-title"><h2>Impact</h2></header>
 						<ul>
-							<li>Reduced overlap and internal conflict during expansion workflows.</li>
-							<li>Created clearer expectations for allowable outreach behavior.</li>
+							<li>Reduced internal friction during expansion workflows.</li>
+							<li>Decreased duplicate outreach incidents across products.</li>
+							<li>Improved clarity for SDRs and AEs on allowable outreach behavior.</li>
+							<li>Strengthened operational discipline across shared accounts.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Would Improve Next</h2></header>
+						<header class="major section-title"><h2>Next Improvements</h2></header>
 						<ul>
-							<li>Better audit trail for changes (who changed what, when, why).</li>
-							<li>Automated detection for conflicting outreach when multiple opps exist.</li>
+							<li>Introduce automated conflict detection when multiple open opportunities exist.</li>
+							<li>Add structured audit trail for ownership changes.</li>
+							<li>Surface expansion eligibility flags directly on account page layouts.</li>
 						</ul>
 
 						<ul class="actions section-title">

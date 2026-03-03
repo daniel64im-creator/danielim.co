@@ -26,33 +26,52 @@
 
 					<section>
 						<div class="page-title">Salesforce Demo Email Capture Automation</div>
-						<p>Automation to ensure demo attendee email lands in the Opportunity field required for marketing sync.</p>
+						<p>Record-triggered automation to ensure demo attendee email is reliably captured at the Opportunity level for downstream marketing sync.</p>
 					</section>
 
 					<section>
-						<header class="major"><h2>Problem</h2></header>
+						<header class="major"><h2>Context</h2></header>
 						<ul>
-							<li>Demo attendee email started on the Lead, moved after conversion, and was not reliably present where marketing needed it.</li>
-							<li>This created missed or inconsistent downstream enrollment for post-demo workflows.</li>
+							<li>Demo attendee email initially lived on the Lead record.</li>
+							<li>After Lead conversion, the required email field was not consistently present on the Opportunity.</li>
+							<li>Marketing automation relied on this Opportunity-level field for post-demo enrollment.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Built</h2></header>
+						<header class="major section-title"><h2>Structural Problems</h2></header>
 						<ul>
-							<li><strong>Record-triggered Flow:</strong> Triggered by creation of the “Client Demo” event.</li>
-							<li><strong>Data movement:</strong> Copied Contact email into the Opportunity field used for HubSpot sync.</li>
-							<li><strong>Scope control:</strong> Limited to the relevant event type to avoid unintended updates.</li>
+							<li>Manual copying of email fields created inconsistency.</li>
+							<li>Missed updates resulted in incomplete marketing enrollment.</li>
+							<li>No enforcement layer guaranteed the required field was populated.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Architecture Built</h2></header>
+						<ul>
+							<li><strong>Record-Triggered Flow:</strong> Activated upon creation of a “Client Demo” event.</li>
+							<li><strong>Scoped Trigger Logic:</strong> Limited execution strictly to relevant event type to prevent unintended updates.</li>
+							<li><strong>Field Mapping:</strong> Copied the primary Contact email into the Opportunity-level field used for HubSpot sync.</li>
+							<li><strong>Automation-Based Enforcement:</strong> Removed dependency on manual SDR updates.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Governance & Controls</h2></header>
+						<ul>
+							<li>Conditional logic restricted execution to intended workflow.</li>
+							<li>Centralized required marketing field at Opportunity object level.</li>
+							<li>Reduced human error in high-frequency demo scheduling process.</li>
 						</ul>
 
 						<header class="major section-title"><h2>Impact</h2></header>
 						<ul>
-							<li>Reduced manual copying and lowered risk of missing marketing enrollment.</li>
-							<li>Improved consistency of a key field used for reporting and marketing alignment.</li>
+							<li>Improved consistency of marketing enrollment after demos.</li>
+							<li>Reduced manual copying effort for SDRs.</li>
+							<li>Increased reliability of reporting tied to demo engagement.</li>
+							<li>Strengthened CRM-to-marketing system alignment.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Would Improve Next</h2></header>
+						<header class="major section-title"><h2>Next Improvements</h2></header>
 						<ul>
-							<li>Add validation/alerts for edge cases (missing email, multiple attendees, mismatched records).</li>
-							<li>Track coverage with a simple report to monitor failures/exceptions.</li>
+							<li>Add validation rule for missing or null Contact email.</li>
+							<li>Introduce monitoring report to flag automation exceptions.</li>
+							<li>Extend logic to handle multi-attendee demo edge cases.</li>
 						</ul>
 
 						<ul class="actions section-title">

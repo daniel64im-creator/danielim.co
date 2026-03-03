@@ -26,33 +26,54 @@
 
 					<section>
 						<div class="page-title">Conference Lead Cleanup & Redistribution</div>
-						<p>Process to convert raw event lead lists into usable, owned outreach queues.</p>
+						<p>Structured intake, normalization, and routing process to convert raw event lists into actionable outreach queues.</p>
 					</section>
 
 					<section>
-						<header class="major"><h2>Problem</h2></header>
+						<header class="major"><h2>Context</h2></header>
 						<ul>
-							<li>Event leads arrived as raw lists and were not aligned to product interest or team ownership.</li>
-							<li>Without cleanup and routing, follow-up was slow and inconsistent.</li>
+							<li>Event leads were delivered as raw CSV lists with inconsistent formatting.</li>
+							<li>No standardized routing logic tied to product or team structure.</li>
+							<li>Without cleanup, follow-up speed and ownership clarity suffered.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Did</h2></header>
+						<header class="major section-title"><h2>Structural Problems</h2></header>
 						<ul>
-							<li><strong>Cleaned:</strong> Removed obvious duplicates and normalized key fields for usability.</li>
-							<li><strong>Categorized:</strong> Grouped leads by product interest and intended routing.</li>
-							<li><strong>Distributed:</strong> Reassigned lists into the correct team/ownership buckets to enable immediate follow-up.</li>
+							<li>Duplicate records across events and existing CRM leads.</li>
+							<li>Inconsistent field formatting (name casing, company formatting, product notes).</li>
+							<li>No clear ownership assignment before distribution.</li>
+							<li>Risk of delayed outreach after time-sensitive events.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Architecture Built</h2></header>
+						<ul>
+							<li><strong>Data Normalization:</strong> Cleaned and standardized names, company fields, and core contact data.</li>
+							<li><strong>Deduplication Pass:</strong> Removed obvious duplicates prior to redistribution.</li>
+							<li><strong>Product Categorization:</strong> Segmented leads by stated product interest or contextual relevance.</li>
+							<li><strong>Ownership Routing:</strong> Assigned leads into appropriate team/queue buckets before handoff.</li>
+							<li><strong>Structured Redistribution:</strong> Ensured SDRs received clean, clearly owned outreach lists immediately.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Governance & Controls</h2></header>
+						<ul>
+							<li>Manual review layer before redistribution to reduce routing errors.</li>
+							<li>Clear ownership labeling to prevent duplicate follow-up.</li>
+							<li>Defined intake flow instead of ad hoc list sharing.</li>
 						</ul>
 
 						<header class="major section-title"><h2>Impact</h2></header>
 						<ul>
-							<li>Faster follow-up after events.</li>
-							<li>Cleaner ownership and less confusion about who should work what.</li>
+							<li>Accelerated post-event follow-up speed.</li>
+							<li>Reduced duplicate outreach from improperly assigned records.</li>
+							<li>Improved accountability by clarifying who owned which leads.</li>
+							<li>Created repeatable intake process for future events.</li>
 						</ul>
 
-						<header class="major section-title"><h2>What I Would Improve Next</h2></header>
+						<header class="major section-title"><h2>Next Improvements</h2></header>
 						<ul>
-							<li>More standardized intake format before lists are shared.</li>
-							<li>Repeatable checklist and routing rules applied the same way every time.</li>
+							<li>Standardized pre-event intake template required from marketing.</li>
+							<li>Automated duplicate detection prior to assignment.</li>
+							<li>Formal routing documentation with decision-tree logic.</li>
 						</ul>
 
 						<ul class="actions section-title">
