@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Allocation Infrastructure | Project Details</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+
+		<style>
+			#main .inner { padding-top: 2rem; }
+			#header .logo { font-size: 1.35rem; }
+			.page-title { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.75rem; }
+			.section-title { margin-top: 2rem; }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<div id="main">
+				<div class="inner">
+
+					<header id="header">
+						<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
+					</header>
+
+					<section>
+						<div class="page-title">Team Lead Customer Allocation Infrastructure</div>
+						<p>Operating system for allocation, holds, and reassignment that kept ownership structured as the team scaled.</p>
+					</section>
+
+					<section>
+						<header class="major"><h2>Context</h2></header>
+						<ul>
+							<li>Allocation needed to be consistent across reps, segments, and product lines.</li>
+							<li>Ownership changes and exceptions required an audit-friendly process.</li>
+							<li>Goal: reduce ambiguity and prevent duplicate outreach.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Structural Problems</h2></header>
+						<ul>
+							<li>No single source of truth for “who owns what” at any moment.</li>
+							<li>Handoffs and temporary holds created visibility gaps.</li>
+							<li>Manual processes increased mismatch risk and disputes.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Architecture Built</h2></header>
+						<ul>
+							<li><strong>Allocation Structure:</strong> Defined how accounts/leads were assigned and when reassignment was allowed.</li>
+							<li><strong>Hold Logic:</strong> Temporary states to prevent concurrent outreach during active work or transitions.</li>
+							<li><strong>Exception Handling:</strong> Rules for edge cases (conflicts, stale ownership, reassignment requests).</li>
+							<li><strong>Operational Visibility:</strong> Clear view of current ownership and recent changes.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Governance & Controls</h2></header>
+						<ul>
+							<li>Standard process reduced “ad hoc” reassignment decisions.</li>
+							<li>Consistent rules improved fairness and compliance.</li>
+							<li>Manager-controlled exception handling prevented abuse.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Impact</h2></header>
+						<ul>
+							<li>Reduced allocation disputes and duplicate outreach risk.</li>
+							<li>Improved handoff speed and ownership clarity.</li>
+							<li>Created a scalable allocation model that could grow with team size.</li>
+						</ul>
+
+						<header class="major section-title"><h2>Next Improvements</h2></header>
+						<ul>
+							<li>Add reporting layer for allocation changes and exceptions.</li>
+							<li>Automate conflict detection when multiple workstreams exist.</li>
+							<li>Strengthen audit trail (who/what/when/why).</li>
+						</ul>
+
+						<ul class="actions section-title">
+							<li><a href="../projects.html" class="button">Back to Projects</a></li>
+						</ul>
+					</section>
+
+				</div>
+			</div>
+
+			<div id="sidebar">
+				<div class="inner">
+					<nav id="menu">
+						<header class="major"><h2>Navigation</h2></header>
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../projects.html">Projects</a></li>
+							<li><a href="../resume.html">Resume</a></li>
+							<li><a href="../about.html">About</a></li>
+							<li><a href="../contact.html">Contact</a></li>
+						</ul>
+					</nav>
+					<footer id="footer">
+						<p class="copyright">&copy; Daniel Im</p>
+					</footer>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
