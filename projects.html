@@ -11,7 +11,6 @@
 			#header .logo { font-size: 1.35rem; }
 			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; }
 
-			/* Dropdown styling */
 			.project-details summary {
 				cursor: pointer;
 				font-weight: 700;
@@ -26,7 +25,6 @@
 			.project-details[open] summary::before { content: "▼"; }
 			.project-details .details-body { margin-top: 0.75rem; }
 
-			/* Hash jump spacing */
 			article { scroll-margin-top: 110px; }
 		</style>
 	</head>
@@ -52,124 +50,103 @@
 
 						<p>
 							No formal engineering background. These systems were built through hands-on iteration and “vibe coding”
-							(using AI to draft logic/content, then personally implementing and testing changes in production workflows).
+							(using AI to draft logic/content, then personally implementing and testing changes in workflows).
 						</p>
 
 						<div class="posts">
 
-							<!-- 1) ROE + PIP -->
 							<article id="roe-pip">
 								<h3>SDR Governance: Rules of Engagement + PIP Framework</h3>
-
-								<p><strong>Purpose:</strong> Standardize ownership rules, cross-sell boundaries, and performance accountability for SDR execution.</p>
-								<p><strong>What I did:</strong> Authored and implemented the ROE documentation and created a formal PIP framework in collaboration with leadership/HR.</p>
+								<p><strong>Purpose:</strong> Standardize ownership rules, cross-sell boundaries, and performance accountability.</p>
+								<p><strong>What I did:</strong> Authored governance documentation and created a structured PIP framework adopted internally.</p>
 
 								<details class="project-details">
 									<summary>View details</summary>
 									<div class="details-body">
-										<p><strong>Governance design:</strong></p>
 										<ul>
 											<li>Defined lead ownership rules and time-bound ownership logic (documented as enforceable process).</li>
 											<li>Documented cross-product outreach decision rules to reduce duplicate outreach risk.</li>
 											<li>Created a structured PIP framework tied to performance expectations.</li>
 										</ul>
-										<p><strong>Why it matters:</strong> Governance is a system: definitions, guardrails, enforcement path, and training artifacts.</p>
 									</div>
 								</details>
 							</article>
 
-							<!-- 2) Allocation + cross-sell governance -->
 							<article id="allocation-crosssell">
 								<h3>Customer Allocation + Controlled Cross-Sell Outreach (Google Sheets)</h3>
-
-								<p><strong>Purpose:</strong> Create controlled ownership and routing for current-customer outreach to prevent over-solicitation and duplicates.</p>
-								<p><strong>What I did:</strong> Built a centralized allocation structure for leadership visibility and later expanded it into a controlled cross-sell assignment system.</p>
+								<p><strong>Purpose:</strong> Controlled ownership/routing to prevent duplicate outreach and reduce account conflicts.</p>
+								<p><strong>What I did:</strong> Built a centralized allocation structure and expanded it into a controlled cross-sell assignment system.</p>
 
 								<details class="project-details">
 									<summary>View details</summary>
 									<div class="details-body">
-										<p><strong>Core build:</strong></p>
 										<ul>
-											<li>Initial backbone: a centralized master sheet for distributing customer accounts across team leads (controlled allocation + visibility).</li>
-											<li>Cross-sell control layer: structured account-assignment with defined ownership and reassignment capability to prevent duplicate outreach.</li>
+											<li>Centralized master sheet for distributing customer accounts with controlled visibility.</li>
+											<li>Structured assignment and reassignment to prevent duplicate outreach.</li>
 										</ul>
-										<p><strong>Impact (as stated in your docs):</strong> Eliminated duplicate outreach and introduced structured cross-sell governance.</p>
 									</div>
 								</details>
 							</article>
 
-							<!-- 3) Demo email capture -->
 							<article id="demo-email-capture">
 								<h3>Salesforce Workflow Automation: Demo Email Capture (HubSpot Enrollment Support)</h3>
-
 								<p><strong>Purpose:</strong> Reduce manual copying of demo attendee email data and improve consistency for marketing workflows.</p>
-								<p><strong>What I did:</strong> Implemented a record-triggered Salesforce Flow tied to “Client Demo” events to populate the Opportunity’s newsletter email field.</p>
+								<p><strong>What I did:</strong> Implemented a record-triggered Salesforce Flow tied to “Client Demo” events to populate an Opportunity email field used for HubSpot sync/enrollment.</p>
 
 								<details class="project-details">
 									<summary>View details</summary>
 									<div class="details-body">
-										<p><strong>System logic:</strong></p>
 										<ul>
-											<li>Trigger: “Client Demo” Salesforce Event created.</li>
-											<li>Action: Copy the converted Contact’s email into an Opportunity email field used for HubSpot sync/enrollment.</li>
+											<li>Trigger: “Client Demo” event created.</li>
+											<li>Action: populate Opportunity email field used for HubSpot sync/enrollment.</li>
 										</ul>
-										<p><strong>Outcome:</strong> Reduced manual steps and lowered risk of missed/incorrect email capture.</p>
 									</div>
 								</details>
 							</article>
 
-							<!-- 4) Demo booking notifications -->
 							<article id="demo-notifications">
 								<h3>Salesforce Workflow Automation: Real-Time Demo Booking Notifications</h3>
-
-								<p><strong>Purpose:</strong> Provide immediate visibility when demos are booked without manual monitoring.</p>
-								<p><strong>What I did:</strong> Built an event-triggered notification flow scoped to the “Client Demo” record type to avoid noise.</p>
+								<p><strong>Purpose:</strong> Provide immediate visibility when demos are booked.</p>
+								<p><strong>What I did:</strong> Built a record-triggered notification flow scoped to “Client Demo” events.</p>
 
 								<details class="project-details">
 									<summary>View details</summary>
 									<div class="details-body">
-										<p><strong>System logic (as documented):</strong></p>
 										<ul>
-											<li>Trigger: Record-triggered Flow on the Event object (RecordTypeId = Client Demo).</li>
-											<li>Action: Send notification on demo creation.</li>
-											<li>Constraint: Scoped to demo events to prevent unrelated-calendar noise.</li>
+											<li>Trigger: demo event created.</li>
+											<li>Action: send notification to defined recipients/channel.</li>
 										</ul>
 									</div>
 								</details>
 							</article>
 
-							<!-- 5) Enrichment -->
 							<article id="account-enrichment">
 								<h3>CRM Data Enrichment Initiative (~9,000 Accounts)</h3>
-
 								<p><strong>Purpose:</strong> Improve segmentation and targeting by filling missing/outdated firmographic fields.</p>
-								<p><strong>What I did:</strong> Exported accounts, enriched key fields (FTE, website, state/country, time zone), mapped by Account ID, and coordinated structured re-import with IT.</p>
+								<p><strong>What I did:</strong> Exported accounts, enriched key fields, mapped by Account ID, and coordinated structured re-import with IT.</p>
 
 								<details class="project-details">
 									<summary>View details</summary>
 									<div class="details-body">
-										<p><strong>Approach:</strong></p>
 										<ul>
-											<li>Used Account ID mapping to keep updates aligned during re-import.</li>
-											<li>Focused on practical fields that improve reporting + prospecting (FTE, URL, time zone, location).</li>
+											<li>Updated fields: FTE, website, location, time zone (as available).</li>
+											<li>Used Account ID mapping for safe re-import alignment.</li>
 										</ul>
-										<p><strong>Outcome (as documented):</strong> Improved targeting accuracy, reporting quality, and segmentation reliability.</p>
 									</div>
 								</details>
 							</article>
 
-							<!-- 6) Instant FTE lookup -->
 							<article id="fte-lookup">
 								<h3>Instant FTE Lookup for Prospecting (In-Sheet Workflow)</h3>
-
 								<p><strong>Purpose:</strong> Remove repeated external lookups during prospecting.</p>
-								<p><strong>What I did:</strong> Embedded a searchable FTE dataset directly into the SDR working sheet using preloaded data.</p>
+								<p><strong>What I did:</strong> Embedded an FTE lookup dataset into an SDR working sheet to reduce context switching.</p>
 
 								<details class="project-details">
 									<summary>View details</summary>
 									<div class="details-body">
-										<p><strong>Impact (as documented):</strong> Reduced lookup time from ~30 seconds to ~3 seconds per search.</p>
-										<p><strong>Why it matters:</strong> This is workflow design: keep reps in one place, reduce context switching, and standardize the data reference.</p>
+										<ul>
+											<li>Documented time improvement from ~30s to ~3s per lookup.</li>
+										</ul>
 									</div>
 								</details>
 							</article>
@@ -182,7 +159,6 @@
 
 			<div id="sidebar">
 				<div class="inner">
-
 					<nav id="menu">
 						<header class="major"><h2>Navigation</h2></header>
 						<ul>
@@ -193,11 +169,9 @@
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
-
 					<footer id="footer">
 						<p class="copyright">&copy; Daniel Im</p>
 					</footer>
-
 				</div>
 			</div>
 
@@ -210,12 +184,10 @@
 		<script src="assets/js/main.js"></script>
 
 		<script>
-			// If user lands on an anchor, auto-open that project's details.
 			document.addEventListener("DOMContentLoaded", function () {
 				if (!window.location.hash) return;
 				const target = document.querySelector(window.location.hash);
 				if (!target) return;
-
 				const details = target.querySelector("details");
 				if (details) details.setAttribute("open", true);
 			});
