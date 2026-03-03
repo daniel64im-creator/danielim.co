@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Projects | Revenue Operations Systems</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			#main .inner { padding-top: 2rem; }
+			#header .logo { font-size: 1.35rem; }
+			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+			/* Dropdown styling */
+			.project-details summary {
+				cursor: pointer;
+				font-weight: 700;
+				margin-top: 0.75rem;
+			}
+
+			.project-details summary::-webkit-details-marker { display: none; }
+
+			.project-details summary::before {
+				content: "▶";
+				display: inline-block;
+				margin-right: 0.5rem;
+			}
+
+			.project-details[open] summary::before { content: "▼"; }
+
+			.project-details .details-body { margin-top: 0.75rem; }
+		</style>
+	</head>
+
+	<body class="is-preload">
+		<div id="wrapper">
+
+			<div id="main">
+				<div class="inner">
+
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
+					</header>
+
+					<section>
+						<div class="page-title">Projects</div>
+					</section>
+
+					<section>
+						<header class="major">
+							<h2>Revenue Operations Systems</h2>
+						</header>
+
+						<div class="posts">
+
+							<!-- PROJECT 1 -->
+							<article>
+								<h3>SDR Rules of Engagement & Performance Governance Framework</h3>
+
+								<p><strong>Purpose:</strong> Built structured lead ownership and cross-sell controls across 11–15 SDRs.</p>
+								<p><strong>System:</strong> 14-day ownership logic, Salesforce Flow expiration, documented guardrails.</p>
+
+								<details class="project-details">
+									<summary>View details</summary>
+									<div class="details-body">
+
+										<p><strong>Context:</strong> Managed 11–15 SDRs supporting multiple AEs. No formal governance structure existed for ownership or performance management.</p>
+
+										<p><strong>Architecture Built:</strong></p>
+										<ul>
+											<li>14-day Lead ownership lifecycle enforced via Salesforce Flow.</li>
+											<li>No override allowed before expiration.</li>
+											<li>Documented cross-product outreach decision trees.</li>
+											<li>Designed formal PIP framework tied to quarterly attainment.</li>
+										</ul>
+
+										<p><strong>Impact:</strong> Eliminated duplicate demo conflicts and standardized performance accountability.</p>
+
+									</div>
+								</details>
+							</article>
+
+							<!-- PROJECT 2 -->
+							<article>
+								<h3>Salesforce Demo Email Capture Automation</h3>
+
+								<p><strong>Purpose:</strong> Auto-populated demo attendee email into Opportunity for HubSpot enrollment.</p>
+								<p><strong>System:</strong> Record-triggered Flow tied to “Client Demo” event creation.</p>
+
+								<details class="project-details">
+									<summary>View details</summary>
+									<div class="details-body">
+
+										<p><strong>Context:</strong> SDRs booked demos via a “Book Demo” button, creating a Salesforce Event labeled “Client Demo” and a synced Google Calendar invite. Leads were converted at booking.</p>
+
+										<p><strong>Structural Problem:</strong> Demo attendee email started on the Lead, moved to Contact after conversion, but marketing required it in the Opportunity field <em>Newsletter Email</em> to sync to HubSpot.</p>
+
+										<p><strong>Architecture Built:</strong></p>
+										<ul>
+											<li>Record-Triggered Flow in Salesforce.</li>
+											<li>Triggered when a “Client Demo” event was created.</li>
+											<li>Copied Contact email into Opportunity <strong>Newsletter Email</strong> field.</li>
+											<li>Field synced to HubSpot and enrolled prospect in post-demo campaign.</li>
+										</ul>
+
+										<p><strong>Impact:</strong> Removed manual email copying and reduced missed marketing enrollments.</p>
+
+									</div>
+								</details>
+							</article>
+
+							<!-- PROJECT 3 -->
+							<article>
+								<h3>Customer Allocation & Cross-Sell Structure</h3>
+
+								<p><strong>Purpose:</strong> Defined structured ownership tiers across product segments.</p>
+								<p><strong>System:</strong> Allocation framework with hold states and cross-product controls.</p>
+
+								<details class="project-details">
+									<summary>View details</summary>
+									<div class="details-body">
+
+										<p><strong>Structural Problem:</strong> Expansion outreach lacked formal allocation logic, creating ambiguity across product teams.</p>
+
+										<p><strong>Architecture Built:</strong> Created structured allocation tiers, defined hold durations, and documented cross-sell boundaries to prevent outreach conflict.</p>
+
+										<p><strong>Impact:</strong> Improved visibility and reduced internal friction during expansion workflows.</p>
+
+									</div>
+								</details>
+							</article>
+
+							<!-- PROJECT 4 -->
+							<article>
+								<h3>CRM Data Enrichment & Account Standardization</h3>
+
+								<p><strong>Purpose:</strong> Standardized institutional naming across ~9,000 accounts.</p>
+								<p><strong>System:</strong> Structured enrichment workflow with QA review logic.</p>
+
+								<details class="project-details">
+									<summary>View details</summary>
+									<div class="details-body">
+
+										<p><strong>Structural Problem:</strong> Inconsistent naming conventions reduced reporting reliability.</p>
+
+										<p><strong>Architecture Built:</strong> Created enrichment matching workflow and standardized account naming conventions.</p>
+
+										<p><strong>Impact:</strong> Improved segmentation accuracy and reporting consistency.</p>
+
+									</div>
+								</details>
+							</article>
+
+						</div>
+					</section>
+
+				</div>
+			</div>
+
+			<div id="sidebar">
+				<div class="inner">
+					<nav id="menu">
+						<header class="major"><h2>Navigation</h2></header>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="resume.html">Resume</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+					<footer id="footer">
+						<p class="copyright">&copy; Daniel Im</p>
+					</footer>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
