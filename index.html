@@ -8,9 +8,36 @@
 		<link rel="stylesheet" href="assets/css/custom-nav-b.css" />
 
 		<style>
-			#main .inner { padding-top: 2rem; }
+			#main .inner {
+				padding-top: 2rem;
+				padding-left: 6em;
+				padding-right: 6em;
+				margin: 0 auto;
+				max-width: 110em;
+			}
 			#header .logo { font-size: 1.35rem; }
 			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+			@media (max-width: 1680px) {
+				#main .inner {
+					padding-left: 5em;
+					padding-right: 5em;
+					max-width: 90em;
+				}
+			}
+			@media (max-width: 1280px) {
+				#main .inner {
+					padding-left: 4em;
+					padding-right: 4em;
+					max-width: 70em;
+				}
+			}
+			@media (max-width: 980px) {
+				#main .inner {
+					padding-left: 2em;
+					padding-right: 2em;
+					max-width: 100%;
+				}
+			}
 		</style>
 	</head>
 
