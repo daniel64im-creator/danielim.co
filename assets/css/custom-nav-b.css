@@ -1,4 +1,7 @@
 /* Option B: High Contrast CTA Contact Button Nav */
+#sidebar {
+  display: none !important;
+}
 #top-nav {
   position: fixed;
   top: 0;
