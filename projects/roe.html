@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SDR Rules of Engagement & Performance Governance | Daniel Im</title>
+		<title>ROE & Performance Governance | Project Details</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -9,18 +9,12 @@
 		<style>
 			#main .inner { padding-top: 2rem; }
 			#header .logo { font-size: 1.35rem; }
-			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; }
-			.kicker { margin-top: -0.25rem; margin-bottom: 1.75rem; }
-			.meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-			.meta-card { border: solid 1px rgba(210, 215, 217, 0.75); border-radius: 0.5rem; padding: 1rem; }
-			.meta-card h4 { margin: 0 0 0.5rem 0; font-size: 1rem; }
-			.meta-card p { margin: 0; }
-			.tight ul { margin-top: 0.5rem; }
-			.callout { border-left: 4px solid rgba(46, 118, 255, 0.5); padding: 0.75rem 1rem; background: rgba(240, 243, 255, 0.35); border-radius: 0.35rem; }
+			.page-title { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.75rem; }
+			.section-title { margin-top: 2rem; }
 		</style>
 	</head>
-
 	<body class="is-preload">
+
 		<div id="wrapper">
 
 			<div id="main">
@@ -31,133 +25,48 @@
 					</header>
 
 					<section>
-						<div class="page-title">SDR Rules of Engagement & Governance</div>
-						<p class="kicker">Enforceable ownership boundaries, cross-sell controls, and performance governance for a multi-product SDR org.</p>
+						<div class="page-title">SDR Rules of Engagement & Performance Governance</div>
+						<p>Governance framework to reduce ownership ambiguity, prevent duplicate outreach, and standardize accountability.</p>
 					</section>
 
-					<section class="tight">
-						<div class="meta-grid">
-							<div class="meta-card">
-								<h4>Environment</h4>
-								<p>Multi-product GTM org with shared accounts across product teams.</p>
-							</div>
-							<div class="meta-card">
-								<h4>Team Served</h4>
-								<p>11–15 SDRs; 7–15 AEs; San Jose + Toronto.</p>
-							</div>
-							<div class="meta-card">
-								<h4>Primary Systems</h4>
-								<p>Salesforce (Lead/Contact/Opportunity), Confluence, Canvas training.</p>
-							</div>
-							<div class="meta-card">
-								<h4>Core Mechanism</h4>
-								<p>14-day lead ownership lifecycle with automated expiration.</p>
-							</div>
-						</div>
-					</section>
-
-					<section class="tight">
-						<header class="major">
-							<h2>Problem</h2>
-						</header>
+					<section>
+						<header class="major"><h2>Context</h2></header>
 						<ul>
-							<li>No consistent ownership boundaries → duplicate outreach and internal conflict.</li>
-							<li>Unclear cross-product rules → SDRs unsure who could contact whom and when.</li>
-							<li>Performance management lacked structure → inconsistent coaching, unclear triggers, and escalation ambiguity.</li>
-							<li>Governance existed as “tribal knowledge” rather than enforceable rules.</li>
-						</ul>
-					</section>
-
-					<section class="tight">
-						<header class="major">
-							<h2>Design Goals</h2>
-						</header>
-						<ul>
-							<li>Make ownership enforceable (not optional).</li>
-							<li>Reduce judgment calls with decision trees.</li>
-							<li>Allow cross-sell where safe while protecting active deal contacts.</li>
-							<li>Create a repeatable performance framework tied to measurable thresholds.</li>
-						</ul>
-					</section>
-
-					<section class="tight">
-						<header class="major">
-							<h2>System Architecture</h2>
-						</header>
-
-						<h3>1) Lead Ownership Lifecycle (14-day rule)</h3>
-						<ul>
-							<li>SDR can assign themselves as Lead Owner for exactly 14 days.</li>
-							<li>Ownership cannot be extended by “touches” or manual re-assignments.</li>
-							<li>At day 14, automation removes ownership and relabels the lead as expired/eligible.</li>
+							<li>Sales Development team environment with multiple SDRs and multiple AEs across products and regions.</li>
+							<li>No consistent rules for lead ownership expiration, cross-product boundaries, or performance intervention.</li>
 						</ul>
 
-						<h3>2) Opportunity Guardrails (decision-tree governance)</h3>
+						<header class="major section-title"><h2>Structural Problems</h2></header>
 						<ul>
-							<li>Defined what “active opportunity protection” meant and how to evaluate it.</li>
-							<li>Protected contacts actively involved in open opportunities from cross-product outreach.</li>
-							<li>Allowed outreach into the same account for other products when protected contacts were avoided.</li>
-							<li>Included recency logic (e.g., activity windows) to reduce subjective interpretation.</li>
+							<li>Ownership ambiguity caused internal conflict and duplicate outreach risk.</li>
+							<li>Cross-sell rules were inconsistent and hard to enforce.</li>
+							<li>Performance management lacked consistent standards and documentation.</li>
 						</ul>
 
-						<h3>3) Cross-Sell Controls</h3>
+						<header class="major section-title"><h2>What I Built</h2></header>
 						<ul>
-							<li>Clear boundaries on who is off-limits vs eligible within an account.</li>
-							<li>Standardized handling for parallel motions across products.</li>
-							<li>Documented “do not contact” conditions and reinforced during onboarding.</li>
+							<li><strong>Lead ownership lifecycle rule:</strong> SDRs could assign themselves as Lead Owner for a fixed 14-day window.</li>
+							<li><strong>Salesforce Flow enforcement:</strong> Ownership was automatically removed at day 14 and labeled as expired (no manual override).</li>
+							<li><strong>Opportunity and cross-sell guardrails:</strong> Documented decision logic for when outreach is allowed and which contacts must be protected.</li>
+							<li><strong>PIP framework:</strong> Documented performance improvement standards and timelines in collaboration with leadership/HR (formalized and stored as internal documentation).</li>
 						</ul>
 
-						<h3>4) Performance Governance (PIP framework)</h3>
+						<header class="major section-title"><h2>Impact</h2></header>
 						<ul>
-							<li>Formalized triggers tied to quarterly attainment (e.g., &lt;80%).</li>
-							<li>Defined timeline, expectations, and measurable KPIs during improvement windows.</li>
-							<li>Aligned manager actions with HR expectations to reduce inconsistency.</li>
-						</ul>
-					</section>
-
-					<section class="tight">
-						<header class="major">
-							<h2>Enforcement Layer</h2>
-						</header>
-
-						<div class="callout">
-							<strong>Principle:</strong> Governance fails when it depends on memory, good intent, or “common sense.”
-						</div>
-
-						<ul>
-							<li><strong>Automation:</strong> Salesforce Flow enforced ownership expiration and prevented informal overrides.</li>
-							<li><strong>Documentation:</strong> Rules published in Confluence; converted into visual workflows.</li>
-							<li><strong>Training:</strong> Packaged into a Canvas training module for onboarding consistency.</li>
-							<li><strong>Manager review:</strong> Violations addressed immediately in 1:1 to reinforce boundaries.</li>
-						</ul>
-					</section>
-
-					<section class="tight">
-						<header class="major">
-							<h2>Outcomes</h2>
-						</header>
-						<ul>
-							<li>Reduced duplicate outreach and internal escalation events tied to ownership disputes.</li>
-							<li>Converted “unwritten rules” into a repeatable operating system for SDR execution.</li>
-							<li>Increased consistency in onboarding and governance comprehension across locations.</li>
-							<li>Created a defensible performance management structure aligned with leadership/HR.</li>
-						</ul>
-					</section>
-
-					<section class="tight">
-						<header class="major">
-							<h2>What I Would Improve Next</h2>
-						</header>
-						<ul>
-							<li>Automated stale-opportunity detection to clarify when protections should expire.</li>
-							<li>Violation tracking dashboard (trendline by rule type, team, time period).</li>
-							<li>Additional validation rules to prevent common “workaround” behaviors.</li>
-							<li>Tighter instrumentation: log rule checks and outcomes rather than relying on manual review.</li>
+							<li>Reduced duplicate outreach incidents and escalations caused by unclear boundaries.</li>
+							<li>Created repeatable governance standards for onboarding and enforcement.</li>
+							<li>Made accountability expectations explicit instead of informal.</li>
 						</ul>
 
-						<ul class="actions">
+						<header class="major section-title"><h2>What I Would Improve Next</h2></header>
+						<ul>
+							<li>Automated stale-opportunity checks to reduce manual review.</li>
+							<li>Lightweight logging/dashboarding for violations and exceptions.</li>
+							<li>Stronger object-level protections where appropriate (without over-restricting reps).</li>
+						</ul>
+
+						<ul class="actions section-title">
 							<li><a href="../projects.html" class="button">Back to Projects</a></li>
-							<li><a href="../contact.html" class="button primary">Contact</a></li>
 						</ul>
 					</section>
 
@@ -168,9 +77,7 @@
 				<div class="inner">
 
 					<nav id="menu">
-						<header class="major">
-							<h2>Navigation</h2>
-						</header>
+						<header class="major"><h2>Navigation</h2></header>
 						<ul>
 							<li><a href="../index.html">Home</a></li>
 							<li><a href="../projects.html">Projects</a></li>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Revenue Operations Systems & Infrastructure</title>
+		<title>Projects | Revenue Operations Systems</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -9,11 +9,11 @@
 		<style>
 			#main .inner { padding-top: 2rem; }
 			#header .logo { font-size: 1.35rem; }
-			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; }
 		</style>
 	</head>
-	<body class="is-preload">
 
+	<body class="is-preload">
 		<div id="wrapper">
 
 			<div id="main">
@@ -24,67 +24,71 @@
 					</header>
 
 					<section>
-						<div class="page-title">Home</div>
-					</section>
-
-					<section id="banner">
-						<div class="content">
-							<header>
-								<h1>Revenue Operations Systems & Infrastructure</h1>
-								<p>Governance, workflow design, CRM structure, and data quality systems built inside revenue teams.</p>
-							</header>
-							<p>
-								I have no formal engineering background. I build systems by iterating hands-on and using AI to help draft logic and structure,
-								then personally implementing and validating the workflow in real operations.
-							</p>
-							<ul class="actions">
-								<li><a href="projects.html" class="button big">View Projects</a></li>
-								<li><a href="resume.html" class="button big">View Resume</a></li>
-							</ul>
-						</div>
-						<!-- Photo removed from Home. Moved to About page. -->
+						<div class="page-title">Projects</div>
 					</section>
 
 					<section>
 						<header class="major">
-							<h2>Featured Systems</h2>
+							<h2>Revenue Operations Systems</h2>
 						</header>
 
 						<div class="posts">
 
 							<article>
-								<h3>SDR Governance: Rules of Engagement + PIP Framework</h3>
-								<p><strong>Purpose:</strong> Standardize ownership rules, cross-sell boundaries, and performance accountability.</p>
-								<p><strong>What I did:</strong> Authored governance documentation and created a structured PIP framework adopted internally.</p>
+								<h3>SDR Rules of Engagement & Performance Governance Framework</h3>
+								<p><strong>What it solved:</strong> Unclear ownership and cross-product boundaries created internal friction and duplicate outreach risk.</p>
+								<p><strong>What I built:</strong> Enforceable rules + Salesforce Flow ownership expiration + formal PIP framework documentation.</p>
 								<ul class="actions">
-									<li><a href="projects.html#roe-pip" class="button">Project Details</a></li>
+									<li><a href="projects/roe.html" class="button">Project Details</a></li>
 								</ul>
 							</article>
 
 							<article>
-								<h3>Customer Allocation + Controlled Cross-Sell Outreach (Google Sheets)</h3>
-								<p><strong>Purpose:</strong> Controlled ownership/routing to prevent duplicate outreach and reduce account conflicts.</p>
-								<p><strong>What I did:</strong> Built a centralized allocation structure and expanded it into a controlled cross-sell assignment system.</p>
+								<h3>Salesforce Demo Email Capture Automation</h3>
+								<p><strong>What it solved:</strong> Demo attendee email moved across objects and was not reliably captured where marketing needed it.</p>
+								<p><strong>What I built:</strong> Record-triggered Flow that copied the email into the Opportunity field used for HubSpot sync.</p>
 								<ul class="actions">
-									<li><a href="projects.html#allocation-crosssell" class="button">Project Details</a></li>
+									<li><a href="projects/demo-email.html" class="button">Project Details</a></li>
 								</ul>
 							</article>
 
 							<article>
-								<h3>Salesforce Workflow Automation: Demo Email Capture</h3>
-								<p><strong>Purpose:</strong> Improve data consistency for downstream marketing processes.</p>
-								<p><strong>What I did:</strong> Implemented a Flow tied to demo events to populate the Opportunity email field used for HubSpot sync/enrollment.</p>
+								<h3>Real-Time Demo Booking Notifications</h3>
+								<p><strong>What it solved:</strong> Leadership lacked immediate visibility into booked demos without manual checking.</p>
+								<p><strong>What I built:</strong> Event-triggered notification logic scoped to relevant records to avoid noise.</p>
 								<ul class="actions">
-									<li><a href="projects.html#demo-email-capture" class="button">Project Details</a></li>
+									<li><a href="projects/demo-notifications.html" class="button">Project Details</a></li>
+								</ul>
+							</article>
+
+							<article>
+								<h3>Customer Allocation & Cross-Sell Governance</h3>
+								<p><strong>What it solved:</strong> Expansion/cross-sell outreach had no clear ownership model, creating duplicate outreach risk.</p>
+								<p><strong>What I built:</strong> Allocation tiers + hold states + reassignment structure + documented cross-product protections.</p>
+								<ul class="actions">
+									<li><a href="projects/allocation.html" class="button">Project Details</a></li>
+								</ul>
+							</article>
+
+							<article>
+								<h3>CRM Data Enrichment Initiative (~9,000 Accounts)</h3>
+								<p><strong>What it solved:</strong> Missing firmographic data reduced segmentation quality and SDR targeting precision.</p>
+								<p><strong>What I built:</strong> Export → normalize → map by Account ID → structured re-import with IT.</p>
+								<ul class="actions">
+									<li><a href="projects/enrichment.html" class="button">Project Details</a></li>
+								</ul>
+							</article>
+
+							<article>
+								<h3>Conference Lead Cleanup & Redistribution</h3>
+								<p><strong>What it solved:</strong> Raw event lead lists were not aligned to product/team ownership, slowing follow-up.</p>
+								<p><strong>What I built:</strong> Cleanup + categorization + redistribution by product interest and ownership rules.</p>
+								<ul class="actions">
+									<li><a href="projects/lead-cleanup.html" class="button">Project Details</a></li>
 								</ul>
 							</article>
 
 						</div>
-
-						<ul class="actions">
-							<li><a href="projects.html" class="button primary">View All Projects</a></li>
-							<li><a href="contact.html" class="button">Contact</a></li>
-						</ul>
 					</section>
 
 				</div>
@@ -94,9 +98,7 @@
 				<div class="inner">
 
 					<nav id="menu">
-						<header class="major">
-							<h2>Navigation</h2>
-						</header>
+						<header class="major"><h2>Navigation</h2></header>
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="projects.html">Projects</a></li>
