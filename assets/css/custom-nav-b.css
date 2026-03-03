@@ -1,0 +1,79 @@
+/* Option B: High Contrast CTA Contact Button Nav */
+#top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #2e3141;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+#top-nav .nav-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+#top-nav .nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#top-nav .nav-menu ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#top-nav .nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  transition: color 0.15s;
+}
+#top-nav .nav-menu a:hover {
+  color: #e67c6b;
+}
+#top-nav .nav-contact {
+  margin-left: 2em;
+}
+#top-nav .nav-contact a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 0.5em 1.2em;
+  border-radius: 2em;
+  background: #e67c6b;
+  border: none;
+  box-shadow: 0 2px 8px rgba(230,124,107,0.12);
+  transition: background 0.15s, color 0.15s;
+  letter-spacing: 0.03em;
+}
+#top-nav .nav-contact a:hover {
+  background: #d95c4b;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  #top-nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1em 0.5em;
+  }
+  #top-nav .nav-menu ul {
+    gap: 1em;
+  }
+  #top-nav .nav-contact {
+    margin-left: 0;
+    margin-top: 0.5em;
+  }
+}
