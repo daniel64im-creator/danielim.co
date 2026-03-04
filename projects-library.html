@@ -102,29 +102,28 @@
 	<body class="is-preload">
 		<div id="wrapper">
 
+			<header id="top-nav">
+				<div class="nav-title">Daniel Im | Revenue Operations</div>
+				<div class="nav-menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="projects-library.html">Project Library</a></li>
+						<li><a href="resume.html">Resume</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="nav-contact">
+					<a href="contact.html">Contact</a>
+				</div>
+			</header>
 
-		<header id="top-nav">
-			<div class="nav-title">Daniel Im | Revenue Operations</div>
-			<div class="nav-menu">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="projects-library.html">Project Library</a></li>
-					<li><a href="resume.html">Resume</a></li>
-					<li><a href="about.html">About</a></li>
-				</ul>
-			</div>
-			<div class="nav-contact">
-				<a href="contact.html">Contact</a>
-			</div>
-		</header>
+			<div id="main">
+				<div class="inner">
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
+					</header>
 
-			<div id="wrapper">
-				<div id="main">
-					<div class="inner">
-						<header id="header">
-							<a href="index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
-						</header>
 					<section>
 						<div class="page-title">Project Library</div>
 						<p>Complete index of governance systems, automation workflows, reporting layers, and revenue infrastructure initiatives.</p>
@@ -136,7 +135,6 @@
 							<div class="library-left" id="library-left">
 
 								<div class="category-title">Governance & Policy Systems</div>
-								<div class="project-item" data-key="roe">SDR Rules of Engagement & Performance Governance</div>
 								<div class="project-item" data-key="allocation">Customer Allocation & Cross-Sell Governance</div>
 								<div class="project-item" data-key="allocation-infra">Team Lead Customer Allocation Infrastructure</div>
 								<div class="project-item" data-key="pip">Performance Improvement Plan (PIP) Governance Framework</div>
@@ -196,13 +194,6 @@
 
 		<script>
 			const projectData = {
-				"roe": {
-					category: "Governance & Policy Systems",
-					link: "projects/roe.html",
-					structuralGap: "No lifecycle enforcement or cross-product guardrails across 11–15 SDRs.",
-					architecture: "14-day ownership logic enforced via Salesforce Flow expiration + documented decision framework.",
-					impact: "Reduced duplicate outreach risk and standardized accountability across the SDR org."
-				},
 				"allocation": {
 					category: "Governance & Policy Systems",
 					link: "projects/allocation-TL.html",
@@ -212,7 +203,7 @@
 				},
 				"allocation-infra": {
 					category: "Governance & Policy Systems",
-					link: "projects/allocation-infrastructure.html",
+					link: "projects/allocation-SDR.html",
 					structuralGap: "No scalable operating system for holds, handoffs, and exceptions as allocation complexity increased.",
 					architecture: "Standardized allocation infrastructure (holds, exceptions, reassignment paths) with visibility for team lead control.",
 					impact: "Reduced disputes, improved handoff speed, and made allocation behavior repeatable at scale."
@@ -289,8 +280,8 @@
 				}
 
 				pane.innerHTML = `
-					<div class="preview-title">${escapeHtmlTitle(data.title || getTitleFromKey(key))}</div>
-					<div class="preview-meta">${data.category}</div>
+					<div class="preview-title">${escapeHtmlTitle(getTitleFromKey(key))}</div>
+					<div class="preview-meta">${escapeHtml(data.category)}</div>
 
 					<div class="preview-section">
 						<h3>Structural Gap</h3>
@@ -308,20 +299,21 @@
 					</div>
 
 					<div class="preview-section">
-						<a href="${data.link}" class="button">Open Full Project</a>
+						<a href="${escapeHtml(data.link)}" class="button">Open Full Project</a>
 					</div>
 				`;
 			}
 
 			function getTitleFromKey(key) {
-				const el = document.querySelector(`.project-item[data-key="${key}"]`);
+				const selector = '.project-item[data-key="' + key + '"]';
+				const el = document.querySelector(selector);
 				return el ? el.textContent.trim() : key;
 			}
 
 			function escapeHtml(str) {
 				return String(str)
 					.replaceAll("&", "&amp;")
-					.replaceAll("<", "&lt;")
+					replaceAll("<", "&lt;")
 					.replaceAll(">", "&gt;")
 					.replaceAll('"', "&quot;")
 					.replaceAll("'", "&#039;");
@@ -334,7 +326,6 @@
 				clickedEl.classList.add("active");
 			}
 
-			// Wire clicks (no reliance on implicit "event")
 			document.addEventListener("DOMContentLoaded", () => {
 				document.querySelectorAll(".project-item").forEach(item => {
 					item.addEventListener("click", () => {
@@ -344,11 +335,11 @@
 					});
 				});
 
-				// Default selection
-				const first = document.querySelector('.project-item[data-key="roe"]');
+				const first = document.querySelector(".project-item");
 				if (first) {
+					const key = first.getAttribute("data-key");
 					setActiveItem(first);
-					renderPreview("roe");
+					renderPreview(key);
 				}
 			});
 		</script>
