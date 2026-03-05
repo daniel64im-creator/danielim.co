@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Project Library | Revenue Operations Systems</title>
+		<title>Revenue Operations Systems & Infrastructure</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,158 +15,115 @@
 				margin: 0 auto;
 				max-width: 110em;
 			}
-			.page-title {
-				font-size: 3rem;
-				font-weight: 700;
-				margin-bottom: 1rem;
-			}
-			.library-container {
-				display: flex;
-				gap: 2rem;
-				margin-top: 2rem;
-				width: 100%;
-				max-width: 110em;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			.library-left {
-				width: 35%;
-				min-width: 260px;
-				max-width: 400px;
-				border-right: 1px solid #e5e5e5;
-				padding-right: 2em;
-				max-height: 70vh;
-				overflow: auto;
-				background: none;
-			}
-			.library-right {
-				width: 65%;
-				padding-left: 2em;
-				min-height: 50vh;
-				max-width: 100%;
-			}
-			.category-title {
-				font-size: 0.9rem;
-				font-weight: 700;
-				text-transform: uppercase;
-				margin-top: 1.5rem;
-				margin-bottom: 0.5rem;
-				color: #888;
-			}
-			.project-item {
-				cursor: pointer;
-				padding: 0.55rem 0.5rem;
-				border-radius: 6px;
-				margin-bottom: 0.25rem;
-				line-height: 1.2;
-				transition: background 0.15s;
-			}
-			.project-item:hover { background-color: #f5f5f5; }
-			.project-item.active { background-color: #eaeaea; font-weight: 700; }
-			.preview-title { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.35rem; }
-			.preview-meta { color: #777; margin-bottom: 1rem; }
-			.preview-section { margin-top: 1.25rem; }
-			.preview-section h3 { margin-bottom: 0.4rem; }
-			.preview-section p { margin-bottom: 0; }
+			#header .logo { font-size: 1.35rem; }
+			.page-title { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+
 			@media (max-width: 1680px) {
-				#main .inner, .library-container {
+				#main .inner {
 					padding-left: 5em;
 					padding-right: 5em;
 					max-width: 90em;
 				}
 			}
+
 			@media (max-width: 1280px) {
-				#main .inner, .library-container {
+				#main .inner {
 					padding-left: 4em;
 					padding-right: 4em;
 					max-width: 70em;
 				}
 			}
+
 			@media (max-width: 980px) {
-				#main .inner, .library-container {
+				#main .inner {
 					padding-left: 2em;
 					padding-right: 2em;
 					max-width: 100%;
-				}
-				.library-container { flex-direction: column; }
-				.library-left, .library-right {
-					width: 100%;
-					border-right: none;
-					padding: 0;
-					max-height: none;
 				}
 			}
 		</style>
 	</head>
 
 	<body class="is-preload">
-		<div id="wrapper">
 
-			<header id="top-nav">
-				<div class="nav-title">Daniel Im | Revenue Operations</div>
-				<div class="nav-menu">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="projects-library.html">Project Library</a></li>
-						<li><a href="resume.html">Resume</a></li>
-						<li><a href="about.html">About</a></li>
-					</ul>
-				</div>
-				<div class="nav-contact">
-					<a href="contact.html">Contact</a>
-				</div>
-			</header>
+		<header id="top-nav">
+			<div class="nav-title">Daniel Im | Revenue Operations</div>
+
+			<div class="nav-menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="projects-library.html">Projects</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</div>
+
+			<div class="nav-contact">
+				<a href="contact.html">Contact</a>
+			</div>
+		</header>
+
+		<div id="wrapper">
 
 			<div id="main">
 				<div class="inner">
+
 					<header id="header">
 						<a href="index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
 					</header>
 
 					<section>
-						<div class="page-title">Project Library</div>
-						<p>Complete index of governance systems, automation workflows, reporting layers, and revenue infrastructure initiatives.</p>
+						<div class="page-title">Home</div>
+					</section>
+
+					<section id="banner">
+						<div class="content">
+							<header>
+								<h1>Revenue Operations Systems & Infrastructure</h1>
+								<p>Governance design, workflow enforcement, CRM architecture, and data integrity systems built inside multi-product revenue teams.</p>
+							</header>
+
+							<p>
+								I transitioned from sales into Revenue Operations by identifying structural friction inside GTM environments and building enforcement-driven systems to resolve it. These projects include ownership governance frameworks, Salesforce automation, cross-product guardrails, and large-scale data normalization initiatives across thousands of records.
+							</p>
+
+							<ul class="actions">
+								<li><a href="projects-library.html" class="button big">View All Projects</a></li>
+								<li><a href="resume.html" class="button big">View Resume</a></li>
+							</ul>
+						</div>
 					</section>
 
 					<section>
-						<div class="library-container">
+						<header class="major">
+							<h2>Featured Projects</h2>
+						</header>
 
-							<div class="library-left" id="library-left">
+						<div class="posts">
 
-								<div class="category-title">Governance & Policy Systems</div>
-								<div class="project-item" data-key="allocation">Customer Allocation & Cross-Sell Governance</div>
-								<div class="project-item" data-key="allocation-infra">Team Lead Customer Allocation Infrastructure</div>
-								<div class="project-item" data-key="pip">Performance Improvement Plan (PIP) Governance Framework</div>
+							<article>
+								<h3>CRM Data Enrichment Initiative (~9,000 Accounts)</h3>
+								<p><strong>Focus:</strong> Enriched key firmographics to improve segmentation, reporting, and targeting.</p>
+								<ul class="actions">
+									<li><a href="projects/enrichment.html" class="button">Project Details</a></li>
+								</ul>
+							</article>
 
-								<div class="category-title">Data Quality & Standardization</div>
-								<div class="project-item" data-key="enrichment">CRM Data Enrichment Initiative (~9,000 Accounts)</div>
-								<div class="project-item" data-key="fte">Instant FTE Lookup for SDR Prospecting</div>
-
-								<div class="category-title">Workflow Automation</div>
-								<div class="project-item" data-key="demo-email">Salesforce Demo Email Capture Automation</div>
-								<div class="project-item" data-key="notifications">Real-Time Demo Booking Notifications</div>
-
-								<div class="category-title">Reporting & Visibility</div>
-								<div class="project-item" data-key="roe-report">CRM Outreach Eligibility & ROE Compliance Reporting</div>
-
-								<div class="category-title">Lead Intake & Targeting</div>
-								<div class="project-item" data-key="conference">Conference Lead Cleanup & Redistribution</div>
-								<div class="project-item" data-key="advisory">Executive Customer Advisory Targeting</div>
-
-							</div>
-
-							<div class="library-right" id="preview-pane">
-								<div class="preview-title">Select a project</div>
-								<div class="preview-meta">Preview opens here (right pane).</div>
-								<p>Click a project on the left to view a concise summary and open the full write-up.</p>
-							</div>
+							<article>
+								<h3>Customer Allocation & Cross-Sell Governance</h3>
+								<p><strong>Focus:</strong> Ownership structure to reduce conflicts and prevent duplicate outreach.</p>
+								<ul class="actions">
+									<li><a href="projects/allocation-TL.html" class="button">Project Details</a></li>
+								</ul>
+							</article>
 
 						</div>
 
-						<ul class="actions" style="margin-top:2rem;">
-							<li><a href="projects.html" class="button">Back to Flagship Projects</a></li>
+						<ul class="actions">
+							<li><a href="projects-library.html" class="button primary">View All Projects</a></li>
+							<li><a href="contact.html" class="button">Contact</a></li>
 						</ul>
+
 					</section>
 
 				</div>
@@ -174,175 +131,28 @@
 
 			<div id="sidebar">
 				<div class="inner">
+
 					<nav id="menu">
-						<header class="major"><h2>Navigation</h2></header>
+						<header class="major">
+							<h2>Navigation</h2>
+						</header>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="projects.html">Projects</a></li>
+							<li><a href="projects-library.html">Projects</a></li>
 							<li><a href="resume.html">Resume</a></li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
+
 					<footer id="footer">
 						<p class="copyright">&copy; Daniel Im</p>
 					</footer>
+
 				</div>
 			</div>
 
 		</div>
-
-		<script>
-			const projectData = {
-				"allocation": {
-					category: "Governance & Policy Systems",
-					link: "projects/allocation-TL.html",
-					structuralGap: "Ownership ambiguity created cross-product conflicts and inconsistent expansion behavior.",
-					architecture: "Allocation tiers + hold states + cross-product protections to control who can outreach and when.",
-					impact: "Improved clarity, reduced internal friction, and lowered duplicate outreach incidents."
-				},
-				"allocation-infra": {
-					category: "Governance & Policy Systems",
-					link: "projects/allocation-SDR.html",
-					structuralGap: "No scalable operating system for holds, handoffs, and exceptions as allocation complexity increased.",
-					architecture: "Standardized allocation infrastructure (holds, exceptions, reassignment paths) with visibility for team lead control.",
-					impact: "Reduced disputes, improved handoff speed, and made allocation behavior repeatable at scale."
-				},
-				"pip": {
-					category: "Governance & Policy Systems",
-					link: "projects/pip-governance.html",
-					structuralGap: "Performance intervention lacked consistent triggers, timelines, and documentation standards.",
-					architecture: "Defined trigger criteria + phased timeline + KPI expectations + standardized documentation package.",
-					impact: "Improved fairness, reduced ambiguity, and created reusable performance governance for onboarding."
-				},
-				"enrichment": {
-					category: "Data Quality & Standardization",
-					link: "projects/enrichment.html",
-					structuralGap: "Thousands of accounts had missing/incorrect firmographics and inconsistent institutional naming.",
-					architecture: "ID-based enrichment workflow with normalization rules and QA pass before structured re-import.",
-					impact: "Improved segmentation accuracy and increased confidence in reporting across ~9,000 accounts."
-				},
-				"fte": {
-					category: "Data Quality & Standardization",
-					link: "projects/fte-lookup.html",
-					structuralGap: "Reps lacked a fast, consistent size signal during prospecting; lookups were slow and inconsistent.",
-					architecture: "Instant lookup workflow that returns FTE context in a standardized format at point of prospecting.",
-					impact: "Reduced time-to-context and improved prioritization consistency across targeting workflows."
-				},
-				"demo-email": {
-					category: "Workflow Automation",
-					link: "projects/demo-email.html",
-					structuralGap: "Demo attendee email wasn’t reliably available on the Opportunity for HubSpot enrollment.",
-					architecture: "Scoped record-triggered Flow tied to “Client Demo” event creation that writes the required Opportunity email.",
-					impact: "Reduced manual copying and improved reliability of post-demo marketing enrollment."
-				},
-				"notifications": {
-					category: "Workflow Automation",
-					link: "projects/demo-notifications.html",
-					structuralGap: "Stakeholders lacked real-time visibility into booked demos without manual monitoring.",
-					architecture: "Event-triggered notification logic with filters to keep volume low and signal high.",
-					impact: "Improved operational visibility while avoiding notification noise."
-				},
-				"roe-report": {
-					category: "Reporting & Visibility",
-					link: "projects/roe-compliance-reporting.html",
-					structuralGap: "ROE eligibility checks were manual; managers lacked a repeatable compliance view.",
-					architecture: "Eligibility definitions + compliance reporting layer to surface protected contacts, conflicts, and exceptions.",
-					impact: "Reduced manual auditing and increased ROE adherence through visibility."
-				},
-				"conference": {
-					category: "Lead Intake & Targeting",
-					link: "projects/lead-cleanup.html",
-					structuralGap: "Event lead lists arrived raw with duplicates and unclear routing; follow-up was delayed and inconsistent.",
-					architecture: "Normalization + deduplication + product categorization + ownership routing into usable outreach queues.",
-					impact: "Faster post-event follow-up and clearer accountability for who owns what."
-				},
-				"advisory": {
-					category: "Lead Intake & Targeting",
-					link: "projects/executive-advisory-targeting.html",
-					structuralGap: "Executive invite lists were ad hoc and hard to justify; targeting quality was inconsistent.",
-					architecture: "Selection criteria + segmentation workflow + validation pass to produce a clean, reviewable invite list.",
-					impact: "Higher confidence targeting and a reusable system for future advisory cycles."
-				}
-			};
-
-			function renderPreview(key) {
-				const pane = document.getElementById("preview-pane");
-				const data = projectData[key];
-
-				if (!data) {
-					pane.innerHTML = `
-						<div class="preview-title">Not Found</div>
-						<div class="preview-meta">No preview is configured for this item.</div>
-						<p>Add this project to <code>projectData</code> in the page script.</p>
-					`;
-					return;
-				}
-
-				pane.innerHTML = `
-					<div class="preview-title">${escapeHtmlTitle(getTitleFromKey(key))}</div>
-					<div class="preview-meta">${escapeHtml(data.category)}</div>
-
-					<div class="preview-section">
-						<h3>Structural Gap</h3>
-						<p>${escapeHtml(data.structuralGap)}</p>
-					</div>
-
-					<div class="preview-section">
-						<h3>Architecture</h3>
-						<p>${escapeHtml(data.architecture)}</p>
-					</div>
-
-					<div class="preview-section">
-						<h3>Operational Impact</h3>
-						<p>${escapeHtml(data.impact)}</p>
-					</div>
-
-					<div class="preview-section">
-						<a href="${escapeHtml(data.link)}" class="button">Open Full Project</a>
-					</div>
-				`;
-			}
-
-			function getTitleFromKey(key) {
-				const selector = '.project-item[data-key="' + key + '"]';
-				const el = document.querySelector(selector);
-				return el ? el.textContent.trim() : key;
-			}
-
-			function escapeHtml(str) {
-				return String(str)
-					.replaceAll("&", "&amp;")
-					replaceAll("<", "&lt;")
-					.replaceAll(">", "&gt;")
-					.replaceAll('"', "&quot;")
-					.replaceAll("'", "&#039;");
-			}
-
-			function escapeHtmlTitle(str) { return escapeHtml(str); }
-
-			function setActiveItem(clickedEl) {
-				document.querySelectorAll(".project-item").forEach(i => i.classList.remove("active"));
-				clickedEl.classList.add("active");
-			}
-
-			document.addEventListener("DOMContentLoaded", () => {
-				document.querySelectorAll(".project-item").forEach(item => {
-					item.addEventListener("click", () => {
-						const key = item.getAttribute("data-key");
-						setActiveItem(item);
-						renderPreview(key);
-					});
-				});
-
-				const first = document.querySelector(".project-item");
-				if (first) {
-					const key = first.getAttribute("data-key");
-					setActiveItem(first);
-					renderPreview(key);
-				}
-			});
-		</script>
 
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
