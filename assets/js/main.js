@@ -260,3 +260,19 @@
 			});
 
 })(jQuery);
+
+// Automatically highlight the current navigation button based on URL
+document.addEventListener("DOMContentLoaded", function() {
+    var currentUrl = window.location.pathname.split("/").pop();
+    if (currentUrl === "") currentUrl = "index.html"; // Handle root domain
+    
+    var navLinks = document.querySelectorAll("#top-nav .nav-menu a");
+    navLinks.forEach(function(link) {
+        if (link.getAttribute("href") === currentUrl || 
+           (currentUrl === "index.html" && link.getAttribute("href") === "index.html")) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
