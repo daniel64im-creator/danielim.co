@@ -238,3 +238,9 @@ html, body {
   #header .icons { margin-top: 1em; }
   #header .icons li { margin-left: 0; margin-right: 1.5em; }
 }
+
+/* Reduce spacing below red divider across site */
+
+#header {
+margin-bottom:0.2em;
+}
