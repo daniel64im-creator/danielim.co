@@ -1,9 +1,10 @@
 /* =================================================
-GLOBAL NAV & CONSISTENCY OVERRIDES
+DANIELIM.CO GLOBAL NAV & CONSISTENCY OVERRIDES
 ================================================= */
 
-#sidebar {
-  display: none;
+/* HIDE REDUNDANT ELEMENTS */
+#sidebar, #header {
+  display: none !important;
 }
 
 /* TOP FIXED NAV BAR */
@@ -18,20 +19,16 @@ GLOBAL NAV & CONSISTENCY OVERRIDES
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2em;
+  padding: 0 5%; /* Aligned with main content padding */
   z-index: 10000;
 }
 
 /* LOGO / TITLE (TOP NAV) */
 #top-nav .nav-title {
-  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700 !important;
   font-size: 1.35rem !important; 
   letter-spacing: 0.02em;
-}
-
-/* HIDE THE REDUNDANT INNER HEADER */
-#header {
-  display: none !important;
 }
 
 /* GLOBAL PAGE TITLE STYLING */
@@ -40,10 +37,10 @@ GLOBAL NAV & CONSISTENCY OVERRIDES
   font-size: 3rem !important;
   font-weight: 700 !important;
   color: #3d4449;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* SECTION HEADERS (Featured Projects & Resume Sections) */
+/* SECTION HEADERS */
 header.major h2 {
   font-family: "Roboto Slab", serif;
   font-size: 1.75rem;
@@ -55,7 +52,7 @@ header.major h2 {
   margin-bottom: 1.5em;
 }
 
-/* PROJECT TITLES (Home Page Articles) */
+/* PROJECT TITLES */
 .posts article h3 {
   font-family: "Roboto Slab", serif;
   font-size: 1.25rem;
@@ -87,13 +84,13 @@ header.major h2 {
 }
 
 #top-nav .nav-menu a:hover {
-  color: #e67c6b;
+  color: #f56a6a;
 }
 
 /* CONTACT BUTTON IN NAV */
 #top-nav .nav-contact a {
   color: #fff;
-  background: #e67c6b;
+  background: #f56a6a;
   text-decoration: none;
   padding: 0.5em 1.2em;
   border-radius: 2em;
@@ -104,19 +101,40 @@ header.major h2 {
   background: #d95c4b;
 }
 
-/* MAIN CONTENT SPACING */
-#main > .inner {
-  padding-top: 3em !important;
-  padding-left: 6em;
-  padding-right: 6em;
+/* --- MAIN CONTENT SPACING FIX --- */
+#main > .inner, 
+section.wrapper.style1 .inner, 
+footer#footer .inner {
+  padding-top: 5em !important; /* Space for fixed top nav */
+  padding-left: 8%;            /* Percentage-based padding for better "air" */
+  padding-right: 8%;
   margin: 0 auto;
-  max-width: 110em;
+  max-width: 1400px;           /* Standard max width for readability */
+  width: 100%;
 }
 
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 980px) {
-  #top-nav { flex-direction: column; height: auto; padding: 1em; }
-  #top-nav .nav-menu ul { gap: 1em; margin: 10px 0; }
-  #main .inner { padding-top: 2em !important; padding-left: 2em; padding-right: 2em; max-width: 100%; }
-  .page-title { font-size: 2.2rem !important; }
+  #top-nav { 
+    flex-direction: column; 
+    height: auto; 
+    padding: 1em; 
+    position: relative; /* Unfix on mobile to prevent overlap */
+  }
+  
+  #top-nav .nav-menu ul { 
+    gap: 1em; 
+    margin: 10px 0; 
+  }
+
+  #main > .inner,
+  section.wrapper.style1 .inner { 
+    padding-top: 2em !important; 
+    padding-left: 25px; 
+    padding-right: 25px; 
+  }
+
+  .page-title { 
+    font-size: 2.2rem !important; 
+  }
 }
