@@ -2,8 +2,8 @@
 DANIELIM.CO GLOBAL NAV & CONSISTENCY OVERRIDES
 ================================================= */
 
-/* IMPORT SOURCE SANS PRO */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 /* 1. SCROLLBAR ISOLATION & STYLING */
 html, body {
@@ -77,15 +77,16 @@ html, body {
   align-items: center;
 }
 
+/* UPDATED NAV TITLE: ROBOTO SLAB @ 700 WEIGHT */
 #top-nav .nav-title {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  font-weight: 400 !important; 
+  font-family: 'Roboto Slab', serif !important;
+  font-weight: 700 !important; 
   font-size: 19.5px !important;
   letter-spacing: 0.01em;
   margin-right: 0.8em; 
 }
 
-/* NAV MENU - UPDATED FOR SCREENSHOT LOOK */
+/* NAV MENU */
 #top-nav .nav-menu {
   display: flex;
   flex: 0 1 auto;
@@ -96,20 +97,18 @@ html, body {
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle outer border */
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.05); /* Very slight tint to the track */
+  background: rgba(0, 0, 0, 0.05);
 }
 
 #top-nav .nav-menu li {
-  /* Separator lines between buttons */
   border-right: 1px solid rgba(255, 255, 255, 0.15);
   margin: 0;
   padding: 0;
 }
 
-/* Explicitly remove any default template borders on the list items */
 #top-nav .nav-menu li::before,
 #top-nav .nav-menu li::after {
   content: none !important;
@@ -123,18 +122,18 @@ html, body {
 #top-nav .nav-menu a {
   color: #fff;
   text-decoration: none !important;
-  border: none !important; /* Kill any default borders */
-  font-weight: 500;
+  border: none !important;
+  font-weight: 700; /* Increased from 500 */
   font-size: 0.8rem;
   padding: 0.6em 1.2em;
   display: block;
   transition: background 0.2s;
 }
 
-/* HIGHLIGHTED STATE (Active and Hover) */
+/* HIGHLIGHTED STATE */
 #top-nav .nav-menu a:hover,
 #top-nav .nav-menu a.active {
-  background: #626773 !important; /* Lighter slate highlight from your screenshot */
+  background: #626773 !important;
   color: #fff !important;
 }
 
@@ -165,7 +164,7 @@ html, body {
   background: #d95c4b;
 }
 
-/* REST OF THE CSS... (Inner Header, Spacing, etc.) */
+/* INNER HEADER STYLING */
 #header {
   display: flex !important;
   justify-content: space-between;
