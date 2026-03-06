@@ -2,7 +2,7 @@
 DANIELIM.CO GLOBAL NAV & CONSISTENCY OVERRIDES
 ================================================= */
 
-/* IMPORT FONTS - Added Roboto */
+/* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
 
 /* 1. SCROLLBAR ISOLATION & STYLING */
@@ -77,13 +77,13 @@ html, body {
   align-items: center;
 }
 
-/* UPDATED NAV TITLE */
+/* UPDATED NAV TITLE: LIGHTER AND SMALLER */
 #top-nav .nav-title {
   font-family: 'Roboto', sans-serif !important;
-  font-weight: 700 !important; 
-  font-size: 19.5px !important;
-  letter-spacing: -0.01em;
-  margin-right: 0.8em; 
+  font-weight: 400 !important; /* Reduced from 700 */
+  font-size: 17px !important;   /* Reduced from 19.5px */
+  letter-spacing: 0.02em;      /* Slightly increased spacing for readability at smaller size */
+  margin-right: 1.2em; 
 }
 
 /* NAV MENU */
@@ -119,15 +119,14 @@ html, body {
   border-right: none;
 }
 
-/* INCREASED FONT WEIGHT HERE */
 #top-nav .nav-menu a {
   color: #fff;
   text-decoration: none !important;
   border: none !important;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 900 !important; /* Set to Black/900 weight */
-  font-size: 0.85rem;          /* Slightly increased size for better legibility with heavier weight */
-  letter-spacing: 0.02em;      /* Added slight spacing to prevent characters from bleeding together */
+  font-weight: 900 !important;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
   padding: 0.6em 1.2em;
   display: block;
   transition: background 0.2s;
