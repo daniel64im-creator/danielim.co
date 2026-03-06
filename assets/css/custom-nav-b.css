@@ -34,6 +34,36 @@ GLOBAL NAV & CONSISTENCY OVERRIDES
   display: none !important;
 }
 
+/* GLOBAL PAGE TITLE STYLING */
+.page-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  color: #3d4449;
+  margin-bottom: 1rem;
+}
+
+/* SECTION HEADERS (Featured Projects & Resume Sections) */
+header.major h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #3d4449;
+  border-bottom: solid 3px #f56a6a;
+  display: inline-block;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+/* PROJECT TITLES (Home Page Articles) */
+.posts article h3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3d4449;
+  margin-bottom: 0.5em;
+}
+
 /* NAV MENU LINKS */
 #top-nav .nav-menu {
   display: flex;
@@ -74,9 +104,9 @@ GLOBAL NAV & CONSISTENCY OVERRIDES
   background: #d95c4b;
 }
 
-/* MAIN CONTENT SPACING - Adjusted for removed inner header */
+/* MAIN CONTENT SPACING */
 #main > .inner {
-  padding-top: 3em !important; /* Reduced from 5em since we removed the inner logo */
+  padding-top: 3em !important;
   padding-left: 6em;
   padding-right: 6em;
   margin: 0 auto;
@@ -84,16 +114,9 @@ GLOBAL NAV & CONSISTENCY OVERRIDES
 }
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 1680px) {
-  #main .inner { padding-left: 5em; padding-right: 5em; max-width: 90em; }
-}
-
-@media (max-width: 1280px) {
-  #main .inner { padding-left: 4em; padding-right: 4em; max-width: 70em; }
-}
-
 @media (max-width: 980px) {
   #top-nav { flex-direction: column; height: auto; padding: 1em; }
   #top-nav .nav-menu ul { gap: 1em; margin: 10px 0; }
   #main .inner { padding-top: 2em !important; padding-left: 2em; padding-right: 2em; max-width: 100%; }
+  .page-title { font-size: 2.2rem !important; }
 }

@@ -7,47 +7,6 @@
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
-<style>
-
-#main .inner {
-	padding-top: 2rem;
-	max-width: 110em;
-	margin: auto;
-}
-
-.page-title {
-	font-size: 2.6rem;
-	font-weight: 700;
-	margin-bottom: .5rem;
-}
-
-.project-meta {
-	color: #666;
-	font-size: .9rem;
-	margin-bottom: 1.5rem;
-}
-
-.tags {
-	font-size: .8rem;
-	color: #555;
-	margin-bottom: 2rem;
-}
-
-.section-title {
-	margin-top: 2rem;
-}
-
-.arch-box {
-	background:#fafafa;
-	border:1px solid #e6e6e6;
-	padding:1rem;
-	border-radius:6px;
-	font-family: monospace;
-	margin-top:1rem;
-}
-
-</style>
-
 </head>
 
 <body class="is-preload">
@@ -74,32 +33,24 @@
 <div id="main">
 <div class="inner">
 
-<header id="header">
-<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
-</header>
-
-
 <section>
 
-<div class="page-title">
-CRM Data Enrichment Initiative (~9,000 Accounts)
-</div>
+<h1 class="page-title">CRM Data Enrichment Initiative (~9,000 Accounts)</h1>
 
 <div class="project-meta">
 Data Infrastructure System
 </div>
 
 <div class="tags">
-CRM • Data Normalization • Data Quality • Salesforce
+CRM â€¢ Data Normalization â€¢ Data Quality â€¢ Salesforce
 </div>
 
 <p>
-Large‑scale firmographic cleanup and structured re‑import designed to restore CRM reliability
+Largeâ€‘scale firmographic cleanup and structured reâ€‘import designed to restore CRM reliability
 for segmentation, reporting, and outbound targeting across thousands of institutional accounts.
 </p>
 
 </section>
-
 
 <section>
 
@@ -113,7 +64,6 @@ workflow to normalize these fields and restore CRM data integrity.
 </p>
 
 </section>
-
 
 <section>
 
@@ -129,21 +79,20 @@ workflow to normalize these fields and restore CRM data integrity.
 
 </section>
 
-
 <section>
 
 <header class="major section-title"><h2>Architecture</h2></header>
 
 <ul>
-<li><strong>Full Population Export</strong> — Extracted the complete account dataset requiring normalization.</li>
+<li><strong>Full Population Export</strong> â€” Extracted the complete account dataset requiring normalization.</li>
 
-<li><strong>Data Standardization Layer</strong> — Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
+<li><strong>Data Standardization Layer</strong> â€” Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
 
-<li><strong>ID‑Based Mapping</strong> — All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
+<li><strong>IDâ€‘Based Mapping</strong> â€” All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
 
-<li><strong>Structured Re‑Import</strong> — Coordinated staged re‑upload with internal systems owners to avoid overwrite conflicts.</li>
+<li><strong>Structured Reâ€‘Import</strong> â€” Coordinated staged reâ€‘upload with internal systems owners to avoid overwrite conflicts.</li>
 
-<li><strong>Pre‑Import QA Validation</strong> — Sampled dataset segments to validate formatting consistency and duplication risks.</li>
+<li><strong>Preâ€‘Import QA Validation</strong> â€” Sampled dataset segments to validate formatting consistency and duplication risks.</li>
 </ul>
 
 <div class="arch-box">
@@ -151,15 +100,14 @@ workflow to normalize these fields and restore CRM data integrity.
 System Workflow
 
 Salesforce Export  
-→ Data Normalization Layer  
-→ QA Sampling  
-→ Structured Re‑Import  
-→ Clean CRM Dataset
+â†’ Data Normalization Layer  
+â†’ QA Sampling  
+â†’ Structured Reâ€‘Import  
+â†’ Clean CRM Dataset
 
 </div>
 
 </section>
-
 
 <section>
 
@@ -174,7 +122,6 @@ Salesforce Export
 
 </section>
 
-
 <section>
 
 <header class="major section-title"><h2>Scale</h2></header>
@@ -186,7 +133,6 @@ Salesforce Export
 </ul>
 
 </section>
-
 
 <section>
 
@@ -201,7 +147,6 @@ Salesforce Export
 
 </section>
 
-
 <section>
 
 <header class="major section-title"><h2>Future Improvements</h2></header>
@@ -214,15 +159,12 @@ Salesforce Export
 
 </section>
 
-
 <ul class="actions section-title">
 <li><a href="../projects-library.html" class="button">Back to Projects</a></li>
 </ul>
 
-
 </div>
 </div>
-
 
 <div id="sidebar">
 <div class="inner">
