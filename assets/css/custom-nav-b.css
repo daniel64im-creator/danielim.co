@@ -60,12 +60,12 @@ html, body {
   left: 0;
   width: 100%;
   height: 50px;
-  background: #2e3141;
+  background: #3c4049; /* Matched to the slate-grey in reference screenshot */
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Changed to push contact button to far right */
-  padding: 0 3%; 
+  justify-content: space-between;
+  padding: 0 1% 0 3%; 
   z-index: 10000;
 }
 
@@ -109,11 +109,11 @@ html, body {
 
 #top-nav .nav-menu a {
   color: #fff;
-  text-decoration: none !important; /* Forces removal of underline/dots */
-  border-bottom: none !important;   /* Specifically kills the dotted line */
+  text-decoration: none !important;
+  border-bottom: none !important;
   font-weight: 500;
   font-size: 0.8rem;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.2em;
   display: block;
   transition: background 0.2s;
 }
@@ -124,9 +124,11 @@ html, body {
   color: #fff;
 }
 
-/* CONTACT BUTTON - RECTANGLE WITH ROUNDED CORNERS */
+/* CONTACT BUTTON - SLIGHTLY REDUCED HEIGHT */
 #top-nav .nav-contact {
-  margin-left: auto; /* Ensures it stays on the far right */
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #top-nav .nav-contact a {
@@ -134,11 +136,15 @@ html, body {
   background: #f56a6a;
   text-decoration: none !important;
   border-bottom: none !important;
-  padding: 0.5em 1.2em;
-  border-radius: 4px; /* Rounded rectangle look */
-  font-weight: 600;
-  font-size: 0.8rem;
+  padding: 0 2.5em; /* Horizontal padding remains wide */
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
   transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75%; /* Reduced slightly from 85% to create a cleaner margin */
 }
 
 #top-nav .nav-contact a:hover {
@@ -205,7 +211,8 @@ html, body {
   html, body { overflow: auto; height: auto; }
   #wrapper { height: auto; margin-top: 0; overflow-y: visible; }
   #top-nav { flex-direction: column; height: auto; padding: 1em; position: relative; align-items: flex-start; }
-  #top-nav .nav-contact { margin-left: 0; margin-top: 10px; }
+  #top-nav .nav-contact { margin-left: 0; margin-top: 10px; width: 100%; }
+  #top-nav .nav-contact a { width: 100%; height: 35px; padding: 0; }
   #header { flex-direction: column; align-items: flex-start; }
   #header .icons { margin-top: 1em; }
   #header .icons li { margin-left: 0; margin-right: 1.5em; }
