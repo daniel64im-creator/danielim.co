@@ -182,8 +182,8 @@ html, body {
   color: #3d4449;
   text-decoration: none !important;
   border-bottom: none !important;
+  /* SOLUTION: Limits clickable area to the text width */
   display: inline-block;
-  width: fit-content; /* Limits clickable area to text width */
 }
 
 #header .logo strong {
