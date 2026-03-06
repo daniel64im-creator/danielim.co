@@ -15,11 +15,19 @@
 				margin: 0 auto;
 				max-width: 110em;
 			}
+
 			.page-title {
 				font-size: 3rem;
 				font-weight: 700;
+				margin-bottom: 0.3rem;
+			}
+
+			.project-count {
+				color: #777;
+				font-size: 0.9rem;
 				margin-bottom: 1rem;
 			}
+
 			.library-container {
 				display: flex;
 				gap: 2rem;
@@ -29,6 +37,7 @@
 				margin-left: auto;
 				margin-right: auto;
 			}
+
 			.library-left {
 				width: 35%;
 				min-width: 260px;
@@ -37,14 +46,15 @@
 				padding-right: 2em;
 				max-height: 70vh;
 				overflow: auto;
-				background: none;
 			}
+
 			.library-right {
 				width: 65%;
 				padding-left: 2em;
 				min-height: 50vh;
 				max-width: 100%;
 			}
+
 			.category-title {
 				font-size: 0.9rem;
 				font-weight: 700;
@@ -53,6 +63,7 @@
 				margin-bottom: 0.5rem;
 				color: #888;
 			}
+
 			.project-item {
 				cursor: pointer;
 				padding: 0.55rem 0.5rem;
@@ -61,13 +72,43 @@
 				line-height: 1.2;
 				transition: background 0.15s;
 			}
+
 			.project-item:hover { background-color: #f5f5f5; }
-			.project-item.active { background-color: #eaeaea; font-weight: 700; }
-			.preview-title { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.35rem; }
-			.preview-meta { color: #777; margin-bottom: 1rem; }
-			.preview-section { margin-top: 1.25rem; }
-			.preview-section h3 { margin-bottom: 0.4rem; }
-			.preview-section p { margin-bottom: 0; }
+
+			.project-item.active {
+				background-color: #eaeaea;
+				font-weight: 700;
+			}
+
+			.preview-title {
+				font-size: 1.6rem;
+				font-weight: 800;
+				margin-bottom: 0.35rem;
+			}
+
+			.preview-meta {
+				color: #777;
+				margin-bottom: 0.4rem;
+			}
+
+			.preview-tags {
+				margin-bottom: 1rem;
+				font-size: 0.8rem;
+				color: #555;
+			}
+
+			.preview-section {
+				margin-top: 1.25rem;
+			}
+
+			.preview-section h3 {
+				margin-bottom: 0.4rem;
+			}
+
+			.preview-section p {
+				margin-bottom: 0;
+			}
+
 		</style>
 	</head>
 
@@ -91,13 +132,19 @@
 
 			<div id="main">
 				<div class="inner">
+
 					<header id="header">
 						<a href="index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
 					</header>
 
 					<section>
 						<div class="page-title">Project Library</div>
-						<p>Complete index of governance systems, automation workflows, reporting layers, and revenue infrastructure initiatives.</p>
+						<div class="project-count">10 Operational Systems</div>
+
+						<p>
+						Complete index of governance systems, automation workflows,
+						reporting layers, and revenue infrastructure initiatives.
+						</p>
 					</section>
 
 					<section>
@@ -105,12 +152,12 @@
 
 							<div class="library-left" id="library-left">
 
-								<div class="category-title">Governance & Policy Systems</div>
+								<div class="category-title">Governance Systems</div>
 								<div class="project-item" data-key="allocation">Customer Allocation & Cross-Sell Governance</div>
 								<div class="project-item" data-key="allocation-infra">Team Lead Customer Allocation Infrastructure</div>
-								<div class="project-item" data-key="pip">Performance Improvement Plan (PIP) Governance Framework</div>
+								<div class="project-item" data-key="pip">Performance Improvement Plan Governance Framework</div>
 
-								<div class="category-title">Data Quality & Standardization</div>
+								<div class="category-title">Data Infrastructure</div>
 								<div class="project-item" data-key="enrichment">CRM Data Enrichment Initiative (~9,000 Accounts)</div>
 								<div class="project-item" data-key="fte">Instant FTE Lookup for SDR Prospecting</div>
 
@@ -118,10 +165,10 @@
 								<div class="project-item" data-key="demo-email">Salesforce Demo Email Capture Automation</div>
 								<div class="project-item" data-key="notifications">Real-Time Demo Booking Notifications</div>
 
-								<div class="category-title">Reporting & Visibility</div>
+								<div class="category-title">Operational Intelligence</div>
 								<div class="project-item" data-key="roe-report">CRM Outreach Eligibility & ROE Compliance Reporting</div>
 
-								<div class="category-title">Lead Intake & Targeting</div>
+								<div class="category-title">Revenue Programs</div>
 								<div class="project-item" data-key="conference">Conference Lead Cleanup & Redistribution</div>
 								<div class="project-item" data-key="advisory">Executive Customer Advisory Targeting</div>
 
@@ -129,197 +176,171 @@
 
 							<div class="library-right" id="preview-pane">
 								<div class="preview-title">Select a project</div>
-								<div class="preview-meta">Preview opens here (right pane).</div>
-								<p>Click a project on the left to view a concise summary and open the full write-up.</p>
+								<div class="preview-meta">Preview opens here.</div>
+								<p>Click a project on the left to view the system summary.</p>
 							</div>
 
 						</div>
-
-						<ul class="actions" style="margin-top:2rem;">
-							<li><a href="index.html" class="button">Back to Flagship Projects</a></li>
-						</ul>
 					</section>
 
 				</div>
 			</div>
 
-			<div id="sidebar">
-				<div class="inner">
-					<nav id="menu">
-						<header class="major"><h2>Navigation</h2></header>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="projects-library.html">Projects</a></li>
-							<li><a href="resume.html">Resume</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</nav>
-					<footer id="footer">
-						<p class="copyright">&copy; Daniel Im</p>
-					</footer>
-				</div>
-			</div>
-
 		</div>
 
-		<script>
-			const projectData = {
-				"allocation": {
-					category: "Governance & Policy Systems",
-					link: "projects/allocation-TL.html",
-					structuralGap: "Ownership ambiguity created cross-product conflicts and inconsistent expansion behavior.",
-					architecture: "Allocation tiers + hold states + cross-product protections to control who can outreach and when.",
-					impact: "Improved clarity, reduced internal friction, and lowered duplicate outreach incidents."
-				},
-				"allocation-infra": {
-					category: "Governance & Policy Systems",
-					link: "projects/allocation-SDR.html",
-					structuralGap: "No scalable operating system for holds, handoffs, and exceptions as allocation complexity increased.",
-					architecture: "Standardized allocation infrastructure (holds, exceptions, reassignment paths) with visibility for team lead control.",
-					impact: "Reduced disputes, improved handoff speed, and made allocation behavior repeatable at scale."
-				},
-				"pip": {
-					category: "Governance & Policy Systems",
-					link: "projects/pip-governance.html",
-					structuralGap: "Performance intervention lacked consistent triggers, timelines, and documentation standards.",
-					architecture: "Defined trigger criteria + phased timeline + KPI expectations + standardized documentation package.",
-					impact: "Improved fairness, reduced ambiguity, and created reusable performance governance for onboarding."
-				},
-				"enrichment": {
-					category: "Data Quality & Standardization",
-					link: "projects/enrichment.html",
-					structuralGap: "Thousands of accounts had missing/incorrect firmographics and inconsistent institutional naming.",
-					architecture: "ID-based enrichment workflow with normalization rules and QA pass before structured re-import.",
-					impact: "Improved segmentation accuracy and increased confidence in reporting across ~9,000 accounts."
-				},
-				"fte": {
-					category: "Data Quality & Standardization",
-					link: "projects/fte-lookup.html",
-					structuralGap: "Reps lacked a fast, consistent size signal during prospecting; lookups were slow and inconsistent.",
-					architecture: "Instant lookup workflow that returns FTE context in a standardized format at point of prospecting.",
-					impact: "Reduced time-to-context and improved prioritization consistency across targeting workflows."
-				},
-				"demo-email": {
-					category: "Workflow Automation",
-					link: "projects/demo-email.html",
-					structuralGap: "Demo attendee email wasn’t reliably available on the Opportunity for HubSpot enrollment.",
-					architecture: "Scoped record-triggered Flow tied to “Client Demo” event creation that writes the required Opportunity email.",
-					impact: "Reduced manual copying and improved reliability of post-demo marketing enrollment."
-				},
-				"notifications": {
-					category: "Workflow Automation",
-					link: "projects/demo-notifications.html",
-					structuralGap: "Stakeholders lacked real-time visibility into booked demos without manual monitoring.",
-					architecture: "Event-triggered notification logic with filters to keep volume low and signal high.",
-					impact: "Improved operational visibility while avoiding notification noise."
-				},
-				"roe-report": {
-					category: "Reporting & Visibility",
-					link: "projects/roe-compliance-reporting.html",
-					structuralGap: "ROE eligibility checks were manual; managers lacked a repeatable compliance view.",
-					architecture: "Eligibility definitions + compliance reporting layer to surface protected contacts, conflicts, and exceptions.",
-					impact: "Reduced manual auditing and increased ROE adherence through visibility."
-				},
-				"conference": {
-					category: "Lead Intake & Targeting",
-					link: "projects/lead-cleanup.html",
-					structuralGap: "Event lead lists arrived raw with duplicates and unclear routing; follow-up was delayed and inconsistent.",
-					architecture: "Normalization + deduplication + product categorization + ownership routing into usable outreach queues.",
-					impact: "Faster post-event follow-up and clearer accountability for who owns what."
-				},
-				"advisory": {
-					category: "Lead Intake & Targeting",
-					link: "projects/executive-advisory-targeting.html",
-					structuralGap: "Executive invite lists were ad hoc and hard to justify; targeting quality was inconsistent.",
-					architecture: "Selection criteria + segmentation workflow + validation pass to produce a clean, reviewable invite list.",
-					impact: "Higher confidence targeting and a reusable system for future advisory cycles."
-				}
-			};
+<script>
+const projectData = {
 
-			function renderPreview(key) {
-				const pane = document.getElementById("preview-pane");
-				const data = projectData[key];
+"allocation": {
+category: "Governance Systems",
+tags: "Salesforce • Governance • Allocation",
+link: "projects/allocation-TL.html",
+structuralGap: "Ownership ambiguity created cross-product conflicts and inconsistent expansion behavior.",
+architecture: "Allocation tiers + hold states + cross-product protections controlling outreach rights.",
+impact: "Reduced internal conflict and duplicate outreach."
+},
 
-				if (!data) {
-					pane.innerHTML = `
-						<div class="preview-title">Not Found</div>
-						<div class="preview-meta">No preview is configured for this item.</div>
-						<p>Add this project to <code>projectData</code> in the page script.</p>
-					`;
-					return;
-				}
+"allocation-infra": {
+category: "Governance Systems",
+tags: "Governance • Routing • SDR Operations",
+link: "projects/allocation-SDR.html",
+structuralGap: "No scalable system for holds, handoffs, and reassignment paths.",
+architecture: "Standardized routing infrastructure supporting exceptions and ownership changes.",
+impact: "Reduced disputes and improved operational consistency."
+},
 
-				pane.innerHTML = `
-					<div class="preview-title">${escapeHtmlTitle(getTitleFromKey(key))}</div>
-					<div class="preview-meta">${escapeHtml(data.category)}</div>
+"pip": {
+category: "Governance Systems",
+tags: "Performance Management • Governance",
+link: "projects/pip-governance.html",
+structuralGap: "Performance interventions lacked structure and documentation consistency.",
+architecture: "Trigger criteria, documentation templates, and structured timelines.",
+impact: "Improved fairness and operational clarity."
+},
 
-					<div class="preview-section">
-						<h3>Structural Gap</h3>
-						<p>${escapeHtml(data.structuralGap)}</p>
-					</div>
+"enrichment": {
+category: "Data Infrastructure",
+tags: "Data Quality • CRM • Normalization",
+link: "projects/enrichment.html",
+structuralGap: "Thousands of accounts had missing or inconsistent firmographic data.",
+architecture: "ID‑based enrichment workflow with normalization and QA validation.",
+impact: "Improved segmentation accuracy across ~9,000 accounts."
+},
 
-					<div class="preview-section">
-						<h3>Architecture</h3>
-						<p>${escapeHtml(data.architecture)}</p>
-					</div>
+"fte": {
+category: "Data Infrastructure",
+tags: "Data Layer • Prospecting Intelligence",
+link: "projects/fte-lookup.html",
+structuralGap: "Institution size data required manual lookup across external sources.",
+architecture: "Embedded lookup system returning standardized FTE data instantly.",
+impact: "Reduced research time and improved prioritization."
+},
 
-					<div class="preview-section">
-						<h3>Operational Impact</h3>
-						<p>${escapeHtml(data.impact)}</p>
-					</div>
+"demo-email": {
+category: "Workflow Automation",
+tags: "Salesforce • Automation • Flow",
+link: "projects/demo-email.html",
+structuralGap: "Demo attendee email not reliably available on Opportunities.",
+architecture: "Record‑triggered Salesforce Flow populating email automatically.",
+impact: "Improved reliability of marketing enrollment workflows."
+},
 
-					<div class="preview-section">
-						<a href="${escapeHtml(data.link)}" class="button">Open Full Project</a>
-					</div>
-				`;
-			}
+"notifications": {
+category: "Workflow Automation",
+tags: "Automation • Notifications",
+link: "projects/demo-notifications.html",
+structuralGap: "Teams lacked immediate awareness when demos were scheduled.",
+architecture: "Event‑triggered notifications with signal filtering.",
+impact: "Improved operational visibility."
+},
 
-			function getTitleFromKey(key) {
-				const selector = '.project-item[data-key="' + key + '"]';
-				const el = document.querySelector(selector);
-				return el ? el.textContent.trim() : key;
-			}
+"roe-report": {
+category: "Operational Intelligence",
+tags: "Reporting • Compliance • CRM",
+link: "projects/roe-compliance-reporting.html",
+structuralGap: "ROE eligibility checks required manual auditing.",
+architecture: "Eligibility logic paired with compliance reporting dashboards.",
+impact: "Improved enforcement of outreach rules."
+},
 
-			function escapeHtml(str) {
-				return String(str)
-					.replaceAll("&", "&amp;")
-					.replaceAll("<", "&lt;")
-					.replaceAll(">", "&gt;")
-					.replaceAll('"', "&quot;")
-					.replaceAll("'", "&#039;");
-			}
+"conference": {
+category: "Revenue Programs",
+tags: "Lead Ops • Data Cleanup",
+link: "projects/lead-cleanup.html",
+structuralGap: "Conference lead lists were unstructured and delayed follow‑up.",
+architecture: "Normalization and routing workflow for immediate SDR distribution.",
+impact: "Faster outreach and improved ownership clarity."
+},
 
-			function escapeHtmlTitle(str) { return escapeHtml(str); }
+"advisory": {
+category: "Revenue Programs",
+tags: "Targeting • Executive Programs",
+link: "projects/executive-advisory-targeting.html",
+structuralGap: "Executive targeting lists lacked consistent selection criteria.",
+architecture: "Segmented targeting workflow with validation pass.",
+impact: "Improved credibility of advisory invitations."
+}
 
-			function setActiveItem(clickedEl) {
-				document.querySelectorAll(".project-item").forEach(i => i.classList.remove("active"));
-				clickedEl.classList.add("active");
-			}
+};
 
-			document.addEventListener("DOMContentLoaded", () => {
-				document.querySelectorAll(".project-item").forEach(item => {
-					item.addEventListener("click", () => {
-						const key = item.getAttribute("data-key");
-						setActiveItem(item);
-						renderPreview(key);
-					});
-				});
+function renderPreview(key) {
+const pane = document.getElementById("preview-pane");
+const data = projectData[key];
 
-				const first = document.querySelector(".project-item");
-				if (first) {
-					const key = first.getAttribute("data-key");
-					setActiveItem(first);
-					renderPreview(key);
-				}
-			});
-		</script>
+pane.innerHTML = `
+<div class="preview-title">${getTitleFromKey(key)}</div>
+<div class="preview-meta">${data.category}</div>
+<div class="preview-tags">${data.tags}</div>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+<div class="preview-section">
+<h3>Structural Gap</h3>
+<p>${data.structuralGap}</p>
+</div>
 
-	</body>
+<div class="preview-section">
+<h3>Architecture</h3>
+<p>${data.architecture}</p>
+</div>
+
+<div class="preview-section">
+<h3>Operational Impact</h3>
+<p>${data.impact}</p>
+</div>
+
+<div class="preview-section">
+<a href="${data.link}" class="button">Open Full Project</a>
+</div>
+`;
+}
+
+function getTitleFromKey(key) {
+const el = document.querySelector('.project-item[data-key="'+key+'"]');
+return el ? el.textContent.trim() : key;
+}
+
+function setActiveItem(el) {
+document.querySelectorAll(".project-item").forEach(i=>i.classList.remove("active"));
+el.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+document.querySelectorAll(".project-item").forEach(item=>{
+item.addEventListener("click",()=>{
+const key=item.getAttribute("data-key");
+setActiveItem(item);
+renderPreview(key);
+});
+});
+
+const first=document.querySelector(".project-item");
+if(first){
+setActiveItem(first);
+renderPreview(first.getAttribute("data-key"));
+}
+
+});
+</script>
+
+</body>
 </html>

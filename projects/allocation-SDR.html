@@ -1,126 +1,219 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Allocation Infrastructure | Project Details</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
+<head>
+<title>Team Lead Customer Allocation Infrastructure | Revenue Operations Project</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
-		<style>
-			#main .inner { padding-top: 2rem; }
-			#header .logo { font-size: 1.35rem; }
-			.page-title { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.75rem; }
-			.section-title { margin-top: 2rem; }
-		</style>
-	</head>
+<style>
+#main .inner{padding-top:2rem;max-width:110em;margin:auto;}
+.page-title{font-size:2.6rem;font-weight:700;margin-bottom:.5rem;}
+.project-meta{color:#666;font-size:.9rem;margin-bottom:1.5rem;}
+.tags{font-size:.8rem;color:#555;margin-bottom:2rem;}
+.section-title{margin-top:2rem;}
+.arch-box{background:#fafafa;border:1px solid #e6e6e6;padding:1rem;border-radius:6px;font-family:monospace;margin-top:1rem;}
+</style>
 
-	<body class="is-preload">
-			<header id="top-nav">
-				<div class="nav-title">Daniel Im | Revenue Operations</div>
-				<div class="nav-menu">
-					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="../projects-library.html">Projects</a></li>
-						
-						<li><a href="../resume.html">Resume</a></li>
-						<li><a href="../about.html">About</a></li>
-					</ul>
-				</div>
-				<div class="nav-contact">
-					<a href="../contact.html">Contact</a>
-				</div>
-			</header>
+</head>
 
-		<div id="wrapper">
-			<div id="main">
-				<div class="inner">
-					<header id="header">
-						<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
-					</header>
+<body class="is-preload">
 
-					<section>
-						<div class="page-title">Team Lead Customer Allocation Infrastructure</div>
-						<p>Operating system for allocation, holds, and reassignment that kept ownership structured as the team scaled.</p>
-					</section>
+<header id="top-nav">
+<div class="nav-title">Daniel Im | Revenue Operations</div>
 
-					<section>
-						<header class="major"><h2>Context</h2></header>
-						<ul>
-							<li>Allocation needed to be consistent across reps, segments, and product lines.</li>
-							<li>Ownership changes and exceptions required an audit-friendly process.</li>
-							<li>Goal: reduce ambiguity and prevent duplicate outreach.</li>
-						</ul>
+<div class="nav-menu">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+</ul>
+</div>
 
-						<header class="major section-title"><h2>Structural Problems</h2></header>
-						<ul>
-							<li>No single source of truth for “who owns what” at any moment.</li>
-							<li>Handoffs and temporary holds created visibility gaps.</li>
-							<li>Manual processes increased mismatch risk and disputes.</li>
-						</ul>
+<div class="nav-contact">
+<a href="../contact.html">Contact</a>
+</div>
+</header>
 
-						<header class="major section-title"><h2>Architecture Built</h2></header>
-						<ul>
-							<li><strong>Allocation Structure:</strong> Defined how accounts/leads were assigned and when reassignment was allowed.</li>
-							<li><strong>Hold Logic:</strong> Temporary states to prevent concurrent outreach during active work or transitions.</li>
-							<li><strong>Exception Handling:</strong> Rules for edge cases (conflicts, stale ownership, reassignment requests).</li>
-							<li><strong>Operational Visibility:</strong> Clear view of current ownership and recent changes.</li>
-						</ul>
+<div id="wrapper">
 
-						<header class="major section-title"><h2>Governance & Controls</h2></header>
-						<ul>
-							<li>Standard process reduced “ad hoc” reassignment decisions.</li>
-							<li>Consistent rules improved fairness and compliance.</li>
-							<li>Manager-controlled exception handling prevented abuse.</li>
-						</ul>
+<div id="main">
+<div class="inner">
 
-						<header class="major section-title"><h2>Impact</h2></header>
-						<ul>
-							<li>Reduced allocation disputes and duplicate outreach risk.</li>
-							<li>Improved handoff speed and ownership clarity.</li>
-							<li>Created a scalable allocation model that could grow with team size.</li>
-						</ul>
+<header id="header">
+<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
+</header>
 
-						<header class="major section-title"><h2>Next Improvements</h2></header>
-						<ul>
-							<li>Add reporting layer for allocation changes and exceptions.</li>
-							<li>Automate conflict detection when multiple workstreams exist.</li>
-							<li>Strengthen audit trail (who/what/when/why).</li>
-						</ul>
+<section>
 
-						<ul class="actions section-title">
-							<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-						</ul>
-					</section>
+<div class="page-title">
+Team Lead Customer Allocation Infrastructure
+</div>
 
-				</div>
-			</div>
+<div class="project-meta">
+Account Ownership Governance System
+</div>
 
-			<div id="sidebar">
-				<div class="inner">
-					<nav id="menu">
-						<header class="major"><h2>Navigation</h2></header>
-						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="../projects-library.html">Projects</a></li>
-							<li><a href="../resume.html">Resume</a></li>
-							<li><a href="../about.html">About</a></li>
-							<li><a href="../contact.html">Contact</a></li>
-						</ul>
-					</nav>
-					<footer id="footer">
-						<p class="copyright">&copy; Daniel Im</p>
-					</footer>
-				</div>
-			</div>
+<div class="tags">
+Sales Operations • Ownership Governance • SDR Allocation
+</div>
 
-		</div>
+<p>
+Operational allocation framework designed to maintain clear customer
+ownership across SDR teams while preventing duplicate outreach and
+enforcing structured reassignment workflows.
+</p>
 
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
+</section>
 
-	</body>
+<section>
+
+<header class="major section-title"><h2>System Overview</h2></header>
+
+<p>
+As SDR teams expanded across multiple product segments, maintaining
+accurate account ownership became increasingly complex. Allocation,
+temporary holds, and reassignment events introduced operational risk
+without a centralized system controlling ownership transitions.
+</p>
+
+<p>
+This project introduced a structured allocation infrastructure designed to
+define ownership rules, manage hold states, and document reassignment
+decisions.
+</p>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Structural Gap</h2></header>
+
+<ul>
+<li>No centralized system defining account ownership.</li>
+<li>Temporary work states created visibility gaps.</li>
+<li>Manual handoffs increased duplicate outreach risk.</li>
+<li>Disputes occurred when ownership was unclear.</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Architecture</h2></header>
+
+<ul>
+
+<li><strong>Allocation Framework</strong> — Defined assignment rules across SDR teams.</li>
+
+<li><strong>Hold State Logic</strong> — Temporary protection state preventing concurrent outreach.</li>
+
+<li><strong>Exception Handling</strong> — Governance process for reassignment requests.</li>
+
+<li><strong>Ownership Visibility</strong> — Operational view of current allocation and changes.</li>
+
+</ul>
+
+<div class="arch-box">
+
+Customer Allocation Workflow
+
+Account Identified  
+→ SDR Ownership Assigned  
+→ Hold State (Active Work)  
+→ Reassignment Review  
+→ Ownership Updated
+
+</div>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Tools</h2></header>
+
+<ul>
+<li>Google Sheets allocation framework</li>
+<li>Shared SDR working datasets</li>
+<li>Manager-controlled governance rules</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Scale</h2></header>
+
+<ul>
+<li>Primary users: SDR teams and team leads</li>
+<li>Scope: multi-product SDR organization</li>
+<li>Objective: maintain clear ownership across prospecting operations</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Operational Impact</h2></header>
+
+<ul>
+<li>Reduced allocation disputes across SDR teams.</li>
+<li>Prevented duplicate outreach activity.</li>
+<li>Improved transparency during ownership changes.</li>
+<li>Created scalable allocation governance model.</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Future Improvements</h2></header>
+
+<ul>
+<li>Add reporting layer for allocation change tracking.</li>
+<li>Automate conflict detection during reassignment events.</li>
+<li>Strengthen audit trail for ownership transitions.</li>
+</ul>
+
+</section>
+
+<ul class="actions section-title">
+<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
+</ul>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+
+<nav id="menu">
+<header class="major"><h2>Navigation</h2></header>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<footer id="footer">
+<p class="copyright">&copy; Daniel Im</p>
+</footer>
+
+</div>
+</div>
+
+</div>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
 </html>

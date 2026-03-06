@@ -1,127 +1,213 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Demo Email Capture | Project Details</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
+<head>
+<title>Salesforce Demo Email Capture Automation | Revenue Operations Project</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
-		<style>
-			#main .inner { padding-top: 2rem; }
-			#header .logo { font-size: 1.35rem; }
-			.page-title { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.75rem; }
-			.section-title { margin-top: 2rem; }
-		</style>
-	</head>
+<style>
+#main .inner{padding-top:2rem;max-width:110em;margin:auto;}
+.page-title{font-size:2.6rem;font-weight:700;margin-bottom:.5rem;}
+.project-meta{color:#666;font-size:.9rem;margin-bottom:1.5rem;}
+.tags{font-size:.8rem;color:#555;margin-bottom:2rem;}
+.section-title{margin-top:2rem;}
+.arch-box{background:#fafafa;border:1px solid #e6e6e6;padding:1rem;border-radius:6px;font-family:monospace;margin-top:1rem;}
+</style>
 
-	<body class="is-preload">
-			<header id="top-nav">
-				<div class="nav-title">Daniel Im | Revenue Operations</div>
-				<div class="nav-menu">
-					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="../projects-library.html">Projects</a></li>
-						
-						<li><a href="../resume.html">Resume</a></li>
-						<li><a href="../about.html">About</a></li>
-					</ul>
-				</div>
-				<div class="nav-contact">
-					<a href="../contact.html">Contact</a>
-				</div>
-			</header>
+</head>
 
-		<div id="wrapper">
-			<div id="main">
-				<div class="inner">
-					<header id="header">
-						<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
-					</header>
+<body class="is-preload">
 
-					<section>
-						<div class="page-title">Salesforce Demo Email Capture Automation</div>
-						<p>Record-triggered automation to ensure demo attendee email is reliably captured at the Opportunity level for downstream marketing sync.</p>
-					</section>
+<header id="top-nav">
+<div class="nav-title">Daniel Im | Revenue Operations</div>
 
-					<section>
-						<header class="major"><h2>Context</h2></header>
-						<ul>
-							<li>Demo attendee email initially lived on the Lead record.</li>
-							<li>After Lead conversion, the required email field was not consistently present on the Opportunity.</li>
-							<li>Marketing automation relied on this Opportunity-level field for post-demo enrollment.</li>
-						</ul>
+<div class="nav-menu">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+</ul>
+</div>
 
-						<header class="major section-title"><h2>Structural Problems</h2></header>
-						<ul>
-							<li>Manual copying of email fields created inconsistency.</li>
-							<li>Missed updates resulted in incomplete marketing enrollment.</li>
-							<li>No enforcement layer guaranteed the required field was populated.</li>
-						</ul>
+<div class="nav-contact">
+<a href="../contact.html">Contact</a>
+</div>
+</header>
 
-						<header class="major section-title"><h2>Architecture Built</h2></header>
-						<ul>
-							<li><strong>Record-Triggered Flow:</strong> Activated upon creation of a “Client Demo” event.</li>
-							<li><strong>Scoped Trigger Logic:</strong> Limited execution strictly to relevant event type to prevent unintended updates.</li>
-							<li><strong>Field Mapping:</strong> Copied the primary Contact email into the Opportunity-level field used for HubSpot sync.</li>
-							<li><strong>Automation-Based Enforcement:</strong> Removed dependency on manual SDR updates.</li>
-						</ul>
+<div id="wrapper">
 
-						<header class="major section-title"><h2>Governance & Controls</h2></header>
-						<ul>
-							<li>Conditional logic restricted execution to intended workflow.</li>
-							<li>Centralized required marketing field at Opportunity object level.</li>
-							<li>Reduced human error in high-frequency demo scheduling process.</li>
-						</ul>
+<div id="main">
+<div class="inner">
 
-						<header class="major section-title"><h2>Impact</h2></header>
-						<ul>
-							<li>Improved consistency of marketing enrollment after demos.</li>
-							<li>Reduced manual copying effort for SDRs.</li>
-							<li>Increased reliability of reporting tied to demo engagement.</li>
-							<li>Strengthened CRM-to-marketing system alignment.</li>
-						</ul>
+<header id="header">
+<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
+</header>
 
-						<header class="major section-title"><h2>Next Improvements</h2></header>
-						<ul>
-							<li>Add validation rule for missing or null Contact email.</li>
-							<li>Introduce monitoring report to flag automation exceptions.</li>
-							<li>Extend logic to handle multi-attendee demo edge cases.</li>
-						</ul>
+<section>
 
-						<ul class="actions section-title">
-							<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-						</ul>
-					</section>
+<div class="page-title">
+Salesforce Demo Email Capture Automation
+</div>
 
-				</div>
-			</div>
+<div class="project-meta">
+Salesforce Automation System
+</div>
 
-			<div id="sidebar">
-				<div class="inner">
-					<nav id="menu">
-						<header class="major"><h2>Navigation</h2></header>
-						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="../projects-library.html">Projects</a></li>
-							<li><a href="../resume.html">Resume</a></li>
-							<li><a href="../about.html">About</a></li>
-							<li><a href="../contact.html">Contact</a></li>
-						</ul>
-					</nav>
-					<footer id="footer">
-						<p class="copyright">&copy; Daniel Im</p>
-					</footer>
-				</div>
-			</div>
+<div class="tags">
+Salesforce • Automation • Marketing Sync • CRM Data Integrity
+</div>
 
-		</div>
+<p>
+Record-triggered Salesforce automation ensuring demo attendee email addresses
+are consistently captured at the Opportunity level for reliable marketing
+automation enrollment and reporting.
+</p>
 
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
+</section>
 
-	</body>
+<section>
+
+<header class="major section-title"><h2>System Overview</h2></header>
+
+<p>
+The demo scheduling process relied on attendee email information that initially
+lived on Lead records. After conversion, this data was not consistently present
+on the Opportunity object, which was the required source field used by the
+marketing automation system for post-demo enrollment workflows.
+</p>
+
+<p>
+This project implemented automation to guarantee that the required email field
+was consistently populated whenever a demo event was created.
+</p>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Structural Gap</h2></header>
+
+<ul>
+<li>Demo attendee email often existed only on Lead records.</li>
+<li>Opportunity-level marketing field frequently remained empty.</li>
+<li>Manual copying created inconsistent data quality.</li>
+<li>Marketing automation enrollment failed when the field was missing.</li>
+<li>No enforcement mechanism guaranteed required data population.</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Architecture</h2></header>
+
+<ul>
+<li><strong>Record-Triggered Flow</strong> — Automation executed when a demo event record was created.</li>
+<li><strong>Scoped Trigger Logic</strong> — Execution limited specifically to “Client Demo” event types.</li>
+<li><strong>Email Field Mapping</strong> — Primary contact email copied into Opportunity-level marketing field.</li>
+<li><strong>Automation Enforcement Layer</strong> — Removed reliance on manual SDR updates.</li>
+<li><strong>Downstream System Alignment</strong> — Ensured marketing automation always received required field data.</li>
+</ul>
+
+<div class="arch-box">
+Automation Workflow
+
+Demo Event Created
+→ Flow Triggered
+→ Primary Contact Email Retrieved
+→ Opportunity Email Field Updated
+→ Marketing Automation Enrollment
+</div>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Tools</h2></header>
+
+<ul>
+<li>Salesforce CRM</li>
+<li>Salesforce Record-Triggered Flow</li>
+<li>Marketing automation integration</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Scale</h2></header>
+
+<ul>
+<li>Primary users: SDR team + marketing automation workflows</li>
+<li>Process frequency: every scheduled product demo</li>
+<li>Objects involved: Event, Contact, Opportunity</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Operational Impact</h2></header>
+
+<ul>
+<li>Improved reliability of post-demo marketing enrollment.</li>
+<li>Reduced manual data copying for SDRs.</li>
+<li>Increased CRM data integrity for demo engagement reporting.</li>
+<li>Strengthened alignment between CRM and marketing systems.</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Future Improvements</h2></header>
+
+<ul>
+<li>Add validation rule preventing demos without contact email.</li>
+<li>Create monitoring report for automation exceptions.</li>
+<li>Extend logic to support multi-attendee demo scenarios.</li>
+</ul>
+
+</section>
+
+<ul class="actions section-title">
+<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
+</ul>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+
+<nav id="menu">
+<header class="major"><h2>Navigation</h2></header>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<footer id="footer">
+<p class="copyright">&copy; Daniel Im</p>
+</footer>
+
+</div>
+</div>
+
+</div>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
 </html>

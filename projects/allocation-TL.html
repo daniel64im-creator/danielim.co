@@ -1,129 +1,261 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Customer Allocation & Cross-Sell | Project Details</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
+<head>
+<title>Customer Allocation & Cross‑Sell Governance | Revenue Operations Project</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
-		<style>
-			#main .inner { padding-top: 2rem; }
-			#header .logo { font-size: 1.35rem; }
-			.page-title { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.75rem; }
-			.section-title { margin-top: 2rem; }
-		</style>
-	</head>
+<style>
 
-	<body class="is-preload">
-			<header id="top-nav">
-				<div class="nav-title">Daniel Im | Revenue Operations</div>
-				<div class="nav-menu">
-					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="../projects-library.html">Projects</a></li>
-						
-						<li><a href="../resume.html">Resume</a></li>
-						<li><a href="../about.html">About</a></li>
-					</ul>
-				</div>
-				<div class="nav-contact">
-					<a href="../contact.html">Contact</a>
-				</div>
-			</header>
+#main .inner{
+padding-top:2rem;
+max-width:110em;
+margin:auto;
+}
 
-		<div id="wrapper">
-			<div id="main">
-				<div class="inner">
-					<header id="header">
-						<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
-					</header>
+.page-title{
+font-size:2.6rem;
+font-weight:700;
+margin-bottom:.5rem;
+}
 
-					<section>
-						<div class="page-title">Customer Allocation & Cross-Sell Governance</div>
-						<p>Structured ownership and expansion framework to reduce internal conflict, protect active opportunities, and prevent duplicate outreach.</p>
-					</section>
+.project-meta{
+color:#666;
+font-size:.9rem;
+margin-bottom:1.5rem;
+}
 
-					<section>
-						<header class="major"><h2>Context</h2></header>
-						<ul>
-							<li>Multi-product sales environment with overlapping expansion opportunities.</li>
-							<li>Accounts could have simultaneous activity across different product lines.</li>
-							<li>No clearly enforced cross-product ownership structure.</li>
-						</ul>
+.tags{
+font-size:.8rem;
+color:#555;
+margin-bottom:2rem;
+}
 
-						<header class="major section-title"><h2>Structural Problems</h2></header>
-						<ul>
-							<li>Ambiguity over who could work expansion within shared accounts.</li>
-							<li>Contacts tied to active opportunities were not formally protected.</li>
-							<li>Manual handoffs created visibility gaps and friction between teams.</li>
-							<li>Duplicate outreach risk across products.</li>
-						</ul>
+.section-title{
+margin-top:2rem;
+}
 
-						<header class="major section-title"><h2>Architecture Built</h2></header>
-						<ul>
-							<li><strong>Ownership Tiers:</strong> Defined structured rules determining which roles could work which accounts and under what conditions.</li>
-							<li><strong>Hold States:</strong> Temporary “hold” classifications to prevent simultaneous outreach during active work or transition periods.</li>
-							<li><strong>Cross-Product Guardrails:</strong> Allowed Product B outreach while protecting contacts actively involved in Product A open opportunities.</li>
-							<li><strong>Reassignment Model:</strong> Clear process for ownership transfers without losing account visibility or historical context.</li>
-							<li><strong>Decision Logic Documentation:</strong> Formalized allowable outreach conditions to reduce reliance on informal judgment.</li>
-						</ul>
+.arch-box{
+background:#fafafa;
+border:1px solid #e6e6e6;
+padding:1rem;
+border-radius:6px;
+font-family:monospace;
+margin-top:1rem;
+}
 
-						<header class="major section-title"><h2>Governance & Controls</h2></header>
-						<ul>
-							<li>Structured documentation reinforced consistent enforcement.</li>
-							<li>Clear boundaries reduced subjective interpretation of “who can work what.”</li>
-							<li>Manual review process ensured alignment during complex edge cases.</li>
-						</ul>
+</style>
 
-						<header class="major section-title"><h2>Impact</h2></header>
-						<ul>
-							<li>Reduced internal friction during expansion workflows.</li>
-							<li>Decreased duplicate outreach incidents across products.</li>
-							<li>Improved clarity for SDRs and AEs on allowable outreach behavior.</li>
-							<li>Strengthened operational discipline across shared accounts.</li>
-						</ul>
+</head>
 
-						<header class="major section-title"><h2>Next Improvements</h2></header>
-						<ul>
-							<li>Introduce automated conflict detection when multiple open opportunities exist.</li>
-							<li>Add structured audit trail for ownership changes.</li>
-							<li>Surface expansion eligibility flags directly on account page layouts.</li>
-						</ul>
+<body class="is-preload">
 
-						<ul class="actions section-title">
-							<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-						</ul>
-					</section>
+<header id="top-nav">
+<div class="nav-title">Daniel Im | Revenue Operations</div>
 
-				</div>
-			</div>
+<div class="nav-menu">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+</ul>
+</div>
 
-			<div id="sidebar">
-				<div class="inner">
-					<nav id="menu">
-						<header class="major"><h2>Navigation</h2></header>
-						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="../projects-library.html">Projects</a></li>
-							<li><a href="../resume.html">Resume</a></li>
-							<li><a href="../about.html">About</a></li>
-							<li><a href="../contact.html">Contact</a></li>
-						</ul>
-					</nav>
-					<footer id="footer">
-						<p class="copyright">&copy; Daniel Im</p>
-					</footer>
-				</div>
-			</div>
+<div class="nav-contact">
+<a href="../contact.html">Contact</a>
+</div>
+</header>
 
-		</div>
+<div id="wrapper">
 
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
+<div id="main">
+<div class="inner">
 
-	</body>
+<header id="header">
+<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
+</header>
+
+
+<section>
+
+<div class="page-title">
+Customer Allocation & Cross‑Sell Governance
+</div>
+
+<div class="project-meta">
+Governance System
+</div>
+
+<div class="tags">
+Governance • Account Ownership • SDR Operations • Salesforce
+</div>
+
+<p>
+Operational governance framework designed to control expansion behavior across
+a multi‑product sales organization. The system defined ownership rules, protected
+active opportunities, and reduced duplicate outreach risk across shared accounts.
+</p>
+
+</section>
+
+
+<section>
+
+<header class="major section-title"><h2>System Overview</h2></header>
+
+<p>
+The sales organization operated across multiple product lines targeting the same
+institutional customer base. Accounts could have simultaneous activity across
+different products, creating ambiguity around expansion ownership and outreach
+permissions. This project introduced a structured allocation and governance
+framework to control how teams interacted with shared accounts.
+</p>
+
+</section>
+
+
+<section>
+
+<header class="major section-title"><h2>Structural Gap</h2></header>
+
+<ul>
+<li>No formal ownership model governing expansion activity.</li>
+<li>Contacts involved in active opportunities were not protected.</li>
+<li>Cross‑product outreach created duplicate outreach risk.</li>
+<li>Manual handoffs introduced visibility gaps between teams.</li>
+<li>Ownership disputes slowed SDR execution.</li>
+</ul>
+
+</section>
+
+
+<section>
+
+<header class="major section-title"><h2>Architecture</h2></header>
+
+<ul>
+
+<li><strong>Ownership Tier Model</strong> — Defined clear expansion rights by role and product alignment.</li>
+
+<li><strong>Account Hold States</strong> — Introduced temporary hold classifications preventing simultaneous outreach.</li>
+
+<li><strong>Cross‑Product Guardrails</strong> — Enabled Product B outreach while protecting contacts tied to Product A opportunities.</li>
+
+<li><strong>Reassignment Protocol</strong> — Structured handoff process maintaining visibility and account history.</li>
+
+<li><strong>Decision Logic Documentation</strong> — Documented allowable outreach conditions to eliminate subjective interpretation.</li>
+
+</ul>
+
+<div class="arch-box">
+
+Governance Workflow
+
+Account Activity Detected  
+→ Ownership Tier Evaluation  
+→ Contact Protection Check  
+→ Outreach Allowed or Blocked  
+→ Reassignment Path (if required)
+
+</div>
+
+</section>
+
+
+<section>
+
+<header class="major section-title"><h2>Tools</h2></header>
+
+<ul>
+<li>Salesforce CRM</li>
+<li>SDR allocation tracking systems</li>
+<li>Governance documentation frameworks</li>
+<li>Manual conflict resolution workflows</li>
+</ul>
+
+</section>
+
+
+<section>
+
+<header class="major section-title"><h2>Scale</h2></header>
+
+<ul>
+<li>Users impacted: SDR team + sales leadership</li>
+<li>Environment: multi‑product SaaS sales organization</li>
+<li>Primary objective: prevent duplicate outreach and protect active deals</li>
+</ul>
+
+</section>
+
+
+<section>
+
+<header class="major section-title"><h2>Operational Impact</h2></header>
+
+<ul>
+<li>Reduced internal friction during expansion workflows.</li>
+<li>Lowered duplicate outreach incidents across product teams.</li>
+<li>Improved clarity around expansion ownership.</li>
+<li>Strengthened operational discipline across shared accounts.</li>
+</ul>
+
+</section>
+
+
+<section>
+
+<header class="major section-title"><h2>Future Improvements</h2></header>
+
+<ul>
+<li>Automate conflict detection across open opportunities.</li>
+<li>Introduce audit trail for ownership changes.</li>
+<li>Surface expansion eligibility indicators on account layouts.</li>
+</ul>
+
+</section>
+
+
+<ul class="actions section-title">
+<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
+</ul>
+
+
+</div>
+</div>
+
+
+<div id="sidebar">
+<div class="inner">
+
+<nav id="menu">
+<header class="major"><h2>Navigation</h2></header>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<footer id="footer">
+<p class="copyright">&copy; Daniel Im</p>
+</footer>
+
+</div>
+</div>
+
+</div>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
 </html>

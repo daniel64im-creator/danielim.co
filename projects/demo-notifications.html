@@ -1,127 +1,212 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Demo Booking Notifications | Project Details</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
+<head>
+<title>Real-Time Demo Booking Notifications | Revenue Operations Project</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
-		<style>
-			#main .inner { padding-top: 2rem; }
-			#header .logo { font-size: 1.35rem; }
-			.page-title { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.75rem; }
-			.section-title { margin-top: 2rem; }
-		</style>
-	</head>
+<style>
+#main .inner{padding-top:2rem;max-width:110em;margin:auto;}
+.page-title{font-size:2.6rem;font-weight:700;margin-bottom:.5rem;}
+.project-meta{color:#666;font-size:.9rem;margin-bottom:1.5rem;}
+.tags{font-size:.8rem;color:#555;margin-bottom:2rem;}
+.section-title{margin-top:2rem;}
+.arch-box{background:#fafafa;border:1px solid #e6e6e6;padding:1rem;border-radius:6px;font-family:monospace;margin-top:1rem;}
+</style>
 
-	<body class="is-preload">
-			<header id="top-nav">
-				<div class="nav-title">Daniel Im | Revenue Operations</div>
-				<div class="nav-menu">
-					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="../projects-library.html">Projects</a></li>
-						
-						<li><a href="../resume.html">Resume</a></li>
-						<li><a href="../about.html">About</a></li>
-					</ul>
-				</div>
-				<div class="nav-contact">
-					<a href="../contact.html">Contact</a>
-				</div>
-			</header>
+</head>
 
-		<div id="wrapper">
-			<div id="main">
-				<div class="inner">
-					<header id="header">
-						<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
-					</header>
+<body class="is-preload">
 
-					<section>
-						<div class="page-title">Real-Time Demo Booking Notifications</div>
-						<p>Event-triggered visibility system to notify stakeholders when demos are booked without requiring manual monitoring.</p>
-					</section>
+<header id="top-nav">
+<div class="nav-title">Daniel Im | Revenue Operations</div>
 
-					<section>
-						<header class="major"><h2>Context</h2></header>
-						<ul>
-							<li>Demos were being booked regularly but leadership lacked immediate visibility.</li>
-							<li>Stakeholders relied on manual dashboard checks or Slack follow-ups.</li>
-							<li>Over-notification risk could reduce signal quality.</li>
-						</ul>
+<div class="nav-menu">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+</ul>
+</div>
 
-						<header class="major section-title"><h2>Structural Problems</h2></header>
-						<ul>
-							<li>No automated alerting layer tied to confirmed demo bookings.</li>
-							<li>Manual monitoring introduced delays and inconsistency.</li>
-							<li>Unfiltered notifications would create operational noise.</li>
-						</ul>
+<div class="nav-contact">
+<a href="../contact.html">Contact</a>
+</div>
+</header>
 
-						<header class="major section-title"><h2>Architecture Built</h2></header>
-						<ul>
-							<li><strong>Event-Triggered Logic:</strong> Automation activated when a defined “demo booked” condition was met.</li>
-							<li><strong>Scoped Filtering:</strong> Limited to specific record types and conditions to avoid noise.</li>
-							<li><strong>Targeted Recipients:</strong> Notifications sent only to relevant stakeholders.</li>
-							<li><strong>Signal Control:</strong> Structured logic prevented duplicate or irrelevant alerts.</li>
-						</ul>
+<div id="wrapper">
 
-						<header class="major section-title"><h2>Governance & Controls</h2></header>
-						<ul>
-							<li>Conditional logic enforced strict qualification of what constitutes a valid demo booking.</li>
-							<li>Controlled distribution reduced unnecessary visibility spam.</li>
-							<li>Aligned notification trigger directly to operational milestone.</li>
-						</ul>
+<div id="main">
+<div class="inner">
 
-						<header class="major section-title"><h2>Impact</h2></header>
-						<ul>
-							<li>Improved real-time visibility into booked demos.</li>
-							<li>Reduced reliance on manual monitoring.</li>
-							<li>Increased transparency for leadership without increasing noise.</li>
-							<li>Strengthened alignment between SDR activity and management awareness.</li>
-						</ul>
+<header id="header">
+<a href="../index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
+</header>
 
-						<header class="major section-title"><h2>Next Improvements</h2></header>
-						<ul>
-							<li>Add simple reporting on notification volume and coverage.</li>
-							<li>Implement duplicate detection logic for reschedules.</li>
-							<li>Introduce exception tracking for missed trigger scenarios.</li>
-						</ul>
+<section>
 
-						<ul class="actions section-title">
-							<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-						</ul>
-					</section>
+<div class="page-title">
+Real-Time Demo Booking Notifications
+</div>
 
-				</div>
-			</div>
+<div class="project-meta">
+Operational Visibility System
+</div>
 
-			<div id="sidebar">
-				<div class="inner">
-					<nav id="menu">
-						<header class="major"><h2>Navigation</h2></header>
-						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="../projects-library.html">Projects</a></li>
-							<li><a href="../resume.html">Resume</a></li>
-							<li><a href="../about.html">About</a></li>
-							<li><a href="../contact.html">Contact</a></li>
-						</ul>
-					</nav>
-					<footer id="footer">
-						<p class="copyright">&copy; Daniel Im</p>
-					</footer>
-				</div>
-			</div>
+<div class="tags">
+Salesforce • Automation • Notifications • SDR Operations
+</div>
 
-		</div>
+<p>
+Automation system designed to provide immediate visibility into newly booked
+product demos. The system removed the need for manual monitoring while ensuring
+that only qualified demo bookings generated stakeholder notifications.
+</p>
 
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
+</section>
 
-	</body>
+<section>
+
+<header class="major section-title"><h2>System Overview</h2></header>
+
+<p>
+Demo bookings were a critical operational milestone for the sales development
+team, yet leadership visibility relied primarily on manual dashboard checks or
+Slack follow-ups. This project implemented an automated alerting system that
+triggered notifications whenever a qualifying demo booking occurred.
+</p>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Structural Gap</h2></header>
+
+<ul>
+<li>No automated notification system tied to demo bookings.</li>
+<li>Leadership visibility relied on manual CRM monitoring.</li>
+<li>Unfiltered alerts risked creating operational noise.</li>
+<li>Demo activity milestones were not surfaced in real time.</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Architecture</h2></header>
+
+<ul>
+
+<li><strong>Event-Based Trigger Logic</strong> — Automation executed when a defined demo booking condition was satisfied.</li>
+
+<li><strong>Qualification Filters</strong> — Logic restricted notifications to valid demo scenarios only.</li>
+
+<li><strong>Targeted Stakeholder Routing</strong> — Notifications delivered to specific leadership and operational recipients.</li>
+
+<li><strong>Duplicate Alert Prevention</strong> — Structured conditions prevented redundant notifications.</li>
+
+</ul>
+
+<div class="arch-box">
+
+Notification Workflow
+
+Demo Booked  
+→ Qualification Logic Evaluated  
+→ Notification Conditions Met  
+→ Targeted Stakeholder Alert Sent
+
+</div>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Tools</h2></header>
+
+<ul>
+<li>Salesforce CRM</li>
+<li>Salesforce automation logic (Flow / event triggers)</li>
+<li>Internal communication channels for alert delivery</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Scale</h2></header>
+
+<ul>
+<li>Primary users: SDR leadership + operational stakeholders</li>
+<li>Process frequency: every qualifying demo booking</li>
+<li>Primary objective: real-time operational visibility</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Operational Impact</h2></header>
+
+<ul>
+<li>Improved real-time awareness of booked demos.</li>
+<li>Reduced dependency on manual dashboard monitoring.</li>
+<li>Increased transparency between SDR activity and leadership.</li>
+<li>Maintained signal quality by avoiding notification noise.</li>
+</ul>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>Future Improvements</h2></header>
+
+<ul>
+<li>Add reporting on notification coverage and frequency.</li>
+<li>Introduce reschedule detection logic.</li>
+<li>Create monitoring for missed trigger scenarios.</li>
+</ul>
+
+</section>
+
+<ul class="actions section-title">
+<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
+</ul>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+
+<nav id="menu">
+<header class="major"><h2>Navigation</h2></header>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../projects-library.html">Projects</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<footer id="footer">
+<p class="copyright">&copy; Daniel Im</p>
+</footer>
+
+</div>
+</div>
+
+</div>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
 </html>
