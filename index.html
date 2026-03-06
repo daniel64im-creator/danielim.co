@@ -6,75 +6,164 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/custom-nav-b.css" />
+
 <style>
+
 /* Unique subtitle and description styles for the Home Page */
-.hero-subtitle { font-size: 1.15rem; color:#555; margin-bottom: 1.5rem; max-width:900px; }
-.hero-description { max-width:900px; margin-bottom:2rem; }
+
+.hero-subtitle {
+font-size: 1.15rem;
+color:#555;
+margin-bottom: 1.5rem;
+max-width:900px;
+}
+
+.hero-description {
+max-width:900px;
+margin-bottom:2rem;
+}
+
+/* HERO LAYOUT WITH IMAGE */
+
+.hero-container {
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:3rem;
+}
+
+.hero-text {
+flex:1;
+}
+
+.hero-image {
+flex:1;
+display:flex;
+justify-content:flex-end;
+}
+
+.hero-image img {
+max-width:520px;
+width:100%;
+border-radius:10px;
+}
+
+/* Hide image on mobile */
+
+@media screen and (max-width: 980px) {
+.hero-container {
+flex-direction:column;
+}
+
+.hero-image {
+display:none;
+}
+}
+
 </style>
 </head>
+
 <body class="is-preload">
+
 <header id="top-nav">
-    <div class="nav-left-group">
-        <div class="nav-title">Rev Ops Portfolio</div>
-        <div class="nav-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects-library.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="nav-contact"><a href="contact.html">Contact</a></div>
+<div class="nav-left-group">
+<div class="nav-title">Rev Ops Portfolio</div>
+<div class="nav-menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="projects-library.html">Projects</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-contact"><a href="contact.html">Contact</a></div>
 </header>
 
 <div id="wrapper">
-    <div id="main">
-        <div class="inner">
-            <header id="header">
-                <a href="index.html" class="logo"><strong>Daniel Im</strong> | Systems & Infrastructure</a>
-                <ul class="icons">
-                    <li><a href="https://github.com/daniel64im" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/daeim/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                </ul>
-            </header>
+
+<div id="main">
+<div class="inner">
+
+<header id="header">
+<a href="index.html" class="logo"><strong>Daniel Im</strong> | Systems & Infrastructure</a>
+<ul class="icons">
+<li><a href="https://github.com/daniel64im" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+<li><a href="https://www.linkedin.com/in/daeim/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+</ul>
+</header>
 
 <section id="hero">
+
+<div class="hero-container">
+
+<div class="hero-text">
+
 <h1 class="page-title">Revenue Operations Systems & Infrastructure</h1>
-<div class="hero-subtitle">Governance design, workflow enforcement, CRM architecture, and data integrity systems.</div>
+
+<div class="hero-subtitle">
+Governance design, workflow enforcement, CRM architecture, and data integrity systems.
+</div>
+
 <div class="hero-description">
 <p>Sales Development Team Lead building operational infrastructure across CRM governance, automation, reporting systems, and revenue workflow design.</p>
 </div>
+
 <ul class="actions">
 <li><a href="projects-library.html" class="button big primary">View All Projects</a></li>
 <li><a href="resume.html" class="button big">View Resume</a></li>
 </ul>
+
+</div>
+
+<div class="hero-image">
+<img src="images/Systems Image (1).png" alt="Revenue Operations Systems Blueprint">
+</div>
+
+</div>
+
 </section>
 
 <section>
 <header class="major"><h2>Featured Projects</h2></header>
+
 <div class="posts">
+
 <article>
 <h3>CRM Data Enrichment Initiative</h3>
 <p>Improved CRM segmentation and reporting by enriching key institutional firmographics.</p>
-<ul class="actions"><li><a href="projects/enrichment.html" class="button">Project Details</a></li></ul>
+<ul class="actions">
+<li><a href="projects/enrichment.html" class="button">Project Details</a></li>
+</ul>
 </article>
+
 <article>
 <h3>Customer Allocation Governance</h3>
 <p>Operational ownership framework preventing duplicate outreach and defining reassignment rules.</p>
-<ul class="actions"><li><a href="projects/allocation-TL.html" class="button">Project Details</a></li></ul>
+<ul class="actions">
+<li><a href="projects/allocation-TL.html" class="button">Project Details</a></li>
+</ul>
 </article>
+
 <article>
 <h3>ROE Compliance Reporting System</h3>
 <p>Salesforce reporting layer surfacing outreach eligibility and governance compliance.</p>
-<ul class="actions"><li><a href="projects/roe-compliance-reporting.html" class="button">Project Details</a></li></ul>
+<ul class="actions">
+<li><a href="projects/roe-compliance-reporting.html" class="button">Project Details</a></li>
+</ul>
 </article>
+
 </div>
+
 </section>
+
 </div>
 </div>
+
 </div>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
