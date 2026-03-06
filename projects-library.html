@@ -4,12 +4,9 @@
 <title>Project Library | Revenue Operations Systems</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/custom-nav-b.css" />
-
 <style>
-/* Page-specific library styles */
 .project-count{ color:#777; font-size:0.9rem; margin-bottom:1rem; }
 .library-container{ display:flex; gap:2rem; margin-top:2rem; width:100%; max-width:110em; margin-left:auto; margin-right:auto; }
 .library-left{ width:35%; min-width:260px; max-width:420px; border-right:1px solid #e5e5e5; padding-right:2em; max-height:70vh; overflow:auto; }
@@ -27,11 +24,7 @@
 .library-intro{ max-width:850px; margin-bottom:1rem; }
 </style>
 </head>
-
 <body class="is-preload">
-
-<div id="wrapper">
-
 <header id="top-nav">
 <div class="nav-title">Daniel Im | Revenue Operations</div>
 <div class="nav-menu">
@@ -44,22 +37,15 @@
 </div>
 <div class="nav-contact"><a href="contact.html">Contact</a></div>
 </header>
-
 <div id="main">
 <div class="inner">
-
-<header id="header">
-<a href="index.html" class="logo"><strong>Daniel Im</strong> | Revenue Operations</a>
-</header>
-
 <section>
 <h1 class="page-title" style="font-size: 3rem; font-weight: 700;">Project Library</h1>
 <div class="project-count">10 Revenue Operations Systems</div>
 <div class="library-intro">
-Complete index of governance systems, automation workflows, reporting layers, and revenue infrastructure initiatives.
+Complete index of governance systems, automation workflows, and reporting layers.
 </div>
 </section>
-
 <section>
 <div class="library-container">
 <div class="library-left">
@@ -79,7 +65,6 @@ Complete index of governance systems, automation workflows, reporting layers, an
 <div class="project-item" data-key="conference">Conference Lead Cleanup & Redistribution</div>
 <div class="project-item" data-key="advisory">Executive Customer Advisory Targeting</div>
 </div>
-
 <div class="library-right" id="preview-pane">
 <div class="preview-title">Select a project</div>
 <div class="preview-meta">Preview opens here.</div>
@@ -87,65 +72,35 @@ Complete index of governance systems, automation workflows, reporting layers, an
 </div>
 </div>
 </section>
-
 </div>
 </div>
-</div>
-
 <script>
-// Logic remains identical to your original file
 const projectData = {
-allocation:{ category:"Governance Systems", tags:"Salesforce • Ownership Governance", link:"projects/allocation-TL.html", gap:"Account ownership ambiguity caused conflicts.", architecture:"Allocation tiers and guardrails.", impact:"Reduced disputes." },
-allocationinfra:{ category:"Governance Systems", tags:"SDR Operations", link:"projects/allocation-SDR.html", gap:"No scalable system for holds.", architecture:"Routing infrastructure with hold states.", impact:"Improved consistency." },
-pip:{ category:"Governance Systems", tags:"Performance Governance", link:"projects/pip-governance.html", gap:"Interventions lacked structure.", architecture:"Trigger criteria and timelines.", impact:"Improved accountability." },
-enrichment:{ category:"Data Infrastructure", tags:"CRM Data Quality", link:"projects/enrichment.html", gap:"Records lacked firmographic data.", architecture:"ID‑based enrichment workflow.", impact:"Improved accuracy across ~9,000 accounts." },
-fte:{ category:"Data Infrastructure", tags:"Prospecting Intelligence", link:"projects/fte-lookup.html", gap:"FTE data required manual research.", architecture:"Embedded lookup system.", impact:"Reduced research time." },
-demoemail:{ category:"Workflow Automation", tags:"Salesforce Automation", link:"projects/demo-email.html", gap:"Emails not captured on Ops.", architecture:"Record‑triggered Flow.", impact:"Improved reliability." },
-notifications:{ category:"Workflow Automation", tags:"Operational Visibility", link:"projects/demo-notifications.html", gap:"Teams lacked real‑time visibility.", architecture:"Event‑triggered notifications.", impact:"Improved awareness." },
-roe:{ category:"Operational Intelligence", tags:"Sales Governance", link:"projects/roe-compliance-reporting.html", gap:"Eligibility checks were manual.", architecture:"Salesforce reporting dashboards.", impact:"Improved enforcement." },
-conference:{ category:"Revenue Programs", tags:"Lead Operations", link:"projects/lead-cleanup.html", gap:"Lead lists were inconsistent.", architecture:"Normalization and routing workflow.", impact:"Accelerated outreach." },
-advisory:{ category:"Revenue Programs", tags:"Strategic Targeting", link:"projects/executive-advisory-targeting.html", gap:"Lists lacked selection criteria.", architecture:"Segmented targeting workflow.", impact:"Improved relevance." }
+allocation:{ category:"Governance Systems", tags:"Salesforce • Ownership", link:"projects/allocation-TL.html", gap:"Ambiguity caused conflicts.", architecture:"Allocation tiers.", impact:"Reduced disputes." },
+allocationinfra:{ category:"Governance Systems", tags:"SDR Operations", link:"projects/allocation-SDR.html", gap:"No scalable system.", architecture:"Routing infrastructure.", impact:"Improved consistency." },
+pip:{ category:"Governance Systems", tags:"Performance Governance", link:"projects/pip-governance.html", gap:"Interventions lacked structure.", architecture:"Trigger criteria.", impact:"Improved accountability." },
+enrichment:{ category:"Data Infrastructure", tags:"CRM Data Quality", link:"projects/enrichment.html", gap:"Records lacked data.", architecture:"ID‑based workflow.", impact:"Improved accuracy." },
+fte:{ category:"Data Infrastructure", tags:"Prospecting Intelligence", link:"projects/fte-lookup.html", gap:"FTE required manual research.", architecture:"Embedded lookup.", impact:"Reduced research time." },
+demoemail:{ category:"Workflow Automation", tags:"Salesforce Automation", link:"projects/demo-email.html", gap:"Emails not captured.", architecture:"Record‑triggered Flow.", impact:"Improved reliability." },
+notifications:{ category:"Workflow Automation", tags:"Operational Visibility", link:"projects/demo-notifications.html", gap:"No real‑time visibility.", architecture:"Event‑triggered notifications.", impact:"Improved awareness." },
+roe:{ category:"Operational Intelligence", tags:"Sales Governance", link:"projects/roe-compliance-reporting.html", gap:"Eligibility checks were manual.", architecture:"Reporting dashboards.", impact:"Improved enforcement." },
+conference:{ category:"Revenue Programs", tags:"Lead Operations", link:"projects/lead-cleanup.html", gap:"Lists were inconsistent.", architecture:"Normalization and routing.", impact:"Accelerated outreach." },
+advisory:{ category:"Revenue Programs", tags:"Strategic Targeting", link:"projects/executive-advisory-targeting.html", gap:"Lists lacked criteria.", architecture:"Segmented targeting.", impact:"Improved relevance." }
 };
-
 function renderPreview(key){
 const pane=document.getElementById("preview-pane");
 const data=projectData[key];
-pane.innerHTML=`
-<div class="preview-title">${getTitleFromKey(key)}</div>
-<div class="preview-meta">${data.category}</div>
-<div class="preview-tags">${data.tags}</div>
-<div class="preview-section"><h3>Structural Gap</h3><p>${data.gap}</p></div>
-<div class="preview-section"><h3>Architecture</h3><p>${data.architecture}</p></div>
-<div class="preview-section"><h3>Operational Impact</h3><p>${data.impact}</p></div>
-<div class="preview-section"><a href="${data.link}" class="button">Open Full Project</a></div>
-`;
+pane.innerHTML=`<div class="preview-title">${getTitleFromKey(key)}</div><div class="preview-meta">${data.category}</div><div class="preview-tags">${data.tags}</div><div class="preview-section"><h3>Structural Gap</h3><p>${data.gap}</p></div><div class="preview-section"><h3>Architecture</h3><p>${data.architecture}</p></div><div class="preview-section"><h3>Operational Impact</h3><p>${data.impact}</p></div><div class="preview-section"><a href="${data.link}" class="button">Open Full Project</a></div>`;
 }
-
-function getTitleFromKey(key){
-const el=document.querySelector('.project-item[data-key="'+key+'"]');
-return el ? el.textContent.trim() : key;
-}
-
-function setActiveItem(el){
-document.querySelectorAll(".project-item").forEach(i=>i.classList.remove("active"));
-el.classList.add("active");
-}
-
+function getTitleFromKey(key){ const el=document.querySelector('.project-item[data-key="'+key+'"]'); return el ? el.textContent.trim() : key; }
+function setActiveItem(el){ document.querySelectorAll(".project-item").forEach(i=>i.classList.remove("active")); el.classList.add("active"); }
 document.addEventListener("DOMContentLoaded",()=>{
-document.querySelectorAll(".project-item").forEach(item=>{
-item.addEventListener("click",()=>{
-const key=item.getAttribute("data-key");
-setActiveItem(item);
-renderPreview(key);
-});
-});
+document.querySelectorAll(".project-item").forEach(item=>{ item.addEventListener("click",()=>{ const key=item.getAttribute("data-key"); setActiveItem(item); renderPreview(key); }); });
 const first=document.querySelector(".project-item");
 if(first){ setActiveItem(first); renderPreview(first.getAttribute("data-key")); }
 });
 </script>
-
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>
