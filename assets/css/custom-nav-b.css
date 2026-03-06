@@ -1,42 +1,44 @@
-/* Global Top Navigation Styling */
+/* =================================================
+GLOBAL NAV
+================================================= */
 
 #sidebar {
-  display: none !important;
+  display: none;
 }
+
+/* NAV BAR */
 
 #top-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  height: 60px;
   background: #2e3141;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  height: 3.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2em;
+  z-index: 10000;
 }
 
-/* Site Title */
+/* TITLE */
+
 #top-nav .nav-title {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   letter-spacing: 0.02em;
-  white-space: nowrap;
 }
 
-/* Navigation Menu Container */
+/* NAV MENU */
+
 #top-nav .nav-menu {
-  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex: 1;
 }
 
-/* Menu List */
 #top-nav .nav-menu ul {
   display: flex;
   gap: 2em;
@@ -45,65 +47,50 @@
   padding: 0;
 }
 
-/* Menu Links */
 #top-nav .nav-menu a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  transition: color 0.15s ease;
 }
 
-/* Hover */
 #top-nav .nav-menu a:hover {
   color: #e67c6b;
 }
 
-/* Contact Button Container */
-#top-nav .nav-contact {
-  margin-left: 2em;
-}
+/* CONTACT BUTTON */
 
-/* Contact Button */
 #top-nav .nav-contact a {
   color: #fff;
+  background: #e67c6b;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
   padding: 0.5em 1.2em;
   border-radius: 2em;
-  background: #e67c6b;
-  border: none;
-  box-shadow: 0 2px 8px rgba(230,124,107,0.12);
-  transition: background 0.15s ease;
-  letter-spacing: 0.03em;
+  font-weight: 600;
 }
 
 #top-nav .nav-contact a:hover {
   background: #d95c4b;
-  color: #fff;
 }
 
-/* Mobile Layout */
+/* MAIN CONTENT OFFSET */
+
+#main > .inner {
+  padding-top: 5em !important;
+}
+
+/* MOBILE */
+
 @media (max-width: 900px) {
 
   #top-nav {
     flex-direction: column;
     height: auto;
-    padding: 1em 0.5em;
-  }
-
-  #top-nav .nav-title {
-    margin-bottom: 0.5em;
+    padding: 1em;
   }
 
   #top-nav .nav-menu ul {
     gap: 1em;
-  }
-
-  #top-nav .nav-contact {
-    margin-left: 0;
-    margin-top: 0.5em;
   }
 
 }
