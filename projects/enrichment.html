@@ -46,7 +46,7 @@ Data Infrastructure System
 </div>
 
 <div class="tags">
-CRM Â¢â€šÂ¬Â¢ Data Normalization Â¢â€šÂ¬Â¢ Data Quality Â¢â€šÂ¬Â¢ Salesforce
+CRM -- Data Normalization -- Data Quality -- Salesforce
 </div>
 
 <p>
@@ -88,15 +88,15 @@ workflow to normalize these fields and restore CRM data integrity.
 <header class="major section-title"><h2>Architecture</h2></header>
 
 <ul>
-<li><strong>Full Population Export</strong> Â¢â€šÂ¬â‚¬Â Extracted the complete account dataset requiring normalization.</li>
+<li><strong>Full Population Export</strong> -- Extracted the complete account dataset requiring normalization.</li>
 
-<li><strong>Data Standardization Layer</strong> Â¢â€šÂ¬â‚¬Â Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
+<li><strong>Data Standardization Layer</strong> -- Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
 
-<li><strong>ID-Based Mapping</strong> Â¢â€šÂ¬â‚¬Â All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
+<li><strong>ID-Based Mapping</strong> -- All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
 
-<li><strong>Structured Re-Import</strong> Â¢â€šÂ¬â‚¬Â Coordinated staged re-upload with internal systems owners to avoid overwrite conflicts.</li>
+<li><strong>Structured Re-Import</strong> -- Coordinated staged re-upload with internal systems owners to avoid overwrite conflicts.</li>
 
-<li><strong>Pre-Import QA Validation</strong> Â¢â€šÂ¬â‚¬Â Sampled dataset segments to validate formatting consistency and duplication risks.</li>
+<li><strong>Pre-Import QA Validation</strong> -- Sampled dataset segments to validate formatting consistency and duplication risks.</li>
 </ul>
 
 <div class="arch-box">
@@ -104,10 +104,10 @@ workflow to normalize these fields and restore CRM data integrity.
 System Workflow
 
 Salesforce Export  
-Â¢â‚¬Â â‚¬â„¢ Data Normalization Layer  
-Â¢â‚¬Â â‚¬â„¢ QA Sampling  
-Â¢â‚¬Â â‚¬â„¢ Structured Re-Import  
-Â¢â‚¬Â â‚¬â„¢ Clean CRM Dataset
+-- Data Normalization Layer  
+-- QA Sampling  
+-- Structured Re-Import  
+-- Clean CRM Dataset
 
 </div>
 
@@ -201,4 +201,7 @@ Salesforce Export
 
 </body>
 </html>
+
+
+
 
