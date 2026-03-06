@@ -13,13 +13,13 @@ DANIELIM.CO GLOBAL NAV & CONSISTENCY OVERRIDES
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 50px; /* Reduced from 60px for a slimmer profile */
   background: #2e3141;
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 5%; /* Aligned with main content padding */
+  justify-content: flex-start;
+  padding: 0 3%; 
   z-index: 10000;
 }
 
@@ -27,8 +27,68 @@ DANIELIM.CO GLOBAL NAV & CONSISTENCY OVERRIDES
 #top-nav .nav-title {
   font-family: "Roboto Slab", serif;
   font-weight: 700 !important;
-  font-size: 1.35rem !important; 
-  letter-spacing: 0.02em;
+  font-size: 1.1rem !important; /* Reduced from 1.35rem */
+  letter-spacing: 0.01em;
+  margin-right: 2em;
+}
+
+/* NAV MENU - TABLE STYLE (SEGMENTED CONTROL) */
+#top-nav .nav-menu {
+  display: flex;
+  flex: 0 1 auto;
+}
+
+#top-nav .nav-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#top-nav .nav-menu li {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#top-nav .nav-menu li:last-child {
+  border-right: none;
+}
+
+#top-nav .nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.8rem; /* Reduced from 0.9rem */
+  padding: 0.5em 1em; /* Slimmer padding */
+  display: block;
+  transition: background 0.2s;
+}
+
+#top-nav .nav-menu a:hover,
+#top-nav .nav-menu a.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* CONTACT BUTTON IN NAV */
+#top-nav .nav-contact {
+  margin-left: 1.5em;
+}
+
+#top-nav .nav-contact a {
+  color: #fff;
+  background: #f56a6a;
+  text-decoration: none;
+  padding: 0.4em 1em; /* Scaled down with the rest of the header */
+  border-radius: 2em;
+  font-weight: 600;
+  font-size: 0.8rem; /* Matched to nav links */
+}
+
+#top-nav .nav-contact a:hover {
+  background: #d95c4b;
 }
 
 /* GLOBAL PAGE TITLE STYLING */
@@ -61,56 +121,34 @@ header.major h2 {
   margin-bottom: 0.5em;
 }
 
-/* NAV MENU LINKS */
-#top-nav .nav-menu {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-}
-
-#top-nav .nav-menu ul {
-  display: flex;
-  gap: 2em;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#top-nav .nav-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-#top-nav .nav-menu a:hover {
-  color: #f56a6a;
-}
-
-/* CONTACT BUTTON IN NAV */
-#top-nav .nav-contact a {
-  color: #fff;
-  background: #f56a6a;
-  text-decoration: none;
-  padding: 0.5em 1.2em;
-  border-radius: 2em;
-  font-weight: 600;
-}
-
-#top-nav .nav-contact a:hover {
-  background: #d95c4b;
+/* ABOUT PAGE PHOTO STYLING */
+.image.left img, .image.right img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1em;
 }
 
 /* --- MAIN CONTENT SPACING FIX --- */
 #main > .inner, 
 section.wrapper.style1 .inner, 
 footer#footer .inner {
-  padding-top: 5em !important; /* Space for fixed top nav */
-  padding-left: 8%;            /* Percentage-based padding for better "air" */
-  padding-right: 8%;
+  padding-top: 4em !important; /* Adjusted slightly for slimmer header */
+  padding-bottom: 4em !important;
+  padding-left: 3% !important; 
+  padding-right: 3% !important; 
   margin: 0 auto;
-  max-width: 1400px;           /* Standard max width for readability */
+  max-width: 1800px; 
   width: 100%;
+}
+
+/* Clean dividers between sections */
+section {
+  padding: 3em 0 !important;
+  border-bottom: solid 1px #eeeeee;
+}
+
+section:last-of-type {
+  border-bottom: none;
 }
 
 /* RESPONSIVE BREAKPOINTS */
@@ -119,19 +157,31 @@ footer#footer .inner {
     flex-direction: column; 
     height: auto; 
     padding: 1em; 
-    position: relative; /* Unfix on mobile to prevent overlap */
+    position: relative; 
+    align-items: flex-start;
   }
   
-  #top-nav .nav-menu ul { 
-    gap: 1em; 
-    margin: 10px 0; 
+  #top-nav .nav-menu {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  #top-nav .nav-menu ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #top-nav .nav-menu a {
+    text-align: center;
+    padding: 0.6em 0.5em;
+    font-size: 0.75rem;
   }
 
   #main > .inner,
   section.wrapper.style1 .inner { 
     padding-top: 2em !important; 
-    padding-left: 25px; 
-    padding-right: 25px; 
+    padding-left: 5% !important; 
+    padding-right: 5% !important; 
   }
 
   .page-title { 
