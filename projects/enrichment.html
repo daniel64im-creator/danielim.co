@@ -12,14 +12,16 @@
 <body class="is-preload">
 
 <header id="top-nav">
-    <div class="nav-title">Revenue Operations Portfolio</div>
-    <div class="nav-menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects-library.html">Projects</a></li>
-            <li><a href="../resume.html">Resume</a></li>
-            <li><a href="../about.html">About</a></li>
-        </ul>
+    <div class="nav-left-group">
+        <div class="nav-title">Revenue Operations Portfolio</div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects-library.html">Projects</a></li>
+                <li><a href="../resume.html">Resume</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </div>
     </div>
     <div class="nav-contact"><a href="../contact.html">Contact</a></div>
 </header>
@@ -44,11 +46,11 @@ Data Infrastructure System
 </div>
 
 <div class="tags">
-CRM Ã¢â‚¬Â¢ Data Normalization Ã¢â‚¬Â¢ Data Quality Ã¢â‚¬Â¢ Salesforce
+CRM ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ Data Normalization ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ Data Quality ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ Salesforce
 </div>
 
 <p>
-LargeÃ¢â‚¬â€˜scale firmographic cleanup and structured reÃ¢â‚¬â€˜import designed to restore CRM reliability
+LargeÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœscale firmographic cleanup and structured reÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœimport designed to restore CRM reliability
 for segmentation, reporting, and outbound targeting across thousands of institutional accounts.
 </p>
 
@@ -86,15 +88,15 @@ workflow to normalize these fields and restore CRM data integrity.
 <header class="major section-title"><h2>Architecture</h2></header>
 
 <ul>
-<li><strong>Full Population Export</strong> Ã¢â‚¬â€ Extracted the complete account dataset requiring normalization.</li>
+<li><strong>Full Population Export</strong> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Extracted the complete account dataset requiring normalization.</li>
 
-<li><strong>Data Standardization Layer</strong> Ã¢â‚¬â€ Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
+<li><strong>Data Standardization Layer</strong> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
 
-<li><strong>IDÃ¢â‚¬â€˜Based Mapping</strong> Ã¢â‚¬â€ All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
+<li><strong>IDÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ËœBased Mapping</strong> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
 
-<li><strong>Structured ReÃ¢â‚¬â€˜Import</strong> Ã¢â‚¬â€ Coordinated staged reÃ¢â‚¬â€˜upload with internal systems owners to avoid overwrite conflicts.</li>
+<li><strong>Structured ReÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ËœImport</strong> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Coordinated staged reÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœupload with internal systems owners to avoid overwrite conflicts.</li>
 
-<li><strong>PreÃ¢â‚¬â€˜Import QA Validation</strong> Ã¢â‚¬â€ Sampled dataset segments to validate formatting consistency and duplication risks.</li>
+<li><strong>PreÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ËœImport QA Validation</strong> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Sampled dataset segments to validate formatting consistency and duplication risks.</li>
 </ul>
 
 <div class="arch-box">
@@ -102,10 +104,10 @@ workflow to normalize these fields and restore CRM data integrity.
 System Workflow
 
 Salesforce Export  
-Ã¢â€ â€™ Data Normalization Layer  
-Ã¢â€ â€™ QA Sampling  
-Ã¢â€ â€™ Structured ReÃ¢â‚¬â€˜Import  
-Ã¢â€ â€™ Clean CRM Dataset
+ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Data Normalization Layer  
+ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ QA Sampling  
+ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Structured ReÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ËœImport  
+ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Clean CRM Dataset
 
 </div>
 
