@@ -12,26 +12,28 @@
 <body class="is-preload">
 
 <header id="top-nav">
-	<div class="nav-title">Daniel Im | Revenue Operations</div>
-
-	<div class="nav-menu">
-		<ul>
-			<li><a href="../index.html">Home</a></li>
-			<li><a href="../projects-library.html">Projects</a></li>
-			<li><a href="../resume.html">Resume</a></li>
-			<li><a href="../about.html">About</a></li>
-		</ul>
-	</div>
-
-	<div class="nav-contact">
-		<a href="../contact.html">Contact</a>
-	</div>
+    <div class="nav-title">Revenue Operations Portfolio</div>
+    <div class="nav-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects-library.html">Projects</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </div>
+    <div class="nav-contact"><a href="../contact.html">Contact</a></div>
 </header>
 
 <div id="wrapper">
-
-<div id="main">
-<div class="inner">
+    <div id="main">
+        <div class="inner">
+            <header id="header">
+                <a href="../index.html" class="logo"><strong>Daniel Im</strong> | Systems & Infrastructure</a>
+                <ul class="icons">
+                    <li><a href="https://github.com/daniel64im" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/daeim/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                </ul>
+            </header>
 
 <section>
 
@@ -42,11 +44,11 @@ Data Infrastructure System
 </div>
 
 <div class="tags">
-CRM â€¢ Data Normalization â€¢ Data Quality â€¢ Salesforce
+CRM Ã¢â‚¬Â¢ Data Normalization Ã¢â‚¬Â¢ Data Quality Ã¢â‚¬Â¢ Salesforce
 </div>
 
 <p>
-Largeâ€‘scale firmographic cleanup and structured reâ€‘import designed to restore CRM reliability
+LargeÃ¢â‚¬â€˜scale firmographic cleanup and structured reÃ¢â‚¬â€˜import designed to restore CRM reliability
 for segmentation, reporting, and outbound targeting across thousands of institutional accounts.
 </p>
 
@@ -84,15 +86,15 @@ workflow to normalize these fields and restore CRM data integrity.
 <header class="major section-title"><h2>Architecture</h2></header>
 
 <ul>
-<li><strong>Full Population Export</strong> â€” Extracted the complete account dataset requiring normalization.</li>
+<li><strong>Full Population Export</strong> Ã¢â‚¬â€ Extracted the complete account dataset requiring normalization.</li>
 
-<li><strong>Data Standardization Layer</strong> â€” Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
+<li><strong>Data Standardization Layer</strong> Ã¢â‚¬â€ Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
 
-<li><strong>IDâ€‘Based Mapping</strong> â€” All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
+<li><strong>IDÃ¢â‚¬â€˜Based Mapping</strong> Ã¢â‚¬â€ All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
 
-<li><strong>Structured Reâ€‘Import</strong> â€” Coordinated staged reâ€‘upload with internal systems owners to avoid overwrite conflicts.</li>
+<li><strong>Structured ReÃ¢â‚¬â€˜Import</strong> Ã¢â‚¬â€ Coordinated staged reÃ¢â‚¬â€˜upload with internal systems owners to avoid overwrite conflicts.</li>
 
-<li><strong>Preâ€‘Import QA Validation</strong> â€” Sampled dataset segments to validate formatting consistency and duplication risks.</li>
+<li><strong>PreÃ¢â‚¬â€˜Import QA Validation</strong> Ã¢â‚¬â€ Sampled dataset segments to validate formatting consistency and duplication risks.</li>
 </ul>
 
 <div class="arch-box">
@@ -100,10 +102,10 @@ workflow to normalize these fields and restore CRM data integrity.
 System Workflow
 
 Salesforce Export  
-â†’ Data Normalization Layer  
-â†’ QA Sampling  
-â†’ Structured Reâ€‘Import  
-â†’ Clean CRM Dataset
+Ã¢â€ â€™ Data Normalization Layer  
+Ã¢â€ â€™ QA Sampling  
+Ã¢â€ â€™ Structured ReÃ¢â‚¬â€˜Import  
+Ã¢â€ â€™ Clean CRM Dataset
 
 </div>
 
