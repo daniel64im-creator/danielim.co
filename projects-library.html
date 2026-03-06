@@ -68,34 +68,6 @@
 			.preview-section { margin-top: 1.25rem; }
 			.preview-section h3 { margin-bottom: 0.4rem; }
 			.preview-section p { margin-bottom: 0; }
-			@media (max-width: 1680px) {
-				#main .inner, .library-container {
-					padding-left: 5em;
-					padding-right: 5em;
-					max-width: 90em;
-				}
-			}
-			@media (max-width: 1280px) {
-				#main .inner, .library-container {
-					padding-left: 4em;
-					padding-right: 4em;
-					max-width: 70em;
-				}
-			}
-			@media (max-width: 980px) {
-				#main .inner, .library-container {
-					padding-left: 2em;
-					padding-right: 2em;
-					max-width: 100%;
-				}
-				.library-container { flex-direction: column; }
-				.library-left, .library-right {
-					width: 100%;
-					border-right: none;
-					padding: 0;
-					max-height: none;
-				}
-			}
 		</style>
 	</head>
 
@@ -312,7 +284,7 @@
 			function escapeHtml(str) {
 				return String(str)
 					.replaceAll("&", "&amp;")
-					replaceAll("<", "&lt;")
+					.replaceAll("<", "&lt;")
 					.replaceAll(">", "&gt;")
 					.replaceAll('"', "&quot;")
 					.replaceAll("'", "&#039;");
