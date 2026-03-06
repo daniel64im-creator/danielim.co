@@ -13,17 +13,11 @@
 PROJECT LIBRARY VISUAL REFINEMENT
 -------------------------------- */
 
-.project-count{
-color:#777;
-font-size:.9rem;
-margin-bottom:1rem;
-}
-
 .library-intro{
 max-width:720px;
 margin-bottom:1.5rem;
 font-size:.95rem;
-color:#555;
+color:#222;
 }
 
 /* MAIN LAYOUT */
@@ -36,6 +30,7 @@ width:100%;
 max-width:110em;
 margin-left:auto;
 margin-right:auto;
+padding-bottom:4em;
 }
 
 /* LEFT PROJECT NAVIGATION */
@@ -101,6 +96,7 @@ padding-left:.55rem;
 /* PREVIEW HEADER */
 
 .preview-title{
+color:#222;
 font-size:1.85rem;
 font-weight:800;
 margin-bottom:.3rem;
@@ -132,7 +128,7 @@ letter-spacing:.05em;
 
 .preview-section p{
 margin-bottom:0;
-color:#555;
+color:#222;
 }
 
 /* BUTTON REFINEMENT */
@@ -406,7 +402,7 @@ pane.innerHTML=`
 
 <div class="preview-meta">${data.category}</div>
 
-<div class="preview-tags">${data.tags}</div>
+<hr class="preview-divider">
 
 <div class="preview-section">
 <h3>Structural Gap</h3>
