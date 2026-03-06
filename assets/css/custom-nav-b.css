@@ -183,6 +183,7 @@ html, body {
   text-decoration: none !important;
   border-bottom: none !important;
   display: inline-block;
+  width: fit-content; /* Limits clickable area to text width */
 }
 
 #header .logo strong {
