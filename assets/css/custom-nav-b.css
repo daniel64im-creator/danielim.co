@@ -1,13 +1,12 @@
 /* =================================================
-GLOBAL NAV
+GLOBAL NAV & CONSISTENCY OVERRIDES
 ================================================= */
 
 #sidebar {
   display: none;
 }
 
-/* NAV BAR */
-
+/* TOP FIXED NAV BAR */
 #top-nav {
   position: fixed;
   top: 0;
@@ -23,16 +22,22 @@ GLOBAL NAV
   z-index: 10000;
 }
 
-/* TITLE */
-
+/* LOGO / TITLE (TOP NAV) */
 #top-nav .nav-title {
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.35rem !important; 
   letter-spacing: 0.02em;
 }
 
-/* NAV MENU */
+/* LOGO / TITLE (THE REPEATED HEADER INSIDE THE PAGE) */
+#header .logo {
+  font-size: 1.35rem !important; 
+  border-bottom: 0;
+  font-family: "Roboto Slab", serif;
+  display: block;
+}
 
+/* NAV MENU LINKS */
 #top-nav .nav-menu {
   display: flex;
   justify-content: center;
@@ -58,8 +63,7 @@ GLOBAL NAV
   color: #e67c6b;
 }
 
-/* CONTACT BUTTON */
-
+/* CONTACT BUTTON IN NAV */
 #top-nav .nav-contact a {
   color: #fff;
   background: #e67c6b;
@@ -73,24 +77,26 @@ GLOBAL NAV
   background: #d95c4b;
 }
 
-/* MAIN CONTENT OFFSET */
-
+/* MAIN CONTENT SPACING - Standardizes padding for all pages */
 #main > .inner {
   padding-top: 5em !important;
+  padding-left: 6em;
+  padding-right: 6em;
+  margin: 0 auto;
+  max-width: 110em;
 }
 
-/* MOBILE */
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1680px) {
+  #main .inner { padding-left: 5em; padding-right: 5em; max-width: 90em; }
+}
 
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
+  #main .inner { padding-left: 4em; padding-right: 4em; max-width: 70em; }
+}
 
-  #top-nav {
-    flex-direction: column;
-    height: auto;
-    padding: 1em;
-  }
-
-  #top-nav .nav-menu ul {
-    gap: 1em;
-  }
-
+@media (max-width: 980px) {
+  #top-nav { flex-direction: column; height: auto; padding: 1em; }
+  #top-nav .nav-menu ul { gap: 1em; margin: 10px 0; }
+  #main .inner { padding-left: 2em; padding-right: 2em; max-width: 100%; }
 }
