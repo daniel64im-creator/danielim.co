@@ -2,6 +2,9 @@
 DANIELIM.CO GLOBAL NAV & CONSISTENCY OVERRIDES
 ================================================= */
 
+/* IMPORT SOURCE SANS PRO */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 /* 1. SCROLLBAR ISOLATION & STYLING */
 html, body {
   height: 100%;
@@ -9,8 +12,9 @@ html, body {
 }
 
 #wrapper {
-  height: calc(100% - 50px);
-  margin-top: 50px;
+  /* Height minus the new 58px header */
+  height: calc(100% - 58px);
+  margin-top: 58px;
   overflow-y: auto;
   display: block;
   scrollbar-color: #888888 #ffffff;
@@ -59,13 +63,13 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
-  background: #3c4049; /* Matched to the slate-grey in reference screenshot */
+  height: 58px; /* Increased from 50px */
+  background: #3c4049; 
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1% 0 3%; 
+  padding: 0 1% 0 1.5%; /* Reduced left padding from 3% to 1.5% */
   z-index: 10000;
 }
 
@@ -75,10 +79,11 @@ html, body {
   align-items: center;
 }
 
+/* UPDATED NAV TITLE: SOURCE SANS PRO @ 19.5px, NORMAL WEIGHT */
 #top-nav .nav-title {
-  font-family: "Roboto Slab", serif;
-  font-weight: 700 !important;
-  font-size: 1.1rem !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-weight: 400 !important; /* Removed Bold (700 to 400) */
+  font-size: 19.5px !important;
   letter-spacing: 0.01em;
   margin-right: 2em;
 }
@@ -124,7 +129,7 @@ html, body {
   color: #fff;
 }
 
-/* CONTACT BUTTON - SLIGHTLY REDUCED HEIGHT */
+/* CONTACT BUTTON */
 #top-nav .nav-contact {
   height: 100%;
   display: flex;
@@ -136,7 +141,7 @@ html, body {
   background: #f56a6a;
   text-decoration: none !important;
   border-bottom: none !important;
-  padding: 0 2.5em; /* Horizontal padding remains wide */
+  padding: 0 2.5em; 
   border-radius: 4px;
   font-weight: 700;
   font-size: 0.85rem;
@@ -144,7 +149,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75%; /* Reduced slightly from 85% to create a cleaner margin */
+  height: 70%; /* Adjusted height to keep proportional with taller bar */
 }
 
 #top-nav .nav-contact a:hover {
