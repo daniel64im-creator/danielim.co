@@ -20,3 +20,24 @@
 </div>
 
 </header>
+
+<script>
+  (function() {
+    // Get the current URL path (e.g., /resume.html)
+    const currentPath = window.location.pathname;
+    
+    // Select all links within your top navigation
+    const navLinks = document.querySelectorAll('#top-nav a');
+
+    navLinks.forEach(link => {
+      // Get the link's destination
+      const linkPath = link.getAttribute('href');
+
+      // Check if current path matches the link
+      // We check if it ends with the path or if it's the root index
+      if (currentPath.endsWith(linkPath) || (currentPath === "/" && linkPath === "/index.html")) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
