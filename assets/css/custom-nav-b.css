@@ -242,7 +242,7 @@ html, body {
 /* Reduce spacing below red divider across site */
 
 #header {
-margin-bottom:0.2em;
+margin-bottom:20px;
 }
 
 /* The box on the left side of your library */
@@ -271,4 +271,84 @@ margin-bottom:0.2em;
     border: 1px solid rgba(210, 215, 217, 0.75); /* Matches your site's standard border color */
     padding: 1.5em;
     background: #ffffff;
+}
+
+
+/* ROE diagram layout */
+
+.diagram-row{
+display:flex;
+gap:40px;
+align-items:center;
+margin-bottom:60px;
+}
+
+.diagram-text{
+flex:1;
+}
+
+.diagram-image{
+flex:1;
+}
+
+.diagram-image img{
+width:100%;
+height:auto;
+border-radius:6px;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ROE diagram grid */
+
+.diagram-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:32px;
+margin-top:10px;
+}
+
+.diagram-card{
+background:#ffffff;
+padding:20px;
+border-radius:8px;
+box-shadow:0 8px 24px rgba(0,0,0,0.12);
+text-align:center;
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
+.diagram-card img{
+width:100%;
+height:auto;
+border-radius:6px;
+margin-top:16px;
+}
+
+.diagram-card h3{
+margin-bottom:8px;
+}
+
+.diagram-card p{
+font-size:0.9rem;
+line-height:1.4;
+}
+
+.diagram-card:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 30px rgba(0,0,0,0.18);
+transition:all 0.25s ease;
+}
+
+.workflow-intro{
+margin-top:10px;
+margin-bottom:30px;
+max-width:700px;
+}
+
+/* Reduce vertical spacing between sections */
+
+section{
+margin-bottom:.2px;
+padding-bottom:0;
 }
