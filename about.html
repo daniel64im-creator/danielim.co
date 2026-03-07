@@ -8,6 +8,73 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/custom-nav-b.css" />
 
+<style>
+
+/* ABOUT HERO */
+
+.about-hero {
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:3rem;
+margin-bottom:3rem;
+}
+
+.about-hero-text {
+flex:1;
+}
+
+.about-hero-image {
+flex:1;
+display:flex;
+justify-content:flex-end;
+}
+
+.about-hero-image img {
+max-width:320px;
+width:100%;
+border-radius:8px;
+}
+
+.about-description {
+max-width:650px;
+font-size:1.05rem;
+color:#555;
+margin-top:1rem;
+}
+
+/* CAPABILITY GRID */
+
+.about-capabilities {
+margin-top:1rem;
+}
+
+.about-capabilities h3 {
+margin-bottom:.6rem;
+}
+
+.about-capabilities ul {
+margin-bottom:0;
+}
+
+/* MOBILE */
+
+@media screen and (max-width:980px) {
+
+.about-hero {
+flex-direction:column;
+align-items:flex-start;
+}
+
+.about-hero-image {
+justify-content:flex-start;
+margin-top:1.5rem;
+}
+
+}
+
+</style>
+
 </head>
 
 <body class="is-preload">
@@ -22,58 +89,47 @@
 
 <section>
 
-<h1 class="page-title">About</h1>
+<div class="about-hero">
 
-<div class="project-meta">
-Sales Development Leadership | Revenue Operations Systems
+<div class="about-hero-text">
+
+<h1 class="page-title">About — Daniel Im</h1>
+
+<div class="about-description">
+
+Sales Development Team Lead focused on building operational infrastructure that improves how revenue teams operate. My work centers on CRM governance, workflow design, and data integrity systems that create scalable and enforceable revenue processes.
+
 </div>
+
+</div>
+
+<div class="about-hero-image">
+<img src="images/daniel-im.webp" alt="Daniel Im">
+</div>
+
+</div>
+
+</section>
+
+<section class="about-capabilities">
 
 <div class="row">
 
-<div class="col-8 col-12-medium">
-
-<span class="image left" style="max-width:170px;margin:0 1.5em 1em 0;">
-<img src="images/daniel-im.webp" alt="Daniel Im" style="width:100%;border-radius:6px;" />
-</span>
-
-<p>
-Sales Development Team Lead focused on improving how revenue teams operate. Leading SDR teams exposed recurring operational issues in CRM structure, account ownership rules, and workflow consistency, which led me to begin designing internal systems to address those problems.
-</p>
-
-<p>
-This portfolio documents operational frameworks, process improvements, and system concepts developed while managing sales development teams and working closely with CRM workflows and reporting systems.
-</p>
-
-<header class="major">
-<h2>Background</h2>
-</header>
-
-<p>
-My career began in direct sales roles at Xerox before moving into startup environments including Spectrust and Arkose Labs. Working inside these organizations provided direct exposure to how operational systems influence sales performance as companies scale.
-</p>
-
-<p>
-While leading SDR teams, I began building internal frameworks and documentation to address operational gaps related to CRM structure, reporting visibility, and workflow coordination. These projects led me to pursue Revenue Operations and Sales Operations roles focused on improving operational infrastructure for revenue teams.
-</p>
-
-</div>
-
 <div class="col-4 col-12-medium">
-
-<div class="box" style="padding:1.4em">
 
 <h3>Focus Areas</h3>
 
 <ul>
 <li>CRM process design</li>
 <li>Operational governance</li>
-<li>Workflow improvement</li>
+<li>Workflow enforcement</li>
+<li>Revenue workflow design</li>
 <li>Data quality systems</li>
 </ul>
 
 </div>
 
-<div class="box" style="padding:1.4em">
+<div class="col-4 col-12-medium">
 
 <h3>Tools</h3>
 
@@ -86,9 +142,36 @@ While leading SDR teams, I began building internal frameworks and documentation 
 
 </div>
 
+<div class="col-4 col-12-medium">
+
+<h3>Systems</h3>
+
+<ul>
+<li>Account ownership frameworks</li>
+<li>Lead routing logic</li>
+<li>Reporting infrastructure</li>
+<li>RevOps governance models</li>
+</ul>
+
 </div>
 
 </div>
+
+</section>
+
+<section>
+
+<header class="major">
+<h2>Background</h2>
+</header>
+
+<p>
+My career began in direct sales roles at Xerox before moving into startup environments including Spectrust and Arkose Labs. Working inside these organizations provided direct exposure to how operational systems influence sales performance as companies scale.
+</p>
+
+<p>
+While leading SDR teams, I began building internal frameworks and documentation to address operational gaps related to CRM structure, reporting visibility, and workflow coordination. These projects led me to pursue Revenue Operations and Sales Operations roles focused on improving operational infrastructure for revenue teams.
+</p>
 
 </section>
 
