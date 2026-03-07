@@ -62,28 +62,87 @@ which accounts and contacts were compliant for outreach activity.
 <header class="major section-title"><h2>System Overview</h2></header>
 
 <p>
-Rules of Engagement policies defined when outreach was permitted based on
-existing opportunities, account ownership, and contact participation in
-active deals. However, enforcement relied on manual review and tribal
-knowledge, making consistent compliance difficult to maintain.
-</p>
-
-<p>
-This project introduced reporting views that clearly surfaced outreach
-eligibility and highlighted records at risk of violating governance rules.
+Rules of Engagement (ROE) governance defined when SDR outreach was permitted across shared Salesforce accounts.
+Because multiple product teams operated within the same institutions, SDRs needed a clear framework for determining when outreach was allowed without interfering with existing opportunities, account ownership, or active deal conversations.
+This framework standardized how representatives evaluated accounts, analyzed opportunity activity, and coordinated outreach across teams to maintain alignment and prevent prospect conflict.
 </p>
 
 </section>
 
 <section>
 
+<header class="major section-title"><h2>Governance Decision Framework</h2></header>
+
+<p>
+Rules of Engagement policies were operationalized through a structured
+decision framework used by SDRs to determine whether outreach into an
+account or lead was permitted.
+</p>
+
+<p>
+The framework standardized how representatives evaluated account status,
+existing opportunities, and lead ownership before initiating prospecting
+activity.
+</p>
+
+</section>
+
+<section>
+
+<header class="major section-title"><h2>ROE Decision Workflows</h2></header>
+
+<p>
+The following decision diagrams document the operational workflows used
+by SDRs to determine outreach eligibility while respecting existing
+opportunities, account ownership, and lead management rules.
+</p>
+
+</section>
+
+<h3>Account Qualification Workflow</h3>
+
+<p>
+Process used when evaluating whether an account is eligible for
+prospecting based on customer status and opportunity activity.
+</p>
+
+<span class="image main">
+<img src="../images/roe-account-qualification.png" alt="Account Qualification Workflow" />
+</span>
+
+<h3>Opportunity Conflict Analysis</h3>
+
+<p>
+Decision framework used when an account already contains open
+opportunities. SDRs must evaluate product alignment and avoid engaging
+contacts actively involved in ongoing deals.
+</p>
+
+<span class="image main">
+<img src="../images/roe-opportunity-analysis.png" alt="Opportunity Analysis Workflow" />
+</span>
+
+<h3>Lead Ownership Evaluation</h3>
+
+<p>
+Lead ownership rules govern which representatives may contact a prospect.
+Ownership and recent activity must be verified before initiating outreach.
+</p>
+
+<span class="image main">
+<img src="../images/roe-lead-ownership.png" alt="Lead Ownership Workflow" />
+</span>
+
+<section>
+
 <header class="major section-title"><h2>Structural Gap</h2></header>
 
 <ul>
-<li>No centralized view of outreach eligibility.</li>
-<li>Manual compliance checks slowed SDR workflow.</li>
-<li>Managers lacked reliable audit visibility.</li>
-<li>Edge cases required time-consuming investigation.</li>
+<li>No consistent process for determining outreach eligibility.</li>
+<li>Salesforce opportunity activity required manual interpretation.</li>
+<li>SDRs risked contacting stakeholders already engaged in active deals.</li>
+<li>Cross-product teams lacked a standardized coordination framework.</li>
+<li>Lead ownership conflicts created prospect confusion and duplicate outreach.</li>
 </ul>
 
 </section>
@@ -94,25 +153,29 @@ eligibility and highlighted records at risk of violating governance rules.
 
 <ul>
 
-<li><strong>Eligibility Definitions</strong> - Formalized criteria determining when outreach is allowed.</li>
+<li><strong>Account Qualification Workflow</strong> – Structured process to determine customer status, opportunity presence, and activity recency.</li>
 
-<li><strong>Compliance Reporting Views</strong> - Reports and dashboards highlighting eligible and restricted records.</li>
+<li><strong>Opportunity Activity Evaluation</strong> – SDRs assess opportunity status, product alignment, and recent activity before initiating outreach.</li>
 
-<li><strong>Risk Identification</strong> - Surfaced contacts tied to active opportunities.</li>
+<li><strong>Contact Participation Restrictions</strong> – Contacts engaged in active opportunities are marked as restricted from SDR outreach.</li>
 
-<li><strong>Operational Coaching Layer</strong> - Reports designed to support daily manager reviews.</li>
+<li><strong>Lead Ownership Protocol</strong> – Ownership rules ensure only the assigned owner or authorized representatives can contact a prospect.</li>
+
+<li><strong>Coordination Escalation Layer</strong> – SDRs escalate stale opportunities or ambiguous ownership cases to team leadership.</li>
 
 </ul>
 
 <div class="arch-box">
 
-ROE Compliance Workflow
+ROE Evaluation Workflow
 
-Account Evaluated  
-- Opportunity Status Checked  
-- Contact Participation Verified  
-- Outreach Eligibility Determined  
-- Compliance Reporting View Updated
+Account Evaluated
+- Customer Status Verified
+- Opportunity Presence Checked
+- Opportunity Activity Reviewed
+- Contact Participation Identified
+- Lead Ownership Verified
+- Outreach Eligibility Determined
 
 </div>
 
@@ -123,9 +186,11 @@ Account Evaluated
 <header class="major section-title"><h2>Tools</h2></header>
 
 <ul>
-<li>Salesforce reporting and dashboards</li>
-<li>CRM opportunity and contact datasets</li>
-<li>Operational review workflows</li>
+<li>Salesforce account and opportunity records</li>
+<li>Opportunity activity timeline analysis</li>
+<li>Lead ownership tracking</li>
+<li>SDR coordination protocols</li>
+<li>Team lead escalation workflows</li>
 </ul>
 
 </section>
@@ -135,9 +200,10 @@ Account Evaluated
 <header class="major section-title"><h2>Scale</h2></header>
 
 <ul>
-<li>Primary users: SDR team and sales leadership</li>
-<li>Scope: outreach governance across shared accounts</li>
-<li>Objective: make ROE compliance visible and auditable</li>
+<li>Primary users: SDR teams operating across multiple product lines</li>
+<li>Scope: shared institutional accounts within the CRM</li>
+<li>Coverage: opportunity evaluation, contact restrictions, and lead ownership</li>
+<li>Objective: prevent cross-team prospect conflicts</li>
 </ul>
 
 </section>
@@ -147,10 +213,11 @@ Account Evaluated
 <header class="major section-title"><h2>Operational Impact</h2></header>
 
 <ul>
-<li>Improved adherence to outreach eligibility rules.</li>
-<li>Reduced manual compliance investigations.</li>
-<li>Increased transparency for coaching and auditing.</li>
-<li>Strengthened enforcement of cross-product governance.</li>
+<li>Reduced prospect conflicts across product teams.</li>
+<li>Improved coordination between SDRs and Account Executives.</li>
+<li>Standardized opportunity review process.</li>
+<li>Clear escalation paths for stale or ambiguous opportunities.</li>
+<li>Improved prospect experience through coordinated outreach.</li>
 </ul>
 
 </section>
@@ -160,9 +227,10 @@ Account Evaluated
 <header class="major section-title"><h2>Future Improvements</h2></header>
 
 <ul>
-<li>Automate exception logging when violations occur.</li>
-<li>Introduce alerting for high-risk eligibility changes.</li>
-<li>Expand coverage to additional governance scenarios.</li>
+<li>Automate opportunity activity detection for stale deals.</li>
+<li>Introduce CRM flags for restricted contacts.</li>
+<li>Build automated outreach eligibility indicators.</li>
+<li>Surface ownership conflicts directly in SDR workflows.</li>
 </ul>
 
 </section>
