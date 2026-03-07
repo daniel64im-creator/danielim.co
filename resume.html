@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Daniel Im | Resume</title>
@@ -10,20 +10,7 @@
 
 <body class="is-preload">
 
-<header id="top-nav">
-<div class="nav-left-group">
-<div class="nav-title">Rev Ops Portfolio</div>
-<div class="nav-menu">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="projects-library.html">Projects</a></li>
-<li><a href="resume.html" class="active">Resume</a></li>
-<li><a href="about.html">About</a></li>
-</ul>
-</div>
-</div>
-<div class="nav-contact"><a href="contact.html">Contact</a></div>
-</header>
+<div id="nav-placeholder"></div>
 
 <div id="wrapper">
 <div id="main">
@@ -49,7 +36,7 @@
 <ul>
 <li>Designed rep-level workspaces that unified note-taking, prioritization, and embedded enrollment lookup, reducing prospecting friction while preserving data continuity across account refreshes and ownership changes.</li>
 
-<li>Replaced manual Lattice-based performance tracking with a custom monthly and quarterly dashboard built using Supabase and Next.js, giving leadership real-time visibility into rep performance and supporting 98%â€“124% quota attainment across three quarters.</li>
+<li>Replaced manual Lattice-based performance tracking with a custom monthly and quarterly dashboard built using Supabase and Next.js, giving leadership real-time visibility into rep performance and supporting 98%–124% quota attainment across three quarters.</li>
 
 <li>Standardized end-to-end account lifecycle and SDR Rules of Engagement across multiple product lines by building a centralized ownership and status system outside Salesforce to enforce assignment, reassignment, hold logic, and governance within permission constraints.</li>
 
@@ -76,12 +63,12 @@
 <ul>
 <li>Managed the full sales cycle from prospecting through close for SMB and mid-market accounts.</li>
 
-<li>Owned and expanded a portfolio of 50â€“60 customer accounts, overseeing renewals and long-term relationship management.</li>
+<li>Owned and expanded a portfolio of 50–60 customer accounts, overseeing renewals and long-term relationship management.</li>
 </ul>
 
 <header class="major"><h2>Education</h2></header>
 
-<p><strong>B.A. Economics</strong> â€” University of California, Davis (2018)</p>
+<p><strong>B.A. Economics</strong> — University of California, Davis (2018)</p>
 
 </section>
 
@@ -92,5 +79,14 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
 
+<script>
+fetch("/components/nav.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("nav-placeholder").innerHTML = data;
+});
+</script>
+
 </body>
 </html>
+

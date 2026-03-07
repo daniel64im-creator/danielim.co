@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Project Library | Revenue Operations Systems</title>
@@ -170,26 +170,7 @@ border-radius:8px;
 
 <body class="is-preload">
 
-<header id="top-nav">
-<div class="nav-left-group">
-<div class="nav-title">Rev Ops Portfolio</div>
-
-<div class="nav-menu">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="projects-library.html" class="active">Projects</a></li>
-<li><a href="resume.html">Resume</a></li>
-<li><a href="about.html">About</a></li>
-</ul>
-</div>
-
-</div>
-
-<div class="nav-contact">
-<a href="contact.html">Contact</a>
-</div>
-
-</header>
+<div id="nav-placeholder"></div>
 
 <div id="wrapper">
 <div id="main">
@@ -481,5 +462,14 @@ renderPreview(first.getAttribute("data-key"));
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
 
+<script>
+fetch("/components/nav.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("nav-placeholder").innerHTML = data;
+});
+</script>
+
 </body>
 </html>
+
