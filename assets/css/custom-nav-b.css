@@ -352,3 +352,23 @@ section{
 margin-bottom:.2px;
 padding-bottom:0;
 }
+
+header.major{
+margin-bottom:14px !important;
+}
+
+header.major h2{
+margin-bottom:0;
+}
+
+p{
+margin-top:8px;
+}
+
+header.major.section-title{
+margin-bottom:12px !important;
+}
+
+header.major.section-title h2{
+margin-bottom:0;
+}
