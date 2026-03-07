@@ -78,13 +78,7 @@ display:none;
 <div id="main">
 <div class="inner">
 
-<header id="header">
-<div class="logo"><strong>Daniel Im</strong> | Systems & Infrastructure</div>
-<ul class="icons">
-<li><a href="https://github.com/daniel64im" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-<li><a href="https://www.linkedin.com/in/daeim/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-</ul>
-</header>
+<div id="site-header-placeholder"></div>
 
 <section id="hero">
 
@@ -166,8 +160,18 @@ document.getElementById("nav-placeholder").innerHTML = data;
 });
 </script>
 
+<script>
+fetch("/components/site-header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("site-header-placeholder").innerHTML = data;
+});
+</script>
+
 </body>
 </html>
+
+
 
 
 
