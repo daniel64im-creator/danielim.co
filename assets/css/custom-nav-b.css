@@ -216,6 +216,7 @@ html, body {
   font-weight: 700 !important;
   color: #3d4449;
   margin-bottom: 1.5rem;
+  padding-top: .2em !important;
 }
 
 #main > .inner {
@@ -392,4 +393,23 @@ padding-top:0 !important;
 
 #hero .page-title{
 margin-top:0 !important;
+}
+
+/* Reduce top spacing on the main container */
+#main > .inner {
+    padding-top: 2em !important;
+}
+
+/* Remove default browser margin from the page title */
+h1.page-title {
+    margin-top: 0 !important;
+}
+
+/* Remove potential gap from the placeholder div */
+#site-header-placeholder {
+    display: none !important;
+}
+
+.box {
+padding: 1.25em;
 }
