@@ -377,7 +377,7 @@ margin-bottom:0;
 /* Reduce spacing above hero title */
 
 #hero{
-padding-top:0.5em !important;
+padding-top:1em !important;
 }
 
 #hero .hero-container{
