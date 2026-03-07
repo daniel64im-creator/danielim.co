@@ -1,3 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Daniel Im | About</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/custom-nav-b.css" />
+
+</head>
+
+<body class="is-preload">
+
+<div id="nav-placeholder"></div>
+
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+<div id="site-header-placeholder"></div>
+
 <section>
 
 <h1 class="page-title">About</h1>
@@ -10,8 +32,8 @@ Sales Development Leadership | Revenue Operations Systems
 
 <div class="col-8 col-12-medium">
 
-<span class="image left">
-<img src="images/daniel-im.webp" alt="Daniel Im" style="width:200px;border-radius:8px;" />
+<span class="image left" style="max-width:170px;margin:0 1.5em 1em 0;">
+<img src="images/daniel-im.webp" alt="Daniel Im" style="width:100%;border-radius:6px;" />
 </span>
 
 <p>
@@ -19,13 +41,15 @@ Sales Development Team Lead focused on improving how revenue teams operate. Lead
 </p>
 
 <p>
-This portfolio documents operational frameworks, process improvements, and system concepts developed while managing sales development teams and working closely with CRM and reporting workflows.
+This portfolio documents operational frameworks, process improvements, and system concepts developed while managing sales development teams and working closely with CRM workflows and reporting systems.
 </p>
 
-<header class="major section-title"><h2>Background</h2></header>
+<header class="major">
+<h2>Background</h2>
+</header>
 
 <p>
-My career began in direct sales roles at Xerox, Spectrust, and Arkose Labs before moving into SDR leadership. Working inside these environments provided direct exposure to how operational systems influence sales performance at scale.
+My career began in direct sales roles at Xerox before moving into startup environments including Spectrust and Arkose Labs. Working inside these organizations provided direct exposure to how operational systems influence sales performance as companies scale.
 </p>
 
 <p>
@@ -34,11 +58,9 @@ While leading SDR teams, I began building internal frameworks and documentation 
 
 </div>
 
-
-
 <div class="col-4 col-12-medium">
 
-<div class="box">
+<div class="box" style="padding:1.4em">
 
 <h3>Focus Areas</h3>
 
@@ -51,8 +73,7 @@ While leading SDR teams, I began building internal frameworks and documentation 
 
 </div>
 
-
-<div class="box">
+<div class="box" style="padding:1.4em">
 
 <h3>Tools</h3>
 
@@ -70,3 +91,29 @@ While leading SDR teams, I began building internal frameworks and documentation 
 </div>
 
 </section>
+
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+fetch("/components/nav.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("nav-placeholder").innerHTML = data;
+});
+</script>
+
+<script>
+fetch("/components/site-header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("site-header-placeholder").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
