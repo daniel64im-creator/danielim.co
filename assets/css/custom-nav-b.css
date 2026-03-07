@@ -372,3 +372,24 @@ margin-bottom:12px !important;
 header.major.section-title h2{
 margin-bottom:0;
 }
+
+
+/* Reduce spacing above hero title */
+
+#hero{
+padding-top:0.5em !important;
+}
+
+#hero .hero-container{
+margin-top:0 !important;
+padding-top:0 !important;
+}
+
+#hero .hero-text{
+margin-top:0 !important;
+padding-top:0 !important;
+}
+
+#hero .page-title{
+margin-top:0 !important;
+}
