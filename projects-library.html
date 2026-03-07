@@ -114,6 +114,12 @@ margin-bottom:.4rem;
 }
 
 
+.preview-divider{
+border:0;
+border-top:1px solid #e5e5e5;
+margin:.75rem 0 1rem 0;
+}
+
 /* PREVIEW CONTENT SECTIONS */
 
 .preview-section{
@@ -388,6 +394,7 @@ impact:"Improved relevance."
 
 };
 
+
 function renderPreview(key){
 
 const pane=document.getElementById("preview-pane");
@@ -416,13 +423,15 @@ pane.innerHTML=`
 <p>${data.impact}</p>
 </div>
 
-<div>
+<div class="preview-section">
 <a href="${data.link}" class="button">Open Full Project</a>
 </div>
 
 `;
 
 }
+
+
 
 function getTitleFromKey(key){
 
