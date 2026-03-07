@@ -244,3 +244,31 @@ html, body {
 #header {
 margin-bottom:0.2em;
 }
+
+/* The box on the left side of your library */
+.nav-box-left {
+    background-color: #f0f0f0; /* Example color */
+    padding: 15px;
+    border: 2px solid #ccc;
+    /* Rounds Top-Left and Bottom-Left only */
+    border-radius: 15px 0 0 15px; 
+}
+
+/* LIBRARY CONTAINER ROUNDED CORNERS */
+.lib-box-left {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: none; /* Smooth transition between boxes */
+}
+
+.lib-box-right {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Base style for both to ensure they align */
+.lib-box-left, .lib-box-right {
+    border: 1px solid rgba(210, 215, 217, 0.75); /* Matches your site's standard border color */
+    padding: 1.5em;
+    background: #ffffff;
+}
