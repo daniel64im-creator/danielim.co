@@ -222,8 +222,8 @@ html, body {
 #main > .inner {
   padding-top: 2em !important; 
   padding-bottom: 2em !important;
-  padding-left: 5% !important; 
-  padding-right: 5% !important; 
+  padding-left: 10% !important; 
+  padding-right: 10% !important; 
   margin: 0 auto;
   max-width: 1800px; 
   width: 100%;
