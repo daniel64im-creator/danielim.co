@@ -31,7 +31,7 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
-fetch("../components/nav.html")
+fetch("/components/nav.html")
 .then(res => res.text())
 .then(data => {
 document.getElementById("nav-placeholder").innerHTML = data;
@@ -39,7 +39,7 @@ document.getElementById("nav-placeholder").innerHTML = data;
 </script>
 
 <script>
-fetch("../components/site-header.html")
+fetch("/components/site-header.html")
 .then(res => res.text())
 .then(data => {
 document.getElementById("site-header-placeholder").innerHTML = data;
