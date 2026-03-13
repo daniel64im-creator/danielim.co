@@ -212,7 +212,7 @@ html, body {
 
 .page-title {
   font-family: "Roboto Slab", serif;
-  font-size: 2.5rem !important;
+  font-size: 3rem !important;
   font-weight: 700 !important;
   color: #3d4449;
   margin-bottom: 1.5rem;
@@ -451,3 +451,25 @@ body, input, select, textarea {
   @media screen and (max-width: 360px) {
     body, input, select, textarea {
       font-size: 12pt; } }
+
+
+
+h1 {
+  font-size: 4.5em;
+  margin: 0 0 0.5em 0;
+  line-height: 1.3; }
+
+h2 {
+  font-size: 2.5em; }
+
+h3 {
+  font-size: 2em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: 1em; }
