@@ -11,27 +11,25 @@
 </head>
 <body class="is-preload">
 
-<div id="nav-placeholder"></div>
-
-<div id="site-header-placeholder"></div>
+    <div id="nav-placeholder"></div>
 
 <div id="wrapper">
     <div id="main">
         <div class="inner">
-         
-            <section>
-                <h1 class="page-title" style="font-size: 2rem; font-weight: 700;">Redirecting to Project Library...</h1>
-                <p>If you are not redirected automatically, please <a href="projects-library.html">click here</a>.</p>
-            </section>
+            <div id="site-header-placeholder"></div>
+                <section>
+                    <h1 class="page-title" style="font-size: 2rem; font-weight: 700;">Redirecting to Project Library...</h1>
+                    <p>If you are not redirected automatically, please <a href="projects-library.html">click here</a>.</p>
+                </section>
+            </div>
         </div>
     </div>
-</div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
 
 <script>
-fetch("/components/nav.html")
+fetch("../components/nav.html")
 .then(res => res.text())
 .then(data => {
 document.getElementById("nav-placeholder").innerHTML = data;
@@ -39,7 +37,7 @@ document.getElementById("nav-placeholder").innerHTML = data;
 </script>
 
 <script>
-fetch("/components/site-header.html")
+fetch("../components/site-header.html")
 .then(res => res.text())
 .then(data => {
 document.getElementById("site-header-placeholder").innerHTML = data;
