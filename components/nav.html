@@ -15,6 +15,12 @@
 
 </div>
 
+<button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
 <div class="nav-contact">
 <a href="/contact.html">Contact</a>
 </div>
@@ -23,21 +29,28 @@
 
 <script>
   (function() {
-    // Get the current URL path (e.g., /resume.html)
     const currentPath = window.location.pathname;
-    
-    // Select all links within your top navigation
     const navLinks = document.querySelectorAll('#top-nav a');
-
     navLinks.forEach(link => {
-      // Get the link's destination
       const linkPath = link.getAttribute('href');
-
-      // Check if current path matches the link
-      // We check if it ends with the path or if it's the root index
       if (currentPath.endsWith(linkPath) || (currentPath === "/" && linkPath === "/index.html")) {
         link.classList.add('active');
       }
     });
   })();
+
+  const hamburger = document.getElementById('nav-hamburger');
+  const topNav = document.getElementById('top-nav');
+  if (hamburger && topNav) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = topNav.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', String(isOpen));
+    });
+    topNav.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        topNav.classList.remove('nav-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 </script>
