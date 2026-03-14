@@ -189,9 +189,13 @@ border-radius:8px;
 Complete index of governance systems, automation workflows, and reporting layers.
 </div>
 
+<button class="library-toggle-btn" id="library-toggle" aria-expanded="true">
+  Browse Projects <span class="toggle-arrow">▼</span>
+</button>
+
 <div class="library-container">
 
-<div class="library-left">
+<div class="library-left" id="library-left-panel">
 
 <div class="category-title">Governance Systems</div>
 
@@ -424,6 +428,17 @@ const key=item.getAttribute("data-key");
 setActiveItem(item);
 renderPreview(key);
 
+// On mobile, collapse list after selection so preview is immediately visible
+if (window.innerWidth <= 768) {
+  const btn = document.getElementById('library-toggle');
+  const panel = document.getElementById('library-left-panel');
+  if (btn && panel) {
+    panel.classList.add('collapsed');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+}
+
 });
 
 });
@@ -437,9 +452,19 @@ renderPreview(first.getAttribute("data-key"));
 
 }
 
-});
+  // Mobile toggle for project list panel
+  const toggleBtn = document.getElementById('library-toggle');
+  const leftPanel = document.getElementById('library-left-panel');
 
-</script>
+  if (toggleBtn && leftPanel) {
+    toggleBtn.addEventListener('click', () => {
+      const isCollapsed = leftPanel.classList.toggle('collapsed');
+      toggleBtn.classList.toggle('open', !isCollapsed);
+      toggleBtn.setAttribute('aria-expanded', String(!isCollapsed));
+    });
+  }
+
+});
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
