@@ -245,7 +245,7 @@ header.major.section-title h2 {
 /* LAYOUT
    ------------------------------------------------- */
 #main > .inner {
-  padding-top: 2em !important;
+  padding-top: 0.5em !important;
   padding-bottom: 2em !important;
   padding-left: 10% !important;
   padding-right: 10% !important;
@@ -321,6 +321,7 @@ h6 { font-size: 1em; }
 
 h1.page-title {
   margin-top: 0 !important;
+  margin-bottom: 0.2rem !important;
 }
 
 .page-title {
@@ -328,8 +329,16 @@ h1.page-title {
   font-size: 2.4rem !important;
   font-weight: 700 !important;
   color: #3d4449;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   padding-top: .2em !important;
+}
+
+.preview-title {
+  font-size: 1.4rem !important;
+  font-weight: 700;
+  color: #3d4449;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
 }
 
 .project-meta {
@@ -364,7 +373,7 @@ p {
 
 #hero .page-title {
   margin-top: 0 !important;
-  font-size: 2.8rem !important;
+  font-size: 2.6rem !important;
 }
 
 
