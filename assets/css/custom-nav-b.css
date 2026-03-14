@@ -175,7 +175,7 @@ html, body {
   display: flex !important;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0.4em 0 0.4em 0;
+  padding: 0.4em 0 0.8em 0;
   border-bottom: solid 3px #f56a6a;
   margin-bottom: 5px;
 }
