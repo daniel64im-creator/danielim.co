@@ -125,6 +125,53 @@ grid-template-columns: 1fr;
 }
 }
 
+/* PRINT */
+
+@media print {
+html, body {
+overflow: visible !important;
+height: auto !important;
+font-size: 10pt;
+color: #000;
+}
+
+#wrapper {
+height: auto !important;
+margin-top: 0 !important;
+overflow: visible !important;
+padding-bottom: 0 !important;
+}
+
+#top-nav,
+#nav-placeholder,
+#site-header-placeholder {
+display: none !important;
+}
+
+#main > .inner {
+padding: 0.5rem 1rem !important;
+}
+
+.metric-card,
+.skills-card {
+border: 1px solid #ccc !important;
+box-shadow: none !important;
+}
+
+.metrics-bar {
+flex-direction: row;
+}
+
+a {
+color: #000 !important;
+text-decoration: none !important;
+}
+
+.quota-line {
+border-left: 2px solid #ccc;
+}
+}
+
 </style>
 </head>
 
