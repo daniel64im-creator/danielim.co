@@ -14,7 +14,7 @@
 .metrics-bar {
 display: flex;
 gap: 1.5rem;
-margin-bottom: 2rem;
+margin-bottom: 1rem;
 margin-top: 0.5rem;
 }
 
@@ -62,10 +62,10 @@ padding: 1rem 1.25rem;
 }
 
 .skills-card h4 {
-font-size: 0.8rem;
+font-size: 0.85rem;
 font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 0.06em;
+text-transform: none;
+letter-spacing: 0;
 color: #3d4449;
 margin-bottom: 0.4rem;
 }
@@ -75,6 +75,29 @@ font-size: 0.85rem;
 color: #555;
 margin: 0;
 line-height: 1.5;
+}
+
+/* QUOTA ATTAINMENT */
+
+.quota-line {
+font-size: 0.8rem;
+color: #888;
+margin-top: 0.5rem;
+margin-bottom: 0;
+border-left: 3px solid #e5e5e5;
+padding-left: 0.75rem;
+}
+
+/* PRIOR ROLE HEADINGS */
+
+.prior-role h3 {
+font-size: 1.1rem;
+font-weight: 600;
+color: #555;
+}
+
+.prior-role p em {
+font-size: 0.85rem;
 }
 
 /* MOBILE */
@@ -180,9 +203,9 @@ grid-template-columns: 1fr;
 <li>Standardized cross-product Rules of Engagement and outreach eligibility reporting in Salesforce, reducing SDR outreach confusion and enforcing account ownership governance across overlapping product lines.</li>
 </ul>
 
-<p><strong>Team Quota Attainment</strong></p>
-<p>Q1 2025: 98% | Q2 2025: 135% | Q3 2025: 127% (Q3 quota increased 40% QoQ)</p>
+<p class="quota-line">Q1 2025: 98% &nbsp;|&nbsp; Q2 2025: 135% &nbsp;|&nbsp; Q3 2025: 127% (Q3 quota increased 40% QoQ)</p>
 
+<div class="prior-role">
 <h3>MiaRec | Arkose Labs | SpecTrust — Senior SDR / Founding SDR</h3>
 <p><em>June 2021 – June 2024 | San Jose, CA</em></p>
 
@@ -191,7 +214,9 @@ grid-template-columns: 1fr;
 
 <li>Collaborated with founders and sales leadership to refine qualification frameworks and workflow design while balancing operational data integrity with real-world rep adoption.</li>
 </ul>
+</div>
 
+<div class="prior-role">
 <h3>Xerox Corporation — Account Executive</h3>
 <p><em>Jan 2019 – June 2021 | San Jose, CA</em></p>
 
@@ -200,6 +225,7 @@ grid-template-columns: 1fr;
 
 <li>Owned and expanded a portfolio of 50–60 customer accounts, overseeing renewals and long-term relationship management.</li>
 </ul>
+</div>
 
 </section>
 
