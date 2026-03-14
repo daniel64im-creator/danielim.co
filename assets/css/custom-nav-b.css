@@ -228,6 +228,7 @@ header.major > :last-child {
 }
 
 header.major {
+  margin-top: 1.2rem;
   margin-bottom: 5px !important;
 }
 
