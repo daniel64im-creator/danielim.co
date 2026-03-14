@@ -1,18 +1,4 @@
 ﻿/* =================================================
-   TABLE OF CONTENTS
-   -------------------------------------------------
-   1. Fonts
-   2. Base & Scrollbar
-   3. Top Nav Bar
-   4. Site Header
-   5. Layout
-   6. Typography
-   7. Page-Specific: Hero (index.html)
-   8. Page-Specific: ROE Diagrams (roe-compliance-reporting.html)
-   9. Responsive
-   ================================================= */
-
-/* =================================================
    DANIELIM.CO — GLOBAL NAV & CONSISTENCY OVERRIDES
    ================================================= */
 
@@ -228,11 +214,15 @@ html, body {
   color: #72777c;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.2em 0;
+}
+
 header.major > :last-child {
   border-bottom: solid 3px #f56a6a;
   display: inline-block;
-  margin: 0 0 1em 0;
-  padding: 0 0.75em 0.5em 0;
+  margin: 0 0 0.4em 0;
+  padding: 0 0.75em 0 0;
 }
 
 header.major {
