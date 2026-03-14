@@ -217,7 +217,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.2em 0;
+  margin: 0 0 0.4em 0;
 }
 
 header.major > :last-child {
@@ -228,8 +228,8 @@ header.major > :last-child {
 }
 
 header.major {
-  margin-top: 1.2rem;
-  margin-bottom: 5px !important;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
 header.major h2 {
@@ -238,7 +238,7 @@ header.major h2 {
 }
 
 header.major.section-title {
-  margin-bottom: 5px !important;
+  margin-bottom: 0.5rem !important;
 }
 
 header.major.section-title h2 {
@@ -261,13 +261,13 @@ header.major.section-title h2 {
 
 section {
   margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  padding-top: 10px !important;
+  padding-bottom: 0.75rem !important;
+  padding-top: 1.25rem !important;
 }
 
 #main > .inner > section {
-  padding-top: 10px !important;
-  padding-bottom: 0 !important;
+  padding-top: 1.25rem !important;
+  padding-bottom: 0.75rem !important;
 }
 
 hr {
@@ -360,12 +360,12 @@ h1.page-title {
 
 p {
   margin-top: 8px;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.75em;
 }
 
 ul, ol {
-  margin-bottom: 0.25em;
-  margin-top: 0;
+  margin-bottom: 0.6em;
+  margin-top: 0.25em;
 }
 
 .quota-line {
