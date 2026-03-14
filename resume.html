@@ -6,6 +6,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/custom-nav-b.css" />
+
+<style>
+
+/* METRICS BAR */
+
+.metrics-bar {
+display: flex;
+gap: 1.5rem;
+margin-bottom: 2rem;
+margin-top: 0.5rem;
+}
+
+.metric-card {
+flex: 1;
+background: #ffffff;
+border: 1px solid #e5e5e5;
+border-top: 3px solid #f56a6a;
+border-radius: 10px;
+padding: 1.25rem 1.5rem;
+text-align: center;
+}
+
+.metric-value {
+font-family: "Roboto Slab", serif;
+font-size: 2rem;
+font-weight: 700;
+color: #3d4449;
+line-height: 1.1;
+}
+
+.metric-label {
+font-size: 0.75rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.07em;
+color: #999;
+margin-top: 0.3rem;
+}
+
+/* SKILLS GRID */
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+margin-top: 0.5rem;
+}
+
+.skills-card {
+background: #f9f9f9;
+border: 1px solid #e5e5e5;
+border-radius: 8px;
+padding: 1rem 1.25rem;
+}
+
+.skills-card h4 {
+font-size: 0.8rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+color: #3d4449;
+margin-bottom: 0.4rem;
+}
+
+.skills-card p {
+font-size: 0.85rem;
+color: #555;
+margin: 0;
+line-height: 1.5;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 980px) {
+.metrics-bar {
+flex-direction: column;
+}
+
+.skills-grid {
+grid-template-columns: 1fr;
+}
+}
+
+</style>
 </head>
 
 <body class="is-preload">
@@ -22,28 +106,85 @@
 
 <h1 class="page-title">Resume</h1>
 
-<p>Sales Development Team Lead focused on revenue operations systems, Salesforce reporting, and operational process design. Experienced in building CRM governance frameworks, performance dashboards, and workflow infrastructure that improves data accuracy and sales execution.</p>
+<div class="metrics-bar">
+
+<div class="metric-card">
+<div class="metric-value">9,000+</div>
+<div class="metric-label">CRM Accounts Enriched</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">98–135%</div>
+<div class="metric-label">Quota Attainment, 3 Consecutive Quarters</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">30s → 3s</div>
+<div class="metric-label">FTE Lookup Time Reduction</div>
+</div>
+
+</div>
+
+<p>Revenue Operations professional with 7 years in B2B SaaS, specializing in CRM governance, Salesforce automation, SDR workflow infrastructure, and operational reporting. At YuJa, built and owned end-to-end RevOps systems including a ~9,000-account CRM enrichment initiative, Salesforce Flow automations, account allocation governance, and a custom performance dashboard — delivering measurable improvements in data accuracy, pipeline visibility, and rep productivity.</p>
+
+</section>
+
+<section>
+
+<header class="major"><h2>Core Skills & Tools</h2></header>
+
+<div class="skills-grid">
+
+<div class="skills-card">
+<h4>CRM & Automation</h4>
+<p>Salesforce (Flows, Reports, Dashboards, Data Management), Salesforce Flow Builder, CRM data governance</p>
+</div>
+
+<div class="skills-card">
+<h4>Operations & Infrastructure</h4>
+<p>Google Sheets (advanced), Apps Script, account allocation systems, Rules of Engagement design, lead routing logic, SDR workflow governance</p>
+</div>
+
+<div class="skills-card">
+<h4>Reporting & Data</h4>
+<p>Supabase, Next.js (dashboard tooling), Excel/CSV data processing, firmographic enrichment, CRM segmentation</p>
+</div>
+
+<div class="skills-card">
+<h4>AI-Assisted Tooling</h4>
+<p>ChatGPT, Claude, GitHub Copilot — applied to operational system design and documentation</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
 
 <header class="major"><h2>Professional Experience</h2></header>
 
-<h3>YuJa, Inc - Team Lead, Sales Development</h3>
-<p><em>June 2024 - Present | San Jose, CA</em></p>
+<h3>YuJa, Inc — Revenue Operations & SDR Team Lead</h3>
+<p><em>June 2024 – Present | San Jose, CA</em></p>
 
 <ul>
-<li>Partnered with IT to improve Salesforce reporting accuracy and CRM data governance, leading enrichment of ~9,000 accounts and clarifying metric definitions so reports reflected true booking, conversion, and prospecting activity.</li>
+<li>Led a ~9,000-account CRM data enrichment initiative — exporting, enriching, and re-importing Salesforce accounts with missing firmographic data (FTE, geography, website) — improving segmentation accuracy, territory planning, and reporting reliability across SDR workflows.</li>
 
-<li>Designed rep-level workspaces that unified note-taking, prioritization, and embedded enrollment lookup, reducing prospecting friction (lookup time ~30s → ~3s) while preserving data continuity through account refreshes and ownership changes.</li>
+<li>Designed and deployed two Salesforce Flows: a Record-Triggered Flow on the Event object providing leadership real-time demo booking notifications, and an automation ensuring demo attendee emails populate on Opportunity records automatically — eliminating manual entry gaps and improving marketing data consistency.</li>
 
-<li>Replaced manual Lattice-based performance tracking with a custom monthly and quarterly dashboard (Supabase, Next.js), giving leadership real-time visibility into rep performance and supporting 98%-124% quota attainment across three quarters, including 124% in Q3 after a 40% quota increase.</li>
+<li>Built a scalable SDR account allocation framework in Google Sheets with Apps Script, establishing lifecycle states, duplicate prevention logic, and rep-level ownership routing across multiple product lines — eliminating duplicate outreach across shared institutional accounts.</li>
 
-<li>Standardized SDR operational workflows across multiple product lines, including account lifecycle governance, Rules of Engagement, lead routing, and post-event outreach processes, enabling consistent assignment logic, cleaner lead data, and faster follow-up execution.</li>
+<li>Replaced manual performance tracking with a custom reporting dashboard (Supabase, Next.js) providing leadership real-time rep-level visibility; team achieved 98–135% quota attainment across three consecutive quarters including 135% in Q2 after a 40% quota increase.</li>
+
+<li>Designed rep-level prospecting workspaces with an embedded FTE lookup database, reducing institutional enrollment lookup time from ~30 seconds to ~3 seconds while preserving data continuity across account refreshes.</li>
+
+<li>Standardized cross-product Rules of Engagement and outreach eligibility reporting in Salesforce, reducing SDR outreach confusion and enforcing account ownership governance across overlapping product lines.</li>
 </ul>
 
-<p><strong>2025 Team Quota Attainment</strong></p>
-<p>Q1: 98% | Q2: 135% | Q3: 127% (40% QoQ quota increase)</p>
+<p><strong>Team Quota Attainment</strong></p>
+<p>Q1 2025: 98% | Q2 2025: 135% | Q3 2025: 127% (Q3 quota increased 40% QoQ)</p>
 
-<h3>MiaRec | Arkose Labs | Spectrust - Sr. SDR / Founding SDR</h3>
-<p><em>June 2021 - June 2024 | San Jose, CA</em></p>
+<h3>MiaRec | Arkose Labs | SpecTrust — Senior SDR / Founding SDR</h3>
+<p><em>June 2021 – June 2024 | San Jose, CA</em></p>
 
 <ul>
 <li>Early SDR hire at multiple early-stage startups contributing to outbound process buildout, CRM hygiene standards, and foundational sales tooling architecture.</li>
@@ -51,18 +192,22 @@
 <li>Collaborated with founders and sales leadership to refine qualification frameworks and workflow design while balancing operational data integrity with real-world rep adoption.</li>
 </ul>
 
-<h3>Xerox Corporation - Account Executive</h3>
-<p><em>Jan 2019 - June 2021 | San Jose, CA</em></p>
+<h3>Xerox Corporation — Account Executive</h3>
+<p><em>Jan 2019 – June 2021 | San Jose, CA</em></p>
 
 <ul>
 <li>Managed the full sales cycle from prospecting through close for SMB and mid-market accounts.</li>
 
-<li>Owned and expanded a portfolio of 50-60 customer accounts, overseeing renewals and long-term relationship management.</li>
+<li>Owned and expanded a portfolio of 50–60 customer accounts, overseeing renewals and long-term relationship management.</li>
 </ul>
+
+</section>
+
+<section>
 
 <header class="major"><h2>Education</h2></header>
 
-<p><strong>B.A. Economics</strong> - University of California, Davis (2018)</p>
+<p><strong>B.A. Economics</strong> — University of California, Davis (2018)</p>
 
 </section>
 
