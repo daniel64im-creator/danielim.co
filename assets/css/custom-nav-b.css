@@ -21,6 +21,7 @@ html, body {
   display: block;
   scrollbar-color: #888888 #ffffff;
   scrollbar-width: auto;
+  padding-bottom: 2em;
 }
 
 #wrapper::-webkit-scrollbar {
@@ -247,7 +248,7 @@ header.major.section-title h2 {
    ------------------------------------------------- */
 #main > .inner {
   padding-top: 0.5em !important;
-  padding-bottom: 2em !important;
+  padding-bottom: 4em !important;
   padding-left: 10% !important;
   padding-right: 10% !important;
   margin: 0 auto;
