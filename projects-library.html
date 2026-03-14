@@ -189,7 +189,7 @@ border-radius:8px;
 Complete index of governance systems, automation workflows, and reporting layers.
 </div>
 
-<button class="library-toggle-btn" id="library-toggle" aria-expanded="true">
+<button class="library-toggle-btn open" id="library-toggle" aria-expanded="true">
   Browse Projects <span class="toggle-arrow">▼</span>
 </button>
 
@@ -436,6 +436,7 @@ if (window.innerWidth <= 768) {
     panel.classList.add('collapsed');
     btn.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
+    document.getElementById('preview-pane').scrollIntoView({ behavior: 'smooth' });
   }
 }
 
@@ -465,6 +466,8 @@ renderPreview(first.getAttribute("data-key"));
   }
 
 });
+
+</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
