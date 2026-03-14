@@ -405,10 +405,6 @@ h1.page-title {
     margin-top: 0 !important;
 }
 
-/* Remove potential gap from the placeholder div */
-#site-header-placeholder {
-    display: none !important;
-}
 
 .box {
 padding: 1.25em;
