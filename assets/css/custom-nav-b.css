@@ -256,13 +256,14 @@ header.major.section-title h2 {
 }
 
 section {
-  margin-bottom: .2px;
-  padding-bottom: 0;
-  padding-top: 10px;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 10px !important;
 }
 
 #main > .inner > section {
   padding-top: 10px !important;
+  padding-bottom: 0 !important;
 }
 
 hr {
@@ -353,6 +354,7 @@ h1.page-title {
 
 p {
   margin-top: 8px;
+  margin-bottom: 0.5em;
 }
 
 
