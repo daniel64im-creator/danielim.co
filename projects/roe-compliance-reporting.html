@@ -27,48 +27,43 @@
 <h1 class="page-title">CRM Outreach Eligibility & ROE Compliance Reporting</h1>
 
 <div class="project-meta">
-Sales Governance Visibility System
+SDR Governance Framework
 </div>
+
 <div class="project-impact">
-Prevented cross-team prospect conflicts by operationalizing Rules of Engagement into a structured decision framework used across all SDR outreach.
+Eliminated duplicate demo bookings, reduced cross-team ownership disputes, and shifted the SDR organization from informal interpretation to enforceable outreach rules across four product lines.
 </div>
-
-
 
 <p>
-Reporting system designed to surface outreach eligibility under Rules of
-Engagement (ROE) policies, allowing managers and SDRs to quickly identify
-which accounts and contacts were compliant for outreach activity.
+Comprehensive governance framework built to control lead ownership, define cross-product outreach boundaries, and standardize outreach eligibility evaluation across an 11–15 person SDR team. Enforced through a combination of Salesforce automation, decision framework documentation, and Confluence-hosted training materials.
 </p>
-
-
 
 
 
 <header class="major section-title"><h2>System Overview</h2></header>
 
 <p>
-Rules of Engagement (ROE) governance defined when SDR outreach was permitted across shared Salesforce accounts.
-Because multiple product teams operated within the same institutions, SDRs needed a clear framework for determining when outreach was allowed without interfering with existing opportunities, account ownership, or active deal conversations.
-This framework standardized how representatives evaluated accounts, analyzed opportunity activity, and coordinated outreach across teams to maintain alignment and prevent prospect conflict.
+As the sole Team Lead overseeing 11–15 SDRs supporting 7–15 Account Executives across four product lines — Verity, Panorama, Lumina, and EqualGround — and two regions (San Jose and Toronto), no enforceable governance structure existed to control lead ownership lifecycle, cross-product outreach boundaries, or demo booking conflicts.
 </p>
 
+<p>
+As team size and product complexity increased, ambiguity created real operational risk: duplicate demo bookings, internal AE/SDR disputes, revenue attribution confusion, and unenforceable performance standards. This project introduced a structured governance layer combining Salesforce automation, decision framework documentation, and published training materials to shift the organization from informal interpretation to enforced rules.
+</p>
 
+<p>
+The PIP framework was developed as part of this initiative. See: <a href="pip-governance.html">Performance Improvement Plan Governance Framework</a>.
+</p>
 
 
 
 <header class="major section-title"><h2>Governance Decision Framework</h2></header>
 
 <p>
-Rules of Engagement policies were operationalized through a structured
-decision framework used by SDRs to determine whether outreach into an
-account or lead was permitted.
+Rules of Engagement policies were operationalized through a structured decision framework used by SDRs to determine whether outreach into an account or lead was permitted.
 </p>
 
 <p>
-The framework standardized how representatives evaluated account status,
-existing opportunities, and lead ownership before initiating prospecting
-activity.
+The framework standardized how representatives evaluated account status, existing opportunities, and lead ownership before initiating prospecting activity. Workflows were documented, reviewed with upper management, and published to Confluence as official organizational reference material.
 </p>
 
 
@@ -127,19 +122,15 @@ Ownership and recent activity must be verified before initiating outreach.
 
 
 
-
-
 <header class="major section-title"><h2>Structural Gap</h2></header>
 
 <ul>
-<li>No consistent process for determining outreach eligibility.</li>
-<li>Salesforce opportunity activity required manual interpretation.</li>
-<li>SDRs risked contacting stakeholders already engaged in active deals.</li>
-<li>Cross-product teams lacked a standardized coordination framework.</li>
-<li>Lead ownership conflicts created prospect confusion and duplicate outreach.</li>
+<li>SDRs could self-assign leads indefinitely with no expiration or reassignment logic.</li>
+<li>Multiple product teams could independently contact the same institutional accounts.</li>
+<li>No standardized method existed for determining when outreach conflicted with active opportunities.</li>
+<li>Contacts involved in open deals were sometimes contacted by other product teams.</li>
+<li>No enforceable performance accountability framework existed for the SDR organization.</li>
 </ul>
-
-
 
 
 
@@ -147,84 +138,66 @@ Ownership and recent activity must be verified before initiating outreach.
 
 <ul>
 
-<li><strong>Account Qualification Workflow</strong> – Structured process to determine customer status, opportunity presence, and activity recency.</li>
+<li><strong>14-Day Lead Ownership Enforcement</strong> — Salesforce record-triggered Flow monitored lead assignment timestamps. At day 14, ownership was automatically removed, the lead was labeled "Expired," and returned to the eligible pool. No manual override allowed before expiration.</li>
 
-<li><strong>Opportunity Activity Evaluation</strong> – SDRs assess opportunity status, product alignment, and recent activity before initiating outreach.</li>
+<li><strong>Opportunity Guardrail Rules</strong> — Formal decision tree governing open opportunity stage checks, Closed Won protections, active contact protection logic, and a 3-month recency activity rule for cross-product eligibility.</li>
 
-<li><strong>Contact Participation Restrictions</strong> – Contacts engaged in active opportunities are marked as restricted from SDR outreach.</li>
+<li><strong>Cross-Product Outreach Logic</strong> — Defined when Product B outreach was permitted into accounts with active Product A opportunities, including which contacts were protected and when AE alignment was required.</li>
 
-<li><strong>Lead Ownership Protocol</strong> – Ownership rules ensure only the assigned owner or authorized representatives can contact a prospect.</li>
+<li><strong>Coordination Escalation Layer</strong> — SDRs escalate stale opportunities or ambiguous ownership cases to team leadership rather than making unilateral outreach decisions.</li>
 
-<li><strong>Coordination Escalation Layer</strong> – SDRs escalate stale opportunities or ambiguous ownership cases to team leadership.</li>
+<li><strong>Documentation & Training Layer</strong> — Full governance framework published to Confluence as official reference documentation and integrated into Canvas as a new hire onboarding module.</li>
 
 </ul>
 
 <div class="arch-box">
-
 ROE Evaluation Workflow
 
-Account Evaluated
-- Customer Status Verified
-- Opportunity Presence Checked
-- Opportunity Activity Reviewed
-- Contact Participation Identified
-- Lead Ownership Verified
-- Outreach Eligibility Determined
-
+Account Evaluated → Customer Status Verified → Opportunity Presence Checked → Active Contact Protection Applied → Lead Ownership Verified → Outreach Permitted or Escalated
 </div>
-
-
 
 
 
 <header class="major section-title"><h2>Tools</h2></header>
 
 <ul>
-<li>Salesforce account and opportunity records</li>
-<li>Opportunity activity timeline analysis</li>
-<li>Lead ownership tracking</li>
-<li>SDR coordination protocols</li>
-<li>Team lead escalation workflows</li>
+<li>Salesforce CRM</li>
+<li>Salesforce Flow Builder</li>
+<li>Confluence (governance documentation)</li>
+<li>Canvas (new hire onboarding integration)</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Scale</h2></header>
 
 <ul>
-<li>Primary users: SDR teams operating across multiple product lines</li>
-<li>Scope: shared institutional accounts within the CRM</li>
-<li>Coverage: opportunity evaluation, contact restrictions, and lead ownership</li>
-<li>Objective: prevent cross-team prospect conflicts</li>
+<li>Team size: 11–15 SDRs, 7–15 Account Executives</li>
+<li>Product lines: Verity, Panorama, Lumina, EqualGround</li>
+<li>Regions: San Jose + Toronto</li>
+<li>Objective: replace informal interpretation with enforceable outreach governance</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Operational Impact</h2></header>
 
 <ul>
-<li>Reduced prospect conflicts across product teams.</li>
-<li>Improved coordination between SDRs and Account Executives.</li>
-<li>Standardized opportunity review process.</li>
-<li>Clear escalation paths for stale or ambiguous opportunities.</li>
-<li>Improved prospect experience through coordinated outreach.</li>
+<li>Eliminated duplicate demo booking incidents across product teams.</li>
+<li>Reduced cross-team ownership disputes and AE/SDR escalations.</li>
+<li>Standardized outreach eligibility evaluation across all four product lines.</li>
+<li>Created enforceable lead ownership boundaries with system-level expiration logic.</li>
+<li>Improved prospect experience through coordinated, non-conflicting outreach.</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Future Improvements</h2></header>
 
 <ul>
-<li>Automate opportunity activity detection for stale deals.</li>
-<li>Introduce CRM flags for restricted contacts.</li>
-<li>Build automated outreach eligibility indicators.</li>
-<li>Surface ownership conflicts directly in SDR workflows.</li>
+<li>Automate opportunity activity detection to surface stale deals without manual review.</li>
+<li>Introduce CRM flags for restricted contacts directly on account layouts.</li>
+<li>Build outreach eligibility indicators surfaced in the SDR prospecting workflow.</li>
 </ul>
 
 
@@ -263,13 +236,3 @@ document.getElementById("site-header-placeholder").innerHTML = data;
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
