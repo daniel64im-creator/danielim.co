@@ -1,5 +1,5 @@
 /* =================================================
-   DANIELIM.CO — GLOBAL NAV & CONSISTENCY OVERRIDES
+   DANIELIM.CO - GLOBAL NAV & CONSISTENCY OVERRIDES
    ================================================= */
 
 /* FONTS
@@ -729,7 +729,7 @@ ul, ol {
 
 @media (max-width: 480px) {
 
-  /* Typography — tighten further on small phones */
+  /* Typography - tighten further on small phones */
   body, input, select, textarea {
     font-size: 10.5pt;
   }
@@ -742,7 +742,7 @@ ul, ol {
     font-size: 1.55rem !important;
   }
 
-  /* Layout padding — tighter on very small screens */
+  /* Layout padding - tighter on very small screens */
   #main > .inner {
     padding-left: 4% !important;
     padding-right: 4% !important;
@@ -750,7 +750,7 @@ ul, ol {
 
 }
 
-/* Library toggle button — hidden on desktop, shown on mobile via 768px block above */
+/* Library toggle button - hidden on desktop, shown on mobile via 768px block above */
 .library-toggle-btn {
   display: none;
   align-items: center;

@@ -31,7 +31,7 @@ Data Infrastructure System
 </div>
 
 <div class="project-impact">
-Restored firmographic accuracy across ~9,000 Salesforce accounts by sourcing institutional data from IPEDS, normalizing it in Google Sheets, and re-importing by Account ID — improving segmentation, territory reporting, and CRM reliability.
+Restored firmographic accuracy across ~9,000 Salesforce accounts by sourcing institutional data from IPEDS, normalizing it in Google Sheets, and re-importing by Account ID - improving segmentation, territory reporting, and CRM reliability.
 </div>
 
 <p>
@@ -48,8 +48,8 @@ for segmentation, reporting, and outbound targeting across thousands of institut
 <p>
 The Salesforce account base contained thousands of records with missing or inconsistent
 firmographic data. Critical targeting fields such as institutional size, domain, geographic
-location, and time zone were unreliable. Firmographic data was sourced from IPEDS — the
-Integrated Postsecondary Education Data System — exported as CSV, normalized in Google Sheets,
+location, and time zone were unreliable. Firmographic data was sourced from IPEDS - the
+Integrated Postsecondary Education Data System - exported as CSV, normalized in Google Sheets,
 and re-imported to Salesforce by Account ID to restore CRM data integrity.
 </p>
 
@@ -74,11 +74,11 @@ and re-imported to Salesforce by Account ID to restore CRM data integrity.
 <header class="major section-title"><h2>Architecture</h2></header>
 
 <ul>
-<li><strong>Salesforce Account Export</strong> — Pulled the complete account dataset to identify which records were missing firmographic fields.</li>
+<li><strong>Salesforce Account Export</strong> - Pulled the complete account dataset to identify which records were missing firmographic fields.</li>
 
-<li><strong>IPEDS Data Pull</strong> — Sourced institutional firmographic data (FTE, domain, geographic fields, time zone) from the IPEDS public database via CSV export.</li>
+<li><strong>IPEDS Data Pull</strong> - Sourced institutional firmographic data (FTE, domain, geographic fields, time zone) from the IPEDS public database via CSV export.</li>
 
-<li><strong>Google Sheets Normalization</strong> — Cleaned, standardized, and mapped IPEDS data to Salesforce Account IDs, normalizing institution names, domains, and geographic values.</li>
+<li><strong>Google Sheets Normalization</strong> - Cleaned, standardized, and mapped IPEDS data to Salesforce Account IDs, normalizing institution names, domains, and geographic values.</li>
 
 <li><strong>ID-Based Mapping</strong> - All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
 
@@ -94,17 +94,17 @@ Salesforce Account Export → IPEDS Data Pull → Google Sheets Normalization �
 </div>
 
 <div class="screenshot-block">
-<div class="screenshot-label">Google Sheets — Enrichment Dataset (Account Name, ID, Website, Country, Region, State, Time Zone, FTE)</div>
+<div class="screenshot-label">Google Sheets - Enrichment Dataset (Account Name, ID, Website, Country, Region, State, Time Zone, FTE)</div>
 <img src="../images/enrichment-sheet.webp" alt="Enrichment Google Sheets Dataset">
 </div>
 
 <div class="screenshot-grid">
 <div class="screenshot-block">
-<div class="screenshot-label">Salesforce Data Import Wizard — Import Configuration</div>
+<div class="screenshot-label">Salesforce Data Import Wizard - Import Configuration</div>
 <img src="../images/enrichment-import-wizard.webp" alt="Salesforce Import Wizard Configuration">
 </div>
 <div class="screenshot-block">
-<div class="screenshot-label">Salesforce Data Import Wizard — Field Mapping</div>
+<div class="screenshot-label">Salesforce Data Import Wizard - Field Mapping</div>
 <img src="../images/enrichment-field-mapping.webp" alt="Salesforce Field Mapping">
 </div>
 </div>
