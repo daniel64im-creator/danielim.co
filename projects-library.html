@@ -1,9 +1,13 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <title>Project Library | Revenue Operations Systems</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="Complete project library — governance systems, data infrastructure builds, and workflow automations built for revenue operations teams." />
+<meta property="og:title" content="Project Library | Daniel Im" />
+<meta property="og:description" content="Complete project library — governance systems, data infrastructure builds, and workflow automations built for revenue operations teams." />
+<meta property="og:type" content="website" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/custom-nav-b.css" />
 
@@ -189,7 +193,7 @@ border-radius:8px;
 Complete index of governance systems, automation workflows, and reporting layers.
 </div>
 
-<button class="library-toggle-btn" id="library-toggle" aria-expanded="true">
+<button class="library-toggle-btn open" id="library-toggle" aria-expanded="true">
   Browse Projects <span class="toggle-arrow">▼</span>
 </button>
 
@@ -200,7 +204,7 @@ Complete index of governance systems, automation workflows, and reporting layers
 <div class="category-title">Governance Systems</div>
 
 <div class="project-item" data-key="allocation">
-Customer Allocation & Cross-Governance
+Customer Allocation & Cross-Sell Governance
 </div>
 
 <div class="project-item" data-key="allocationinfra">
@@ -436,6 +440,7 @@ if (window.innerWidth <= 768) {
     panel.classList.add('collapsed');
     btn.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
+    document.getElementById('preview-pane').scrollIntoView({ behavior: 'smooth' });
   }
 }
 
@@ -465,6 +470,8 @@ renderPreview(first.getAttribute("data-key"));
   }
 
 });
+
+</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>

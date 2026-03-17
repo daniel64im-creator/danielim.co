@@ -1,9 +1,13 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <title>Team Lead Customer Allocation Infrastructure | Revenue Operations Project</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="Centralized account allocation infrastructure defining SDR ownership, hold state logic, and handoff visibility at scale." />
+<meta property="og:title" content="Team Lead Customer Allocation Infrastructure | Daniel Im" />
+<meta property="og:description" content="Centralized account allocation infrastructure defining SDR ownership, hold state logic, and handoff visibility at scale." />
+<meta property="og:type" content="website" />
 <link rel="stylesheet" href="../assets/css/main.css" />
 <link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
@@ -23,49 +27,39 @@
 <h1 class="page-title">Team Lead Customer Allocation Infrastructure</h1>
 
 <div class="project-meta">
-Account Ownership Governance System
+Account Ownership Foundation System
 </div>
 
+<div class="project-impact">
+Established the foundational ownership model for SDR account allocation — a simple, centralized sheet shared across three team leads that later evolved into a full cross-product governance system.
+</div>
 
 <p>
-Operational allocation framework designed to maintain clear customer
-ownership across SDR teams while preventing duplicate outreach and
-enforcing structured reassignment workflows.
+Centralized Google Sheets system built to give three team leads shared visibility into account ownership across ~500 institutional accounts. Simple by design, this was the first structured allocation system built for the SDR organization and served as the foundation for later governance work.
 </p>
-
-
 
 
 
 <header class="major section-title"><h2>System Overview</h2></header>
 
 <p>
-As SDR teams expanded across multiple product segments, maintaining
-accurate account ownership became increasingly complex. Allocation,
-temporary holds, and reassignment events introduced operational risk
-without a centralized system controlling ownership transitions.
+Early in the SDR buildout, three team leads were working from a shared list of roughly 500 institutional accounts. Without a centralized system, account ownership was tracked informally, making it difficult to coordinate during reassignment and identify which accounts were available for reallocation.
 </p>
 
 <p>
-This project introduced a structured allocation infrastructure designed to
-define ownership rules, manage hold states, and document reassignment
-decisions.
+This project introduced a single Google Sheets ownership layer — simple by design — that gave all three team leads a shared view of account status and introduced the hold state model that would later become the foundation for more complex allocation governance.
 </p>
-
-
 
 
 
 <header class="major section-title"><h2>Structural Gap</h2></header>
 
 <ul>
-<li>No centralized system defining account ownership.</li>
-<li>Temporary work states created visibility gaps.</li>
-<li>Manual handoffs increased duplicate outreach risk.</li>
-<li>Disputes occurred when ownership was unclear.</li>
+<li>No shared record of which team lead owned which account.</li>
+<li>No defined process for marking accounts as inactive or available for reallocation.</li>
+<li>Reassignment decisions happened informally with no documented handoff.</li>
+<li>Account availability was unclear without checking manually with each team lead.</li>
 </ul>
-
-
 
 
 
@@ -73,26 +67,20 @@ decisions.
 
 <ul>
 
-<li><strong>Allocation Framework</strong> - Defined assignment rules across SDR teams.</li>
+<li><strong>Master Account Sheet</strong> — Single centralized spreadsheet visible to all three team leads with ownership status per account.</li>
 
-<li><strong>Hold State Logic</strong> - Temporary protection state preventing concurrent outreach.</li>
+<li><strong>Ownership Assignment</strong> — Each account assigned to a specific team lead with clear accountability.</li>
 
-<li><strong>Exception Handling</strong> - Governance process for reassignment requests.</li>
+<li><strong>Hold State</strong> — Neutral status for accounts a team lead was no longer working, flagging them as available for reallocation to another owner.</li>
 
-<li><strong>Ownership Visibility</strong> - Operational view of current allocation and changes.</li>
+<li><strong>Reassignment Review</strong> — Brief review step before a held account transferred to a new team lead, preserving context and preventing premature reassignment.</li>
 
 </ul>
 
 <div class="arch-box">
-
 Customer Allocation Workflow
 
-Account Identified  
-- SDR Ownership Assigned  
-- Hold State (Active Work)  
-- Reassignment Review  
-- Ownership Updated
-
+Account Identified → Team Lead Ownership Assigned → Hold State (No Longer Being Worked) → Reassignment Review → New Owner Assigned
 </div>
 
 <div class="screenshot-block">
@@ -102,51 +90,41 @@ Account Identified
 
 
 
-
-
 <header class="major section-title"><h2>Tools</h2></header>
 
 <ul>
-<li>Google Sheets allocation framework</li>
-<li>Shared SDR working datasets</li>
-<li>Manager-controlled governance rules</li>
+<li>Google Sheets</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Scale</h2></header>
 
 <ul>
-<li>Primary users: SDR teams and team leads</li>
-<li>Scope: multi-product SDR organization</li>
-<li>Objective: maintain clear ownership across prospecting operations</li>
+<li>Primary users: 3 team leads</li>
+<li>Account scope: ~500 institutional accounts</li>
+<li>Objective: establish shared ownership visibility and structured reassignment process</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Operational Impact</h2></header>
 
 <ul>
-<li>Reduced allocation disputes across SDR teams.</li>
-<li>Prevented duplicate outreach activity.</li>
-<li>Improved transparency during ownership changes.</li>
-<li>Created scalable allocation governance model.</li>
+<li>Gave three team leads a shared, reliable view of account ownership for the first time.</li>
+<li>Introduced a structured process for releasing and redistributing accounts via hold states.</li>
+<li>Reduced informal ownership disputes across the early SDR team.</li>
+<li>Created the foundational allocation model that later evolved into a full cross-product governance system.</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Future Improvements</h2></header>
 
 <ul>
-<li>Add reporting layer for allocation change tracking.</li>
-<li>Automate conflict detection during reassignment events.</li>
-<li>Strengthen audit trail for ownership transitions.</li>
+<li>Expand to support individual rep-level ownership as the team grows.</li>
+<li>Add timestamps to hold state transitions for better ownership tracking.</li>
+<li>Migrate into a more structured system as account volume and team size increase.</li>
 </ul>
 
 
@@ -158,26 +136,6 @@ Account Identified
 </div>
 </div>
 
-<div id="sidebar">
-<div class="inner">
-
-<nav id="menu">
-<header class="major"><h2>Navigation</h2></header>
-<ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="../projects-library.html">Projects</a></li>
-<li><a href="../resume.html">Resume</a></li>
-<li><a href="../about.html">About</a></li>
-<li><a href="../contact.html">Contact</a></li>
-</ul>
-</nav>
-
-<footer id="footer">
-<p class="copyright">&copy; Daniel Im</p>
-</footer>
-
-</div>
-</div>
 
 </div>
 
@@ -205,13 +163,3 @@ document.getElementById("site-header-placeholder").innerHTML = data;
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

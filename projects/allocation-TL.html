@@ -1,9 +1,13 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <title>Customer Allocation & Cross-Sell Governance | Revenue Operations Project</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="Customer allocation and cross-sell governance model designed to eliminate duplicate outreach and ownership disputes between product teams." />
+<meta property="og:title" content="Customer Allocation & Cross-Sell Governance | Daniel Im" />
+<meta property="og:description" content="Customer allocation and cross-sell governance model designed to eliminate duplicate outreach and ownership disputes between product teams." />
+<meta property="og:type" content="website" />
 <link rel="stylesheet" href="../assets/css/main.css" />
 <link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
@@ -23,45 +27,40 @@
 <h1 class="page-title">Customer Allocation & Cross-Sell Governance</h1>
 
 <div class="project-meta">
-Governance System
+Cross-Sell Governance System
 </div>
 
+<div class="project-impact">
+Eliminated duplicate outreach on existing customers by introducing enforced team routing rules and rep-level ownership logic across a multi-product SDR organization.
+</div>
 
 <p>
-Operational governance framework designed to control expansion behavior across
-a multi-product sales organization. The system defined ownership rules, protected
-active opportunities, and reduced duplicate outreach risk across shared accounts.
+Google Sheets-based governance system designed to control cross-product outreach across a shared institutional customer base. Built on the foundation of the earlier team lead allocation system, this framework introduced a master account list, enforced team routing rules, and rep-level ownership logic to prevent duplicate outreach between product lines.
 </p>
-
-
 
 
 
 <header class="major section-title"><h2>System Overview</h2></header>
 
 <p>
-The sales organization operated across multiple product lines targeting the same
-institutional customer base. Accounts could have simultaneous activity across
-different products, creating ambiguity around expansion ownership and outreach
-permissions. This project introduced a structured allocation and governance
-framework to control how teams interacted with shared accounts.
+The organization operated multiple SDR product teams targeting the same institutional customer base. Without a defined ownership and routing model, cross-product outreach on existing customers created duplicate activity and unclear accountability.
 </p>
 
-
+<p>
+This project designed a centralized Google Sheets framework — building on the earlier team lead allocation infrastructure — with a master customer list, team-level routing logic, and rep assignment rules to control how SDR teams engaged shared accounts.
+</p>
 
 
 
 <header class="major section-title"><h2>Structural Gap</h2></header>
 
 <ul>
-<li>No formal ownership model governing expansion activity.</li>
-<li>Contacts involved in active opportunities were not protected.</li>
-<li>Cross-product outreach created duplicate outreach risk.</li>
-<li>Manual handoffs introduced visibility gaps between teams.</li>
-<li>Ownership disputes slowed SDR execution.</li>
+<li>No centralized ownership record for existing customers across product lines.</li>
+<li>Cross-product SDR teams could independently target the same institutions.</li>
+<li>No routing logic defining which team held outreach rights on a given account.</li>
+<li>Duplicate outreach risk increased as the organization scaled across products.</li>
+<li>Reassignment decisions had no documented process or visibility.</li>
 </ul>
-
-
 
 
 
@@ -69,17 +68,23 @@ framework to control how teams interacted with shared accounts.
 
 <ul>
 
-<li><strong>Ownership Tier Model</strong> - Defined clear expansion rights by role and product alignment.</li>
+<li><strong>Master Customer List</strong> — Centralized record of existing customers serving as the single source of truth for account ownership across all product teams.</li>
 
-<li><strong>Account Hold States</strong> - Introduced temporary hold classifications preventing simultaneous outreach.</li>
+<li><strong>Team Routing Rules</strong> — Enforced logic defining which product team held outreach rights on each account, built directly into the sheet structure.</li>
 
-<li><strong>Cross-Product Guardrails</strong> - Enabled Product B outreach while protecting contacts tied to Product A opportunities.</li>
+<li><strong>Rep Assignment Layer</strong> — Individual rep ownership tracked within each team's routing layer, preventing concurrent claims on the same account.</li>
 
-<li><strong>Reassignment Protocol</strong> - Structured handoff process maintaining visibility and account history.</li>
+<li><strong>Cross-Sell Guardrails</strong> — Sheet-enforced rules preventing overlapping outreach when multiple product teams had interest in the same institution.</li>
 
-<li><strong>Decision Logic Documentation</strong> - Documented allowable outreach conditions to eliminate subjective interpretation.</li>
+<li><strong>Reassignment Controls</strong> — Structured process for ownership transitions, maintaining accountability and visibility during handoffs.</li>
 
 </ul>
+
+<div class="arch-box">
+Cross-Sell Governance Workflow
+
+Account Identified → Team Routing Rules Applied → Rep Ownership Assigned → Cross-Sell Check Enforced → Outreach Permitted or Blocked
+</div>
 
 <div class="screenshot-block">
 <div class="screenshot-label">Google Sheets — SDR Allocation Framework (Status, Territory, Account, Products, Ownership Routing)</div>
@@ -91,44 +96,37 @@ framework to control how teams interacted with shared accounts.
 <header class="major section-title"><h2>Tools</h2></header>
 
 <ul>
-<li>Salesforce CRM</li>
-<li>SDR allocation tracking systems</li>
-<li>Governance documentation frameworks</li>
-<li>Manual conflict resolution workflows</li>
+<li>Google Sheets</li>
 </ul>
 
 
 <header class="major section-title"><h2>Scale</h2></header>
 
 <ul>
-<li>Users impacted: SDR team + sales leadership</li>
-<li>Environment: multi-product SaaS sales organization</li>
-<li>Primary objective: prevent duplicate outreach and protect active deals</li>
+<li>Users: SDR teams across multiple product lines</li>
+<li>Account scope: existing customer base</li>
+<li>Objective: eliminate duplicate outreach across product teams</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Operational Impact</h2></header>
 
 <ul>
-<li>Reduced internal friction during expansion workflows.</li>
-<li>Lowered duplicate outreach incidents across product teams.</li>
-<li>Improved clarity around expansion ownership.</li>
-<li>Strengthened operational discipline across shared accounts.</li>
+<li>Eliminated duplicate outreach on shared existing customer accounts.</li>
+<li>Introduced clear rep-level ownership across cross-product SDR teams.</li>
+<li>Established an enforced governance layer for cross-sell coordination.</li>
+<li>Created a repeatable routing model that scaled with the organization.</li>
 </ul>
-
-
 
 
 
 <header class="major section-title"><h2>Future Improvements</h2></header>
 
 <ul>
-<li>Automate conflict detection across open opportunities.</li>
-<li>Introduce audit trail for ownership changes.</li>
-<li>Surface expansion eligibility indicators on account layouts.</li>
+<li>Migrate routing logic into Salesforce account records for real-time CRM visibility.</li>
+<li>Add conflict detection to flag accounts with active outreach across multiple product teams.</li>
+<li>Build an audit trail for ownership changes and reassignment decisions.</li>
 </ul>
 
 
@@ -140,26 +138,6 @@ framework to control how teams interacted with shared accounts.
 </div>
 </div>
 
-<div id="sidebar">
-<div class="inner">
-
-<nav id="menu">
-<header class="major"><h2>Navigation</h2></header>
-<ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="../projects-library.html">Projects</a></li>
-<li><a href="../resume.html">Resume</a></li>
-<li><a href="../about.html">About</a></li>
-<li><a href="../contact.html">Contact</a></li>
-</ul>
-</nav>
-
-<footer id="footer">
-<p class="copyright">&copy; Daniel Im</p>
-</footer>
-
-</div>
-</div>
 
 </div>
 
@@ -187,13 +165,3 @@ document.getElementById("site-header-placeholder").innerHTML = data;
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

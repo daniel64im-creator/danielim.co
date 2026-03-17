@@ -1,9 +1,13 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<title>CRM Data Enrichment Initiative | Revenue Operations Project</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="CRM data enrichment initiative restoring firmographic accuracy across ~9,000 Salesforce accounts, strengthening segmentation and territory reporting." />
+	<meta property="og:title" content="CRM Data Enrichment Initiative | Daniel Im" />
+	<meta property="og:description" content="CRM data enrichment initiative restoring firmographic accuracy across ~9,000 Salesforce accounts, strengthening segmentation and territory reporting." />
+	<meta property="og:type" content="website" />
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 
@@ -26,6 +30,9 @@
 Data Infrastructure System
 </div>
 
+<div class="project-impact">
+Restored firmographic accuracy across ~9,000 Salesforce accounts by sourcing institutional data from IPEDS, normalizing it in Google Sheets, and re-importing by Account ID — improving segmentation, territory reporting, and CRM reliability.
+</div>
 
 <p>
 Large-scale firmographic cleanup and structured re-import designed to restore CRM reliability
@@ -41,8 +48,9 @@ for segmentation, reporting, and outbound targeting across thousands of institut
 <p>
 The Salesforce account base contained thousands of records with missing or inconsistent
 firmographic data. Critical targeting fields such as institutional size, domain, geographic
-location, and time zone were unreliable. This project implemented a structured enrichment
-workflow to normalize these fields and restore CRM data integrity.
+location, and time zone were unreliable. Firmographic data was sourced from IPEDS — the
+Integrated Postsecondary Education Data System — exported as CSV, normalized in Google Sheets,
+and re-imported to Salesforce by Account ID to restore CRM data integrity.
 </p>
 
 
@@ -66,9 +74,11 @@ workflow to normalize these fields and restore CRM data integrity.
 <header class="major section-title"><h2>Architecture</h2></header>
 
 <ul>
-<li><strong>Full Population Export</strong> - Extracted the complete account dataset requiring normalization.</li>
+<li><strong>Salesforce Account Export</strong> — Pulled the complete account dataset to identify which records were missing firmographic fields.</li>
 
-<li><strong>Data Standardization Layer</strong> - Cleaned and normalized fields including FTE ranges, institution domains, geographic fields, and time zone values.</li>
+<li><strong>IPEDS Data Pull</strong> — Sourced institutional firmographic data (FTE, domain, geographic fields, time zone) from the IPEDS public database via CSV export.</li>
+
+<li><strong>Google Sheets Normalization</strong> — Cleaned, standardized, and mapped IPEDS data to Salesforce Account IDs, normalizing institution names, domains, and geographic values.</li>
 
 <li><strong>ID-Based Mapping</strong> - All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
 
@@ -78,15 +88,9 @@ workflow to normalize these fields and restore CRM data integrity.
 </ul>
 
 <div class="arch-box">
+Enrichment Workflow
 
-System Workflow
-
-Salesforce Export  
-- Data Normalization Layer  
-- QA Sampling  
-- Structured Re-Import  
-- Clean CRM Dataset
-
+Salesforce Account Export → IPEDS Data Pull → Google Sheets Normalization → QA Sampling → CSV Export → Salesforce Re-Import → Clean CRM Dataset
 </div>
 
 <div class="screenshot-block">
@@ -112,10 +116,9 @@ Salesforce Export
 <header class="major section-title"><h2>Tools</h2></header>
 
 <ul>
-<li>Salesforce CRM</li>
+<li>IPEDS (Integrated Postsecondary Education Data System)</li>
 <li>Google Sheets</li>
-<li>Spreadsheet data normalization workflows</li>
-<li>Manual QA validation sampling</li>
+<li>Salesforce CRM + Data Import Wizard</li>
 </ul>
 
 
@@ -164,26 +167,6 @@ Salesforce Export
 </div>
 </div>
 
-<div id="sidebar">
-<div class="inner">
-
-<nav id="menu">
-<header class="major"><h2>Navigation</h2></header>
-<ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="../projects-library.html">Projects</a></li>
-<li><a href="../resume.html">Resume</a></li>
-<li><a href="../about.html">About</a></li>
-<li><a href="../contact.html">Contact</a></li>
-</ul>
-</nav>
-
-<footer id="footer">
-<p class="copyright">&copy; Daniel Im</p>
-</footer>
-
-</div>
-</div>
 
 </div>
 
