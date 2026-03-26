@@ -781,3 +781,17 @@ ul, ol {
 .library-toggle-btn.open .toggle-arrow {
   transform: rotate(180deg);
 }
+
+
+/* =================================================
+   ACTIVE NAV LINK - STYLE CONSISTENCY MATCH
+   ================================================= */
+
+#top-nav .nav-menu a.active {
+    background: #626773 !important;
+    color: #fff !important;
+    /* Adds the signature red line from your #header and header.major */
+    border-bottom: 3px solid #f56a6a !important; 
+    /* Adjust padding slightly to account for the border so text stays centered */
+    padding-bottom: calc(0.6em - 3px) !important; 
+}
