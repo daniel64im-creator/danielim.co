@@ -783,15 +783,26 @@ ul, ol {
 }
 
 
+
+
 /* =================================================
-   ACTIVE NAV LINK - STYLE CONSISTENCY MATCH
+   ACTIVE NAV HIGHLIGHT (DANIELIM.CO STYLE)
    ================================================= */
 
+/* Desktop: Red line on the bottom */
 #top-nav .nav-menu a.active {
-    background: #626773 !important;
+    background: #626773 !important; 
     color: #fff !important;
-    /* Adds the signature red line from your #header and header.major */
     border-bottom: 3px solid #f56a6a !important; 
-    /* Adjust padding slightly to account for the border so text stays centered */
     padding-bottom: calc(0.6em - 3px) !important; 
+}
+
+/* Mobile: Red line on the left for vertical lists */
+@media (max-width: 980px) {
+    #top-nav.nav-open .nav-menu a.active {
+        border-bottom: none !important;
+        border-left: 4px solid #f56a6a !important; 
+        padding-bottom: 0.6em !important;
+        padding-left: calc(1.2em - 4px) !important;
+    }
 }
