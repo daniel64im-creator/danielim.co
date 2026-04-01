@@ -168,6 +168,12 @@ html, body {
   background: #d95c4b;
 }
 
+#top-nav .nav-contact a.active {
+  background: #d95c4b;
+  outline: 2px solid rgba(255,255,255,0.3);
+  outline-offset: -2px;
+}
+
 
 /* SITE HEADER (inner branding bar)
    ------------------------------------------------- */
