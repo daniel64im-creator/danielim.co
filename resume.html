@@ -17,119 +17,148 @@
 
 <style>
 
-/* METRICS BAR */
+/* VERTICAL TIMELINE */
 
-.metrics-bar {
-display: flex;
-gap: 1.5rem;
-margin-bottom: 1rem;
-margin-top: 0.5rem;
+.timeline {
+position: relative;
+padding: 2rem 0;
 }
 
-.metric-card {
-flex: 1;
+.timeline::before {
+content: '';
+position: absolute;
+left: 30px;
+top: 0;
+bottom: 0;
+width: 2px;
+background: #e5e5e5;
+}
+
+.timeline-item {
+position: relative;
+padding-left: 100px;
+margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+content: '';
+position: absolute;
+left: 15px;
+top: 8px;
+width: 30px;
+height: 30px;
+background: #ffffff;
+border: 3px solid #f56a6a;
+border-radius: 50%;
+z-index: 1;
+}
+
+.timeline-item.current::before {
+background: #f56a6a;
+box-shadow: 0 0 0 4px rgba(245, 106, 106, 0.1);
+}
+
+.timeline-content {
 background: #ffffff;
 border: 1px solid #e5e5e5;
-border-top: 3px solid #f56a6a;
-border-radius: 10px;
-padding: 1.25rem 1.5rem;
-text-align: center;
-}
-
-.metric-value {
-font-family: "Roboto Slab", serif;
-font-size: 2rem;
-font-weight: 700;
-color: #3d4449;
-line-height: 1.1;
-}
-
-.metric-label {
-font-size: 0.75rem;
-font-weight: 600;
-text-transform: uppercase;
-letter-spacing: 0.07em;
-color: #999;
-margin-top: 0.3rem;
-}
-
-/* SKILLS GRID */
-
-.skills-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
-margin-top: 0.5rem;
-}
-
-.skills-card {
-background: #f9f9f9;
-border: 1px solid #e5e5e5;
 border-radius: 8px;
-padding: 1rem 1.25rem;
+padding: 1.75rem 1.5rem;
 }
 
-.skills-card h4 {
-font-size: 0.85rem;
-font-weight: 700;
-text-transform: none;
-letter-spacing: 0;
-color: #3d4449;
-margin-bottom: 0.4rem;
-}
-
-.skills-card p {
-font-size: 0.85rem;
-color: #555;
-margin: 0;
-line-height: 1.5;
-}
-
-/* QUOTA ATTAINMENT */
-
-.quota-line {
-font-size: 0.85rem;
-color: #666;
-margin-top: 0.5rem;
-margin-bottom: 0;
-border-left: 3px solid #e5e5e5;
-padding-left: 0.75rem;
-}
-
-/* PRIOR ROLE HEADINGS */
-
-.prior-role {
-margin-top: 2rem;
-padding-top: 1.5rem;
-border-top: 1px solid #e5e5e5;
-}
-
-.prior-role h3 {
-font-size: 1rem;
+.timeline-role {
+font-size: 1.1rem;
 font-weight: 600;
 color: #3d4449;
-margin-bottom: 0.25rem;
+margin: 0 0 0.25rem 0;
 }
 
-.prior-role p em {
-font-size: 0.8rem;
+.timeline-meta {
+font-size: 0.85rem;
+color: #999;
+margin: 0 0 0.75rem 0;
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.timeline-company {
+font-weight: 600;
+color: #666;
+}
+
+.timeline-dates {
 color: #999;
 }
 
-.prior-role > p:first-of-type {
-margin-top: 0;
+.timeline-description {
+margin-top: 1rem;
+}
+
+.timeline-description ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.timeline-description li {
+font-size: 0.95rem;
+color: #555;
 margin-bottom: 0.75rem;
+padding-left: 1.5rem;
+position: relative;
+line-height: 1.6;
+}
+
+.timeline-description li::before {
+content: '▸';
+position: absolute;
+left: 0;
+color: #f56a6a;
+font-weight: bold;
+}
+
+/* CONTACT INFO */
+
+.contact-header {
+font-size: 0.9rem;
+color: #666;
+margin-bottom: 2rem;
+display: flex;
+gap: 1.5rem;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.contact-header a {
+color: #f56a6a;
+text-decoration: none;
+}
+
+.contact-header a:hover {
+text-decoration: underline;
 }
 
 /* MOBILE */
 
-@media screen and (max-width: 980px) {
-.metrics-bar {
-flex-direction: column;
+@media screen and (max-width: 768px) {
+.timeline::before {
+left: 20px;
 }
 
-.skills-grid {
-grid-template-columns: 1fr;
+.timeline-item {
+padding-left: 70px;
+}
+
+.timeline-item::before {
+left: 5px;
+width: 30px;
+height: 30px;
+}
+
+.contact-header {
+flex-direction: column;
+gap: 0.5rem;
+align-items: flex-start;
 }
 }
 
@@ -160,23 +189,24 @@ display: none !important;
 padding: 0.5rem 1rem !important;
 }
 
-.metric-card,
-.skills-card {
-border: 1px solid #ccc !important;
-box-shadow: none !important;
+.timeline::before {
+background: #ccc;
 }
 
-.metrics-bar {
-flex-direction: row;
+.timeline-item::before {
+border-color: #333;
+background: #fff;
+}
+
+.timeline-content {
+border: 1px solid #ccc !important;
+box-shadow: none !important;
+page-break-inside: avoid;
 }
 
 a {
 color: #000 !important;
 text-decoration: none !important;
-}
-
-.quota-line {
-border-left: 2px solid #ccc;
 }
 }
 
@@ -197,120 +227,75 @@ border-left: 2px solid #ccc;
 
 <h1 class="page-title">Resume</h1>
 
-<p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;">San Jose, CA  |  (408) 482-9904  |  <a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a>  |  <a href="https://linkedin.com/in/daeim">linkedin.com/in/daeim</a></p>
-
-<div class="metrics-bar">
-
-<div class="metric-card">
-<div class="metric-value">~9,000</div>
-<div class="metric-label">CRM Accounts Enriched</div>
+<div class="contact-header">
+<span>San Jose, CA</span>
+<span>(408) 482-9904</span>
+<a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a>
+<a href="https://linkedin.com/in/daeim">linkedin.com/in/daeim</a>
 </div>
 
-<div class="metric-card">
-<div class="metric-value">3 hrs</div>
-<div class="metric-label">Daily Manual Work Eliminated / Rep</div>
+<div class="timeline">
+
+<!-- CURRENT ROLE -->
+<div class="timeline-item current">
+<div class="timeline-content">
+<div class="timeline-role">Sales Development Team Lead</div>
+<div class="timeline-meta">
+<span class="timeline-company">YuJa, Inc.</span>
+<span class="timeline-dates">June 2024 - Present</span>
 </div>
-
-<div class="metric-card">
-<div class="metric-value">14</div>
-<div class="metric-label">SDR Team Members Supported</div>
-</div>
-
-<div class="metric-card">
-<div class="metric-value">4</div>
-<div class="metric-label">Product Lines Governed</div>
-</div>
-
-</div>
-
-<header class="major"><h2>Professional Summary</h2></header>
-
-<p>Sales operations professional with hands-on experience building CRM governance systems, automating sales workflows, and designing process infrastructure to support SDR team performance across multiple product lines. Proven ability to identify operational gaps, implement scalable Salesforce and data solutions, and deliver reporting visibility that directly reduces manual workload for sales teams. Currently completing Salesforce Platform Administrator certification (est. May 2026).</p>
-
-</section>
-
-<section>
-
-<header class="major"><h2>Core Skills & Tools</h2></header>
-
-<div class="skills-grid">
-
-<div class="skills-card">
-<h4>CRM & Salesforce</h4>
-<p>Flow Builder, Record-Triggered Flows, Reports & Dashboards, page layout configuration, data hygiene, lead management, opportunity management, account segmentation, user administration</p>
-</div>
-
-<div class="skills-card">
-<h4>Sales Operations</h4>
-<p>Sales process optimization, pipeline reporting, territory management, quota tracking, Rules of Engagement design, account allocation, cross-functional workflow coordination</p>
-</div>
-
-<div class="skills-card">
-<h4>Reporting & Data</h4>
-<p>KPI dashboards, performance reporting, Google Sheets (advanced), Apps Script automation, Excel/CSV processing, firmographic enrichment</p>
-</div>
-
-<div class="skills-card">
-<h4>Process & Systems</h4>
-<p>SOP development, workflow automation, process documentation, operational governance frameworks, change management</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<header class="major"><h2>Professional Experience</h2></header>
-
-<h3>Sales Development Team Lead (Salesforce Administration & CRM Governance)</h3>
-<p><em>YuJa, Inc. - June 2024 - Present</em></p>
-
+<div class="timeline-description">
+<p>Salesforce Administration & CRM Governance focused on process infrastructure, reporting, and data governance at scale across 4 product lines.</p>
 <ul>
 <li>Designed reporting infrastructure that eliminated approximately 3 hours per day of manual account eligibility checking per rep - giving a 14-person SDR team across 4 product lines instant visibility into prospectable accounts without manually cross-referencing active opps against Rules of Engagement.</li>
-
 <li>Built and deployed Record-Triggered Flows in Salesforce automating real-time demo booking notifications to leadership and auto-populating demo attendee data on Opportunity records, eliminating manual entry gaps and improving CRM data consistency.</li>
-
 <li>Designed and enforced cross-product Rules of Engagement in Salesforce, establishing account ownership governance and outreach eligibility standards across 4 overlapping product lines, reducing ownership conflicts and improving pipeline data integrity.</li>
-
 <li>Owned a ~9,000 account CRM data enrichment initiative and exported, normalized, and re-imported Salesforce records with missing firmographic fields (FTE, geography, website), improving segmentation accuracy and reporting reliability across the org.</li>
-
 <li>Built an account allocation and ownership routing framework in Google Sheets with Apps Script, establishing lifecycle states, duplicate account prevention logic, and rep-level ownership controls across 4 product lines, eliminating conflicting outreach across shared institutional accounts.</li>
-
 <li>Optimized Salesforce page layouts for Opportunity and Lead objects directly in Setup, improving workflow efficiency and reducing friction for the SDR team.</li>
-
 <li>Managed Salesforce user permissions and supported CRM administration across the sales team.</li>
-
 <li>Wrote SOPs documenting CRM workflows and data governance standards to support onboarding and operational consistency.</li>
 </ul>
+</div>
+</div>
+</div>
 
-<div class="prior-role">
-<h3>Senior / Founding SDR</h3>
-<p><em>SpecTrust | Arkose Labs | Miarec - July 2021 - June 2024</em></p>
-
+<!-- PRIOR ROLE 1 -->
+<div class="timeline-item">
+<div class="timeline-content">
+<div class="timeline-role">Senior / Founding SDR</div>
+<div class="timeline-meta">
+<span class="timeline-company">SpecTrust | Arkose Labs | Miarec</span>
+<span class="timeline-dates">July 2021 - June 2024</span>
+</div>
+<div class="timeline-description">
+<p>Early-stage sales development across three companies with emphasis on outbound prospecting, CRM governance, and SDR team management.</p>
 <ul>
 <li>Built outbound prospecting motions from scratch at early-stage startups and maintained Salesforce CRM hygiene and account data accuracy across all three roles.</li>
 </ul>
 </div>
+</div>
+</div>
 
-<div class="prior-role">
-<h3>Account Executive</h3>
-<p><em>Xerox Corporation - January 2019 - June 2021</em></p>
-
+<!-- PRIOR ROLE 2 -->
+<div class="timeline-item">
+<div class="timeline-content">
+<div class="timeline-role">Account Executive</div>
+<div class="timeline-meta">
+<span class="timeline-company">Xerox Corporation</span>
+<span class="timeline-dates">January 2019 - June 2021</span>
+</div>
+<div class="timeline-description">
+<p>B2B sales across the San Jose territory with full sales cycle ownership from prospecting to close.</p>
 <ul>
 <li>Managed full B2B sales cycle including prospecting, discovery, proposal, and close across the San Jose territory.</li>
-
 <li>Maintained Salesforce pipeline records, account history, and opportunity stages throughout tenure.</li>
 </ul>
 </div>
+</div>
+</div>
 
-</section>
-
-<section>
-
-<header class="major"><h2>Certifications</h2></header>
-
-<p><strong>Salesforce Platform Administrator (ADM-201)</strong>  -  In progress, est. May 2026</p>
+</div>
 
 </section>
 
