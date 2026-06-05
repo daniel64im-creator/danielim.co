@@ -150,7 +150,7 @@ html, body {
 
 #top-nav .nav-contact a {
   color: #fff;
-  background: #f56a6a;
+  background: #06B6D4;
   text-decoration: none !important;
   border: none !important;
   padding: 0 2.5em;
@@ -165,11 +165,11 @@ html, body {
 }
 
 #top-nav .nav-contact a:hover {
-  background: #d95c4b;
+  background: #0891B2;
 }
 
 #top-nav .nav-contact a.active {
-  background: #d95c4b;
+  background: #0891B2;
   outline: 2px solid rgba(255,255,255,0.3);
   outline-offset: -2px;
 }
@@ -182,7 +182,7 @@ html, body {
   justify-content: space-between;
   align-items: baseline;
   padding: 0.4em 0 0.8em 0;
-  border-bottom: solid 3px #f56a6a;
+  border-bottom: solid 3px #06B6D4;
   margin-bottom: 5px;
 }
 
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header.major > :last-child {
-  border-bottom: solid 3px #f56a6a;
+  border-bottom: solid 3px #06B6D4;
   display: inline-block;
   margin: 0 0 0.4em 0;
   padding: 0 0.75em 0 0;
@@ -517,8 +517,8 @@ ul, ol {
 /* PAGE-SPECIFIC: ARCHITECTURE BOX (project pages)
    ------------------------------------------------- */
 .arch-box {
-  background: #f4f4f4;
-  border-left: 3px solid #f56a6a;
+  background: #f0f9ff;
+  border-left: 3px solid #06B6D4;
   border-radius: 6px;
   padding: 1rem 1.25rem;
   margin: 1.25rem 0;
@@ -533,8 +533,8 @@ ul, ol {
 /* PAGE-SPECIFIC: PROJECT IMPACT CALLOUT (project pages)
    ------------------------------------------------- */
 .project-impact {
-  background: #fff8f8;
-  border-left: 3px solid #f56a6a;
+  background: #f0f9ff;
+  border-left: 3px solid #06B6D4;
   border-radius: 6px;
   padding: 0.85rem 1.1rem;
   margin: 0.75rem 0 1.25rem 0;
@@ -799,7 +799,7 @@ ul, ol {
 #top-nav .nav-menu a.active {
     background: #626773 !important; 
     color: #fff !important;
-    border-bottom: 3px solid #f56a6a !important; 
+    border-bottom: 3px solid #06B6D4 !important; 
     padding-bottom: calc(0.6em - 3px) !important; 
 }
 
@@ -807,7 +807,7 @@ ul, ol {
 @media (max-width: 980px) {
     #top-nav.nav-open .nav-menu a.active {
         border-bottom: none !important;
-        border-left: 4px solid #f56a6a !important; 
+        border-left: 4px solid #06B6D4 !important; 
         padding-bottom: 0.6em !important;
         padding-left: calc(1.2em - 4px) !important;
     }
