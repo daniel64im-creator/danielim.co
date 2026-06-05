@@ -21,77 +21,104 @@
 
 .timeline {
 position: relative;
-padding: 2rem 0;
+padding: 1rem 0;
+max-width: 900px;
 }
 
 .timeline::before {
 content: '';
 position: absolute;
-left: 30px;
-top: 0;
+left: 22px;
+top: 20px;
 bottom: 0;
-width: 2px;
-background: #e5e5e5;
+width: 1px;
+background: linear-gradient(to bottom, #f56a6a, #e5e5e5);
 }
 
 .timeline-item {
 position: relative;
-padding-left: 100px;
-margin-bottom: 3rem;
+padding-left: 80px;
+margin-bottom: 2.5rem;
 }
 
 .timeline-item::before {
 content: '';
 position: absolute;
-left: 15px;
-top: 8px;
-width: 30px;
-height: 30px;
+left: 8px;
+top: 4px;
+width: 28px;
+height: 28px;
 background: #ffffff;
-border: 3px solid #f56a6a;
+border: 2px solid #d0d0d0;
 border-radius: 50%;
 z-index: 1;
+transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+border-color: #f56a6a;
+box-shadow: 0 0 0 3px rgba(245, 106, 106, 0.1);
 }
 
 .timeline-item.current::before {
 background: #f56a6a;
-box-shadow: 0 0 0 4px rgba(245, 106, 106, 0.1);
+border-color: #f56a6a;
+box-shadow: 0 0 0 4px rgba(245, 106, 106, 0.15);
+width: 32px;
+height: 32px;
+left: 6px;
+top: 2px;
 }
 
 .timeline-content {
-background: #ffffff;
-border: 1px solid #e5e5e5;
-border-radius: 8px;
-padding: 1.75rem 1.5rem;
+background: transparent;
+padding: 0;
+border: none;
+transition: all 0.2s ease;
+}
+
+.timeline-item:hover .timeline-content {
+padding-left: 0.5rem;
 }
 
 .timeline-role {
-font-size: 1.1rem;
-font-weight: 600;
-color: #3d4449;
-margin: 0 0 0.25rem 0;
+font-size: 1.05rem;
+font-weight: 700;
+color: #2a2a2a;
+margin: 0 0 0.35rem 0;
+letter-spacing: -0.3px;
 }
 
 .timeline-meta {
-font-size: 0.85rem;
-color: #999;
-margin: 0 0 0.75rem 0;
+font-size: 0.8rem;
+color: #888;
+margin: 0 0 0.6rem 0;
 display: flex;
-gap: 1rem;
+gap: 1.2rem;
 flex-wrap: wrap;
+font-weight: 500;
 }
 
 .timeline-company {
-font-weight: 600;
 color: #666;
+font-weight: 600;
 }
 
 .timeline-dates {
 color: #999;
+font-weight: 400;
 }
 
 .timeline-description {
-margin-top: 1rem;
+margin-top: 0.6rem;
+}
+
+.timeline-description > p {
+font-size: 0.9rem;
+color: #555;
+margin: 0 0 0.6rem 0;
+line-height: 1.5;
+font-weight: 400;
 }
 
 .timeline-description ul {
@@ -101,64 +128,97 @@ margin: 0;
 }
 
 .timeline-description li {
-font-size: 0.95rem;
-color: #555;
-margin-bottom: 0.75rem;
-padding-left: 1.5rem;
+font-size: 0.9rem;
+color: #525252;
+margin-bottom: 0.55rem;
+padding-left: 1.25rem;
 position: relative;
 line-height: 1.6;
+font-weight: 400;
 }
 
 .timeline-description li::before {
-content: '▸';
+content: '';
 position: absolute;
 left: 0;
-color: #f56a6a;
-font-weight: bold;
+top: 0.65rem;
+width: 4px;
+height: 4px;
+background: #999;
+border-radius: 50%;
 }
 
 /* CONTACT INFO */
 
 .contact-header {
-font-size: 0.9rem;
-color: #666;
-margin-bottom: 2rem;
+font-size: 0.85rem;
+color: #777;
+margin-bottom: 2.5rem;
 display: flex;
-gap: 1.5rem;
+gap: 1.8rem;
 flex-wrap: wrap;
 align-items: center;
+font-weight: 500;
 }
 
 .contact-header a {
-color: #f56a6a;
+color: #555;
 text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: border-color 0.2s ease;
 }
 
 .contact-header a:hover {
-text-decoration: underline;
+border-bottom-color: #f56a6a;
+}
+
+/* PAGE TITLE */
+
+#main .page-title {
+margin-bottom: 0.5rem;
+padding-bottom: 0;
+font-size: 2.5rem;
+font-weight: 700;
+letter-spacing: -0.5px;
 }
 
 /* MOBILE */
 
 @media screen and (max-width: 768px) {
 .timeline::before {
-left: 20px;
+left: 16px;
 }
 
 .timeline-item {
-padding-left: 70px;
+padding-left: 60px;
+margin-bottom: 2rem;
 }
 
 .timeline-item::before {
-left: 5px;
-width: 30px;
-height: 30px;
+left: 2px;
+width: 28px;
+height: 28px;
+}
+
+.timeline-item.current::before {
+width: 28px;
+height: 28px;
+left: 2px;
+top: 4px;
+}
+
+.timeline-role {
+font-size: 1rem;
+}
+
+.timeline-description li {
+font-size: 0.88rem;
 }
 
 .contact-header {
-flex-direction: column;
-gap: 0.5rem;
-align-items: flex-start;
+gap: 1rem;
+font-size: 0.8rem;
+margin-bottom: 2rem;
 }
 }
 
@@ -190,23 +250,27 @@ padding: 0.5rem 1rem !important;
 }
 
 .timeline::before {
-background: #ccc;
+background: #999 !important;
 }
 
 .timeline-item::before {
-border-color: #333;
-background: #fff;
+border-color: #333 !important;
+background: #fff !important;
 }
 
-.timeline-content {
-border: 1px solid #ccc !important;
+.timeline-item.current::before {
+background: #333 !important;
+}
+
+.timeline-item:hover::before {
+border-color: #333 !important;
 box-shadow: none !important;
-page-break-inside: avoid;
 }
 
 a {
 color: #000 !important;
 text-decoration: none !important;
+border: none !important;
 }
 }
 
