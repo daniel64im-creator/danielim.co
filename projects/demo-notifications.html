@@ -5,194 +5,153 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="description" content="Real-time demo booking notification system routing qualifying alerts to leadership, reducing manual CRM monitoring and improving pipeline visibility." />
-<meta property="og:title" content="Real-Time Demo Booking Notifications | Daniel Im" />
-<meta property="og:description" content="Real-time demo booking notification system routing qualifying alerts to leadership, reducing manual CRM monitoring and improving pipeline visibility." />
-<meta property="og:type" content="website" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon%2016x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon%2032x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
-
+<link rel="stylesheet" href="../assets/css/sf-theme.css">
 </head>
+<body>
 
-<body class="is-preload">
+<div id="sf-nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
-
-<div id="wrapper">
-    <div id="main">
-        <div class="inner">
-            <div id="site-header-placeholder"></div>
-
-
-
-<a href="../projects-library.html" style="display:inline-block; font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#999; text-decoration:none; margin-bottom:0.75rem;">← All Projects</a>
-
-<h1 class="page-title">Real-Time Demo Booking Notifications</h1>
-
-<div class="project-meta">
-Operational Visibility System
+<!-- CONTEXT BAR -->
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box projects">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <a href="/projects-library.html" class="sf-breadcrumb-link">Projects</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">Demo Booking Notifications</span>
+    </div>
+  </div>
 </div>
 
-<div class="project-impact">
-Gave leadership real-time visibility into qualifying demo bookings by replacing manual CRM monitoring with an event-triggered Salesforce Flow that routed filtered alerts to the right stakeholders.
-</div>
+<!-- PAGE -->
+<div class="sf-page">
+<div class="sf-container">
 
-<p>
-Automation system designed to provide immediate visibility into newly booked
-product demos. The system removed the need for manual monitoring while ensuring
-that only qualified demo bookings generated stakeholder notifications.
-</p>
+  <!-- PROJECT RECORD HEADER -->
+  <div class="sf-proj-header">
+    <div class="sf-proj-header-top">
+      <span class="sf-tag sf-tag-automation">Workflow Automation</span>
+      <h1 class="sf-proj-title">Real-Time Demo Booking Notifications</h1>
+      <p class="sf-proj-impact">Gave leadership real-time visibility into qualifying demo bookings by replacing manual CRM monitoring with an event-triggered Salesforce Flow that routed filtered alerts to the right stakeholders.</p>
+    </div>
+  </div>
 
+  <!-- PROJECT BODY -->
+  <div class="sf-proj-body">
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">System Overview</div>
+      <div class="sf-proj-content">
+        <p>Automation system designed to provide immediate visibility into newly booked product demos. The system removed the need for manual monitoring while ensuring that only qualified demo bookings generated stakeholder notifications.</p>
+        <p>Demo bookings were a critical operational milestone for the sales development team, yet leadership visibility relied primarily on manual dashboard checks or Slack follow-ups. This project implemented an automated alerting system that triggered notifications whenever a qualifying demo booking occurred.</p>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>No automated notification system tied to demo bookings.</li>
+          <li>Leadership visibility relied on manual CRM monitoring.</li>
+          <li>Unfiltered alerts risked creating operational noise.</li>
+          <li>Demo activity milestones were not surfaced in real time.</li>
+        </ul>
+      </div>
+    </div>
 
-
-<header class="major section-title"><h2>System Overview</h2></header>
-
-<p>
-Demo bookings were a critical operational milestone for the sales development
-team, yet leadership visibility relied primarily on manual dashboard checks or
-Slack follow-ups. This project implemented an automated alerting system that
-triggered notifications whenever a qualifying demo booking occurred.
-</p>
-
-
-
-
-
-<header class="major section-title"><h2>Structural Gap</h2></header>
-
-<ul>
-<li>No automated notification system tied to demo bookings.</li>
-<li>Leadership visibility relied on manual CRM monitoring.</li>
-<li>Unfiltered alerts risked creating operational noise.</li>
-<li>Demo activity milestones were not surfaced in real time.</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Architecture</h2></header>
-
-<ul>
-
-<li><strong>Event-Based Trigger Logic</strong> - Automation executed when a defined demo booking condition was satisfied.</li>
-
-<li><strong>Qualification Filters</strong> - Logic restricted notifications to valid demo scenarios only.</li>
-
-<li><strong>Targeted Stakeholder Routing</strong> - Notifications delivered to specific leadership and operational recipients.</li>
-
-<li><strong>Duplicate Alert Prevention</strong> - Structured conditions prevented redundant notifications.</li>
-
-</ul>
-
-<div class="arch-box">
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Architecture</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li><strong>Event-Based Trigger Logic</strong> - Automation executed when a defined demo booking condition was satisfied.</li>
+          <li><strong>Qualification Filters</strong> - Logic restricted notifications to valid demo scenarios only.</li>
+          <li><strong>Targeted Stakeholder Routing</strong> - Notifications delivered to specific leadership and operational recipients.</li>
+          <li><strong>Duplicate Alert Prevention</strong> - Structured conditions prevented redundant notifications.</li>
+        </ul>
+        <div class="sf-arch-box">
 Notification Workflow
 
 Demo Booked → Qualification Logic Evaluated → Notification Conditions Met → Targeted Stakeholder Alert Sent
-</div>
+        </div>
+        <div class="sf-screenshot">
+          <div class="sf-screenshot-label">Salesforce Flow Builder - Event-Triggered Flow (Entry Conditions, Qualification Filters, Email Alert)</div>
+          <img src="../images/demo-notifications-flow.webp" alt="Salesforce Demo Notifications Flow">
+        </div>
+      </div>
+    </div>
 
-<div class="screenshot-block">
-<div class="screenshot-label">Salesforce Flow Builder - Event-Triggered Flow (Entry Conditions, Qualification Filters, Email Alert)</div>
-<img src="../images/demo-notifications-flow.webp" alt="Salesforce Demo Notifications Flow">
-</div>
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Tools</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Salesforce CRM</li>
+          <li>Salesforce automation logic (Flow / event triggers)</li>
+          <li>Internal communication channels for alert delivery</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Scale</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Primary users: SDR leadership + operational stakeholders</li>
+          <li>Process frequency: every qualifying demo booking</li>
+          <li>Primary objective: real-time operational visibility</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Operational Impact</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Improved real-time awareness of booked demos.</li>
+          <li>Reduced dependency on manual dashboard monitoring.</li>
+          <li>Increased transparency between SDR activity and leadership.</li>
+          <li>Maintained signal quality by avoiding notification noise.</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Future Improvements</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Add reporting on notification coverage and frequency.</li>
+          <li>Introduce reschedule detection logic.</li>
+          <li>Create monitoring for missed trigger scenarios.</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-footer">
+      <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
+    </div>
 
-<header class="major section-title"><h2>Tools</h2></header>
-
-<ul>
-<li>Salesforce CRM</li>
-<li>Salesforce automation logic (Flow / event triggers)</li>
-<li>Internal communication channels for alert delivery</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Scale</h2></header>
-
-<ul>
-<li>Primary users: SDR leadership + operational stakeholders</li>
-<li>Process frequency: every qualifying demo booking</li>
-<li>Primary objective: real-time operational visibility</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Operational Impact</h2></header>
-
-<ul>
-<li>Improved real-time awareness of booked demos.</li>
-<li>Reduced dependency on manual dashboard monitoring.</li>
-<li>Increased transparency between SDR activity and leadership.</li>
-<li>Maintained signal quality by avoiding notification noise.</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Future Improvements</h2></header>
-
-<ul>
-<li>Add reporting on notification coverage and frequency.</li>
-<li>Introduce reschedule detection logic.</li>
-<li>Create monitoring for missed trigger scenarios.</li>
-</ul>
-
-
-
-<ul class="actions section-title">
-<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-</ul>
+  </div>
 
 </div>
 </div>
-
-
-</div>
-
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
 
 <script>
-fetch("../components/nav.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("nav-placeholder").innerHTML = data;
-});
-</script>
-
-<script>
-fetch("../components/site-header.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("site-header-placeholder").innerHTML = data;
-});
+fetch("../components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

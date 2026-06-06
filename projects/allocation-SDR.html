@@ -5,166 +5,151 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="description" content="Centralized account allocation infrastructure defining SDR ownership, hold state logic, and handoff visibility at scale." />
-<meta property="og:title" content="Team Lead Customer Allocation Infrastructure | Daniel Im" />
-<meta property="og:description" content="Centralized account allocation infrastructure defining SDR ownership, hold state logic, and handoff visibility at scale." />
-<meta property="og:type" content="website" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon%2016x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon%2032x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
-
+<link rel="stylesheet" href="../assets/css/sf-theme.css">
 </head>
+<body>
 
-<body class="is-preload">
+<div id="sf-nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
-
-<div id="wrapper">
-    <div id="main">
-        <div class="inner">
-            <div id="site-header-placeholder"></div>
-
-
-
-<a href="../projects-library.html" style="display:inline-block; font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#999; text-decoration:none; margin-bottom:0.75rem;">← All Projects</a>
-
-<h1 class="page-title">Team Lead Customer Allocation Infrastructure</h1>
-
-<div class="project-meta">
-Account Ownership Foundation System
+<!-- CONTEXT BAR -->
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box projects">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <a href="/projects-library.html" class="sf-breadcrumb-link">Projects</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">TL Allocation Infrastructure</span>
+    </div>
+  </div>
 </div>
 
-<div class="project-impact">
-Established the foundational ownership model for SDR account allocation - a simple, centralized sheet shared across three team leads that later evolved into a full cross-product governance system.
-</div>
+<!-- PAGE -->
+<div class="sf-page">
+<div class="sf-container">
 
-<p>
-Centralized Google Sheets system built to give three team leads shared visibility into account ownership across ~500 institutional accounts. Simple by design, this was the first structured allocation system built for the SDR organization and served as the foundation for later governance work.
-</p>
+  <!-- PROJECT RECORD HEADER -->
+  <div class="sf-proj-header">
+    <div class="sf-proj-header-top">
+      <span class="sf-tag sf-tag-governance">Governance Systems</span>
+      <h1 class="sf-proj-title">Team Lead Customer Allocation Infrastructure</h1>
+      <p class="sf-proj-impact">Established the foundational ownership model for SDR account allocation - a simple, centralized sheet shared across three team leads that later evolved into a full cross-product governance system.</p>
+    </div>
+  </div>
 
+  <!-- PROJECT BODY -->
+  <div class="sf-proj-body">
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">System Overview</div>
+      <div class="sf-proj-content">
+        <p>Centralized Google Sheets system built to give three team leads shared visibility into account ownership across ~500 institutional accounts. Simple by design, this was the first structured allocation system built for the SDR organization and served as the foundation for later governance work.</p>
+        <p>Early in the SDR buildout, three team leads were working from a shared list of roughly 500 institutional accounts. Without a centralized system, account ownership was tracked informally, making it difficult to coordinate during reassignment and identify which accounts were available for reallocation.</p>
+        <p>This project introduced a single Google Sheets ownership layer - simple by design - that gave all three team leads a shared view of account status and introduced the hold state model that would later become the foundation for more complex allocation governance.</p>
+      </div>
+    </div>
 
-<header class="major section-title"><h2>System Overview</h2></header>
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>No shared record of which team lead owned which account.</li>
+          <li>No defined process for marking accounts as inactive or available for reallocation.</li>
+          <li>Reassignment decisions happened informally with no documented handoff.</li>
+          <li>Account availability was unclear without checking manually with each team lead.</li>
+        </ul>
+      </div>
+    </div>
 
-<p>
-Early in the SDR buildout, three team leads were working from a shared list of roughly 500 institutional accounts. Without a centralized system, account ownership was tracked informally, making it difficult to coordinate during reassignment and identify which accounts were available for reallocation.
-</p>
-
-<p>
-This project introduced a single Google Sheets ownership layer - simple by design - that gave all three team leads a shared view of account status and introduced the hold state model that would later become the foundation for more complex allocation governance.
-</p>
-
-
-
-<header class="major section-title"><h2>Structural Gap</h2></header>
-
-<ul>
-<li>No shared record of which team lead owned which account.</li>
-<li>No defined process for marking accounts as inactive or available for reallocation.</li>
-<li>Reassignment decisions happened informally with no documented handoff.</li>
-<li>Account availability was unclear without checking manually with each team lead.</li>
-</ul>
-
-
-
-<header class="major section-title"><h2>Architecture</h2></header>
-
-<ul>
-
-<li><strong>Master Account Sheet</strong> - Single centralized spreadsheet visible to all three team leads with ownership status per account.</li>
-
-<li><strong>Ownership Assignment</strong> - Each account assigned to a specific team lead with clear accountability.</li>
-
-<li><strong>Hold State</strong> - Neutral status for accounts a team lead was no longer working, flagging them as available for reallocation to another owner.</li>
-
-<li><strong>Reassignment Review</strong> - Brief review step before a held account transferred to a new team lead, preserving context and preventing premature reassignment.</li>
-
-</ul>
-
-<div class="arch-box">
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Architecture</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li><strong>Master Account Sheet</strong> - Single centralized spreadsheet visible to all three team leads with ownership status per account.</li>
+          <li><strong>Ownership Assignment</strong> - Each account assigned to a specific team lead with clear accountability.</li>
+          <li><strong>Hold State</strong> - Neutral status for accounts a team lead was no longer working, flagging them as available for reallocation to another owner.</li>
+          <li><strong>Reassignment Review</strong> - Brief review step before a held account transferred to a new team lead, preserving context and preventing premature reassignment.</li>
+        </ul>
+        <div class="sf-arch-box">
 Customer Allocation Workflow
 
 Account Identified → Team Lead Ownership Assigned → Hold State (No Longer Being Worked) → Reassignment Review → New Owner Assigned
+        </div>
+        <div class="sf-screenshot">
+          <div class="sf-screenshot-label">Google Sheets - SDR Allocation Framework (Status, Territory, Account, Products, Ownership Routing)</div>
+          <img src="../images/allocation-sheet.webp" alt="SDR Allocation Framework Google Sheets">
+        </div>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Tools</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Google Sheets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Scale</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Primary users: 3 team leads</li>
+          <li>Account scope: ~500 institutional accounts</li>
+          <li>Objective: establish shared ownership visibility and structured reassignment process</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Operational Impact</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Gave three team leads a shared, reliable view of account ownership for the first time.</li>
+          <li>Introduced a structured process for releasing and redistributing accounts via hold states.</li>
+          <li>Reduced informal ownership disputes across the early SDR team.</li>
+          <li>Created the foundational allocation model that later evolved into a full cross-product governance system.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Future Improvements</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Expand to support individual rep-level ownership as the team grows.</li>
+          <li>Add timestamps to hold state transitions for better ownership tracking.</li>
+          <li>Migrate into a more structured system as account volume and team size increase.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-footer">
+      <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
+    </div>
+
+  </div>
+
 </div>
-
-<div class="screenshot-block">
-<div class="screenshot-label">Google Sheets - SDR Allocation Framework (Status, Territory, Account, Products, Ownership Routing)</div>
-<img src="../images/allocation-sheet.webp" alt="SDR Allocation Framework Google Sheets">
 </div>
-
-
-
-<header class="major section-title"><h2>Tools</h2></header>
-
-<ul>
-<li>Google Sheets</li>
-</ul>
-
-
-
-<header class="major section-title"><h2>Scale</h2></header>
-
-<ul>
-<li>Primary users: 3 team leads</li>
-<li>Account scope: ~500 institutional accounts</li>
-<li>Objective: establish shared ownership visibility and structured reassignment process</li>
-</ul>
-
-
-
-<header class="major section-title"><h2>Operational Impact</h2></header>
-
-<ul>
-<li>Gave three team leads a shared, reliable view of account ownership for the first time.</li>
-<li>Introduced a structured process for releasing and redistributing accounts via hold states.</li>
-<li>Reduced informal ownership disputes across the early SDR team.</li>
-<li>Created the foundational allocation model that later evolved into a full cross-product governance system.</li>
-</ul>
-
-
-
-<header class="major section-title"><h2>Future Improvements</h2></header>
-
-<ul>
-<li>Expand to support individual rep-level ownership as the team grows.</li>
-<li>Add timestamps to hold state transitions for better ownership tracking.</li>
-<li>Migrate into a more structured system as account volume and team size increase.</li>
-</ul>
-
-
-
-<ul class="actions section-title">
-<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-</ul>
-
-</div>
-</div>
-
-
-</div>
-
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
 
 <script>
-fetch("../components/nav.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("nav-placeholder").innerHTML = data;
-});
-</script>
-
-<script>
-fetch("../components/site-header.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("site-header-placeholder").innerHTML = data;
-});
+fetch("../components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
 </script>
 
 </body>

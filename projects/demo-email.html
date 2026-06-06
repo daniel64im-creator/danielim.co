@@ -5,196 +5,156 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="description" content="Salesforce Flow automation capturing demo attendee email on Opportunity records to prevent marketing automation enrollment failures." />
-<meta property="og:title" content="Salesforce Demo Email Capture Automation | Daniel Im" />
-<meta property="og:description" content="Salesforce Flow automation capturing demo attendee email on Opportunity records to prevent marketing automation enrollment failures." />
-<meta property="og:type" content="website" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon%2016x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon%2032x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
-
+<link rel="stylesheet" href="../assets/css/sf-theme.css">
 </head>
+<body>
 
-<body class="is-preload">
+<div id="sf-nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
-
-<div id="wrapper">
-    <div id="main">
-        <div class="inner">
-            <div id="site-header-placeholder"></div>
-
-
-
-<a href="../projects-library.html" style="display:inline-block; font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#999; text-decoration:none; margin-bottom:0.75rem;">← All Projects</a>
-
-<h1 class="page-title">Salesforce Demo Email Capture Automation</h1>
-
-<div class="project-meta">
-Salesforce Automation System
+<!-- CONTEXT BAR -->
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box projects">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <a href="/projects-library.html" class="sf-breadcrumb-link">Projects</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">Demo Email Automation</span>
+    </div>
+  </div>
 </div>
 
-<div class="project-impact">
-Eliminated marketing automation enrollment failures caused by missing demo attendee email on Opportunity records by automating field population through a record-triggered Salesforce Flow.
-</div>
+<!-- PAGE -->
+<div class="sf-page">
+<div class="sf-container">
 
-<p>
-Record-triggered Salesforce automation ensuring demo attendee email addresses
-are consistently captured at the Opportunity level for reliable marketing
-automation enrollment and reporting.
-</p>
+  <!-- PROJECT RECORD HEADER -->
+  <div class="sf-proj-header">
+    <div class="sf-proj-header-top">
+      <span class="sf-tag sf-tag-automation">Workflow Automation</span>
+      <h1 class="sf-proj-title">Salesforce Demo Email Capture Automation</h1>
+      <p class="sf-proj-impact">Eliminated marketing automation enrollment failures caused by missing demo attendee email on Opportunity records by automating field population through a record-triggered Salesforce Flow.</p>
+    </div>
+  </div>
 
+  <!-- PROJECT BODY -->
+  <div class="sf-proj-body">
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">System Overview</div>
+      <div class="sf-proj-content">
+        <p>Record-triggered Salesforce automation ensuring demo attendee email addresses are consistently captured at the Opportunity level for reliable marketing automation enrollment and reporting.</p>
+        <p>The demo scheduling process relied on attendee email information that initially lived on Lead records. After conversion, this data was not consistently present on the Opportunity object, which was the required source field used by the marketing automation system for post-demo enrollment workflows.</p>
+        <p>This project implemented automation to guarantee that the required email field was consistently populated whenever a demo event was created.</p>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Demo attendee email often existed only on Lead records.</li>
+          <li>Opportunity-level marketing field frequently remained empty.</li>
+          <li>Manual copying created inconsistent data quality.</li>
+          <li>Marketing automation enrollment failed when the field was missing.</li>
+          <li>No enforcement mechanism guaranteed required data population.</li>
+        </ul>
+      </div>
+    </div>
 
-
-<header class="major section-title"><h2>System Overview</h2></header>
-
-<p>
-The demo scheduling process relied on attendee email information that initially
-lived on Lead records. After conversion, this data was not consistently present
-on the Opportunity object, which was the required source field used by the
-marketing automation system for post-demo enrollment workflows.
-</p>
-
-<p>
-This project implemented automation to guarantee that the required email field
-was consistently populated whenever a demo event was created.
-</p>
-
-
-
-
-
-<header class="major section-title"><h2>Structural Gap</h2></header>
-
-<ul>
-<li>Demo attendee email often existed only on Lead records.</li>
-<li>Opportunity-level marketing field frequently remained empty.</li>
-<li>Manual copying created inconsistent data quality.</li>
-<li>Marketing automation enrollment failed when the field was missing.</li>
-<li>No enforcement mechanism guaranteed required data population.</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Architecture</h2></header>
-
-<ul>
-<li><strong>Record-Triggered Flow</strong> - Automation executed when a demo event record was created.</li>
-<li><strong>Scoped Trigger Logic</strong> - Execution limited specifically to Demo event types.</li>
-<li><strong>Email Field Mapping</strong> - Primary contact email copied into Opportunity-level marketing field.</li>
-<li><strong>Automation Enforcement Layer</strong> - Removed reliance on manual SDR updates.</li>
-<li><strong>Downstream System Alignment</strong> - Ensured marketing automation always received required field data.</li>
-</ul>
-
-<div class="arch-box">
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Architecture</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li><strong>Record-Triggered Flow</strong> - Automation executed when a demo event record was created.</li>
+          <li><strong>Scoped Trigger Logic</strong> - Execution limited specifically to Demo event types.</li>
+          <li><strong>Email Field Mapping</strong> - Primary contact email copied into Opportunity-level marketing field.</li>
+          <li><strong>Automation Enforcement Layer</strong> - Removed reliance on manual SDR updates.</li>
+          <li><strong>Downstream System Alignment</strong> - Ensured marketing automation always received required field data.</li>
+        </ul>
+        <div class="sf-arch-box">
 Automation Workflow
 
 Demo Event Created → Flow Triggered → Primary Contact Email Retrieved → Opportunity Email Field Updated → Marketing Automation Enrollment
-</div>
+        </div>
+        <div class="sf-screenshot">
+          <div class="sf-screenshot-label">Salesforce Flow Builder - Record-Triggered Flow (Opportunity Object, Dual Scheduled Paths, Duplicate Detection)</div>
+          <img src="../images/demo-email-flow.webp" alt="Salesforce Demo Email Capture Flow">
+        </div>
+      </div>
+    </div>
 
-<div class="screenshot-block">
-<div class="screenshot-label">Salesforce Flow Builder - Record-Triggered Flow (Opportunity Object, Dual Scheduled Paths, Duplicate Detection)</div>
-<img src="../images/demo-email-flow.webp" alt="Salesforce Demo Email Capture Flow">
-</div>
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Tools</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Salesforce CRM</li>
+          <li>Salesforce Record-Triggered Flow</li>
+          <li>Marketing automation integration</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Scale</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Primary users: SDR team + marketing automation workflows</li>
+          <li>Process frequency: every scheduled product demo</li>
+          <li>Objects involved: Event, Contact, Opportunity</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Operational Impact</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Improved reliability of post-demo marketing enrollment.</li>
+          <li>Reduced manual data copying for SDRs.</li>
+          <li>Increased CRM data integrity for demo engagement reporting.</li>
+          <li>Strengthened alignment between CRM and marketing systems.</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Future Improvements</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Add validation rule preventing demos without contact email.</li>
+          <li>Create monitoring report for automation exceptions.</li>
+          <li>Extend logic to support multi-attendee demo scenarios.</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="sf-proj-footer">
+      <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
+    </div>
 
-<header class="major section-title"><h2>Tools</h2></header>
-
-<ul>
-<li>Salesforce CRM</li>
-<li>Salesforce Record-Triggered Flow</li>
-<li>Marketing automation integration</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Scale</h2></header>
-
-<ul>
-<li>Primary users: SDR team + marketing automation workflows</li>
-<li>Process frequency: every scheduled product demo</li>
-<li>Objects involved: Event, Contact, Opportunity</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Operational Impact</h2></header>
-
-<ul>
-<li>Improved reliability of post-demo marketing enrollment.</li>
-<li>Reduced manual data copying for SDRs.</li>
-<li>Increased CRM data integrity for demo engagement reporting.</li>
-<li>Strengthened alignment between CRM and marketing systems.</li>
-</ul>
-
-
-
-
-
-<header class="major section-title"><h2>Future Improvements</h2></header>
-
-<ul>
-<li>Add validation rule preventing demos without contact email.</li>
-<li>Create monitoring report for automation exceptions.</li>
-<li>Extend logic to support multi-attendee demo scenarios.</li>
-</ul>
-
-
-
-<ul class="actions section-title">
-<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-</ul>
+  </div>
 
 </div>
 </div>
-
-
-</div>
-
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
 
 <script>
-fetch("../components/nav.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("nav-placeholder").innerHTML = data;
-});
-</script>
-
-<script>
-fetch("../components/site-header.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("site-header-placeholder").innerHTML = data;
-});
+fetch("../components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

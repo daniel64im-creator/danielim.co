@@ -5,168 +5,153 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="description" content="Customer allocation and cross-sell governance model designed to eliminate duplicate outreach and ownership disputes between product teams." />
-<meta property="og:title" content="Customer Allocation & Cross-Sell Governance | Daniel Im" />
-<meta property="og:description" content="Customer allocation and cross-sell governance model designed to eliminate duplicate outreach and ownership disputes between product teams." />
-<meta property="og:type" content="website" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<link rel="stylesheet" href="../assets/css/custom-nav-b.css" />
 <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon%2016x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon%2032x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
-
+<link rel="stylesheet" href="../assets/css/sf-theme.css">
 </head>
+<body>
 
-<body class="is-preload">
+<div id="sf-nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
-
-<div id="wrapper">
-    <div id="main">
-        <div class="inner">
-            <div id="site-header-placeholder"></div>
-
-
-
-<a href="../projects-library.html" style="display:inline-block; font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#999; text-decoration:none; margin-bottom:0.75rem;">← All Projects</a>
-
-<h1 class="page-title">Customer Allocation & Cross-Sell Governance</h1>
-
-<div class="project-meta">
-Cross-Sell Governance System
+<!-- CONTEXT BAR -->
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box projects">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <a href="/projects-library.html" class="sf-breadcrumb-link">Projects</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">Cross-Sell Governance</span>
+    </div>
+  </div>
 </div>
 
-<div class="project-impact">
-Eliminated duplicate outreach on existing customers by introducing enforced team routing rules and rep-level ownership logic across a multi-product SDR organization.
-</div>
+<!-- PAGE -->
+<div class="sf-page">
+<div class="sf-container">
 
-<p>
-Google Sheets-based governance system designed to control cross-product outreach across a shared institutional customer base. Built on the foundation of the earlier team lead allocation system, this framework introduced a master account list, enforced team routing rules, and rep-level ownership logic to prevent duplicate outreach between product lines.
-</p>
+  <!-- PROJECT RECORD HEADER -->
+  <div class="sf-proj-header">
+    <div class="sf-proj-header-top">
+      <span class="sf-tag sf-tag-governance">Governance Systems</span>
+      <h1 class="sf-proj-title">Customer Allocation & Cross-Sell Governance</h1>
+      <p class="sf-proj-impact">Eliminated duplicate outreach on existing customers by introducing enforced team routing rules and rep-level ownership logic across a multi-product SDR organization.</p>
+    </div>
+  </div>
 
+  <!-- PROJECT BODY -->
+  <div class="sf-proj-body">
 
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">System Overview</div>
+      <div class="sf-proj-content">
+        <p>Google Sheets-based governance system designed to control cross-product outreach across a shared institutional customer base. Built on the foundation of the earlier team lead allocation system, this framework introduced a master account list, enforced team routing rules, and rep-level ownership logic to prevent duplicate outreach between product lines.</p>
+        <p>The organization operated multiple SDR product teams targeting the same institutional customer base. Without a defined ownership and routing model, cross-product outreach on existing customers created duplicate activity and unclear accountability.</p>
+        <p>This project designed a centralized Google Sheets framework - building on the earlier team lead allocation infrastructure - with a master customer list, team-level routing logic, and rep assignment rules to control how SDR teams engaged shared accounts.</p>
+      </div>
+    </div>
 
-<header class="major section-title"><h2>System Overview</h2></header>
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>No centralized ownership record for existing customers across product lines.</li>
+          <li>Cross-product SDR teams could independently target the same institutions.</li>
+          <li>No routing logic defining which team held outreach rights on a given account.</li>
+          <li>Duplicate outreach risk increased as the organization scaled across products.</li>
+          <li>Reassignment decisions had no documented process or visibility.</li>
+        </ul>
+      </div>
+    </div>
 
-<p>
-The organization operated multiple SDR product teams targeting the same institutional customer base. Without a defined ownership and routing model, cross-product outreach on existing customers created duplicate activity and unclear accountability.
-</p>
-
-<p>
-This project designed a centralized Google Sheets framework - building on the earlier team lead allocation infrastructure - with a master customer list, team-level routing logic, and rep assignment rules to control how SDR teams engaged shared accounts.
-</p>
-
-
-
-<header class="major section-title"><h2>Structural Gap</h2></header>
-
-<ul>
-<li>No centralized ownership record for existing customers across product lines.</li>
-<li>Cross-product SDR teams could independently target the same institutions.</li>
-<li>No routing logic defining which team held outreach rights on a given account.</li>
-<li>Duplicate outreach risk increased as the organization scaled across products.</li>
-<li>Reassignment decisions had no documented process or visibility.</li>
-</ul>
-
-
-
-<header class="major section-title"><h2>Architecture</h2></header>
-
-<ul>
-
-<li><strong>Master Customer List</strong> - Centralized record of existing customers serving as the single source of truth for account ownership across all product teams.</li>
-
-<li><strong>Team Routing Rules</strong> - Enforced logic defining which product team held outreach rights on each account, built directly into the sheet structure.</li>
-
-<li><strong>Rep Assignment Layer</strong> - Individual rep ownership tracked within each team's routing layer, preventing concurrent claims on the same account.</li>
-
-<li><strong>Cross-Sell Guardrails</strong> - Sheet-enforced rules preventing overlapping outreach when multiple product teams had interest in the same institution.</li>
-
-<li><strong>Reassignment Controls</strong> - Structured process for ownership transitions, maintaining accountability and visibility during handoffs.</li>
-
-</ul>
-
-<div class="arch-box">
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Architecture</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li><strong>Master Customer List</strong> - Centralized record of existing customers serving as the single source of truth for account ownership across all product teams.</li>
+          <li><strong>Team Routing Rules</strong> - Enforced logic defining which product team held outreach rights on each account, built directly into the sheet structure.</li>
+          <li><strong>Rep Assignment Layer</strong> - Individual rep ownership tracked within each team's routing layer, preventing concurrent claims on the same account.</li>
+          <li><strong>Cross-Sell Guardrails</strong> - Sheet-enforced rules preventing overlapping outreach when multiple product teams had interest in the same institution.</li>
+          <li><strong>Reassignment Controls</strong> - Structured process for ownership transitions, maintaining accountability and visibility during handoffs.</li>
+        </ul>
+        <div class="sf-arch-box">
 Cross-Sell Governance Workflow
 
 Account Identified → Team Routing Rules Applied → Rep Ownership Assigned → Cross-Sell Check Enforced → Outreach Permitted or Blocked
+        </div>
+        <div class="sf-screenshot">
+          <div class="sf-screenshot-label">Google Sheets - SDR Allocation Framework (Status, Territory, Account, Products, Ownership Routing)</div>
+          <img src="../images/allocation-sheet.webp" alt="SDR Allocation Framework Google Sheets">
+        </div>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Tools</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Google Sheets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Scale</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Users: SDR teams across multiple product lines</li>
+          <li>Account scope: existing customer base</li>
+          <li>Objective: eliminate duplicate outreach across product teams</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Operational Impact</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Eliminated duplicate outreach on shared existing customer accounts.</li>
+          <li>Introduced clear rep-level ownership across cross-product SDR teams.</li>
+          <li>Established an enforced governance layer for cross-sell coordination.</li>
+          <li>Created a repeatable routing model that scaled with the organization.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Future Improvements</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Migrate routing logic into Salesforce account records for real-time CRM visibility.</li>
+          <li>Add conflict detection to flag accounts with active outreach across multiple product teams.</li>
+          <li>Build an audit trail for ownership changes and reassignment decisions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-footer">
+      <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
+    </div>
+
+  </div>
+
 </div>
-
-<div class="screenshot-block">
-<div class="screenshot-label">Google Sheets - SDR Allocation Framework (Status, Territory, Account, Products, Ownership Routing)</div>
-<img src="../images/allocation-sheet.webp" alt="SDR Allocation Framework Google Sheets">
 </div>
-
-
-
-<header class="major section-title"><h2>Tools</h2></header>
-
-<ul>
-<li>Google Sheets</li>
-</ul>
-
-
-<header class="major section-title"><h2>Scale</h2></header>
-
-<ul>
-<li>Users: SDR teams across multiple product lines</li>
-<li>Account scope: existing customer base</li>
-<li>Objective: eliminate duplicate outreach across product teams</li>
-</ul>
-
-
-
-<header class="major section-title"><h2>Operational Impact</h2></header>
-
-<ul>
-<li>Eliminated duplicate outreach on shared existing customer accounts.</li>
-<li>Introduced clear rep-level ownership across cross-product SDR teams.</li>
-<li>Established an enforced governance layer for cross-sell coordination.</li>
-<li>Created a repeatable routing model that scaled with the organization.</li>
-</ul>
-
-
-
-<header class="major section-title"><h2>Future Improvements</h2></header>
-
-<ul>
-<li>Migrate routing logic into Salesforce account records for real-time CRM visibility.</li>
-<li>Add conflict detection to flag accounts with active outreach across multiple product teams.</li>
-<li>Build an audit trail for ownership changes and reassignment decisions.</li>
-</ul>
-
-
-
-<ul class="actions section-title">
-<li><a href="../projects-library.html" class="button">Back to Projects</a></li>
-</ul>
-
-</div>
-</div>
-
-
-</div>
-
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
 
 <script>
-fetch("../components/nav.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("nav-placeholder").innerHTML = data;
-});
-</script>
-
-<script>
-fetch("../components/site-header.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("site-header-placeholder").innerHTML = data;
-});
+fetch("../components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
 </script>
 
 </body>
