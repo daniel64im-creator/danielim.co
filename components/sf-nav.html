@@ -1,0 +1,62 @@
+<header class="sf-app-bar">
+  <div class="sf-app-launcher" title="App Launcher">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <circle cx="2.5" cy="2.5" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="8" cy="2.5" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="13.5" cy="2.5" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="2.5" cy="8" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="8" cy="8" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="13.5" cy="8" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="2.5" cy="13.5" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="8" cy="13.5" r="1.5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="13.5" cy="13.5" r="1.5" fill="rgba(255,255,255,0.7)"/>
+    </svg>
+  </div>
+  <div class="sf-app-name">Revenue <em>Cloud</em></div>
+  <nav class="sf-global-nav" id="sf-desktop-nav">
+    <a href="/index.html">Home</a>
+    <a href="/projects-library.html">Projects</a>
+    <a href="/resume.html">Resume</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+  <div class="sf-bar-right">
+    <div class="sf-avatar" title="Daniel Im">DI</div>
+    <button class="sf-hamburger" id="sf-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="sf-mobile-nav-panel" id="sf-mobile-nav">
+  <a href="/index.html">Home</a>
+  <a href="/projects-library.html">Projects</a>
+  <a href="/resume.html">Resume</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+<script>
+(function() {
+  var path = window.location.pathname;
+  var inProjects = path.indexOf('/projects/') !== -1;
+  document.querySelectorAll('#sf-desktop-nav a, #sf-mobile-nav a').forEach(function(a) {
+    var href = a.getAttribute('href');
+    var match = path.endsWith(href) || (path === '/' && href === '/index.html');
+    var projMatch = inProjects && href === '/projects-library.html';
+    if (match || projMatch) a.classList.add('active');
+  });
+  var hamburger = document.getElementById('sf-hamburger');
+  var mobileNav = document.getElementById('sf-mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      var open = mobileNav.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(open));
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+})();
+</script>

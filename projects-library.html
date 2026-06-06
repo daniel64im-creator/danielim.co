@@ -1,501 +1,452 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Project Library | Revenue Operations Systems</title>
+<title>Project Library | Daniel Im</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<meta name="description" content="Complete project library - governance systems, data infrastructure builds, and workflow automations built for revenue operations teams." />
-<meta property="og:title" content="Project Library | Daniel Im" />
-<meta property="og:description" content="Complete project library - governance systems, data infrastructure builds, and workflow automations built for revenue operations teams." />
-<meta property="og:type" content="website" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/custom-nav-b.css" />
+<meta name="description" content="Complete project library — governance systems, data infrastructure builds, and workflow automations built for revenue operations teams." />
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon%2016x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon%2032x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="images/favicon%2096x96.png">
+<link rel="stylesheet" href="assets/css/sf-theme.css">
 
 <style>
 
-/* --------------------------------
-PROJECT LIBRARY VISUAL REFINEMENT
--------------------------------- */
+/* PAGE HEADER */
 
-.library-intro{
-max-width:720px;
-margin-bottom:1.5rem;
-font-size:.95rem;
-color:#222;
+.sf-page-header {
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  padding: 20px 24px;
+  margin-bottom: 16px;
 }
 
-/* MAIN LAYOUT */
-
-.library-container{
-display:flex;
-gap:2rem;
-margin-top:2rem;
-width:100%;
-max-width:110em;
-margin-left:auto;
-margin-right:auto;
-padding-bottom:4em;
+.sf-page-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #16325c;
+  margin-bottom: 6px;
 }
 
-/* LEFT PROJECT NAVIGATION */
-
-.library-left{
-width:35%;
-min-width:280px;
-max-width:400px;
-padding:1.5em;
-padding-top:1rem;
-max-height:70vh;
-overflow:auto;
-background:#ffffff;
-border: 1px solid #e5e5e5;
-border-radius: 15px;
-margin-top:0px;
+.sf-page-subtitle {
+  font-size: 0.82rem;
+  color: #706e6b;
+  font-weight: 400;
 }
 
-/* RIGHT PREVIEW AREA */
+/* LIBRARY LAYOUT */
 
-.library-right{
-width:65%;
-padding:1em;
-padding-left:3em;
-min-height:50vh;
-max-width:100%;
-background: #ffffff;
-border: 1px solid #e5e5e5;
-border-radius: 15px;
+.library-layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
 }
 
-/* CATEGORY LABELS */
+/* LEFT NAV PANEL */
 
-.category-title{
-font-size:1.2rem;
-font-weight:800;
-text-transform:uppercase;
-margin-top:0;
-margin-bottom:.6rem;
-color:#444;
-letter-spacing:.06em;
+.library-nav {
+  width: 280px;
+  flex-shrink: 0;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  overflow: hidden;
+  position: sticky;
+  top: 108px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
 }
 
-/* PROJECT ITEMS */
+.library-nav::-webkit-scrollbar { width: 4px; }
+.library-nav::-webkit-scrollbar-thumb { background: #c9c7c5; border-radius: 4px; }
 
-.project-item{
-cursor:pointer;
-padding:.65rem .7rem;
-border-radius:6px;
-margin-bottom:.25rem;
-line-height:1.25;
-font-size:.92rem;
-transition:all .15s ease;
+.library-nav-header {
+  padding: 10px 14px;
+  background: #f3f2f2;
+  border-bottom: 1px solid #dddbda;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #706e6b;
 }
 
-.project-item:hover{
-background:#f3f3f3;
-transform:translateX(3px);
+.library-category {
+  padding: 10px 14px 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #b0adab;
+  border-top: 1px solid #f3f2f2;
+  margin-top: 4px;
+}
+.library-category:first-child { border-top: none; margin-top: 0; }
+
+.library-item {
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  color: #3e3e3c;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.12s;
+  line-height: 1.35;
+  border-left: 3px solid transparent;
+}
+.library-item:hover { background: #f8f8f8; color: #0176d3; }
+.library-item.active {
+  background: #e8f4fd;
+  color: #0176d3;
+  font-weight: 600;
+  border-left-color: #0176d3;
 }
 
-.project-item.active{
-background:#e6e6e6;
-font-weight:700;
-border-left:3px solid #4f46e5;
-padding-left:.55rem;
+/* RIGHT PREVIEW */
+
+.library-preview {
+  flex: 1;
+  min-width: 0;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  padding: 22px 24px;
+  min-height: 400px;
 }
 
-/* PREVIEW HEADER */
-
-.preview-title{
-color:#222;
-font-size:1.85rem;
-font-weight:800;
-margin-bottom:.3rem;
+.preview-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #b0adab;
+  font-size: 0.82rem;
+  gap: 8px;
+  text-align: center;
 }
 
-.preview-meta{
-color:#444;
-font-size:.8rem;
-text-transform:uppercase;
-letter-spacing:.04em;
-margin-bottom:.4rem;
+.preview-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #16325c;
+  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
-
-.preview-divider{
-border:0;
-border-top:1px solid #e5e5e5;
-margin:.75rem 0 1rem 0;
+.preview-meta {
+  font-size: 0.7rem;
+  color: #706e6b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
 }
 
-/* PREVIEW CONTENT SECTIONS */
-
-.preview-section{
-margin-top:1.3rem;
-border-left:3px solid #4f46e5;
-padding-left:.8rem;
+.preview-divider {
+  border: none;
+  border-top: 1px solid #e5e4e2;
+  margin: 0 0 16px;
 }
 
-.preview-section h3{
-margin-bottom:.3rem;
-font-size:1.25rem;
-text-transform:uppercase;
-letter-spacing:.05em;
+.preview-section {
+  margin-top: 16px;
 }
 
-.preview-section p{
-margin-bottom:1em;
-color:#222;
+.preview-section-title {
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #706e6b;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e4e2;
 }
 
-/* BUTTON REFINEMENT */
-
-.preview-section .button{
-margin-top:0;
-background:#ffffff;
-border:#ffffff;
+.preview-section p {
+  font-size: 0.85rem;
+  color: #3e3e3c;
+  line-height: 1.65;
 }
 
-.preview-section .button:hover{
-background:#ffffff;
-border:#ffffff;
+/* MOBILE TOGGLE */
+
+.library-toggle-btn {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0176d3;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  padding: 7px 14px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.15s;
+}
+.library-toggle-btn:hover { background: #f3f2f2; }
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .library-layout { flex-direction: column; }
+  .library-nav {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+  .library-nav.collapsed { display: none; }
+  .library-toggle-btn { display: flex; }
 }
 
-/* LEFT PANEL SCROLLBAR */
-
-.library-left::-webkit-scrollbar{
-width:10px;
-}
-
-.library-left::-webkit-scrollbar-thumb{
-background:#c7c7c7;
-border-radius:8px;
+@media (max-width: 580px) {
+  .sf-page-title { font-size: 1.15rem; }
+  .library-preview { padding: 16px; }
 }
 
 </style>
-
 </head>
 
-<body class="is-preload">
+<body>
 
-<div id="nav-placeholder"></div>
+<div id="sf-nav-placeholder"></div>
 
-<div id="wrapper">
-<div id="main">
-<div class="inner">
-
-<div id="site-header-placeholder"></div>
-
-<section>
-
-<h1 class="page-title">Project Library</h1>
-
-
-<div class="library-intro">
-Complete index of governance systems, automation workflows, and reporting layers.
+<!-- CONTEXT BAR -->
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box projects">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">Projects</span>
+    </div>
+  </div>
+  <div class="sf-record-id">LIST VIEW · 10 RECORDS</div>
 </div>
 
-<button class="library-toggle-btn open" id="library-toggle" aria-expanded="true">
-  Browse Projects <span class="toggle-arrow">▼</span>
-</button>
+<!-- PAGE -->
+<div class="sf-page">
+<div class="sf-container">
 
-<div class="library-container">
+  <!-- PAGE HEADER -->
+  <div class="sf-page-header">
+    <div class="sf-page-title">Project Library</div>
+    <div class="sf-page-subtitle">10 projects &nbsp;·&nbsp; Governance Systems &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Workflow Automation</div>
+  </div>
 
-<div class="library-left" id="library-left-panel">
+  <!-- MOBILE TOGGLE -->
+  <button class="library-toggle-btn" id="library-toggle" aria-expanded="true">
+    Browse Projects <span id="toggle-arrow">▼</span>
+  </button>
 
-<div class="category-title">Governance Systems</div>
+  <!-- SPLIT LAYOUT -->
+  <div class="library-layout">
 
-<div class="project-item" data-key="allocation">
-Customer Allocation & Cross-Sell Governance
-</div>
+    <!-- LEFT NAV -->
+    <div class="library-nav" id="library-nav">
 
-<div class="project-item" data-key="allocationinfra">
-Team Lead Customer Allocation Infrastructure
-</div>
+      <div class="library-nav-header">All Projects (10)</div>
 
-<div class="project-item" data-key="pip">
-Performance Improvement Plan Governance Framework
-</div>
+      <div class="library-category">Governance Systems</div>
+      <div class="library-item" data-key="allocation">Customer Allocation &amp; Cross-Sell Governance</div>
+      <div class="library-item" data-key="allocationinfra">Team Lead Customer Allocation Infrastructure</div>
+      <div class="library-item" data-key="pip">Performance Improvement Plan Governance</div>
+      <div class="library-item" data-key="roe">CRM Outreach Eligibility &amp; ROE Compliance</div>
 
-<div class="project-item" data-key="roe">
-CRM Outreach Eligibility & ROE Compliance Reporting
-</div>
+      <div class="library-category">Data Infrastructure</div>
+      <div class="library-item" data-key="enrichment">CRM Data Enrichment Initiative (~9,000 Accounts)</div>
+      <div class="library-item" data-key="fte">Instant FTE Lookup for SDR Prospecting</div>
+      <div class="library-item" data-key="conference">Conference Lead Cleanup &amp; Redistribution</div>
+      <div class="library-item" data-key="advisory">Executive Customer Advisory Targeting</div>
 
+      <div class="library-category">Workflow Automation</div>
+      <div class="library-item" data-key="demoemail">Salesforce Demo Email Capture Automation</div>
+      <div class="library-item" data-key="notifications">Real-Time Demo Booking Notifications</div>
 
+    </div>
 
-<div class="category-title">Data Infrastructure</div>
+    <!-- RIGHT PREVIEW -->
+    <div class="library-preview" id="library-preview">
+      <div class="preview-empty">
+        <div>← Select a project to view details</div>
+      </div>
+    </div>
 
-<div class="project-item" data-key="enrichment">
-CRM Data Enrichment Initiative (~9,000 Accounts)
-</div>
-
-<div class="project-item" data-key="fte">
-Instant FTE Lookup for SDR Prospecting
-</div>
-
-<div class="project-item" data-key="conference">
-Conference Lead Cleanup & Redistribution
-</div>
-
-<div class="project-item" data-key="advisory">
-Executive Customer Advisory Targeting
-</div>
-
-
-
-<div class="category-title">Workflow Automation</div>
-
-<div class="project-item" data-key="demoemail">
-Salesforce Demo Email Capture Automation
-</div>
-
-<div class="project-item" data-key="notifications">
-Real-Time Demo Booking Notifications
-</div>
-
-
-</div>
-
-
-<div class="library-right" id="preview-pane">
-
-<div class="preview-title">
-Select a project
-</div>
-
-<div class="preview-meta">
-10 projects &nbsp;·&nbsp; Governance &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Workflow Automation
-</div>
-
-<hr class="preview-divider">
-
-<p style="color:#aaa; font-size:0.9rem; margin-top:0.5rem;">
-← Choose a project from the list to view the system summary.
-</p>
-
-</div>
-
-</div>
-
-</section>
+  </div>
 
 </div>
 </div>
-</div>
+
 
 <script>
+var projectData = {
 
-const projectData = {
-
-allocation:{
-category:"Governance Systems",
-link:"projects/allocation-TL.html",
-gap:"No formal ownership model governed expansion activity across shared accounts, creating duplicate outreach risk and ownership disputes between product teams.",
-architecture:"Ownership tier model with account hold states, cross-product guardrails, and a structured reassignment protocol enforcing visibility during handoffs.",
-impact:"Reduced internal friction during expansion workflows, lowered duplicate outreach incidents, and improved clarity around expansion ownership across product teams."
+allocation: {
+  category: "Governance Systems",
+  categoryClass: "sf-tag-governance",
+  link: "projects/allocation-TL.html",
+  gap: "No formal ownership model governed expansion activity across shared accounts, creating duplicate outreach risk and ownership disputes between product teams.",
+  architecture: "Ownership tier model with account hold states, cross-product guardrails, and a structured reassignment protocol enforcing visibility during handoffs.",
+  impact: "Reduced internal friction during expansion workflows, lowered duplicate outreach incidents, and improved clarity around expansion ownership across product teams."
 },
 
-allocationinfra:{
-category:"Governance Systems",
-link:"projects/allocation-SDR.html",
-gap:"No centralized system defined account ownership across SDR teams, creating visibility gaps during temporary holds and manual handoffs.",
-architecture:"Allocation framework with hold state logic, exception handling for reassignment requests, and an operational ownership visibility layer.",
-impact:"Reduced allocation disputes, prevented duplicate outreach, and created a scalable governance model for account ownership transitions."
+allocationinfra: {
+  category: "Governance Systems",
+  categoryClass: "sf-tag-governance",
+  link: "projects/allocation-SDR.html",
+  gap: "No centralized system defined account ownership across SDR teams, creating visibility gaps during temporary holds and manual handoffs.",
+  architecture: "Allocation framework with hold state logic, exception handling for reassignment requests, and an operational ownership visibility layer.",
+  impact: "Reduced allocation disputes, prevented duplicate outreach, and created a scalable governance model for account ownership transitions."
 },
 
-pip:{
-category:"Governance Systems",
-link:"projects/pip-governance.html",
-gap:"Performance interventions were handled inconsistently across managers with no objective trigger thresholds, timelines, or documentation standards.",
-architecture:"Trigger criteria defining measurable intervention thresholds, a structured timeline framework with checkpoints, and a standard documentation package.",
-impact:"Improved consistency of performance interventions, reduced subjectivity in escalation decisions, and created a durable HR-aligned documentation framework."
+pip: {
+  category: "Governance Systems",
+  categoryClass: "sf-tag-governance",
+  link: "projects/pip-governance.html",
+  gap: "Performance interventions were handled inconsistently across managers with no objective trigger thresholds, timelines, or documentation standards.",
+  architecture: "Trigger criteria defining measurable intervention thresholds, a structured timeline framework with checkpoints, and a standard documentation package.",
+  impact: "Improved consistency of performance interventions, reduced subjectivity in escalation decisions, and created a durable HR-aligned documentation framework."
 },
 
-roe:{
-category:"Governance Systems",
-link:"projects/roe-compliance-reporting.html",
-gap:"No consistent process existed for determining outreach eligibility across shared accounts, creating prospect conflicts and duplicate outreach across product teams.",
-architecture:"Structured decision framework covering account qualification, opportunity conflict analysis, and lead ownership evaluation with escalation paths for ambiguous cases.",
-impact:"Reduced prospect conflicts across product teams, improved coordination between SDRs and AEs, and standardized outreach eligibility evaluation across all shared accounts."
+roe: {
+  category: "Governance Systems",
+  categoryClass: "sf-tag-governance",
+  link: "projects/roe-compliance-reporting.html",
+  gap: "No consistent process existed for determining outreach eligibility across shared accounts, creating prospect conflicts and duplicate outreach across product teams.",
+  architecture: "Structured decision framework covering account qualification, opportunity conflict analysis, and lead ownership evaluation with escalation paths for ambiguous cases.",
+  impact: "Reduced prospect conflicts across product teams, improved coordination between SDRs and AEs, and standardized outreach eligibility evaluation across all shared accounts."
 },
 
-enrichment:{
-category:"Data Infrastructure",
-link:"projects/enrichment.html",
-gap:"Thousands of Salesforce accounts had missing or inconsistent firmographic data, making segmentation, territory reporting, and outbound targeting unreliable.",
-architecture:"Full population export, data standardization layer, ID-based mapping keyed to Salesforce Account IDs, and a structured re-import with pre-import QA validation.",
-impact:"Restored segmentation accuracy across ~9,000 accounts, improved territory and vertical reporting reliability, and strengthened CRM as a trustworthy operational data layer."
+enrichment: {
+  category: "Data Infrastructure",
+  categoryClass: "sf-tag-data",
+  link: "projects/enrichment.html",
+  gap: "Thousands of Salesforce accounts had missing or inconsistent firmographic data, making segmentation, territory reporting, and outbound targeting unreliable.",
+  architecture: "Full population export, data standardization layer, ID-based mapping keyed to Salesforce Account IDs, and a structured re-import with pre-import QA validation.",
+  impact: "Restored segmentation accuracy across ~9,000 accounts, improved territory and vertical reporting reliability, and strengthened CRM as a trustworthy operational data layer."
 },
 
-fte:{
-category:"Data Infrastructure",
-link:"projects/fte-lookup.html",
-gap:"SDRs had to switch between external research tools during prospecting to find institutional size data, slowing workflow execution and creating repeated manual effort.",
-architecture:"Embedded FTE lookup dataset integrated directly into the SDR prospecting environment with search-based retrieval and standardized output formatting.",
-impact:"Reduced enrollment lookup time from ~30 seconds to ~3 seconds, improved account prioritization consistency, and eliminated repeated manual research during prospecting."
+fte: {
+  category: "Data Infrastructure",
+  categoryClass: "sf-tag-data",
+  link: "projects/fte-lookup.html",
+  gap: "SDRs had to switch between external research tools during prospecting to find institutional size data, slowing workflow execution and creating repeated manual effort.",
+  architecture: "Embedded FTE lookup dataset integrated directly into the SDR prospecting environment with search-based retrieval and standardized output formatting.",
+  impact: "Reduced enrollment lookup time from ~30 seconds to ~3 seconds, improved account prioritization consistency, and eliminated repeated manual research during prospecting."
 },
 
-conference:{
-category:"Data Infrastructure",
-link:"projects/lead-cleanup.html",
-gap:"Event leads arrived as raw CSV exports with inconsistent formatting, duplicate records, and no standardized ownership routing, causing delays and follow-up confusion.",
-architecture:"Lead intake layer, data normalization pass, deduplication, product categorization, and ownership routing into SDR-specific outreach queues.",
-impact:"Accelerated post-event outreach speed, reduced duplicate follow-up incidents, and created a repeatable intake process for future conference lead distributions."
+conference: {
+  category: "Data Infrastructure",
+  categoryClass: "sf-tag-data",
+  link: "projects/lead-cleanup.html",
+  gap: "Event leads arrived as raw CSV exports with inconsistent formatting, duplicate records, and no standardized ownership routing, causing delays and follow-up confusion.",
+  architecture: "Lead intake layer, data normalization pass, deduplication, product categorization, and ownership routing into SDR-specific outreach queues.",
+  impact: "Accelerated post-event outreach speed, reduced duplicate follow-up incidents, and created a repeatable intake process for future conference lead distributions."
 },
 
-advisory:{
-category:"Data Infrastructure",
-link:"projects/executive-advisory-targeting.html",
-gap:"Executive advisory invite lists were built through informal suggestions without consistent criteria, making the process difficult to justify or replicate.",
-architecture:"Structured selection criteria, segmentation workflow, deduplication layer, and a validated stakeholder review output for executive approval.",
-impact:"Improved transparency in invite selection, reduced redundant or inappropriate invitations, and created a repeatable targeting workflow for future advisory cycles."
+advisory: {
+  category: "Data Infrastructure",
+  categoryClass: "sf-tag-data",
+  link: "projects/executive-advisory-targeting.html",
+  gap: "Executive advisory invite lists were built through informal suggestions without consistent criteria, making the process difficult to justify or replicate.",
+  architecture: "Structured selection criteria, segmentation workflow, deduplication layer, and a validated stakeholder review output for executive approval.",
+  impact: "Improved transparency in invite selection, reduced redundant or inappropriate invitations, and created a repeatable targeting workflow for future advisory cycles."
 },
 
-demoemail:{
-category:"Workflow Automation",
-link:"projects/demo-email.html",
-gap:"Demo attendee email existed only on Lead records and was not consistently present on the Opportunity object, causing marketing automation enrollment failures.",
-architecture:"Record-triggered Salesforce Flow scoped to Demo event types that automatically copies primary contact email into the Opportunity-level marketing field.",
-impact:"Eliminated manual data gaps in marketing automation enrollment, reduced SDR manual copying, and improved CRM data integrity for demo engagement reporting."
+demoemail: {
+  category: "Workflow Automation",
+  categoryClass: "sf-tag-automation",
+  link: "projects/demo-email.html",
+  gap: "Demo attendee email existed only on Lead records and was not consistently present on the Opportunity object, causing marketing automation enrollment failures.",
+  architecture: "Record-triggered Salesforce Flow scoped to Demo event types that automatically copies primary contact email into the Opportunity-level marketing field.",
+  impact: "Eliminated manual data gaps in marketing automation enrollment, reduced SDR manual copying, and improved CRM data integrity for demo engagement reporting."
 },
 
-notifications:{
-category:"Workflow Automation",
-link:"projects/demo-notifications.html",
-gap:"Leadership visibility into demo bookings relied on manual CRM monitoring and Slack follow-ups, with no automated alerting tied to booking events.",
-architecture:"Event-based trigger logic with qualification filters, targeted stakeholder routing, and duplicate alert prevention to maintain signal quality.",
-impact:"Gave leadership real-time visibility into qualifying demo bookings, reduced dependency on manual monitoring, and maintained notification quality by filtering invalid triggers."
+notifications: {
+  category: "Workflow Automation",
+  categoryClass: "sf-tag-automation",
+  link: "projects/demo-notifications.html",
+  gap: "Leadership visibility into demo bookings relied on manual CRM monitoring and Slack follow-ups, with no automated alerting tied to booking events.",
+  architecture: "Event-based trigger logic with qualification filters, targeted stakeholder routing, and duplicate alert prevention to maintain signal quality.",
+  impact: "Gave leadership real-time visibility into qualifying demo bookings, reduced dependency on manual monitoring, and maintained notification quality by filtering invalid triggers."
 }
 
 };
 
-
-function renderPreview(key){
-
-const pane=document.getElementById("preview-pane");
-const data=projectData[key];
-
-pane.innerHTML=`
-
-<div class="preview-title">${getTitleFromKey(key)}</div>
-
-<div class="preview-meta">${data.category}</div>
-
-<hr class="preview-divider">
-
-<div class="preview-section">
-<h3>Structural Gap</h3>
-<p>${data.gap}</p>
-</div>
-
-<div class="preview-section">
-<h3>Architecture</h3>
-<p>${data.architecture}</p>
-</div>
-
-<div class="preview-section">
-<h3>Operational Impact</h3>
-<p>${data.impact}</p>
-</div>
-
-<div class="preview-section">
-<a href="${data.link}" class="button">Open Full Project</a>
-</div>
-
-`;
-
+function getTitleFromKey(key) {
+  var el = document.querySelector('.library-item[data-key="' + key + '"]');
+  return el ? el.textContent.trim() : key;
 }
 
-
-
-function getTitleFromKey(key){
-
-const el=document.querySelector('.project-item[data-key="'+key+'"]');
-return el?el.textContent.trim():key;
-
+function renderPreview(key) {
+  var d = projectData[key];
+  var pane = document.getElementById('library-preview');
+  pane.innerHTML =
+    '<div class="preview-title">' + getTitleFromKey(key) + '</div>' +
+    '<div class="preview-meta"><span class="sf-tag ' + d.categoryClass + '">' + d.category + '</span></div>' +
+    '<hr class="preview-divider">' +
+    '<div class="preview-section"><div class="preview-section-title">Structural Gap</div><p>' + d.gap + '</p></div>' +
+    '<div class="preview-section"><div class="preview-section-title">Architecture</div><p>' + d.architecture + '</p></div>' +
+    '<div class="preview-section"><div class="preview-section-title">Operational Impact</div><p>' + d.impact + '</p></div>' +
+    '<div class="preview-section"><a href="' + d.link + '" class="sf-btn sf-btn-primary" style="margin-top:4px;">Open Full Project →</a></div>';
 }
 
-function setActiveItem(el){
-
-document.querySelectorAll(".project-item")
-.forEach(i=>i.classList.remove("active"));
-
-el.classList.add("active");
-
+function setActive(el) {
+  document.querySelectorAll('.library-item').forEach(function(i) { i.classList.remove('active'); });
+  el.classList.add('active');
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener('DOMContentLoaded', function() {
 
-document.querySelectorAll(".project-item")
-.forEach(item=>{
+  document.querySelectorAll('.library-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      var key = this.getAttribute('data-key');
+      setActive(this);
+      renderPreview(key);
+      if (window.innerWidth <= 768) {
+        var nav = document.getElementById('library-nav');
+        var btn = document.getElementById('library-toggle');
+        nav.classList.add('collapsed');
+        btn.setAttribute('aria-expanded', 'false');
+        document.getElementById('toggle-arrow').textContent = '▶';
+        document.getElementById('library-preview').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 
-item.addEventListener("click",()=>{
+  var first = document.querySelector('.library-item');
+  if (first) { setActive(first); renderPreview(first.getAttribute('data-key')); }
 
-const key=item.getAttribute("data-key");
-
-setActiveItem(item);
-renderPreview(key);
-
-// On mobile, collapse list after selection so preview is immediately visible
-if (window.innerWidth <= 768) {
-  const btn = document.getElementById('library-toggle');
-  const panel = document.getElementById('library-left-panel');
-  if (btn && panel) {
-    panel.classList.add('collapsed');
-    btn.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
-    document.getElementById('preview-pane').scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-});
-
-});
-
-const first=document.querySelector(".project-item");
-
-if(first){
-
-setActiveItem(first);
-renderPreview(first.getAttribute("data-key"));
-
-}
-
-  // Mobile toggle for project list panel
-  const toggleBtn = document.getElementById('library-toggle');
-  const leftPanel = document.getElementById('library-left-panel');
-
-  if (toggleBtn && leftPanel) {
-    toggleBtn.addEventListener('click', () => {
-      const isCollapsed = leftPanel.classList.toggle('collapsed');
-      toggleBtn.classList.toggle('open', !isCollapsed);
-      toggleBtn.setAttribute('aria-expanded', String(!isCollapsed));
+  var toggleBtn = document.getElementById('library-toggle');
+  var navPanel = document.getElementById('library-nav');
+  if (toggleBtn && navPanel) {
+    toggleBtn.addEventListener('click', function() {
+      var collapsed = navPanel.classList.toggle('collapsed');
+      this.setAttribute('aria-expanded', String(!collapsed));
+      document.getElementById('toggle-arrow').textContent = collapsed ? '▶' : '▼';
     });
   }
 
 });
-
-</script>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
-
-<script>
-fetch("components/nav.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("nav-placeholder").innerHTML = data;
-});
 </script>
 
 <script>
-fetch("components/site-header.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("site-header-placeholder").innerHTML = data;
-});
+fetch("components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
 </script>
 
 </body>
