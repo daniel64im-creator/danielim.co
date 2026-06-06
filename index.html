@@ -220,35 +220,39 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .sf-record-top {
-  padding: 18px 20px 14px;
-  border-bottom: 1px solid #f3f2f2;
+  padding: 24px;
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 28px;
 }
 
 .sf-record-photo {
-  width: 60px; height: 60px;
-  border-radius: 50%;
+  width: 220px;
+  border-radius: 8px;
   object-fit: cover;
-  border: 2px solid #e5e4e2;
+  border: 1px solid #e5e4e2;
   flex-shrink: 0;
+  display: block;
 }
 
-.sf-record-identity { flex: 1; min-width: 0; }
+.sf-record-identity {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .sf-record-name {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #16325c;
-  line-height: 1.2;
-  margin-bottom: 3px;
+  line-height: 1.15;
 }
 
 .sf-record-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #706e6b;
-  margin-bottom: 9px;
   font-weight: 500;
 }
 
@@ -274,18 +278,12 @@ button { font-family: inherit; cursor: pointer; }
 
 .sf-highlights-fields {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  border-bottom: 1px solid #f3f2f2;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 28px;
+  margin-top: 4px;
 }
 
-.sf-hl-field {
-  padding: 10px 20px;
-  border-right: 1px solid #f3f2f2;
-}
-.sf-hl-field:last-child { border-right: none; }
-.sf-hl-field:nth-child(4) { border-right: none; }
-.sf-hl-field:nth-child(n+5) { border-top: 1px solid #f3f2f2; }
+.sf-hl-field {}
 
 .sf-hl-label {
   font-size: 0.65rem;
@@ -651,23 +649,22 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 860px) {
   .sf-global-nav { display: none; }
   .sf-hamburger { display: flex; }
-  .sf-highlights-fields { grid-template-columns: repeat(2, 1fr); }
-  .sf-hl-field:nth-child(4) { border-right: 1px solid #f3f2f2; }
-  .sf-hl-field:nth-child(2n) { border-right: none; }
-  .sf-hl-field:nth-child(n+3) { border-top: 1px solid #f3f2f2; }
   .sf-philosophy-grid { grid-template-columns: 1fr; }
   .sf-record-id { display: none; }
   .sf-table th:nth-child(3),
   .sf-table td:nth-child(3) { display: none; }
+  .sf-record-photo { width: 160px; }
 }
 
 @media (max-width: 580px) {
+  .sf-record-top { flex-direction: column; align-items: center; gap: 20px; }
+  .sf-record-photo { width: 100%; max-width: 300px; }
+  .sf-record-identity { align-items: flex-start; width: 100%; }
   .sf-fields-grid { grid-template-columns: 1fr; }
   .sf-field-cell:nth-child(even) { padding-left: 0; border-left: none; }
   .sf-field-cell { border-bottom: 1px solid #f3f2f2; }
   .sf-field-cell:last-child { border-bottom: none; }
-  .sf-highlights-fields { grid-template-columns: 1fr 1fr; }
-  .sf-record-name { font-size: 1.1rem; }
+  .sf-record-name { font-size: 1.4rem; }
   .sf-container { padding: 10px 14px; }
   .sf-table th:nth-child(4),
   .sf-table td:nth-child(4) { display: none; }
@@ -764,48 +761,30 @@ button { font-family: inherit; cursor: pointer; }
           <span class="sf-status-dot"></span>
           Open to Opportunities
         </span>
+        <div class="sf-highlights-fields">
+          <div class="sf-hl-field">
+            <div class="sf-hl-label">Email</div>
+            <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+          </div>
+          <div class="sf-hl-field">
+            <div class="sf-hl-label">Location</div>
+            <div class="sf-hl-value">San Jose, CA</div>
+          </div>
+          <div class="sf-hl-field">
+            <div class="sf-hl-label">LinkedIn</div>
+            <div class="sf-hl-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
+          </div>
+          <div class="sf-hl-field">
+            <div class="sf-hl-label">Open To</div>
+            <div class="sf-hl-value">Revenue Operations · Sales Operations</div>
+          </div>
+        </div>
+        <div class="sf-record-actions" style="padding:0; margin-top:4px;">
+          <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
+          <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
+          <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
+        </div>
       </div>
-    </div>
-
-    <div class="sf-highlights-fields">
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Account Name</div>
-        <div class="sf-hl-value">YuJa, Inc.</div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Department</div>
-        <div class="sf-hl-value">Revenue Operations</div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Email</div>
-        <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Phone</div>
-        <div class="sf-hl-value">(408) 482-9904</div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Location</div>
-        <div class="sf-hl-value">San Jose, CA</div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Lead Source</div>
-        <div class="sf-hl-value">B2B SaaS — 7 Years</div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">LinkedIn</div>
-        <div class="sf-hl-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Open To</div>
-        <div class="sf-hl-value">RevOps · SalesOps</div>
-      </div>
-    </div>
-
-    <div class="sf-record-actions">
-      <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
-      <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
-      <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
     </div>
 
   </div>
