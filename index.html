@@ -696,7 +696,18 @@ button { font-family: inherit; cursor: pointer; }
 .sf-rh-name-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+
+.sf-contact-record-icon {
+  width: 44px;
+  height: 44px;
+  background: #7B5EA7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .sf-rh-actions {
@@ -859,6 +870,12 @@ button { font-family: inherit; cursor: pointer; }
   <div class="sf-panel sf-record-header-panel">
     <div class="sf-rh-identity">
       <div class="sf-rh-name-row">
+        <div class="sf-contact-record-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" fill="white"/>
+            <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
         <div class="sf-record-name">Daniel Im</div>
         <div class="sf-social-icons">
         <a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener" title="LinkedIn">
