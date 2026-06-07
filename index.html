@@ -357,8 +357,8 @@ button { font-family: inherit; cursor: pointer; }
 .sf-tabs {
   background: white;
   border: 1px solid #dddbda;
-  border-top: none;
   border-bottom: none;
+  border-radius: 4px 4px 0 0;
   display: flex;
   overflow-x: auto;
   scrollbar-width: none;
@@ -619,6 +619,71 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 
+/* ── TWO-COLUMN RECORD LAYOUT ── */
+
+.sf-record-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sf-sidebar {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.sf-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.sf-panel {
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.sf-panel:last-child { margin-bottom: 0; }
+
+.sf-sidebar-photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-bottom: 1px solid #e5e4e2;
+}
+
+.sf-sidebar-identity {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sf-panel-details {
+  padding: 20px;
+}
+
+.sf-sidebar .sf-highlights-fields {
+  grid-template-columns: 1fr;
+}
+
+.sf-sidebar .sf-fields-grid {
+  grid-template-columns: 1fr;
+}
+.sf-sidebar .sf-field-cell:nth-child(even) {
+  padding-left: 0;
+  border-left: none;
+}
+
+.sf-sidebar .sf-philosophy-grid {
+  grid-template-columns: 1fr;
+}
+
+
 /* ── MOBILE NAV DROPDOWN ── */
 
 .sf-mobile-nav-panel {
@@ -649,17 +714,15 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 860px) {
   .sf-global-nav { display: none; }
   .sf-hamburger { display: flex; }
-  .sf-philosophy-grid { grid-template-columns: 1fr; }
   .sf-record-id { display: none; }
   .sf-table th:nth-child(3),
   .sf-table td:nth-child(3) { display: none; }
-  .sf-record-photo { width: 160px; }
+  .sf-record-layout { flex-direction: column; }
+  .sf-sidebar { width: 100%; }
 }
 
 @media (max-width: 580px) {
-  .sf-record-top { flex-direction: column; align-items: center; gap: 20px; }
-  .sf-record-photo { width: 100%; max-width: 300px; }
-  .sf-record-identity { align-items: flex-start; width: 100%; }
+  .sf-philosophy-grid { grid-template-columns: 1fr; }
   .sf-fields-grid { grid-template-columns: 1fr; }
   .sf-field-cell:nth-child(even) { padding-left: 0; border-left: none; }
   .sf-field-cell { border-bottom: 1px solid #f3f2f2; }
@@ -749,319 +812,327 @@ button { font-family: inherit; cursor: pointer; }
 <div class="sf-container">
 
 
-  <!-- RECORD HEADER -->
-  <div class="sf-record-header">
+  <div class="sf-record-layout">
 
-    <div class="sf-record-top">
-      <img src="images/daniel-im.webp" alt="Daniel Im" class="sf-record-photo">
-      <div class="sf-record-identity">
-        <div class="sf-record-name">Daniel Im</div>
-        <div class="sf-record-subtitle">Sales Development Team Lead &nbsp;·&nbsp; YuJa, Inc.</div>
-        <span class="sf-status-badge">
-          <span class="sf-status-dot"></span>
-          Open to Opportunities
-        </span>
-        <div class="sf-highlights-fields">
-          <div class="sf-hl-field">
-            <div class="sf-hl-label">Email</div>
-            <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+    <!-- ═══ LEFT SIDEBAR ═══ -->
+    <div class="sf-sidebar">
+
+      <!-- HIGHLIGHTS PANEL -->
+      <div class="sf-panel">
+        <img src="images/daniel-im.webp" alt="Daniel Im" class="sf-sidebar-photo">
+        <div class="sf-sidebar-identity">
+          <div class="sf-record-name">Daniel Im</div>
+          <div class="sf-record-subtitle">Sales Development Team Lead &nbsp;·&nbsp; YuJa, Inc.</div>
+          <span class="sf-status-badge">
+            <span class="sf-status-dot"></span>
+            Open to Opportunities
+          </span>
+          <div class="sf-highlights-fields">
+            <div class="sf-hl-field">
+              <div class="sf-hl-label">Email</div>
+              <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+            </div>
+            <div class="sf-hl-field">
+              <div class="sf-hl-label">Location</div>
+              <div class="sf-hl-value">San Jose, CA</div>
+            </div>
+            <div class="sf-hl-field">
+              <div class="sf-hl-label">LinkedIn</div>
+              <div class="sf-hl-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
+            </div>
+            <div class="sf-hl-field">
+              <div class="sf-hl-label">Open To</div>
+              <div class="sf-hl-value">Revenue Ops &nbsp;·&nbsp; Sales Ops</div>
+            </div>
           </div>
-          <div class="sf-hl-field">
-            <div class="sf-hl-label">Location</div>
-            <div class="sf-hl-value">San Jose, CA</div>
-          </div>
-          <div class="sf-hl-field">
-            <div class="sf-hl-label">LinkedIn</div>
-            <div class="sf-hl-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-          </div>
-          <div class="sf-hl-field">
-            <div class="sf-hl-label">Open To</div>
-            <div class="sf-hl-value">Revenue Operations · Sales Operations</div>
+          <div class="sf-record-actions" style="padding:0; margin-top:4px; flex-wrap:wrap;">
+            <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
+            <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
+            <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
           </div>
         </div>
-        <div class="sf-record-actions" style="padding:0; margin-top:4px;">
-          <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
-          <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
-          <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
-        </div>
       </div>
+
+      <!-- DETAILS PANEL -->
+      <div class="sf-panel sf-panel-details">
+
+        <div class="sf-detail-section">
+          <div class="sf-section-label">Contact Information</div>
+          <div class="sf-fields-grid">
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Full Name</div>
+              <div class="sf-field-value">Daniel S. Im</div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Location</div>
+              <div class="sf-field-value">San Jose, CA</div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Title</div>
+              <div class="sf-field-value">Sales Development Team Lead</div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Years of Experience</div>
+              <div class="sf-field-value">7 Years in B2B SaaS</div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Account Name</div>
+              <div class="sf-field-value">YuJa, Inc.</div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Open To Roles</div>
+              <div class="sf-field-value">Revenue Operations · Sales Operations</div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Email</div>
+              <div class="sf-field-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">LinkedIn</div>
+              <div class="sf-field-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">Phone</div>
+              <div class="sf-field-value">(408) 482-9904</div>
+            </div>
+            <div class="sf-field-cell">
+              <div class="sf-field-label">GitHub</div>
+              <div class="sf-field-value"><a href="https://github.com/daniel64im" target="_blank" rel="noopener">github.com/daniel64im</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sf-detail-section">
+          <div class="sf-section-label">Specializations</div>
+          <div class="sf-badges">
+            <span class="sf-badge">Salesforce Administration</span>
+            <span class="sf-badge">CRM Governance</span>
+            <span class="sf-badge">Revenue Operations</span>
+            <span class="sf-badge">Salesforce Flow</span>
+            <span class="sf-badge">Workflow Automation</span>
+            <span class="sf-badge">Data Enrichment</span>
+            <span class="sf-badge">Territory Design</span>
+            <span class="sf-badge">SDR Team Management</span>
+            <span class="sf-badge">Google Sheets / Apps Script</span>
+            <span class="sf-badge">Process Documentation</span>
+          </div>
+        </div>
+
+        <div class="sf-detail-section">
+          <div class="sf-section-label">Description</div>
+          <div class="sf-description">
+            <p>Revenue Operations professional with 7 years in B2B SaaS. I build the operational infrastructure — CRM governance, workflow design, and data integrity systems — that creates clear, enforceable processes for revenue teams at scale.</p>
+            <p>My career started in quota-carrying sales roles at Xerox, then as an early SDR hire at several startups including SpecTrust and Arkose Labs. Working inside those organizations gave me direct exposure to how operational systems — or the lack of them — affect what revenue teams can actually execute on a daily basis.</p>
+            <p>While leading SDR teams at YuJa, I started building internal frameworks to address gaps in CRM structure, reporting visibility, and workflow coordination. What began as solving immediate operational problems evolved into a systematic approach to revenue infrastructure — one that I now pursue full-time through Revenue Operations and Sales Operations work.</p>
+          </div>
+        </div>
+
+        <div class="sf-detail-section">
+          <div class="sf-section-label">Operating Philosophy</div>
+          <div class="sf-philosophy-grid">
+            <div class="sf-philosophy-card">
+              <h4>Ownership &amp; clarity before automation</h4>
+              <p>Most RevOps problems trace back to unclear responsibility or inconsistent CRM definitions. Making the data model, ownership rules, and process expectations solid before building on top of them prevents automation that just makes problems faster.</p>
+            </div>
+            <div class="sf-philosophy-card">
+              <h4>Reduce friction for the people doing the work</h4>
+              <p>A process that requires too many manual steps will eventually get bypassed. Systems should guide the correct behavior automatically — routing logic, validation rules, and automation that removes repetitive work rather than adding to it.</p>
+            </div>
+            <div class="sf-philosophy-card">
+              <h4>Build for scale, not just the immediate problem</h4>
+              <p>RevOps systems are infrastructure. One-off fixes create technical debt. Repeatable frameworks — governance models, segmentation rules, reporting structures — should hold up as teams and products grow without needing to be rebuilt every quarter.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ═══ RIGHT MAIN ═══ -->
+    <div class="sf-main">
+
+      <!-- TAB BAR -->
+      <div class="sf-tabs">
+        <button class="sf-tab-btn active" data-tab="work-history" onclick="showTab('work-history')">Work History</button>
+        <button class="sf-tab-btn" data-tab="projects" onclick="showTab('projects')">Projects</button>
+      </div>
+
+
+      <!-- ─── WORK HISTORY TAB ─── -->
+      <div class="sf-tab-panel" id="tab-work-history">
+
+        <div class="sf-related-list">
+          <div class="sf-related-header">
+            <div class="sf-related-title">
+              Work History
+              <span class="sf-count-pill">3</span>
+            </div>
+          </div>
+          <table class="sf-table">
+            <thead>
+              <tr>
+                <th>Role</th>
+                <th>Company</th>
+                <th>Dates</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>
+                  <div class="sf-link-cell">Sales Development Team Lead</div>
+                  <div class="sf-work-bullets">
+                    <ul>
+                      <li>Designed reporting infrastructure that eliminated ~3 hours/day of manual account eligibility checking per rep across a 14-person SDR team on 4 product lines.</li>
+                      <li>Built and deployed Record-Triggered Flows in Salesforce automating real-time demo booking notifications and auto-populating demo attendee data on Opportunity records.</li>
+                      <li>Designed and enforced cross-product Rules of Engagement in Salesforce, establishing account ownership governance across 4 overlapping product lines.</li>
+                      <li>Owned a ~9,000 account CRM data enrichment initiative — exported, normalized, and re-imported records with missing firmographic fields.</li>
+                      <li>Built an account allocation and ownership routing framework in Google Sheets with Apps Script across 4 product lines, eliminating conflicting outreach.</li>
+                      <li>Wrote SOPs documenting CRM workflows and data governance standards to support onboarding and operational consistency.</li>
+                    </ul>
+                  </div>
+                </td>
+                <td style="white-space:nowrap;">YuJa, Inc.</td>
+                <td style="white-space:nowrap;">Jun 2024 – Present</td>
+                <td><span class="sf-tag sf-tag-current">Current</span></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="sf-link-cell">Senior / Founding SDR</div>
+                  <div class="sf-work-bullets">
+                    <ul>
+                      <li>Built outbound prospecting motions from scratch at three early-stage B2B SaaS companies (SpecTrust, Arkose Labs, Miarec).</li>
+                      <li>Maintained Salesforce CRM hygiene and account data accuracy across all three roles.</li>
+                      <li>Developed direct exposure to the operational gaps that form in fast-moving startup go-to-market motions — the foundation of my RevOps focus.</li>
+                    </ul>
+                  </div>
+                </td>
+                <td style="white-space:nowrap;">SpecTrust · Arkose Labs · Miarec</td>
+                <td style="white-space:nowrap;">Jul 2021 – Jun 2024</td>
+                <td><span class="sf-tag sf-tag-previous">Previous</span></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="sf-link-cell">Account Executive</div>
+                  <div class="sf-work-bullets">
+                    <ul>
+                      <li>Managed full B2B sales cycle — prospecting, discovery, proposal, and close — across the San Jose territory.</li>
+                      <li>Maintained Salesforce pipeline records, account history, and opportunity stages throughout tenure.</li>
+                    </ul>
+                  </div>
+                </td>
+                <td style="white-space:nowrap;">Xerox Corporation</td>
+                <td style="white-space:nowrap;">Jan 2019 – Jun 2021</td>
+                <td><span class="sf-tag sf-tag-previous">Previous</span></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+
+      <!-- ─── PROJECTS TAB ─── -->
+      <div class="sf-tab-panel hidden" id="tab-projects">
+
+        <div class="sf-related-list">
+          <table class="sf-table" style="border-top:1px solid #dddbda; border-radius:4px;">
+            <thead>
+              <tr>
+                <th>Project Name</th>
+                <th>Category</th>
+                <th>Impact</th>
+                <th style="text-align:right;"><a href="projects-library.html" class="sf-btn sf-btn-secondary" style="font-size:0.72rem; padding:4px 12px;">View All</a></th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td><span class="sf-link-cell">Customer Allocation &amp; Cross-Sell Governance</span></td>
+                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
+                <td style="color:#555; font-size:0.77rem;">Eliminated duplicate outreach across shared institutional accounts</td>
+                <td><a href="projects/allocation-TL.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">Team Lead Customer Allocation Infrastructure</span></td>
+                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
+                <td style="color:#555; font-size:0.77rem;">Reduced allocation disputes and prevented duplicate outreach</td>
+                <td><a href="projects/allocation-SDR.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">Performance Improvement Plan Governance Framework</span></td>
+                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
+                <td style="color:#555; font-size:0.77rem;">Standardized performance intervention process with objective thresholds</td>
+                <td><a href="projects/pip-governance.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">CRM Outreach Eligibility &amp; ROE Compliance Reporting</span></td>
+                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
+                <td style="color:#555; font-size:0.77rem;">Standardized outreach eligibility evaluation across all shared accounts</td>
+                <td><a href="projects/roe-compliance-reporting.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">CRM Data Enrichment Initiative (~9,000 Accounts)</span></td>
+                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
+                <td style="color:#555; font-size:0.77rem;">Restored segmentation accuracy across ~9,000 Salesforce accounts</td>
+                <td><a href="projects/enrichment.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">Instant FTE Lookup for SDR Prospecting</span></td>
+                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
+                <td style="color:#555; font-size:0.77rem;">Reduced enrollment lookup time from ~30 seconds to ~3 seconds</td>
+                <td><a href="projects/fte-lookup.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">Conference Lead Cleanup &amp; Redistribution</span></td>
+                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
+                <td style="color:#555; font-size:0.77rem;">Created repeatable intake process for post-event lead distribution</td>
+                <td><a href="projects/lead-cleanup.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">Executive Customer Advisory Targeting</span></td>
+                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
+                <td style="color:#555; font-size:0.77rem;">Improved transparency and repeatability in advisory invite selection</td>
+                <td><a href="projects/executive-advisory-targeting.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">Salesforce Demo Email Capture Automation</span></td>
+                <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
+                <td style="color:#555; font-size:0.77rem;">Eliminated manual data gaps in marketing automation enrollment</td>
+                <td><a href="projects/demo-email.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+              <tr>
+                <td><span class="sf-link-cell">Real-Time Demo Booking Notifications</span></td>
+                <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
+                <td style="color:#555; font-size:0.77rem;">Gave leadership real-time visibility into qualifying demo bookings</td>
+                <td><a href="projects/demo-notifications.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+
     </div>
 
   </div>
-
-
-  <!-- TAB BAR -->
-  <div class="sf-tabs">
-    <button class="sf-tab-btn active" data-tab="details" onclick="showTab('details')">Details</button>
-    <button class="sf-tab-btn" data-tab="work-history" onclick="showTab('work-history')">Work History</button>
-    <button class="sf-tab-btn" data-tab="projects" onclick="showTab('projects')">Projects</button>
-  </div>
-
-
-  <!-- ─── DETAILS TAB ─── -->
-  <div class="sf-tab-panel" id="tab-details">
-
-    <div class="sf-detail-section">
-      <div class="sf-section-label">Contact Information</div>
-      <div class="sf-fields-grid">
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Full Name</div>
-          <div class="sf-field-value">Daniel S. Im</div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Location</div>
-          <div class="sf-field-value">San Jose, CA</div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Title</div>
-          <div class="sf-field-value">Sales Development Team Lead</div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Years of Experience</div>
-          <div class="sf-field-value">7 Years in B2B SaaS</div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Account Name</div>
-          <div class="sf-field-value">YuJa, Inc.</div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Open To Roles</div>
-          <div class="sf-field-value">Revenue Operations · Sales Operations</div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Email</div>
-          <div class="sf-field-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">LinkedIn</div>
-          <div class="sf-field-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">Phone</div>
-          <div class="sf-field-value">(408) 482-9904</div>
-        </div>
-        <div class="sf-field-cell">
-          <div class="sf-field-label">GitHub</div>
-          <div class="sf-field-value"><a href="https://github.com/daniel64im" target="_blank" rel="noopener">github.com/daniel64im</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sf-detail-section">
-      <div class="sf-section-label">Specializations</div>
-      <div class="sf-badges">
-        <span class="sf-badge">Salesforce Administration</span>
-        <span class="sf-badge">CRM Governance</span>
-        <span class="sf-badge">Revenue Operations</span>
-        <span class="sf-badge">Salesforce Flow</span>
-        <span class="sf-badge">Workflow Automation</span>
-        <span class="sf-badge">Data Enrichment</span>
-        <span class="sf-badge">Territory Design</span>
-        <span class="sf-badge">SDR Team Management</span>
-        <span class="sf-badge">Google Sheets / Apps Script</span>
-        <span class="sf-badge">Process Documentation</span>
-      </div>
-    </div>
-
-    <div class="sf-detail-section">
-      <div class="sf-section-label">Description</div>
-      <div class="sf-description">
-        <p>Revenue Operations professional with 7 years in B2B SaaS. I build the operational infrastructure — CRM governance, workflow design, and data integrity systems — that creates clear, enforceable processes for revenue teams at scale.</p>
-        <p>My career started in quota-carrying sales roles at Xerox, then as an early SDR hire at several startups including SpecTrust and Arkose Labs. Working inside those organizations gave me direct exposure to how operational systems — or the lack of them — affect what revenue teams can actually execute on a daily basis.</p>
-        <p>While leading SDR teams at YuJa, I started building internal frameworks to address gaps in CRM structure, reporting visibility, and workflow coordination. What began as solving immediate operational problems evolved into a systematic approach to revenue infrastructure — one that I now pursue full-time through Revenue Operations and Sales Operations work.</p>
-      </div>
-    </div>
-
-    <div class="sf-detail-section">
-      <div class="sf-section-label">Operating Philosophy</div>
-      <div class="sf-philosophy-grid">
-        <div class="sf-philosophy-card">
-          <h4>Ownership &amp; clarity before automation</h4>
-          <p>Most RevOps problems trace back to unclear responsibility or inconsistent CRM definitions. Making the data model, ownership rules, and process expectations solid before building on top of them prevents automation that just makes problems faster.</p>
-        </div>
-        <div class="sf-philosophy-card">
-          <h4>Reduce friction for the people doing the work</h4>
-          <p>A process that requires too many manual steps will eventually get bypassed. Systems should guide the correct behavior automatically — routing logic, validation rules, and automation that removes repetitive work rather than adding to it.</p>
-        </div>
-        <div class="sf-philosophy-card">
-          <h4>Build for scale, not just the immediate problem</h4>
-          <p>RevOps systems are infrastructure. One-off fixes create technical debt. Repeatable frameworks — governance models, segmentation rules, reporting structures — should hold up as teams and products grow without needing to be rebuilt every quarter.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-  <!-- ─── WORK HISTORY TAB ─── -->
-  <div class="sf-tab-panel hidden" id="tab-work-history">
-
-    <div class="sf-related-list">
-      <div class="sf-related-header">
-        <div class="sf-related-title">
-          Work History
-          <span class="sf-count-pill">3</span>
-        </div>
-      </div>
-      <table class="sf-table">
-        <thead>
-          <tr>
-            <th>Role</th>
-            <th>Company</th>
-            <th>Dates</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <td>
-              <div class="sf-link-cell">Sales Development Team Lead</div>
-              <div class="sf-work-bullets">
-                <ul>
-                  <li>Designed reporting infrastructure that eliminated ~3 hours/day of manual account eligibility checking per rep across a 14-person SDR team on 4 product lines.</li>
-                  <li>Built and deployed Record-Triggered Flows in Salesforce automating real-time demo booking notifications and auto-populating demo attendee data on Opportunity records.</li>
-                  <li>Designed and enforced cross-product Rules of Engagement in Salesforce, establishing account ownership governance across 4 overlapping product lines.</li>
-                  <li>Owned a ~9,000 account CRM data enrichment initiative — exported, normalized, and re-imported records with missing firmographic fields.</li>
-                  <li>Built an account allocation and ownership routing framework in Google Sheets with Apps Script across 4 product lines, eliminating conflicting outreach.</li>
-                  <li>Wrote SOPs documenting CRM workflows and data governance standards to support onboarding and operational consistency.</li>
-                </ul>
-              </div>
-            </td>
-            <td style="white-space:nowrap;">YuJa, Inc.</td>
-            <td style="white-space:nowrap;">Jun 2024 – Present</td>
-            <td><span class="sf-tag sf-tag-current">Current</span></td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="sf-link-cell">Senior / Founding SDR</div>
-              <div class="sf-work-bullets">
-                <ul>
-                  <li>Built outbound prospecting motions from scratch at three early-stage B2B SaaS companies (SpecTrust, Arkose Labs, Miarec).</li>
-                  <li>Maintained Salesforce CRM hygiene and account data accuracy across all three roles.</li>
-                  <li>Developed direct exposure to the operational gaps that form in fast-moving startup go-to-market motions — the foundation of my RevOps focus.</li>
-                </ul>
-              </div>
-            </td>
-            <td style="white-space:nowrap;">SpecTrust · Arkose Labs · Miarec</td>
-            <td style="white-space:nowrap;">Jul 2021 – Jun 2024</td>
-            <td><span class="sf-tag sf-tag-previous">Previous</span></td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="sf-link-cell">Account Executive</div>
-              <div class="sf-work-bullets">
-                <ul>
-                  <li>Managed full B2B sales cycle — prospecting, discovery, proposal, and close — across the San Jose territory.</li>
-                  <li>Maintained Salesforce pipeline records, account history, and opportunity stages throughout tenure.</li>
-                </ul>
-              </div>
-            </td>
-            <td style="white-space:nowrap;">Xerox Corporation</td>
-            <td style="white-space:nowrap;">Jan 2019 – Jun 2021</td>
-            <td><span class="sf-tag sf-tag-previous">Previous</span></td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-
-  <!-- ─── PROJECTS TAB ─── -->
-  <div class="sf-tab-panel hidden" id="tab-projects">
-
-    <div class="sf-related-list">
-      <table class="sf-table" style="border-top:1px solid #dddbda; border-radius:4px;">
-        <thead>
-          <tr>
-            <th>Project Name</th>
-            <th>Category</th>
-            <th>Impact</th>
-            <th style="text-align:right;"><a href="projects-library.html" class="sf-btn sf-btn-secondary" style="font-size:0.72rem; padding:4px 12px;">View All</a></th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <td><span class="sf-link-cell">Customer Allocation &amp; Cross-Sell Governance</span></td>
-            <td><span class="sf-tag sf-tag-governance">Governance</span></td>
-            <td style="color:#555; font-size:0.77rem;">Eliminated duplicate outreach across shared institutional accounts</td>
-            <td><a href="projects/allocation-TL.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">Team Lead Customer Allocation Infrastructure</span></td>
-            <td><span class="sf-tag sf-tag-governance">Governance</span></td>
-            <td style="color:#555; font-size:0.77rem;">Reduced allocation disputes and prevented duplicate outreach</td>
-            <td><a href="projects/allocation-SDR.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">Performance Improvement Plan Governance Framework</span></td>
-            <td><span class="sf-tag sf-tag-governance">Governance</span></td>
-            <td style="color:#555; font-size:0.77rem;">Standardized performance intervention process with objective thresholds</td>
-            <td><a href="projects/pip-governance.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">CRM Outreach Eligibility &amp; ROE Compliance Reporting</span></td>
-            <td><span class="sf-tag sf-tag-governance">Governance</span></td>
-            <td style="color:#555; font-size:0.77rem;">Standardized outreach eligibility evaluation across all shared accounts</td>
-            <td><a href="projects/roe-compliance-reporting.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">CRM Data Enrichment Initiative (~9,000 Accounts)</span></td>
-            <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-            <td style="color:#555; font-size:0.77rem;">Restored segmentation accuracy across ~9,000 Salesforce accounts</td>
-            <td><a href="projects/enrichment.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">Instant FTE Lookup for SDR Prospecting</span></td>
-            <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-            <td style="color:#555; font-size:0.77rem;">Reduced enrollment lookup time from ~30 seconds to ~3 seconds</td>
-            <td><a href="projects/fte-lookup.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">Conference Lead Cleanup &amp; Redistribution</span></td>
-            <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-            <td style="color:#555; font-size:0.77rem;">Created repeatable intake process for post-event lead distribution</td>
-            <td><a href="projects/lead-cleanup.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">Executive Customer Advisory Targeting</span></td>
-            <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-            <td style="color:#555; font-size:0.77rem;">Improved transparency and repeatability in advisory invite selection</td>
-            <td><a href="projects/executive-advisory-targeting.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">Salesforce Demo Email Capture Automation</span></td>
-            <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
-            <td style="color:#555; font-size:0.77rem;">Eliminated manual data gaps in marketing automation enrollment</td>
-            <td><a href="projects/demo-email.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-          <tr>
-            <td><span class="sf-link-cell">Real-Time Demo Booking Notifications</span></td>
-            <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
-            <td style="color:#555; font-size:0.77rem;">Gave leadership real-time visibility into qualifying demo bookings</td>
-            <td><a href="projects/demo-notifications.html" class="sf-btn sf-btn-ghost" style="font-size:0.7rem; padding:3px 10px;">View →</a></td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
 
 </div>
 </div>
