@@ -665,8 +665,15 @@ button { font-family: inherit; cursor: pointer; }
 .sf-record-header-panel {
   padding: 20px 24px;
   display: flex;
-  align-items: flex-start;
-  gap: 32px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sf-rh-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .sf-rh-identity {
@@ -868,6 +875,7 @@ button { font-family: inherit; cursor: pointer; }
 
   <!-- ═══ HEADER CARD 1: IDENTITY ═══ -->
   <div class="sf-panel sf-record-header-panel">
+    <div class="sf-rh-top">
     <div class="sf-rh-identity">
       <div class="sf-rh-name-row">
         <div class="sf-contact-record-icon">
@@ -891,6 +899,12 @@ button { font-family: inherit; cursor: pointer; }
       </div>
       </div>
     </div>
+    <div class="sf-rh-actions">
+      <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
+      <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
+      <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
+    </div>
+    </div>
     <div class="sf-rh-fields">
       <div class="sf-hl-field">
         <div class="sf-hl-label">Email</div>
@@ -908,11 +922,6 @@ button { font-family: inherit; cursor: pointer; }
         <div class="sf-hl-label">Phone</div>
         <div class="sf-hl-value">(408) 482-9904</div>
       </div>
-    </div>
-    <div class="sf-rh-actions">
-      <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
-      <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
-      <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
     </div>
   </div>
 
