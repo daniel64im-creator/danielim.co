@@ -662,6 +662,20 @@ button { font-family: inherit; cursor: pointer; }
   grid-template-columns: 1fr;
 }
 
+.sf-highlights-panel {
+  display: flex;
+  align-items: stretch;
+}
+
+.sf-highlights-panel .sf-sidebar-photo {
+  width: 180px;
+  height: unset;
+  min-height: 220px;
+  border-bottom: none;
+  border-right: 1px solid #e5e4e2;
+  flex-shrink: 0;
+}
+
 
 /* ── MOBILE NAV DROPDOWN ── */
 
@@ -796,7 +810,7 @@ button { font-family: inherit; cursor: pointer; }
     <div class="sf-col-1">
 
       <!-- PHOTO + IDENTITY PANEL -->
-      <div class="sf-panel">
+      <div class="sf-panel sf-highlights-panel">
         <img src="images/daniel-im.webp" alt="Daniel Im" class="sf-sidebar-photo">
         <div class="sf-sidebar-identity">
           <div class="sf-record-name">Daniel Im</div>
