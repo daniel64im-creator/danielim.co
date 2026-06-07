@@ -621,7 +621,7 @@ button { font-family: inherit; cursor: pointer; }
 
 .sf-record-layout {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 3fr 7fr;
   gap: 16px;
   align-items: start;
 }
@@ -660,6 +660,41 @@ button { font-family: inherit; cursor: pointer; }
 
 .sf-col-1 .sf-philosophy-grid {
   grid-template-columns: 1fr;
+}
+
+.sf-record-header-panel {
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.sf-rh-identity {
+  flex-shrink: 0;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sf-rh-fields {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 20px;
+}
+
+.sf-rh-actions {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sf-photo-panel .sf-sidebar-photo {
+  width: 100%;
+  height: 400px;
+  border-bottom: none;
 }
 
 .sf-highlights-panel {
@@ -804,67 +839,68 @@ button { font-family: inherit; cursor: pointer; }
 <div class="sf-container">
 
 
+  <!-- ═══ HEADER CARD 1: IDENTITY ═══ -->
+  <div class="sf-panel sf-record-header-panel">
+    <div class="sf-rh-identity">
+      <div class="sf-record-name">Daniel Im</div>
+      <div class="sf-record-subtitle">Sales Development Team Lead &nbsp;·&nbsp; YuJa, Inc.</div>
+      <span class="sf-status-badge">
+        <span class="sf-status-dot"></span>
+        Open to Opportunities
+      </span>
+    </div>
+    <div class="sf-rh-fields">
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Email</div>
+        <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Location</div>
+        <div class="sf-hl-value">San Jose, CA</div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">LinkedIn</div>
+        <div class="sf-hl-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Open To</div>
+        <div class="sf-hl-value">Revenue Ops &nbsp;·&nbsp; Sales Ops</div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Phone</div>
+        <div class="sf-hl-value">(408) 482-9904</div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">GitHub</div>
+        <div class="sf-hl-value"><a href="https://github.com/daniel64im" target="_blank" rel="noopener">github.com/daniel64im</a></div>
+      </div>
+    </div>
+    <div class="sf-rh-actions">
+      <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
+      <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
+      <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
+    </div>
+  </div>
+
+  <!-- ═══ HEADER CARD 2: DESCRIPTION ═══ -->
+  <div class="sf-panel sf-panel-details">
+    <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+      <div class="sf-section-label">Description</div>
+      <div class="sf-description">
+        <p>Revenue Operations professional with 7 years in B2B SaaS. I build the operational infrastructure — CRM governance, workflow design, and data integrity systems — that creates clear, enforceable processes for revenue teams at scale.</p>
+        <p>My career started in quota-carrying sales roles at Xerox, then as an early SDR hire at several startups including SpecTrust and Arkose Labs. Working inside those organizations gave me direct exposure to how operational systems — or the lack of them — affect what revenue teams can actually execute on a daily basis.</p>
+        <p>While leading SDR teams at YuJa, I started building internal frameworks to address gaps in CRM structure, reporting visibility, and workflow coordination. What began as solving immediate operational problems evolved into a systematic approach to revenue infrastructure — one that I now pursue full-time through Revenue Operations and Sales Operations work.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="sf-record-layout">
 
-    <!-- ═══ LEFT COLUMN ═══ -->
+    <!-- ═══ LEFT COLUMN: PHOTO ═══ -->
     <div class="sf-col-1">
-
-      <!-- PHOTO + IDENTITY PANEL -->
-      <div class="sf-panel sf-highlights-panel">
+      <div class="sf-panel sf-photo-panel">
         <img src="images/daniel-im.webp" alt="Daniel Im" class="sf-sidebar-photo">
-        <div class="sf-sidebar-identity">
-          <div class="sf-record-name">Daniel Im</div>
-          <div class="sf-record-subtitle">Sales Development Team Lead &nbsp;·&nbsp; YuJa, Inc.</div>
-          <span class="sf-status-badge">
-            <span class="sf-status-dot"></span>
-            Open to Opportunities
-          </span>
-          <div class="sf-highlights-fields">
-            <div class="sf-hl-field">
-              <div class="sf-hl-label">Email</div>
-              <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-            </div>
-            <div class="sf-hl-field">
-              <div class="sf-hl-label">Location</div>
-              <div class="sf-hl-value">San Jose, CA</div>
-            </div>
-            <div class="sf-hl-field">
-              <div class="sf-hl-label">LinkedIn</div>
-              <div class="sf-hl-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-            </div>
-            <div class="sf-hl-field">
-              <div class="sf-hl-label">Open To</div>
-              <div class="sf-hl-value">Revenue Ops &nbsp;·&nbsp; Sales Ops</div>
-            </div>
-            <div class="sf-hl-field">
-              <div class="sf-hl-label">Phone</div>
-              <div class="sf-hl-value">(408) 482-9904</div>
-            </div>
-            <div class="sf-hl-field">
-              <div class="sf-hl-label">GitHub</div>
-              <div class="sf-hl-value"><a href="https://github.com/daniel64im" target="_blank" rel="noopener">github.com/daniel64im</a></div>
-            </div>
-          </div>
-          <div class="sf-record-actions" style="padding:0; margin-top:4px; flex-wrap:wrap;">
-            <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
-            <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
-            <a href="contact.html" class="sf-btn sf-btn-secondary">Contact</a>
-          </div>
-        </div>
       </div>
-
-      <!-- DESCRIPTION PANEL -->
-      <div class="sf-panel sf-panel-details">
-        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div class="sf-section-label">Description</div>
-          <div class="sf-description">
-            <p>Revenue Operations professional with 7 years in B2B SaaS. I build the operational infrastructure — CRM governance, workflow design, and data integrity systems — that creates clear, enforceable processes for revenue teams at scale.</p>
-            <p>My career started in quota-carrying sales roles at Xerox, then as an early SDR hire at several startups including SpecTrust and Arkose Labs. Working inside those organizations gave me direct exposure to how operational systems — or the lack of them — affect what revenue teams can actually execute on a daily basis.</p>
-            <p>While leading SDR teams at YuJa, I started building internal frameworks to address gaps in CRM structure, reporting visibility, and workflow coordination. What began as solving immediate operational problems evolved into a systematic approach to revenue infrastructure — one that I now pursue full-time through Revenue Operations and Sales Operations work.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
 
 
