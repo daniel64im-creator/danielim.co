@@ -617,16 +617,16 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 
-/* ── THREE-COLUMN RECORD LAYOUT ── */
+/* ── TWO-COLUMN RECORD LAYOUT ── */
 
 .sf-record-layout {
   display: grid;
-  grid-template-columns: 260px 320px 1fr;
+  grid-template-columns: 380px 1fr;
   gap: 16px;
   align-items: start;
 }
 
-.sf-col-1, .sf-col-2, .sf-main { min-width: 0; }
+.sf-col-1, .sf-main { min-width: 0; }
 
 .sf-panel {
   background: white;
@@ -658,19 +658,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 20px;
 }
 
-.sf-col-1 .sf-highlights-fields {
-  grid-template-columns: 1fr;
-}
-
-.sf-col-1 .sf-fields-grid {
-  grid-template-columns: 1fr;
-}
-.sf-col-1 .sf-field-cell:nth-child(even) {
-  padding-left: 0;
-  border-left: none;
-}
-
-.sf-col-2 .sf-philosophy-grid {
+.sf-col-1 .sf-philosophy-grid {
   grid-template-columns: 1fr;
 }
 
@@ -804,7 +792,7 @@ button { font-family: inherit; cursor: pointer; }
 
   <div class="sf-record-layout">
 
-    <!-- ═══ COLUMN 1: PHOTO + CONTACT INFO ═══ -->
+    <!-- ═══ LEFT COLUMN ═══ -->
     <div class="sf-col-1">
 
       <!-- PHOTO + IDENTITY PANEL -->
@@ -834,6 +822,14 @@ button { font-family: inherit; cursor: pointer; }
               <div class="sf-hl-label">Open To</div>
               <div class="sf-hl-value">Revenue Ops &nbsp;·&nbsp; Sales Ops</div>
             </div>
+            <div class="sf-hl-field">
+              <div class="sf-hl-label">Phone</div>
+              <div class="sf-hl-value">(408) 482-9904</div>
+            </div>
+            <div class="sf-hl-field">
+              <div class="sf-hl-label">GitHub</div>
+              <div class="sf-hl-value"><a href="https://github.com/daniel64im" target="_blank" rel="noopener">github.com/daniel64im</a></div>
+            </div>
           </div>
           <div class="sf-record-actions" style="padding:0; margin-top:4px; flex-wrap:wrap;">
             <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
@@ -843,64 +839,9 @@ button { font-family: inherit; cursor: pointer; }
         </div>
       </div>
 
-      <!-- CONTACT INFORMATION PANEL -->
+      <!-- DESCRIPTION PANEL -->
       <div class="sf-panel sf-panel-details">
         <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div class="sf-section-label">Contact Information</div>
-          <div class="sf-fields-grid">
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Full Name</div>
-              <div class="sf-field-value">Daniel S. Im</div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Location</div>
-              <div class="sf-field-value">San Jose, CA</div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Title</div>
-              <div class="sf-field-value">Sales Development Team Lead</div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Years of Experience</div>
-              <div class="sf-field-value">7 Years in B2B SaaS</div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Account Name</div>
-              <div class="sf-field-value">YuJa, Inc.</div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Open To Roles</div>
-              <div class="sf-field-value">Revenue Ops · Sales Ops</div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Email</div>
-              <div class="sf-field-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">LinkedIn</div>
-              <div class="sf-field-value"><a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">Phone</div>
-              <div class="sf-field-value">(408) 482-9904</div>
-            </div>
-            <div class="sf-field-cell">
-              <div class="sf-field-label">GitHub</div>
-              <div class="sf-field-value"><a href="https://github.com/daniel64im" target="_blank" rel="noopener">github.com/daniel64im</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <!-- ═══ COLUMN 2: DESCRIPTION + PHILOSOPHY + SPECIALIZATIONS ═══ -->
-    <div class="sf-col-2">
-
-      <div class="sf-panel sf-panel-details">
-
-        <div class="sf-detail-section">
           <div class="sf-section-label">Description</div>
           <div class="sf-description">
             <p>Revenue Operations professional with 7 years in B2B SaaS. I build the operational infrastructure — CRM governance, workflow design, and data integrity systems — that creates clear, enforceable processes for revenue teams at scale.</p>
@@ -908,8 +849,11 @@ button { font-family: inherit; cursor: pointer; }
             <p>While leading SDR teams at YuJa, I started building internal frameworks to address gaps in CRM structure, reporting visibility, and workflow coordination. What began as solving immediate operational problems evolved into a systematic approach to revenue infrastructure — one that I now pursue full-time through Revenue Operations and Sales Operations work.</p>
           </div>
         </div>
+      </div>
 
-        <div class="sf-detail-section">
+      <!-- OPERATING PHILOSOPHY PANEL -->
+      <div class="sf-panel sf-panel-details">
+        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
           <div class="sf-section-label">Operating Philosophy</div>
           <div class="sf-philosophy-grid">
             <div class="sf-philosophy-card">
@@ -926,23 +870,6 @@ button { font-family: inherit; cursor: pointer; }
             </div>
           </div>
         </div>
-
-        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div class="sf-section-label">Specializations</div>
-          <div class="sf-badges">
-            <span class="sf-badge">Salesforce Administration</span>
-            <span class="sf-badge">CRM Governance</span>
-            <span class="sf-badge">Revenue Operations</span>
-            <span class="sf-badge">Salesforce Flow</span>
-            <span class="sf-badge">Workflow Automation</span>
-            <span class="sf-badge">Data Enrichment</span>
-            <span class="sf-badge">Territory Design</span>
-            <span class="sf-badge">SDR Team Management</span>
-            <span class="sf-badge">Google Sheets / Apps Script</span>
-            <span class="sf-badge">Process Documentation</span>
-          </div>
-        </div>
-
       </div>
 
     </div>
@@ -1125,6 +1052,26 @@ button { font-family: inherit; cursor: pointer; }
           </table>
         </div>
 
+      </div>
+
+
+      <!-- SPECIALIZATIONS PANEL -->
+      <div class="sf-panel sf-panel-details" style="margin-top:16px;">
+        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+          <div class="sf-section-label">Specializations</div>
+          <div class="sf-badges">
+            <span class="sf-badge">Salesforce Administration</span>
+            <span class="sf-badge">CRM Governance</span>
+            <span class="sf-badge">Revenue Operations</span>
+            <span class="sf-badge">Salesforce Flow</span>
+            <span class="sf-badge">Workflow Automation</span>
+            <span class="sf-badge">Data Enrichment</span>
+            <span class="sf-badge">Territory Design</span>
+            <span class="sf-badge">SDR Team Management</span>
+            <span class="sf-badge">Google Sheets / Apps Script</span>
+            <span class="sf-badge">Process Documentation</span>
+          </div>
+        </div>
       </div>
 
 
