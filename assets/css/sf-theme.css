@@ -169,7 +169,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ── SECTION LABEL ── */
 
 .sf-section-label {
-  font-size: 0.67rem; font-weight: 700;
+  font-size: 0.8rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.09em;
   color: #706e6b;
   margin-bottom: 14px; padding-bottom: 6px;
