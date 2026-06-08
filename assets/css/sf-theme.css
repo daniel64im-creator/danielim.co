@@ -455,16 +455,46 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ── RESPONSIVE ── */
 
+/* Tablet / large phone */
 @media (max-width: 860px) {
+  /* Navigation */
   .sf-global-nav { display: none; }
   .sf-hamburger { display: flex; }
   .sf-record-id { display: none; }
+
+  /* Projects library screenshot grid */
   .sf-screenshot-grid { grid-template-columns: 1fr; }
+
+  /* Page header: stack title and button */
+  .sf-page-header { flex-direction: column; gap: 12px; }
+  .sf-page-header-actions { width: 100%; }
+  .sf-page-header-actions .sf-btn { width: 100%; justify-content: center; }
+
+  /* Resume timeline: slightly tighter */
+  .sf-timeline-item { padding-left: 40px; }
+  .sf-timeline::before { left: 10px; }
+  .sf-timeline-dot { left: 0; }
 }
 
+/* Mobile phone */
 @media (max-width: 580px) {
+  /* Container */
   .sf-container { padding: 10px 14px; }
+
+  /* Project pages */
   .sf-proj-header-top { padding: 16px; }
   .sf-proj-body { padding: 0 16px; }
   .sf-proj-title { font-size: 1.2rem; }
+
+  /* Resume: tighten timeline */
+  .sf-timeline-item { padding-left: 32px; margin-bottom: 20px; }
+  .sf-timeline-meta { flex-direction: column; gap: 2px; }
+  .sf-timeline-role { font-size: 0.95rem; }
+
+  /* Contact page card */
+  .sf-contact-card { max-width: 100%; }
+  .sf-contact-header, .sf-contact-body { padding: 16px; }
+
+  /* Contact row on resume header */
+  .sf-contact-row { flex-direction: column; gap: 4px; }
 }
