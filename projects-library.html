@@ -153,25 +153,39 @@
   margin: 0 0 16px;
 }
 
-.preview-section {
+.preview-cards {
+  display: flex;
+  gap: 12px;
   margin-top: 16px;
+  align-items: stretch;
 }
 
-.preview-section-title {
+.preview-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  padding: 16px;
+  background: #fafaf9;
+}
+
+.preview-card-label {
   font-size: 0.67rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: #706e6b;
-  margin-bottom: 8px;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #e5e4e2;
 }
 
-.preview-section p {
+.preview-card-text {
   font-size: 0.85rem;
   color: #181818;
   line-height: 1.65;
+  flex: 1;
 }
 
 /* MOBILE TOGGLE */
@@ -209,6 +223,7 @@
 @media (max-width: 580px) {
   .sf-page-title { font-size: 1.15rem; }
   .library-preview { padding: 16px; }
+  .preview-cards { flex-direction: column; }
 }
 
 </style>
@@ -400,9 +415,11 @@ function renderPreview(key) {
     '</div>' +
     '<div class="preview-meta"><span class="sf-tag ' + d.categoryClass + '">' + d.category + '</span></div>' +
     '<hr class="preview-divider">' +
-    '<div class="preview-section"><div class="preview-section-title">Structural Gap</div><p>' + d.gap + '</p></div>' +
-    '<div class="preview-section"><div class="preview-section-title">Architecture</div><p>' + d.architecture + '</p></div>' +
-    '<div class="preview-section"><div class="preview-section-title">Operational Impact</div><p>' + d.impact + '</p></div>';
+    '<div class="preview-cards">' +
+      '<div class="preview-card"><div class="preview-card-label">Structural Gap</div><div class="preview-card-text">' + d.gap + '</div></div>' +
+      '<div class="preview-card"><div class="preview-card-label">Architecture</div><div class="preview-card-text">' + d.architecture + '</div></div>' +
+      '<div class="preview-card"><div class="preview-card-label">Operational Impact</div><div class="preview-card-text">' + d.impact + '</div></div>' +
+    '</div>';
 }
 
 function setActive(el) {
