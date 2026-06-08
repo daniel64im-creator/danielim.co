@@ -147,6 +147,13 @@
   margin-bottom: 14px;
 }
 
+.preview-summary {
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 8px 0 14px;
+}
+
 .preview-divider {
   border: none;
   border-top: 1px solid #e5e4e2;
@@ -333,6 +340,7 @@ allocation: {
   category: "Governance Systems",
   categoryClass: "sf-tag-governance",
   link: "projects/allocation-TL.html",
+  summary: "No ownership model meant expansion into shared accounts created constant conflicts and duplicate outreach across product teams.",
   problem: ["No account ownership model", "Duplicate outreach risk", "Ownership disputes between teams"],
   solution: ["Ownership tier model", "Account hold states", "Cross-product guardrails", "Reassignment protocol"],
   outcome: ["Less internal friction", "Fewer duplicate outreach incidents", "Clearer expansion ownership"]
@@ -342,6 +350,7 @@ allocationinfra: {
   category: "Governance Systems",
   categoryClass: "sf-tag-governance",
   link: "projects/allocation-SDR.html",
+  summary: "SDR teams had no centralized system to track account ownership, making handoffs and temporary holds invisible across the team.",
   problem: ["No centralized ownership system", "Visibility gaps during holds", "Manual handoff confusion"],
   solution: ["Hold state logic", "Exception handling for reassignments", "Ownership visibility layer"],
   outcome: ["Fewer allocation disputes", "Prevented duplicate outreach", "Scalable ownership model"]
@@ -351,6 +360,7 @@ pip: {
   category: "Governance Systems",
   categoryClass: "sf-tag-governance",
   link: "projects/pip-governance.html",
+  summary: "Every manager handled performance interventions differently — no consistent triggers, timelines, or documentation to make decisions objective or defensible.",
   problem: ["Inconsistent manager interventions", "No trigger thresholds", "No documentation standards"],
   solution: ["Measurable trigger criteria", "Structured timeline with checkpoints", "Standard documentation package"],
   outcome: ["Consistent interventions", "Less subjective escalations", "HR-aligned documentation"]
@@ -360,6 +370,7 @@ roe: {
   category: "Governance Systems",
   categoryClass: "sf-tag-governance",
   link: "projects/roe-compliance-reporting.html",
+  summary: "With no eligibility framework, SDRs and AEs regularly stepped on each other across shared accounts with no clear way to resolve it.",
   problem: ["No outreach eligibility process", "Prospect conflicts across teams", "Duplicate outreach risk"],
   solution: ["Account qualification framework", "Opportunity conflict analysis", "Lead ownership evaluation", "Escalation paths"],
   outcome: ["Fewer prospect conflicts", "Better SDR-AE coordination", "Standardized eligibility process"]
@@ -369,6 +380,7 @@ enrichment: {
   category: "Data Infrastructure",
   categoryClass: "sf-tag-data",
   link: "projects/enrichment.html",
+  summary: "Thousands of Salesforce accounts had incomplete firmographic data, making segmentation, territory reporting, and outbound targeting unreliable.",
   problem: ["Missing firmographic data", "Unreliable segmentation", "Inaccurate territory reporting"],
   solution: ["Full account export", "Data standardization layer", "ID-based Salesforce mapping", "Pre-import QA validation"],
   outcome: ["~9,000 accounts enriched", "Restored segmentation accuracy", "Reliable territory reporting"]
@@ -378,6 +390,7 @@ fte: {
   category: "Data Infrastructure",
   categoryClass: "sf-tag-data",
   link: "projects/fte-lookup.html",
+  summary: "SDRs were losing 30+ seconds per account switching to external tools just to check institution size during prospecting.",
   problem: ["Constant tool switching", "Slow institutional size research", "Repeated manual effort"],
   solution: ["Embedded FTE lookup dataset", "Search-based retrieval", "Standardized output format"],
   outcome: ["30s → 3s lookup time", "Consistent account prioritization", "No more manual research"]
@@ -387,6 +400,7 @@ conference: {
   category: "Data Infrastructure",
   categoryClass: "sf-tag-data",
   link: "projects/lead-cleanup.html",
+  summary: "Event leads arrived as messy CSV exports with no standardization, causing delays, duplicate follow-ups, and ownership confusion.",
   problem: ["Inconsistent CSV formatting", "Duplicate lead records", "No ownership routing"],
   solution: ["Data normalization", "Deduplication layer", "Product categorization", "SDR-specific routing"],
   outcome: ["Faster post-event outreach", "No duplicate follow-ups", "Repeatable intake process"]
@@ -396,6 +410,7 @@ advisory: {
   category: "Data Infrastructure",
   categoryClass: "sf-tag-data",
   link: "projects/executive-advisory-targeting.html",
+  summary: "Advisory invite lists were built on informal suggestions with no criteria — making selection hard to justify and impossible to repeat.",
   problem: ["Informal invite selection", "No consistent criteria", "Hard to justify or replicate"],
   solution: ["Structured selection criteria", "Segmentation workflow", "Stakeholder review output"],
   outcome: ["Transparent invite selection", "Fewer inappropriate invitations", "Repeatable targeting process"]
@@ -405,6 +420,7 @@ demoemail: {
   category: "Workflow Automation",
   categoryClass: "sf-tag-automation",
   link: "projects/demo-email.html",
+  summary: "A data gap between Lead and Opportunity records was causing marketing automation enrollment to silently fail for demo contacts.",
   problem: ["Email missing on Opportunities", "Marketing automation failures", "Manual data copying by SDRs"],
   solution: ["Record-Triggered Flow", "Demo event scoping", "Auto-copies contact email"],
   outcome: ["No enrollment failures", "Eliminated manual copying", "Improved CRM data integrity"]
@@ -414,6 +430,7 @@ notifications: {
   category: "Workflow Automation",
   categoryClass: "sf-tag-automation",
   link: "projects/demo-notifications.html",
+  summary: "Leadership had no automated visibility into qualifying demo bookings — it relied entirely on manual CRM checks and Slack follow-ups.",
   problem: ["Manual CRM monitoring", "No automated booking alerts", "Leadership visibility gaps"],
   solution: ["Event-based trigger logic", "Qualification filters", "Targeted stakeholder routing", "Duplicate alert prevention"],
   outcome: ["Real-time booking visibility", "No manual monitoring needed", "High-quality alert signals"]
@@ -443,6 +460,7 @@ function renderPreview(key) {
       '<a href="' + d.link + '" class="sf-btn sf-btn-primary" style="flex-shrink:0;">Full Project Details →</a>' +
     '</div>' +
     '<div class="preview-meta"><span class="sf-tag ' + d.categoryClass + '">' + d.category + '</span></div>' +
+    '<p class="preview-summary">' + d.summary + '</p>' +
     '<hr class="preview-divider">' +
     '<div class="preview-cards">' +
       '<div class="preview-card preview-card-problem"><div class="preview-card-label">' + iconProblem + 'Problem</div><div class="preview-bubbles">' + renderBubbles(d.problem, 'preview-bubble-problem') + '</div></div>' +
