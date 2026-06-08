@@ -142,9 +142,12 @@
   font-weight: 500;
 }
 
-.sf-timeline-company { color: #181818; font-weight: 600; display: flex; align-items: center; gap: 7px; }
+.sf-timeline-company { color: #181818; font-weight: 600; }
 .sf-timeline-dates { color: #b0adab; }
-.sf-tl-logo { height: 18px; width: auto; max-width: 60px; object-fit: contain; border-radius: 2px; flex-shrink: 0; }
+
+.sf-tl-inner { display: flex; gap: 14px; align-items: flex-start; }
+.sf-tl-logo-block { width: 48px; height: 48px; object-fit: contain; border-radius: 6px; border: 1px solid #dddbda; flex-shrink: 0; background: white; padding: 3px; }
+.sf-tl-text { flex: 1; min-width: 0; }
 
 .sf-timeline-desc > p {
   font-size: 0.85rem;
@@ -253,82 +256,107 @@
       <!-- CURRENT -->
       <div class="sf-timeline-item current">
         <div class="sf-timeline-dot"></div>
-        <div class="sf-timeline-role">Sales Development Team Lead</div>
-        <div class="sf-timeline-meta">
-          <span class="sf-timeline-company"><img src="images/yuja_logo.jpg" alt="YuJa" class="sf-tl-logo">YuJa, Inc.</span>
-          <span class="sf-timeline-dates">June 2024 – Present</span>
-          <span class="sf-tag sf-tag-current" style="font-size:0.6rem;">Current</span>
-        </div>
-        <div class="sf-timeline-desc">
-          <ul class="sf-timeline-bullets">
-            <li>Designed Salesforce reporting infrastructure that eliminated approximately 3 hours of manual account qualification work per SDR per day across a 14-person team.</li>
-            <li>Built Salesforce Record-Triggered Flows automating notifications on new meetings booked and opportunity data population, improving CRM data consistency.</li>
-            <li>Established CRM governance standards and Rules of Engagement across four product lines, reducing ownership conflicts and improving pipeline integrity.</li>
-            <li>Led a 9,000-account Salesforce data enrichment initiative, improving segmentation accuracy and reporting reliability.</li>
-            <li>Developed account routing and ownership automation using Google Sheets and Apps Script, preventing duplicate outreach and improving operational efficiency.</li>
-          </ul>
+        <div class="sf-tl-inner">
+          <img src="images/yuja_logo.jpg" alt="YuJa" class="sf-tl-logo-block">
+          <div class="sf-tl-text">
+            <div class="sf-timeline-role">Sales Development Team Lead</div>
+            <div class="sf-timeline-meta">
+              <span class="sf-timeline-company">YuJa, Inc.</span>
+              <span class="sf-timeline-dates">June 2024 – Present</span>
+              <span class="sf-tag sf-tag-current" style="font-size:0.6rem;">Current</span>
+            </div>
+            <div class="sf-timeline-desc">
+              <ul class="sf-timeline-bullets">
+                <li>Designed Salesforce reporting infrastructure that eliminated approximately 3 hours of manual account qualification work per SDR per day across a 14-person team.</li>
+                <li>Built Salesforce Record-Triggered Flows automating notifications on new meetings booked and opportunity data population, improving CRM data consistency.</li>
+                <li>Established CRM governance standards and Rules of Engagement across four product lines, reducing ownership conflicts and improving pipeline integrity.</li>
+                <li>Led a 9,000-account Salesforce data enrichment initiative, improving segmentation accuracy and reporting reliability.</li>
+                <li>Developed account routing and ownership automation using Google Sheets and Apps Script, preventing duplicate outreach and improving operational efficiency.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- PRIOR 1 -->
       <div class="sf-timeline-item">
         <div class="sf-timeline-dot"></div>
-        <div class="sf-timeline-role">Founding SDR</div>
-        <div class="sf-timeline-meta">
-          <span class="sf-timeline-company"><img src="images/miarec_logo.jpg" alt="Miarec" class="sf-tl-logo">Miarec</span>
-          <span class="sf-timeline-dates">July 2023 – June 2024</span>
-        </div>
-        <div class="sf-timeline-desc">
-          <ul class="sf-timeline-bullets">
-            <li>Built outbound prospecting processes, account targeting strategies, and Salesforce CRM standards for a growing B2B SaaS organization.</li>
-            <li>Maintained CRM data quality and supported pipeline development through high-volume outbound prospecting.</li>
-          </ul>
+        <div class="sf-tl-inner">
+          <img src="images/miarec_logo.jpg" alt="Miarec" class="sf-tl-logo-block">
+          <div class="sf-tl-text">
+            <div class="sf-timeline-role">Founding SDR</div>
+            <div class="sf-timeline-meta">
+              <span class="sf-timeline-company">Miarec</span>
+              <span class="sf-timeline-dates">July 2023 – June 2024</span>
+            </div>
+            <div class="sf-timeline-desc">
+              <ul class="sf-timeline-bullets">
+                <li>Built outbound prospecting processes, account targeting strategies, and Salesforce CRM standards for a growing B2B SaaS organization.</li>
+                <li>Maintained CRM data quality and supported pipeline development through high-volume outbound prospecting.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- PRIOR 2 -->
       <div class="sf-timeline-item">
         <div class="sf-timeline-dot"></div>
-        <div class="sf-timeline-role">Senior SDR</div>
-        <div class="sf-timeline-meta">
-          <span class="sf-timeline-company"><img src="images/arkoselabs_logo.jpg" alt="Arkose Labs" class="sf-tl-logo">Arkose Labs</span>
-          <span class="sf-timeline-dates">November 2022 – June 2024</span>
-        </div>
-        <div class="sf-timeline-desc">
-          <ul class="sf-timeline-bullets">
-            <li>Executed outbound prospecting across enterprise cybersecurity accounts while maintaining Salesforce data quality, account records, and pipeline accuracy.</li>
-          </ul>
+        <div class="sf-tl-inner">
+          <img src="images/arkoselabs_logo.jpg" alt="Arkose Labs" class="sf-tl-logo-block">
+          <div class="sf-tl-text">
+            <div class="sf-timeline-role">Senior SDR</div>
+            <div class="sf-timeline-meta">
+              <span class="sf-timeline-company">Arkose Labs</span>
+              <span class="sf-timeline-dates">November 2022 – June 2024</span>
+            </div>
+            <div class="sf-timeline-desc">
+              <ul class="sf-timeline-bullets">
+                <li>Executed outbound prospecting across enterprise cybersecurity accounts while maintaining Salesforce data quality, account records, and pipeline accuracy.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- PRIOR 3 -->
       <div class="sf-timeline-item">
         <div class="sf-timeline-dot"></div>
-        <div class="sf-timeline-role">Founding SDR</div>
-        <div class="sf-timeline-meta">
-          <span class="sf-timeline-company"><img src="images/specprotected_logo.jpg" alt="SpecTrust" class="sf-tl-logo">SpecTrust</span>
-          <span class="sf-timeline-dates">July 2021 – November 2022</span>
-        </div>
-        <div class="sf-timeline-desc">
-          <ul class="sf-timeline-bullets">
-            <li>First SDR hired; developed outbound prospecting workflows, ICP targeting, cadence structure, and Salesforce data standards.</li>
-            <li>Helped establish foundational sales development processes during the company's early growth stage.</li>
-          </ul>
+        <div class="sf-tl-inner">
+          <img src="images/specprotected_logo.jpg" alt="SpecTrust" class="sf-tl-logo-block">
+          <div class="sf-tl-text">
+            <div class="sf-timeline-role">Founding SDR</div>
+            <div class="sf-timeline-meta">
+              <span class="sf-timeline-company">SpecTrust</span>
+              <span class="sf-timeline-dates">July 2021 – November 2022</span>
+            </div>
+            <div class="sf-timeline-desc">
+              <ul class="sf-timeline-bullets">
+                <li>First SDR hired; developed outbound prospecting workflows, ICP targeting, cadence structure, and Salesforce data standards.</li>
+                <li>Helped establish foundational sales development processes during the company's early growth stage.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- PRIOR 4 -->
       <div class="sf-timeline-item">
         <div class="sf-timeline-dot"></div>
-        <div class="sf-timeline-role">Account Executive</div>
-        <div class="sf-timeline-meta">
-          <span class="sf-timeline-company"><img src="images/xerox_logo.jpg" alt="Xerox" class="sf-tl-logo">Xerox</span>
-          <span class="sf-timeline-dates">January 2019 – June 2021</span>
-        </div>
-        <div class="sf-timeline-desc">
-          <ul class="sf-timeline-bullets">
-            <li>Managed the full B2B sales cycle from prospecting through close while maintaining Salesforce pipeline accuracy and account records.</li>
-          </ul>
+        <div class="sf-tl-inner">
+          <img src="images/xerox_logo.jpg" alt="Xerox" class="sf-tl-logo-block">
+          <div class="sf-tl-text">
+            <div class="sf-timeline-role">Account Executive</div>
+            <div class="sf-timeline-meta">
+              <span class="sf-timeline-company">Xerox</span>
+              <span class="sf-timeline-dates">January 2019 – June 2021</span>
+            </div>
+            <div class="sf-timeline-desc">
+              <ul class="sf-timeline-bullets">
+                <li>Managed the full B2B sales cycle from prospecting through close while maintaining Salesforce pipeline accuracy and account records.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
