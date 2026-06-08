@@ -502,6 +502,7 @@ button { font-family: inherit; cursor: pointer; }
 
 .sf-co-name { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .sf-co-logo { height: 22px; width: auto; max-width: 36px; object-fit: contain; border-radius: 2px; flex-shrink: 0; }
+.sf-co-dates { font-size: 0.75rem; color: #706e6b; margin-top: 3px; }
 
 .sf-link-cell {
   color: #0176d3;
@@ -696,9 +697,6 @@ button { font-family: inherit; cursor: pointer; }
   .sf-rh-top { flex-wrap: wrap; }
   .sf-rh-actions { width: 100%; flex-wrap: wrap; }
 
-  /* Table: hide Dates column, allow horizontal scroll if needed */
-  .sf-table th:nth-child(3),
-  .sf-table td:nth-child(3) { display: none; }
   .sf-related-list { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
@@ -913,13 +911,12 @@ button { font-family: inherit; cursor: pointer; }
               <tr>
                 <th>Company</th>
                 <th>Role</th>
-                <th>Dates</th>
               </tr>
             </thead>
             <tbody>
 
               <tr>
-                <td><div class="sf-co-name"><img src="images/yuja_logo.jpg" alt="YuJa" class="sf-co-logo">YuJa, Inc.</div></td>
+                <td><div class="sf-co-name"><img src="images/yuja_logo.jpg" alt="YuJa" class="sf-co-logo">YuJa, Inc.</div><div class="sf-co-dates">Jun 2024 – Present</div></td>
                 <td>
                   <div class="sf-link-cell">Sales Development Team Lead</div>
                   <div class="sf-work-bullets">
@@ -936,7 +933,7 @@ button { font-family: inherit; cursor: pointer; }
               </tr>
 
               <tr>
-                <td><div class="sf-co-name"><img src="images/miarec_logo.jpg" alt="Miarec" class="sf-co-logo">Miarec</div></td>
+                <td><div class="sf-co-name"><img src="images/miarec_logo.jpg" alt="Miarec" class="sf-co-logo">Miarec</div><div class="sf-co-dates">Jul 2023 – Jun 2024</div></td>
                 <td>
                   <div class="sf-link-cell">Founding SDR</div>
                   <div class="sf-work-bullets">
@@ -946,11 +943,10 @@ button { font-family: inherit; cursor: pointer; }
                     </ul>
                   </div>
                 </td>
-                <td style="white-space:nowrap;">Jul 2023 – Jun 2024</td>
               </tr>
 
               <tr>
-                <td><div class="sf-co-name"><img src="images/arkoselabs_logo.jpg" alt="Arkose Labs" class="sf-co-logo">Arkose Labs</div></td>
+                <td><div class="sf-co-name"><img src="images/arkoselabs_logo.jpg" alt="Arkose Labs" class="sf-co-logo">Arkose Labs</div><div class="sf-co-dates">Nov 2022 – Jun 2024</div></td>
                 <td>
                   <div class="sf-link-cell">Senior SDR</div>
                   <div class="sf-work-bullets">
@@ -959,11 +955,10 @@ button { font-family: inherit; cursor: pointer; }
                     </ul>
                   </div>
                 </td>
-                <td style="white-space:nowrap;">Nov 2022 – Jun 2024</td>
               </tr>
 
               <tr>
-                <td><div class="sf-co-name"><img src="images/specprotected_logo.jpg" alt="SpecTrust" class="sf-co-logo">SpecTrust</div></td>
+                <td><div class="sf-co-name"><img src="images/specprotected_logo.jpg" alt="SpecTrust" class="sf-co-logo">SpecTrust</div><div class="sf-co-dates">Jul 2021 – Nov 2022</div></td>
                 <td>
                   <div class="sf-link-cell">Founding SDR</div>
                   <div class="sf-work-bullets">
@@ -973,11 +968,10 @@ button { font-family: inherit; cursor: pointer; }
                     </ul>
                   </div>
                 </td>
-                <td style="white-space:nowrap;">Jul 2021 – Nov 2022</td>
               </tr>
 
               <tr>
-                <td><div class="sf-co-name"><img src="images/xerox_logo.jpg" alt="Xerox" class="sf-co-logo">Xerox</div></td>
+                <td><div class="sf-co-name"><img src="images/xerox_logo.jpg" alt="Xerox" class="sf-co-logo">Xerox</div><div class="sf-co-dates">Jan 2019 – Jun 2021</div></td>
                 <td>
                   <div class="sf-link-cell">Account Executive</div>
                   <div class="sf-work-bullets">
@@ -986,7 +980,6 @@ button { font-family: inherit; cursor: pointer; }
                     </ul>
                   </div>
                 </td>
-                <td style="white-space:nowrap;">Jan 2019 – Jun 2021</td>
               </tr>
 
             </tbody>

@@ -134,13 +134,14 @@
 
 .sf-timeline-meta {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 3px;
   font-size: 0.75rem;
   color: #706e6b;
   margin-bottom: 10px;
   font-weight: 500;
 }
+.sf-timeline-meta-top { display: flex; align-items: center; gap: 8px; }
 
 .sf-timeline-company { color: #181818; font-weight: 600; }
 .sf-timeline-dates { color: #b0adab; }
@@ -261,9 +262,8 @@
           <div class="sf-tl-text">
             <div class="sf-timeline-role">Sales Development Team Lead</div>
             <div class="sf-timeline-meta">
-              <span class="sf-timeline-company">YuJa, Inc.</span>
+              <div class="sf-timeline-meta-top"><span class="sf-timeline-company">YuJa, Inc.</span><span class="sf-tag sf-tag-current" style="font-size:0.6rem;">Current</span></div>
               <span class="sf-timeline-dates">June 2024 – Present</span>
-              <span class="sf-tag sf-tag-current" style="font-size:0.6rem;">Current</span>
             </div>
             <div class="sf-timeline-desc">
               <ul class="sf-timeline-bullets">
