@@ -500,6 +500,10 @@ button { font-family: inherit; cursor: pointer; }
 .sf-table tr:last-child td { border-bottom: none; }
 .sf-table tbody tr:hover td { background: #fafaf9; }
 
+.sf-table th.sf-logo-col { width: 52px; }
+.sf-table td.sf-logo-cell { width: 52px; text-align: center; padding: 8px; vertical-align: middle; }
+.sf-co-logo { height: 28px; width: 44px; object-fit: contain; display: block; margin: 0 auto; border-radius: 3px; }
+
 .sf-link-cell {
   color: #0176d3;
   font-weight: 600;
@@ -694,8 +698,8 @@ button { font-family: inherit; cursor: pointer; }
   .sf-rh-actions { width: 100%; flex-wrap: wrap; }
 
   /* Table: hide Dates column, allow horizontal scroll if needed */
-  .sf-table th:nth-child(3),
-  .sf-table td:nth-child(3) { display: none; }
+  .sf-table th:nth-child(4),
+  .sf-table td:nth-child(4) { display: none; }
   .sf-related-list { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
@@ -908,6 +912,7 @@ button { font-family: inherit; cursor: pointer; }
           <table class="sf-table">
             <thead>
               <tr>
+                <th class="sf-logo-col"></th>
                 <th>Company</th>
                 <th>Role</th>
                 <th>Dates</th>
@@ -916,6 +921,7 @@ button { font-family: inherit; cursor: pointer; }
             <tbody>
 
               <tr>
+                <td class="sf-logo-cell"><img src="images/yuja_logo.jpg" alt="YuJa" class="sf-co-logo"></td>
                 <td style="white-space:nowrap;">YuJa, Inc.</td>
                 <td>
                   <div class="sf-link-cell">Sales Development Team Lead</div>
@@ -933,6 +939,7 @@ button { font-family: inherit; cursor: pointer; }
               </tr>
 
               <tr>
+                <td class="sf-logo-cell"><img src="images/miarec_logo.jpg" alt="Miarec" class="sf-co-logo"></td>
                 <td style="white-space:nowrap;">Miarec</td>
                 <td>
                   <div class="sf-link-cell">Founding SDR</div>
@@ -947,6 +954,7 @@ button { font-family: inherit; cursor: pointer; }
               </tr>
 
               <tr>
+                <td class="sf-logo-cell"><img src="images/arkoselabs_logo.jpg" alt="Arkose Labs" class="sf-co-logo"></td>
                 <td style="white-space:nowrap;">Arkose Labs</td>
                 <td>
                   <div class="sf-link-cell">Senior SDR</div>
@@ -960,6 +968,7 @@ button { font-family: inherit; cursor: pointer; }
               </tr>
 
               <tr>
+                <td class="sf-logo-cell"><img src="images/specprotected_logo.jpg" alt="SpecTrust" class="sf-co-logo"></td>
                 <td style="white-space:nowrap;">SpecTrust</td>
                 <td>
                   <div class="sf-link-cell">Founding SDR</div>
@@ -974,6 +983,7 @@ button { font-family: inherit; cursor: pointer; }
               </tr>
 
               <tr>
+                <td class="sf-logo-cell"><img src="images/xerox_logo.jpg" alt="Xerox" class="sf-co-logo"></td>
                 <td style="white-space:nowrap;">Xerox</td>
                 <td>
                   <div class="sf-link-cell">Account Executive</div>
