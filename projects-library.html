@@ -48,7 +48,7 @@
 /* LEFT NAV PANEL */
 
 .library-nav {
-  width: 280px;
+  width: 30%;
   flex-shrink: 0;
   background: white;
   border: 1px solid #dddbda;
@@ -395,13 +395,15 @@ function renderPreview(key) {
   var d = projectData[key];
   var pane = document.getElementById('library-preview');
   pane.innerHTML =
-    '<div class="preview-title">' + getTitleFromKey(key) + '</div>' +
+    '<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:4px;">' +
+      '<div class="preview-title">' + getTitleFromKey(key) + '</div>' +
+      '<a href="' + d.link + '" class="sf-btn sf-btn-primary" style="flex-shrink:0;">Open Full Project →</a>' +
+    '</div>' +
     '<div class="preview-meta"><span class="sf-tag ' + d.categoryClass + '">' + d.category + '</span></div>' +
     '<hr class="preview-divider">' +
     '<div class="preview-section"><div class="preview-section-title">Structural Gap</div><p>' + d.gap + '</p></div>' +
     '<div class="preview-section"><div class="preview-section-title">Architecture</div><p>' + d.architecture + '</p></div>' +
-    '<div class="preview-section"><div class="preview-section-title">Operational Impact</div><p>' + d.impact + '</p></div>' +
-    '<div class="preview-section"><a href="' + d.link + '" class="sf-btn sf-btn-primary" style="margin-top:4px;">Open Full Project →</a></div>';
+    '<div class="preview-section"><div class="preview-section-title">Operational Impact</div><p>' + d.impact + '</p></div>';
 }
 
 function setActive(el) {
