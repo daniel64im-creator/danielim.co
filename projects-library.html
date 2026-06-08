@@ -195,12 +195,19 @@
 .preview-bubble {
   font-size: 0.78rem;
   color: #181818;
-  background: #f3f2f2;
-  border: 1px solid #dddbda;
   border-radius: 12px;
   padding: 4px 10px;
   line-height: 1.4;
+  border: 1px solid;
 }
+
+.preview-card-problem { border-top: 3px solid #e45c3a; }
+.preview-card-solution { border-top: 3px solid #0176d3; }
+.preview-card-outcome  { border-top: 3px solid #2e844a; }
+
+.preview-bubble-problem  { background: #fef3ef; border-color: #f5c4b0; }
+.preview-bubble-solution { background: #e8f4fd; border-color: #a8cff0; }
+.preview-bubble-outcome  { background: #edf7ee; border-color: #a2d0aa; }
 
 /* MOBILE TOGGLE */
 
@@ -423,8 +430,8 @@ var iconProblem = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" s
 var iconSolution = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
 var iconOutcome = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-function renderBubbles(arr) {
-  return arr.map(function(b) { return '<span class="preview-bubble">' + b + '</span>'; }).join('');
+function renderBubbles(arr, cls) {
+  return arr.map(function(b) { return '<span class="preview-bubble ' + cls + '">' + b + '</span>'; }).join('');
 }
 
 function renderPreview(key) {
@@ -438,9 +445,9 @@ function renderPreview(key) {
     '<div class="preview-meta"><span class="sf-tag ' + d.categoryClass + '">' + d.category + '</span></div>' +
     '<hr class="preview-divider">' +
     '<div class="preview-cards">' +
-      '<div class="preview-card"><div class="preview-card-label">' + iconProblem + 'Problem</div><div class="preview-bubbles">' + renderBubbles(d.problem) + '</div></div>' +
-      '<div class="preview-card"><div class="preview-card-label">' + iconSolution + 'Solution</div><div class="preview-bubbles">' + renderBubbles(d.solution) + '</div></div>' +
-      '<div class="preview-card"><div class="preview-card-label">' + iconOutcome + 'Outcome</div><div class="preview-bubbles">' + renderBubbles(d.outcome) + '</div></div>' +
+      '<div class="preview-card preview-card-problem"><div class="preview-card-label">' + iconProblem + 'Problem</div><div class="preview-bubbles">' + renderBubbles(d.problem, 'preview-bubble-problem') + '</div></div>' +
+      '<div class="preview-card preview-card-solution"><div class="preview-card-label">' + iconSolution + 'Solution</div><div class="preview-bubbles">' + renderBubbles(d.solution, 'preview-bubble-solution') + '</div></div>' +
+      '<div class="preview-card preview-card-outcome"><div class="preview-card-label">' + iconOutcome + 'Outcome</div><div class="preview-bubbles">' + renderBubbles(d.outcome, 'preview-bubble-outcome') + '</div></div>' +
     '</div>';
 }
 
