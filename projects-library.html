@@ -172,6 +172,9 @@
 }
 
 .preview-card-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -405,6 +408,10 @@ function getTitleFromKey(key) {
   return el ? el.textContent.trim() : key;
 }
 
+var iconProblem = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>';
+var iconSolution = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+var iconOutcome = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
 function renderPreview(key) {
   var d = projectData[key];
   var pane = document.getElementById('library-preview');
@@ -416,9 +423,9 @@ function renderPreview(key) {
     '<div class="preview-meta"><span class="sf-tag ' + d.categoryClass + '">' + d.category + '</span></div>' +
     '<hr class="preview-divider">' +
     '<div class="preview-cards">' +
-      '<div class="preview-card"><div class="preview-card-label">Structural Gap</div><div class="preview-card-text">' + d.gap + '</div></div>' +
-      '<div class="preview-card"><div class="preview-card-label">Architecture</div><div class="preview-card-text">' + d.architecture + '</div></div>' +
-      '<div class="preview-card"><div class="preview-card-label">Operational Impact</div><div class="preview-card-text">' + d.impact + '</div></div>' +
+      '<div class="preview-card"><div class="preview-card-label">' + iconProblem + 'Problem</div><div class="preview-card-text">' + d.gap + '</div></div>' +
+      '<div class="preview-card"><div class="preview-card-label">' + iconSolution + 'Solution</div><div class="preview-card-text">' + d.architecture + '</div></div>' +
+      '<div class="preview-card"><div class="preview-card-label">' + iconOutcome + 'Outcome</div><div class="preview-card-text">' + d.impact + '</div></div>' +
     '</div>';
 }
 
