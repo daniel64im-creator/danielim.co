@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Weekly Expired Lead Email Digest | Revenue Operations Project</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="Native Salesforce automation that emails each rep a weekly digest of their expired leads, turning a silent ownership loss point into an active re-engagement channel." />
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon%2016x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon%2032x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
+<link rel="stylesheet" href="../assets/css/sf-theme.css">
+</head>
+<body>
+
+<div id="sf-nav-placeholder"></div>
+
+<!-- CONTEXT BAR -->
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box projects">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <a href="/projects-library.html" class="sf-breadcrumb-link">Projects</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">Weekly Expired Lead Email Digest</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE -->
+<div class="sf-page">
+<div class="sf-container">
+
+  <!-- PROJECT RECORD HEADER -->
+  <div class="sf-proj-header">
+    <div class="sf-proj-header-top">
+      <span class="sf-tag sf-tag-automation">Workflow Automation</span>
+      <h1 class="sf-proj-title">Weekly Expired Lead Email Digest</h1>
+      <p class="sf-proj-impact">Turned a silent lead ownership loss point into an active re-engagement channel by building a fully native Salesforce system that emails each rep a weekly digest of their expired leads - complete with lead name, company, and a direct record link.</p>
+    </div>
+  </div>
+
+  <!-- PROJECT BODY -->
+  <div class="sf-proj-body">
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">System Overview</div>
+      <div class="sf-proj-content">
+        <p>When a rep claimed a lead, they had a 14-day ownership window to work it. If the lead expired before conversion, ownership moved back to a queue - silently. No notification, no record of what was lost, and no path to follow up. Leads just disappeared from rep names with no trace.</p>
+        <p>This project built a four-component native Salesforce system on top of the existing expiration Flow. It captures each expiration event at the moment it happens, stores it in a custom logging object, and delivers a personalized weekly email digest to every affected rep every Monday morning.</p>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>No feedback loop existed when a lead expired out of a rep's name.</li>
+          <li>Flow cannot query Lead field history directly, so prior owner values were lost the moment ownership transferred.</li>
+          <li>Reps had no visibility into leads slipping out of their pipeline.</li>
+          <li>No automation existed to surface expiration events or enable re-engagement.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Architecture</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li><strong>Custom Logging Object</strong> - Created a custom Salesforce object to capture each expiration event: prior owner, lead name, company, and record ID. Required because Flow cannot query Lead history directly - the prior owner value had to be captured at the moment of expiration before it was overwritten.</li>
+          <li><strong>Record-Triggered Flow (Immediate + Async)</strong> - Built on top of the existing expiration Flow with a split immediate/async path. The immediate path reads and stores the prior owner before the record updates. The async path handles bulk expirations without hitting Salesforce governor limits. Fault paths ensure a logging failure never blocks the core expiration process.</li>
+          <li><strong>Scheduled Flow - Weekly Digest Email</strong> - Runs every Monday, queries the logging object for each rep's prior-week expirations, and emails a personalized digest with lead name, company, and a direct Salesforce record link for each expired lead.</li>
+          <li><strong>Scheduled Flow - Log Cleanup</strong> - Runs on a trailing schedule to delete old log records and keep the custom object from accumulating unbounded data over time.</li>
+        </ul>
+        <div class="sf-arch-box">
+Lead Expiration Flow Trigger
+  → Immediate path captures prior owner value
+  → Async path writes log record (Lead name, Company, Prior Owner, Record ID)
+  → Fault path: logging failure isolated from core expiration process
+
+Every Monday (Scheduled Flow)
+  → Query log object for prior-week expirations by rep
+  → Generate personalized digest email per rep
+  → Email delivered with lead name, company, direct record link
+
+Trailing Cleanup (Scheduled Flow)
+  → Delete log records older than retention window
+        </div>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Tools &amp; Skills</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Salesforce Flow Builder</li>
+          <li>Record-Triggered Flows (immediate + async split architecture)</li>
+          <li>Scheduled Flows</li>
+          <li>Custom Objects (expiration logging)</li>
+          <li>Salesforce governor limit handling</li>
+          <li>Built and tested in sandbox, then deployed to production</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Scale</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Primary users: all SDRs with active lead ownership</li>
+          <li>Digest frequency: weekly, every Monday</li>
+          <li>Trigger frequency: every lead expiration event</li>
+          <li>Architecture designed to handle bulk expiration events without governor limit failures</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Operational Impact</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Gave every rep a standing weekly feedback loop on expired leads.</li>
+          <li>Reps now use the digest to re-engage leads that previously disappeared with no trace.</li>
+          <li>Expiration events fully logged with prior owner, lead name, company, and direct record link.</li>
+          <li>Turned a silent ownership loss point into an active re-engagement channel with no manual effort required.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-footer">
+      <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+<script>
+fetch("../components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
+</script>
+
+</body>
+</html>

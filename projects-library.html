@@ -278,7 +278,7 @@
       <span class="sf-breadcrumb-current">Projects</span>
     </div>
   </div>
-  <div class="sf-record-id">LIST VIEW · 10 RECORDS</div>
+  <div class="sf-record-id">LIST VIEW · 11 RECORDS</div>
 </div>
 
 <!-- PAGE -->
@@ -288,7 +288,7 @@
   <!-- PAGE HEADER -->
   <div class="sf-page-header">
     <div class="sf-page-title">Project Library</div>
-    <div class="sf-page-subtitle">10 projects &nbsp;·&nbsp; Governance Systems &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Workflow Automation</div>
+    <div class="sf-page-subtitle">11 projects &nbsp;·&nbsp; Governance Systems &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Workflow Automation</div>
   </div>
 
   <!-- MOBILE TOGGLE -->
@@ -301,6 +301,9 @@
 
     <!-- LEFT NAV -->
     <div class="library-nav" id="library-nav">
+
+      <div class="library-category">Featured</div>
+      <div class="library-item" data-key="expireddigest">Weekly Expired Lead Email Digest</div>
 
       <div class="library-category">Governance Systems</div>
       <div class="library-item" data-key="allocation">Customer Allocation &amp; Cross-Sell Governance</div>
@@ -335,6 +338,16 @@
 
 <script>
 var projectData = {
+
+expireddigest: {
+  category: "Workflow Automation",
+  categoryClass: "sf-tag-automation",
+  link: "projects/expired-lead-digest.html",
+  summary: "When leads expired out of rep ownership after the 14-day window, they disappeared silently - no notification, no log, and no way to re-engage.",
+  problem: ["Silent lead ownership loss", "No expiration feedback loop", "Prior owner value lost on transfer", "No re-engagement channel"],
+  solution: ["Custom logging object", "Record-Triggered Flow (immediate + async)", "Weekly digest email per rep", "Log cleanup Scheduled Flow"],
+  outcome: ["Weekly expired lead digest per rep", "Re-engagement channel activated", "All expiration events logged", "Zero manual effort required"]
+},
 
 allocation: {
   category: "Governance Systems",
