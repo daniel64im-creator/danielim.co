@@ -22,19 +22,39 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.06);
   padding: 20px 24px;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .sf-page-title {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #16325c;
-  margin-bottom: 6px;
+  line-height: 1.15;
 }
 
 .sf-page-subtitle {
   font-size: 0.82rem;
   color: #706e6b;
   font-weight: 400;
+}
+
+.sf-rh-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sf-proj-header-icon {
+  width: 44px;
+  height: 44px;
+  background: #e287b2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 /* LIBRARY LAYOUT */
@@ -287,7 +307,17 @@
 
   <!-- PAGE HEADER -->
   <div class="sf-page-header">
-    <div class="sf-page-title">Project Library</div>
+    <div class="sf-rh-name-row">
+      <div class="sf-proj-header-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="3" width="7" height="7" rx="1" fill="white"/>
+          <rect x="14" y="3" width="7" height="7" rx="1" fill="white"/>
+          <rect x="3" y="14" width="7" height="7" rx="1" fill="white"/>
+          <rect x="14" y="14" width="7" height="7" rx="1" fill="white"/>
+        </svg>
+      </div>
+      <div class="sf-page-title">Project Library</div>
+    </div>
     <div class="sf-page-subtitle">11 projects &nbsp;·&nbsp; Governance Systems &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Workflow Automation</div>
   </div>
 
