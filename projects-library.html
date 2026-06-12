@@ -34,10 +34,27 @@
   line-height: 1.15;
 }
 
-.sf-page-subtitle {
-  font-size: 0.82rem;
+.sf-rh-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  align-items: flex-start;
+}
+
+.sf-hl-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
   color: #706e6b;
-  font-weight: 400;
+  margin-bottom: 3px;
+  white-space: nowrap;
+}
+
+.sf-hl-value {
+  font-size: 0.8rem;
+  color: #181818;
+  font-weight: 500;
 }
 
 .sf-rh-name-row {
@@ -318,7 +335,24 @@
       </div>
       <div class="sf-page-title">Project Library</div>
     </div>
-    <div class="sf-page-subtitle">11 projects &nbsp;·&nbsp; Governance Systems &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Workflow Automation</div>
+    <div class="sf-rh-fields">
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Total Projects</div>
+        <div class="sf-hl-value">11</div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Workflow Automation</div>
+        <div class="sf-hl-value">3 projects</div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Data Infrastructure</div>
+        <div class="sf-hl-value">4 projects</div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Governance Systems</div>
+        <div class="sf-hl-value">4 projects</div>
+      </div>
+    </div>
   </div>
 
   <!-- MOBILE TOGGLE -->
