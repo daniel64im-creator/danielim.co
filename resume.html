@@ -23,39 +23,65 @@
   padding: 20px 24px;
   margin-bottom: 16px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 16px;
-  flex-wrap: wrap;
 }
-
-.sf-page-header-left {}
 
 .sf-page-title {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #16325c;
-  margin-bottom: 8px;
+  line-height: 1.15;
 }
 
-.sf-contact-row {
+.sf-rh-top {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-size: 0.78rem;
-  color: #706e6b;
-  font-weight: 500;
-}
-
-.sf-contact-row a { color: #0176d3; text-decoration: none; }
-.sf-contact-row a:hover { text-decoration: underline; }
-
-.sf-page-header-actions {
-  display: flex;
-  gap: 8px;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sf-rh-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sf-resume-header-icon {
+  width: 44px;
+  height: 44px;
+  background: #7B5EA7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
+
+.sf-rh-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  align-items: flex-start;
+}
+
+.sf-hl-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #706e6b;
+  margin-bottom: 3px;
+  white-space: nowrap;
+}
+
+.sf-hl-value {
+  font-size: 0.8rem;
+  color: #181818;
+  font-weight: 500;
+}
+.sf-hl-value a { color: #0176d3; font-weight: 500; text-decoration: none; }
+.sf-hl-value a:hover { text-decoration: underline; }
 
 /* TIMELINE BODY */
 
@@ -347,13 +373,33 @@
 
   <!-- PAGE HEADER -->
   <div class="sf-page-header">
-    <div class="sf-page-header-left">
-      <div class="sf-page-title">Resume</div>
-      <div class="sf-contact-row">
-        <span>San Jose, CA</span>
-<a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a>
-        <a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">https://www.linkedin.com/in/daeim/</a>
-        <span>B.S. Economics, UC Davis</span>
+    <div class="sf-rh-top">
+      <div class="sf-rh-name-row">
+        <div class="sf-resume-header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" fill="white"/>
+            <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="sf-page-title">Daniel Im</div>
+      </div>
+    </div>
+    <div class="sf-rh-fields">
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Location</div>
+        <div class="sf-hl-value">San Jose, CA</div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Email</div>
+        <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">LinkedIn</div>
+        <div class="sf-hl-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">https://www.linkedin.com/in/daeim/</a></div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Education</div>
+        <div class="sf-hl-value">B.S. Economics, UC Davis</div>
       </div>
     </div>
   </div>
