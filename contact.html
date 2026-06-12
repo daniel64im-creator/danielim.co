@@ -13,96 +13,218 @@
 
 <style>
 
-.sf-contact-card {
+/* PAGE HEADER */
+
+.sf-page-header {
   background: white;
   border: 1px solid #dddbda;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-  overflow: hidden;
-  max-width: 640px;
-}
-
-.sf-contact-header {
-  padding: 22px 24px 18px;
-  border-bottom: 1px solid #f3f2f2;
-}
-
-.sf-contact-name {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #16325c;
-  margin-bottom: 3px;
-}
-
-.sf-contact-tagline {
-  font-size: 0.8rem;
-  color: #706e6b;
-  font-weight: 500;
-}
-
-.sf-contact-body {
   padding: 20px 24px;
-}
-
-.sf-contact-intro {
-  font-size: 0.88rem;
-  color: #181818;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  max-width: 520px;
-}
-
-.sf-contact-fields {
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 16px;
 }
 
-.sf-contact-field {
+.sf-page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #16325c;
+  line-height: 1.15;
+}
+
+.sf-rh-name-row {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.sf-contact-icon {
-  width: 32px; height: 32px;
-  background: #f3f2f2;
-  border: 1px solid #dddbda;
-  border-radius: 4px;
-  display: flex; align-items: center; justify-content: center;
+.sf-contact-header-icon {
+  width: 44px;
+  height: 44px;
+  background: #47ccd6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  color: #706e6b;
-  font-size: 0.75rem;
 }
 
-.sf-contact-field-label {
-  font-size: 0.65rem;
+.sf-rh-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  align-items: flex-start;
+}
+
+.sf-hl-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #706e6b;
+  margin-bottom: 3px;
+  white-space: nowrap;
+}
+
+.sf-hl-value {
+  font-size: 0.8rem;
+  color: #181818;
+  font-weight: 500;
+}
+.sf-hl-value a { color: #0176d3; font-weight: 500; text-decoration: none; }
+.sf-hl-value a:hover { text-decoration: underline; }
+
+/* TWO-COLUMN LAYOUT */
+
+.sf-contact-columns {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.sf-contact-left {
+  flex: 0 0 62%;
+  min-width: 0;
+}
+
+.sf-contact-right {
+  flex: 1;
+  min-width: 0;
+}
+
+/* BODY CARD */
+
+.sf-body-card {
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  padding: 20px 24px;
+}
+
+/* SECTION LABEL */
+
+.sf-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #444;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #0176d3;
+  width: fit-content;
+}
+
+/* INTRO */
+
+.sf-contact-intro {
+  font-size: 0.88rem;
+  color: #181818;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* WHAT I'M LOOKING FOR */
+
+.sf-lf-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-lf-row {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f3f2f2;
+}
+.sf-lf-row:first-child { padding-top: 0; }
+.sf-lf-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.sf-lf-label {
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   color: #706e6b;
-  margin-bottom: 1px;
+  white-space: nowrap;
+  min-width: 72px;
+  padding-top: 2px;
 }
 
-.sf-contact-field-value {
+.sf-lf-value {
   font-size: 0.85rem;
   color: #181818;
   font-weight: 500;
+  line-height: 1.5;
 }
-.sf-contact-field-value a { color: #0176d3; }
 
-.sf-contact-actions {
+/* ACTION LINKS */
+
+.sf-action-list {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  flex-wrap: wrap;
-  padding-top: 18px;
-  border-top: 1px solid #f3f2f2;
 }
 
-@media (max-width: 480px) {
-  .sf-contact-card { max-width: 100%; }
-  .sf-contact-header, .sf-contact-body { padding: 16px; }
+.sf-action-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  background: #fafaf9;
+  text-decoration: none;
+  transition: all 0.15s;
+  color: inherit;
+}
+.sf-action-link:hover {
+  background: #e8f4fd;
+  border-color: #0176d3;
+  text-decoration: none;
+}
+
+.sf-action-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sf-action-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0176d3;
+  margin-bottom: 2px;
+}
+
+.sf-action-desc {
+  font-size: 0.75rem;
+  color: #706e6b;
+}
+
+.sf-action-arrow {
+  margin-left: auto;
+  color: #b0adab;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+  .sf-contact-columns { flex-direction: column; }
+  .sf-contact-left, .sf-contact-right { flex: none; width: 100%; }
+}
+
+@media (max-width: 580px) {
+  .sf-rh-fields { gap: 8px 16px; }
 }
 
 </style>
@@ -133,52 +255,100 @@
 <div class="sf-page">
 <div class="sf-container">
 
-  <div class="sf-contact-card">
+  <!-- PAGE HEADER -->
+  <div class="sf-page-header">
+    <div class="sf-rh-name-row">
+      <div class="sf-contact-header-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="4" fill="white"/>
+          <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="sf-page-title">Contact</div>
+    </div>
+    <div class="sf-rh-fields">
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Email</div>
+        <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">LinkedIn</div>
+        <div class="sf-hl-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">GitHub</div>
+        <div class="sf-hl-value"><a href="https://github.com/daniel64im-creator" target="_blank" rel="noopener">github.com/daniel64im-creator</a></div>
+      </div>
+      <div class="sf-hl-field">
+        <div class="sf-hl-label">Location</div>
+        <div class="sf-hl-value">San Jose, CA</div>
+      </div>
+    </div>
+  </div>
 
-    <div class="sf-contact-header">
-      <div class="sf-contact-name">Daniel Im</div>
-      <div class="sf-contact-tagline">Sales Operations &amp; Sales Operations &nbsp;·&nbsp; Bay Area, CA</div>
+  <!-- TWO-COLUMN BODY -->
+  <div class="sf-contact-columns">
+
+    <!-- LEFT: MESSAGE + WHAT I'M LOOKING FOR -->
+    <div class="sf-contact-left">
+      <div class="sf-body-card">
+        <div class="sf-section-label">Get in Touch</div>
+        <p class="sf-contact-intro">I'm actively looking for Sales Operations roles where I can build and own the operational systems revenue teams run on. If you're working on CRM governance, workflow infrastructure, or scaling a sales team and want to connect, I'd like to hear from you.</p>
+        <div class="sf-section-label">What I'm Looking For</div>
+        <div class="sf-lf-grid">
+          <div class="sf-lf-row">
+            <div class="sf-lf-label">Role</div>
+            <div class="sf-lf-value">Sales Operations</div>
+          </div>
+          <div class="sf-lf-row">
+            <div class="sf-lf-label">Focus</div>
+            <div class="sf-lf-value">CRM governance, Salesforce automation, GTM workflow infrastructure</div>
+          </div>
+          <div class="sf-lf-row">
+            <div class="sf-lf-label">Open to</div>
+            <div class="sf-lf-value">Full-time, Bay Area or Remote</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="sf-contact-body">
-
-      <p class="sf-contact-intro">
-        I'm actively looking for Sales Operations roles where I can build and own the operational systems revenue teams run on. If you're working on CRM governance, workflow infrastructure, or scaling a sales team and want to connect, I'd like to hear from you.
-      </p>
-
-      <div class="sf-contact-fields">
-
-        <div class="sf-contact-field">
-          <div class="sf-contact-icon">✉</div>
-          <div>
-            <div class="sf-contact-field-label">Email</div>
-            <div class="sf-contact-field-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-          </div>
+    <!-- RIGHT: EXPLORE -->
+    <div class="sf-contact-right">
+      <div class="sf-body-card">
+        <div class="sf-section-label">Explore My Work</div>
+        <div class="sf-action-list">
+          <a href="projects-library.html" class="sf-action-link">
+            <div class="sf-action-icon" style="background:#ecfdf3;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
+                <rect x="14" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
+                <rect x="3" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
+                <rect x="14" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
+              </svg>
+            </div>
+            <div>
+              <div class="sf-action-title">Project Library</div>
+              <div class="sf-action-desc">11 projects across automation, data, and governance</div>
+            </div>
+            <span class="sf-action-arrow">›</span>
+          </a>
+          <a href="resume.html" class="sf-action-link">
+            <div class="sf-action-icon" style="background:#fff3e8;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="2" width="14" height="18" rx="2" stroke="#f59331" stroke-width="1.5" fill="none"/>
+                <line x1="8" y1="7" x2="16" y2="7" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="8" y1="11" x2="16" y2="11" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="8" y1="15" x2="13" y2="15" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="sf-action-title">Resume</div>
+              <div class="sf-action-desc">Work history, skills, and experience</div>
+            </div>
+            <span class="sf-action-arrow">›</span>
+          </a>
         </div>
-
-        <div class="sf-contact-field">
-          <div class="sf-contact-icon">in</div>
-          <div>
-            <div class="sf-contact-field-label">LinkedIn</div>
-            <div class="sf-contact-field-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-          </div>
-        </div>
-
-        <div class="sf-contact-field">
-          <div class="sf-contact-icon" style="font-size:0.65rem;">gh</div>
-          <div>
-            <div class="sf-contact-field-label">GitHub</div>
-            <div class="sf-contact-field-value"><a href="https://github.com/daniel64im-creator" target="_blank" rel="noopener">github.com/daniel64im-creator</a></div>
-          </div>
-        </div>
-
       </div>
-
-      <div class="sf-contact-actions">
-        <a href="projects-library.html" class="sf-btn sf-btn-primary">View My Work</a>
-        <a href="resume.html" class="sf-btn sf-btn-secondary">View Resume</a>
-      </div>
-
     </div>
 
   </div>
