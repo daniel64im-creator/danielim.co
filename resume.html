@@ -34,6 +34,23 @@
   line-height: 1.15;
 }
 
+.sf-rh-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sf-resume-header-icon {
+  width: 44px;
+  height: 44px;
+  background: #f59331;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .sf-rh-fields {
   display: flex;
   flex-wrap: wrap;
@@ -349,7 +366,17 @@
 
   <!-- PAGE HEADER -->
   <div class="sf-page-header">
-    <div class="sf-page-title">Resume</div>
+    <div class="sf-rh-name-row">
+      <div class="sf-resume-header-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="2" width="14" height="18" rx="2" stroke="white" stroke-width="1.5" fill="none"/>
+          <line x1="8" y1="7" x2="16" y2="7" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="8" y1="11" x2="16" y2="11" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="8" y1="15" x2="13" y2="15" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="sf-page-title">Resume</div>
+    </div>
     <div class="sf-rh-fields">
       <div class="sf-hl-field">
         <div class="sf-hl-label">Location</div>
