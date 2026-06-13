@@ -217,6 +217,13 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.15;
 }
 
+.sf-record-target-role {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #706e6b;
+  margin-top: 4px;
+}
+
 .sf-hl-field {}
 
 .sf-hl-label {
@@ -402,6 +409,19 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sf-description p { margin-bottom: 10px; }
 .sf-description p:last-child { margin-bottom: 0; }
+.sf-description ul { margin: 10px 0 0 0; padding-left: 18px; }
+.sf-description ul li { margin-bottom: 7px; }
+.sf-description ul li:last-child { margin-bottom: 0; }
+
+.sf-fit-list {
+  margin: 12px 0 0 0;
+  padding-left: 18px;
+  font-size: 0.84rem;
+  color: #181818;
+  line-height: 1.6;
+}
+.sf-fit-list li { margin-bottom: 7px; }
+.sf-fit-list li:last-child { margin-bottom: 0; }
 
 
 /* ── PHILOSOPHY CARDS ── */
@@ -820,6 +840,7 @@ button { font-family: inherit; cursor: pointer; }
         </div>
         <div class="sf-record-name">Daniel Im</div>
       </div>
+      <div class="sf-record-target-role">Targeting: Sales Operations Coordinator / Associate</div>
     </div>
     <div class="sf-rh-actions">
       <a href="projects-library.html" class="sf-btn sf-btn-primary">View Projects</a>
@@ -851,233 +872,110 @@ button { font-family: inherit; cursor: pointer; }
   <!-- DESCRIPTION PANEL (full width) -->
   <div class="sf-panel sf-panel-details" style="margin-bottom:16px;">
     <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-      <div class="sf-section-label">Description</div>
+      <div class="sf-section-label">About</div>
       <div class="sf-description">
-        <p>Sales Operations professional with 7 years in B2B SaaS. I build operational infrastructure covering CRM governance, workflow design, and data integrity systems that create clear, enforceable processes for revenue teams at scale.</p>
-        <p>My career started in quota-carrying sales roles at Xerox, then as an early SDR hire at several startups including SpecTrust and Arkose Labs. Working inside those organizations gave me direct exposure to how the presence or absence of operational systems shapes what revenue teams can actually execute on a daily basis.</p>
-        <p>While leading SDR teams at YuJa, I started building internal frameworks to address gaps in CRM structure, reporting visibility, and workflow coordination. What began as solving immediate operational problems evolved into a systematic approach to revenue infrastructure. Sales Operations is where that work lives, and it's what I'm focused on full-time.</p>
+        <p>Sales Operations professional with 7 years in B2B SaaS. I build the CRM systems, workflow automation, and governance infrastructure that revenue teams depend on. My background is in quota-carrying sales roles, which gives me direct insight into where operational gaps hurt reps most.</p>
+        <ul>
+          <li>Designed Salesforce reporting infrastructure that eliminated approximately 3 hours of manual account qualification work per SDR per day across a 14-person team.</li>
+          <li>Led a 9,000-account CRM data enrichment initiative, restoring segmentation accuracy and reporting reliability across the full database.</li>
+          <li>Established Rules of Engagement and CRM governance standards across four product lines, reducing account ownership conflicts and improving pipeline integrity.</li>
+          <li>Built account routing and ownership automation using Google Sheets and Apps Script, preventing duplicate outreach at scale.</li>
+          <li>Designed and documented 11 Sales Operations projects spanning workflow automation, data infrastructure, and governance systems.</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <div class="sf-record-layout">
 
-    <!-- ═══ LEFT COLUMN: TABS ═══ -->
+    <!-- ═══ LEFT COLUMN: FEATURED PROJECTS ═══ -->
     <div class="sf-col-1">
 
-      <!-- TAB BAR -->
-      <div class="sf-tabs">
-        <button class="sf-tab-btn active" data-tab="projects" onclick="showTab('projects')">Projects</button>
-        <button class="sf-tab-btn" data-tab="work-history" onclick="showTab('work-history')">Work History</button>
-      </div>
-
-
-      <!-- ─── WORK HISTORY TAB ─── -->
-      <div class="sf-tab-panel hidden" id="tab-work-history">
-
-        <div class="sf-related-list">
-
-          <table class="sf-table sf-work-table">
-            <tbody>
-
-              <tr>
-                <td><img src="images/yuja_logo.jpg" alt="YuJa" class="sf-co-logo"></td>
-                <td>
-                  <div class="sf-link-cell">Sales Development Team Lead</div>
-                  <div class="sf-co-name">YuJa, Inc.</div>
-                  <div class="sf-co-dates">Jun '24 – Present</div>
-                  <div class="sf-co-focus">Focus: Salesforce administration, CRM governance, and GTM process automation</div>
-                  <div class="sf-work-bullets">
-                    <ul>
-                      <li>Designed Salesforce reporting infrastructure that eliminated approximately 3 hours of manual account qualification work per SDR per day across a 14-person team.</li>
-                      <li>Built Salesforce Record-Triggered Flows automating notifications on new meetings booked and opportunity data population, improving CRM data consistency.</li>
-                      <li>Established CRM governance standards and Rules of Engagement across four product lines, reducing ownership conflicts and improving pipeline integrity.</li>
-                      <li>Led a 9,000-account Salesforce data enrichment initiative, improving segmentation accuracy and reporting reliability.</li>
-                      <li>Developed account routing and ownership automation using Google Sheets and Apps Script, preventing duplicate outreach and improving operational efficiency.</li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td><img src="images/miarec_logo.jpg" alt="Miarec" class="sf-co-logo"></td>
-                <td>
-                  <div class="sf-link-cell">Founding SDR</div>
-                  <div class="sf-co-name">Miarec</div>
-                  <div class="sf-co-dates">Jul '23 – Jun '24</div>
-                  <div class="sf-work-bullets">
-                    <ul>
-                      <li>Sole SDR responsible for all top-of-funnel activity, executing 150+ manual dials per day while independently sourcing leads through LinkedIn and ZoomInfo.</li>
-                      <li>Drove a management-approved auto-dialer trial after identifying manual dialing as an operational bottleneck, then refocused on prospect list quality and targeting precision to consistently generate qualified pipeline.</li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td><img src="images/arkoselabs_logo.jpg" alt="Arkose Labs" class="sf-co-logo"></td>
-                <td>
-                  <div class="sf-link-cell">Senior SDR</div>
-                  <div class="sf-co-name">Arkose Labs</div>
-                  <div class="sf-co-dates">Nov '22 – Apr '23</div>
-                  <div class="sf-work-bullets">
-                    <ul>
-                      <li>Ramped to full productivity within 30 days in a complex enterprise cybersecurity sales cycle, booking qualified meetings by end of the first month.</li>
-                      <li>Self-initiated a Korean market expansion by identifying untouched territory with no internal Korean-speaking coverage, translating pitch materials, building a prospecting playbook, and making calls on personal time to align with Korean business hours. Booked 2 qualified meetings before the SDR team was eliminated in a leadership restructure.</li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td><img src="images/specprotected_logo.jpg" alt="SpecTrust" class="sf-co-logo"></td>
-                <td>
-                  <div class="sf-link-cell">Founding SDR</div>
-                  <div class="sf-co-name">SpecTrust</div>
-                  <div class="sf-co-dates">Jul '21 – Nov '22</div>
-                  <div class="sf-work-bullets">
-                    <ul>
-                      <li>Built all outbound sequences, cadences, and Salesforce CRM standards from scratch as one of two founding SDRs, taking the lead on prospecting infrastructure.</li>
-                      <li>Designed and ran a C-level ghost-writing initiative, drafting outbound emails sent under the CEO and COO's names to leverage executive credibility and drive a measurable increase in meeting volume from launch.</li>
-                      <li>Averaged 105% of quota (20 meetings/month) across tenure.</li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td><img src="images/xerox_logo.jpg" alt="Xerox" class="sf-co-logo"></td>
-                <td>
-                  <div class="sf-link-cell">Account Executive</div>
-                  <div class="sf-co-name">Xerox</div>
-                  <div class="sf-co-dates">Jan '19 – Jun '21</div>
-                  <div class="sf-work-bullets">
-                    <ul>
-                      <li>Managed the full B2B sales cycle from prospecting through close while maintaining Salesforce pipeline accuracy and account records.</li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-
-
-      <!-- ─── PROJECTS TAB ─── -->
-      <div class="sf-tab-panel" id="tab-projects">
-
-        <div class="sf-related-list">
-          <table class="sf-table" style="border-top:1px solid #dddbda; border-radius:4px;">
+      <div class="sf-panel sf-panel-details">
+        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+          <div class="sf-section-label">Featured Projects</div>
+          <table class="sf-table" style="border-top:1px solid #dddbda; border-radius:4px; margin-top:12px;">
             <thead>
               <tr>
-                <th>Project Name</th>
+                <th>Project</th>
                 <th>Impact</th>
                 <th>Category</th>
               </tr>
             </thead>
             <tbody>
-
-              <tr>
-                <td><a href="projects/expired-lead-digest.html" class="sf-link-cell">Weekly Expired Lead Email Digest</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Turned silent lead expiration events into a weekly re-engagement digest for every rep</td>
-                <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
-              </tr>
-
-              <tr>
-                <td><a href="projects/demo-email.html" class="sf-link-cell">Salesforce Demo Email Capture Automation</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Eliminated manual data gaps in marketing automation enrollment</td>
-                <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
-              </tr>
-
-              <tr>
-                <td><a href="projects/demo-notifications.html" class="sf-link-cell">Real-Time Demo Booking Notifications</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Gave leadership real-time visibility into qualifying demo bookings</td>
-                <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
-              </tr>
-
               <tr>
                 <td><a href="projects/enrichment.html" class="sf-link-cell">CRM Data Enrichment Initiative (~9,000 Accounts)</a></td>
                 <td style="color:#706e6b; font-size:0.77rem;">Restored segmentation accuracy across ~9,000 Salesforce accounts</td>
                 <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
               </tr>
-
-              <tr>
-                <td><a href="projects/fte-lookup.html" class="sf-link-cell">Instant FTE Lookup for SDR Prospecting</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Reduced enrollment lookup time from ~30 seconds to ~3 seconds</td>
-                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-              </tr>
-
-              <tr>
-                <td><a href="projects/lead-cleanup.html" class="sf-link-cell">Conference Lead Cleanup &amp; Redistribution</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Created repeatable intake process for post-event lead distribution</td>
-                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-              </tr>
-
-              <tr>
-                <td><a href="projects/executive-advisory-targeting.html" class="sf-link-cell">Executive Customer Advisory Targeting</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Improved transparency and repeatability in advisory invite selection</td>
-                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-              </tr>
-
               <tr>
                 <td><a href="projects/allocation-TL.html" class="sf-link-cell">Customer Allocation &amp; Cross-Sell Governance</a></td>
                 <td style="color:#706e6b; font-size:0.77rem;">Eliminated duplicate outreach across shared institutional accounts</td>
                 <td><span class="sf-tag sf-tag-governance">Governance</span></td>
               </tr>
-
               <tr>
-                <td><a href="projects/allocation-SDR.html" class="sf-link-cell">Team Lead Customer Allocation Infrastructure</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Reduced allocation disputes and prevented duplicate outreach</td>
-                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
+                <td><a href="projects/expired-lead-digest.html" class="sf-link-cell">Weekly Expired Lead Email Digest</a></td>
+                <td style="color:#706e6b; font-size:0.77rem;">Turned silent lead expiration events into a weekly re-engagement digest for every rep</td>
+                <td><span class="sf-tag sf-tag-automation">Workflow Automation</span></td>
               </tr>
-
+              <tr>
+                <td><a href="projects/fte-lookup.html" class="sf-link-cell">Instant FTE Lookup for SDR Prospecting</a></td>
+                <td style="color:#706e6b; font-size:0.77rem;">Reduced enrollment lookup time from ~30 seconds to ~3 seconds</td>
+                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
+              </tr>
               <tr>
                 <td><a href="projects/pip-governance.html" class="sf-link-cell">Performance Improvement Plan Governance Framework</a></td>
                 <td style="color:#706e6b; font-size:0.77rem;">Standardized performance intervention process with objective thresholds</td>
                 <td><span class="sf-tag sf-tag-governance">Governance</span></td>
               </tr>
-
-              <tr>
-                <td><a href="projects/roe-compliance-reporting.html" class="sf-link-cell">CRM Outreach Eligibility &amp; ROE Compliance Reporting</a></td>
-                <td style="color:#706e6b; font-size:0.77rem;">Standardized outreach eligibility evaluation across all shared accounts</td>
-                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
-              </tr>
-
             </tbody>
           </table>
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-    <!-- ═══ RIGHT SIDEBAR: PHILOSOPHY + SPECIALIZATIONS ═══ -->
-    <div class="sf-main">
-
-      <div class="sf-panel sf-panel-details">
-        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div class="sf-section-label">Operating Philosophy</div>
-          <div class="sf-philosophy-grid">
-            <div class="sf-philosophy-card">
-              <h4>Ownership &amp; clarity</h4>
-            </div>
-            <div class="sf-philosophy-card">
-              <h4>Reduce friction</h4>
-            </div>
-            <div class="sf-philosophy-card">
-              <h4>Build for scale</h4>
-            </div>
+          <div style="margin-top:14px;">
+            <a href="projects-library.html" style="font-size:0.8rem; color:#0176d3; font-weight:600; text-decoration:none;">View all 11 projects →</a>
           </div>
         </div>
       </div>
 
     </div>
 
+
+    <!-- ═══ RIGHT SIDEBAR: SALES OPS FIT SNAPSHOT ═══ -->
+    <div class="sf-main">
+
+      <div class="sf-panel sf-panel-details">
+        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+          <div class="sf-section-label">Sales Ops Fit Snapshot</div>
+          <ul class="sf-fit-list">
+            <li>Salesforce reporting and workflow automation</li>
+            <li>CRM cleanup, enrichment, and data quality</li>
+            <li>Account routing and ownership process support</li>
+            <li>Sales process documentation and governance</li>
+            <li>SDR workflow support and Salesforce troubleshooting</li>
+            <li>Google Sheets / Apps Script automation</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- OPERATING PHILOSOPHY (bottom) -->
+  <div class="sf-panel sf-panel-details" style="margin-top:16px;">
+    <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
+      <div class="sf-section-label">Operating Philosophy</div>
+      <div class="sf-philosophy-grid">
+        <div class="sf-philosophy-card">
+          <h4>Ownership &amp; clarity</h4>
+        </div>
+        <div class="sf-philosophy-card">
+          <h4>Reduce friction</h4>
+        </div>
+        <div class="sf-philosophy-card">
+          <h4>Build for scale</h4>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
