@@ -867,13 +867,13 @@ button { font-family: inherit; cursor: pointer; }
 
       <!-- TAB BAR -->
       <div class="sf-tabs">
-        <button class="sf-tab-btn active" data-tab="work-history" onclick="showTab('work-history')">Work History</button>
-        <button class="sf-tab-btn" data-tab="projects" onclick="showTab('projects')">Projects</button>
+        <button class="sf-tab-btn active" data-tab="projects" onclick="showTab('projects')">Projects</button>
+        <button class="sf-tab-btn" data-tab="work-history" onclick="showTab('work-history')">Work History</button>
       </div>
 
 
       <!-- ─── WORK HISTORY TAB ─── -->
-      <div class="sf-tab-panel" id="tab-work-history">
+      <div class="sf-tab-panel hidden" id="tab-work-history">
 
         <div class="sf-related-list">
 
@@ -967,7 +967,7 @@ button { font-family: inherit; cursor: pointer; }
 
 
       <!-- ─── PROJECTS TAB ─── -->
-      <div class="sf-tab-panel hidden" id="tab-projects">
+      <div class="sf-tab-panel" id="tab-projects">
 
         <div class="sf-related-list">
           <table class="sf-table" style="border-top:1px solid #dddbda; border-radius:4px;">
