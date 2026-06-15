@@ -606,15 +606,9 @@ button { font-family: inherit; cursor: pointer; }
 .sf-record-header-panel {
   padding: 20px 24px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.sf-rh-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .sf-rh-identity {
@@ -880,18 +874,37 @@ button { font-family: inherit; cursor: pointer; }
 
   <!-- ═══ HEADER CARD 1: IDENTITY ═══ -->
   <div class="sf-panel sf-record-header-panel">
-    <div class="sf-rh-top">
-    <div class="sf-rh-identity">
-      <div class="sf-rh-name-row">
-        <div class="sf-contact-record-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="8" r="4" fill="white"/>
-            <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-          </svg>
+    <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:16px;">
+      <div class="sf-rh-identity">
+        <div class="sf-rh-name-row">
+          <div class="sf-contact-record-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="8" r="4" fill="white"/>
+              <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="sf-record-name">Daniel Im</div>
         </div>
-        <div class="sf-record-name">Daniel Im</div>
+        <div class="sf-record-target-role">Focus: Sales Development - Operations Coordinator</div>
       </div>
-      <div class="sf-record-target-role">Focus: Sales Development - Operations Coordinator</div>
+      <div class="sf-rh-fields">
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">Email</div>
+          <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+        </div>
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">Location</div>
+          <div class="sf-hl-value">San Jose, CA</div>
+        </div>
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">LinkedIn</div>
+          <div class="sf-hl-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">https://www.linkedin.com/in/daeim/</a></div>
+        </div>
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">Education</div>
+          <div class="sf-hl-value">B.S. Economics, UC Davis</div>
+        </div>
+      </div>
     </div>
     <div class="sf-rh-actions">
       <div class="sf-hl-label" style="margin-bottom:10px;">Explore My Work</div>
@@ -940,26 +953,6 @@ button { font-family: inherit; cursor: pointer; }
           <span class="sf-action-arrow">›</span>
         </a>
       </div>
-    </div>
-    </div>
-    <div class="sf-rh-fields">
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Email</div>
-        <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Location</div>
-        <div class="sf-hl-value">San Jose, CA</div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">LinkedIn</div>
-        <div class="sf-hl-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">https://www.linkedin.com/in/daeim/</a></div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Education</div>
-        <div class="sf-hl-value">B.S. Economics, UC Davis</div>
-      </div>
-
     </div>
   </div>
 
