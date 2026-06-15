@@ -121,14 +121,12 @@
 /* PROFILE PHOTO */
 
 .sf-connect-photo {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
+  width: 100%;
+  height: 260px;
+  border-radius: 4px;
   object-fit: cover;
   object-position: top center;
   display: block;
-  margin: 0 auto 16px;
-  border: 2px solid #dddbda;
 }
 
 /* WORK HISTORY LIST */
@@ -319,39 +317,16 @@
   <!-- TWO-COLUMN BODY -->
   <div class="sf-contact-columns">
 
-    <!-- LEFT: MESSAGE + WHAT I'M LOOKING FOR -->
+    <!-- LEFT: PHOTO ONLY -->
     <div class="sf-contact-left">
-      <div class="sf-body-card">
-        <div class="sf-section-label">About</div>
+      <div class="sf-body-card" style="padding:0; overflow:hidden;">
         <img src="images/daniel-im.webp" alt="Daniel Im" class="sf-connect-photo">
-        <div class="sf-wh-list">
-          <div class="sf-wh-item">
-            <div class="sf-wh-role">Sales Development Team Lead</div>
-            <div class="sf-wh-meta">YuJa, Inc. &middot; Jun '24 – Present</div>
-          </div>
-          <div class="sf-wh-item">
-            <div class="sf-wh-role">Founding SDR</div>
-            <div class="sf-wh-meta">Miarec &middot; Jul '23 – Jun '24</div>
-          </div>
-          <div class="sf-wh-item">
-            <div class="sf-wh-role">Senior SDR</div>
-            <div class="sf-wh-meta">Arkose Labs &middot; Nov '22 – Apr '23</div>
-          </div>
-          <div class="sf-wh-item">
-            <div class="sf-wh-role">Founding SDR</div>
-            <div class="sf-wh-meta">SpecTrust &middot; Jul '21 – Nov '22</div>
-          </div>
-          <div class="sf-wh-item">
-            <div class="sf-wh-role">Account Executive</div>
-            <div class="sf-wh-meta">Xerox &middot; Jan '19 – Jun '21</div>
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- RIGHT: EXPLORE -->
+    <!-- RIGHT: EXPLORE + ABOUT -->
     <div class="sf-contact-right">
-      <div class="sf-body-card">
+      <div class="sf-body-card" style="margin-bottom:16px;">
         <div class="sf-section-label">Explore My Work</div>
         <div class="sf-action-list">
           <a href="projects-library.html" class="sf-action-link">
@@ -384,6 +359,31 @@
             </div>
             <span class="sf-action-arrow">›</span>
           </a>
+        </div>
+      </div>
+      <div class="sf-body-card">
+        <div class="sf-section-label">About</div>
+        <div class="sf-wh-list">
+          <div class="sf-wh-item">
+            <div class="sf-wh-role">Sales Development Team Lead</div>
+            <div class="sf-wh-meta">YuJa, Inc. &middot; Jun '24 – Present</div>
+          </div>
+          <div class="sf-wh-item">
+            <div class="sf-wh-role">Founding SDR</div>
+            <div class="sf-wh-meta">Miarec &middot; Jul '23 – Jun '24</div>
+          </div>
+          <div class="sf-wh-item">
+            <div class="sf-wh-role">Senior SDR</div>
+            <div class="sf-wh-meta">Arkose Labs &middot; Nov '22 – Apr '23</div>
+          </div>
+          <div class="sf-wh-item">
+            <div class="sf-wh-role">Founding SDR</div>
+            <div class="sf-wh-meta">SpecTrust &middot; Jul '21 – Nov '22</div>
+          </div>
+          <div class="sf-wh-item">
+            <div class="sf-wh-role">Account Executive</div>
+            <div class="sf-wh-meta">Xerox &middot; Jan '19 – Jun '21</div>
+          </div>
         </div>
       </div>
     </div>
