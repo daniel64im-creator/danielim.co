@@ -291,32 +291,69 @@
 <div class="sf-container">
 
   <!-- PAGE HEADER -->
-  <div class="sf-page-header">
-    <div class="sf-rh-name-row">
-      <div class="sf-contact-header-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="8" r="4" fill="white"/>
-          <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-        </svg>
+  <div class="sf-page-header" style="flex-direction:row; align-items:flex-start; justify-content:space-between; gap:24px;">
+    <div style="display:flex; flex-direction:column; gap:16px; flex:1; min-width:0;">
+      <div class="sf-rh-name-row">
+        <div class="sf-contact-header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" fill="white"/>
+            <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="sf-page-title">Connect</div>
       </div>
-      <div class="sf-page-title">Connect</div>
+      <div class="sf-rh-fields">
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">Email</div>
+          <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+        </div>
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">LinkedIn</div>
+          <div class="sf-hl-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
+        </div>
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">GitHub</div>
+          <div class="sf-hl-value"><a href="https://github.com/daniel64im-creator" target="_blank" rel="noopener">github.com/daniel64im-creator</a></div>
+        </div>
+        <div class="sf-hl-field">
+          <div class="sf-hl-label">Location</div>
+          <div class="sf-hl-value">San Jose, CA</div>
+        </div>
+      </div>
     </div>
-    <div class="sf-rh-fields">
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Email</div>
-        <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">LinkedIn</div>
-        <div class="sf-hl-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">GitHub</div>
-        <div class="sf-hl-value"><a href="https://github.com/daniel64im-creator" target="_blank" rel="noopener">github.com/daniel64im-creator</a></div>
-      </div>
-      <div class="sf-hl-field">
-        <div class="sf-hl-label">Location</div>
-        <div class="sf-hl-value">San Jose, CA</div>
+    <div style="flex-shrink:0; width:300px;">
+      <div class="sf-hl-label" style="margin-bottom:10px;">Explore My Work</div>
+      <div class="sf-action-list">
+        <a href="projects-library.html" class="sf-action-link">
+          <div class="sf-action-icon" style="background:#ecfdf3;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
+              <rect x="14" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
+              <rect x="3" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
+              <rect x="14" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
+            </svg>
+          </div>
+          <div>
+            <div class="sf-action-title">Project Library</div>
+            <div class="sf-action-desc">11 projects across automation, data, and governance</div>
+          </div>
+          <span class="sf-action-arrow">›</span>
+        </a>
+        <a href="resume.html" class="sf-action-link">
+          <div class="sf-action-icon" style="background:#fff3e8;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="5" y="2" width="14" height="18" rx="2" stroke="#f59331" stroke-width="1.5" fill="none"/>
+              <line x1="8" y1="7" x2="16" y2="7" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="8" y1="11" x2="16" y2="11" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="8" y1="15" x2="13" y2="15" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="sf-action-title">Resume</div>
+            <div class="sf-action-desc">Work history, skills, and experience</div>
+          </div>
+          <span class="sf-action-arrow">›</span>
+        </a>
       </div>
     </div>
   </div>
@@ -331,43 +368,8 @@
       </div>
     </div>
 
-    <!-- RIGHT: EXPLORE + ABOUT -->
+    <!-- RIGHT: ABOUT -->
     <div class="sf-contact-right">
-      <div class="sf-body-card" style="margin-bottom:16px;">
-        <div class="sf-section-label">Explore My Work</div>
-        <div class="sf-action-list">
-          <a href="projects-library.html" class="sf-action-link">
-            <div class="sf-action-icon" style="background:#ecfdf3;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
-                <rect x="14" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
-                <rect x="3" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
-                <rect x="14" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
-              </svg>
-            </div>
-            <div>
-              <div class="sf-action-title">Project Library</div>
-              <div class="sf-action-desc">11 projects across automation, data, and governance</div>
-            </div>
-            <span class="sf-action-arrow">›</span>
-          </a>
-          <a href="resume.html" class="sf-action-link">
-            <div class="sf-action-icon" style="background:#fff3e8;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect x="5" y="2" width="14" height="18" rx="2" stroke="#f59331" stroke-width="1.5" fill="none"/>
-                <line x1="8" y1="7" x2="16" y2="7" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8" y1="11" x2="16" y2="11" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="8" y1="15" x2="13" y2="15" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div>
-              <div class="sf-action-title">Resume</div>
-              <div class="sf-action-desc">Work history, skills, and experience</div>
-            </div>
-            <span class="sf-action-arrow">›</span>
-          </a>
-        </div>
-      </div>
       <div class="sf-body-card">
         <div class="sf-section-label">About</div>
         <p class="sf-wh-summary">7 years in B2B SaaS across quota-carrying and operational roles. Started as an Account Executive at Xerox, then moved into early SDR positions at SpecTrust, Arkose Labs, and Miarec, where I built outbound infrastructure from scratch at each company. At YuJa, I stepped into a team lead role and shifted focus toward building the systems behind the team: Salesforce reporting, workflow automation, CRM governance, and account routing. That work became the foundation for a full transition into Sales Operations.</p>
