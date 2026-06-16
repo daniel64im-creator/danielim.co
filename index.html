@@ -652,69 +652,6 @@ button { font-family: inherit; cursor: pointer; }
   flex-shrink: 0;
 }
 
-.sf-rh-actions {
-  flex: 0 0 45%;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  align-items: stretch;
-}
-
-.sf-action-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sf-action-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  border: 1px solid #dddbda;
-  border-radius: 4px;
-  background: #fafaf9;
-  text-decoration: none;
-  transition: all 0.15s;
-  color: inherit;
-}
-.sf-action-link:hover {
-  background: #e8f4fd;
-  border-color: #0176d3;
-  text-decoration: none;
-}
-
-.sf-action-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.sf-action-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #0176d3;
-  margin-bottom: 2px;
-}
-
-.sf-action-desc {
-  font-size: 0.75rem;
-  color: #706e6b;
-}
-
-.sf-action-arrow {
-  margin-left: auto;
-  color: #b0adab;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-
 /* ── MOBILE NAV DROPDOWN ── */
 
 .sf-mobile-nav-panel {
@@ -754,7 +691,6 @@ button { font-family: inherit; cursor: pointer; }
 
   /* Highlights: let buttons wrap to a second row */
   .sf-rh-top { flex-wrap: wrap; }
-  .sf-rh-actions { width: 100%; flex-wrap: wrap; }
 
   .sf-related-list { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
@@ -904,51 +840,6 @@ button { font-family: inherit; cursor: pointer; }
           <div class="sf-hl-label">Education</div>
           <div class="sf-hl-value">B.S. Economics, UC Davis</div>
         </div>
-      </div>
-    </div>
-    <div class="sf-rh-actions">
-      <div class="sf-hl-label" style="margin-bottom:10px;">Explore My Work</div>
-      <div class="sf-action-list" style="flex-direction:row; gap:10px;">
-        <a href="projects-library.html" class="sf-action-link" style="flex:1;">
-          <div class="sf-action-icon" style="background:#ecfdf3;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <rect x="3" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
-              <rect x="14" y="3" width="7" height="7" rx="1" fill="#16a34a"/>
-              <rect x="3" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
-              <rect x="14" y="14" width="7" height="7" rx="1" fill="#16a34a"/>
-            </svg>
-          </div>
-          <div>
-            <div class="sf-action-title">Project Library</div>
-          </div>
-          <span class="sf-action-arrow">›</span>
-        </a>
-        <a href="resume.html" class="sf-action-link" style="flex:1;">
-          <div class="sf-action-icon" style="background:#fff3e8;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <rect x="5" y="2" width="14" height="18" rx="2" stroke="#f59331" stroke-width="1.5" fill="none"/>
-              <line x1="8" y1="7" x2="16" y2="7" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
-              <line x1="8" y1="11" x2="16" y2="11" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
-              <line x1="8" y1="15" x2="13" y2="15" stroke="#f59331" stroke-width="1.2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <div class="sf-action-title">Resume</div>
-          </div>
-          <span class="sf-action-arrow">›</span>
-        </a>
-        <a href="contact.html" class="sf-action-link" style="flex:1;">
-          <div class="sf-action-icon" style="background:#e6fafa;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="8" r="3.5" fill="#47ccd6"/>
-              <path d="M4 20c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#47ccd6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-            </svg>
-          </div>
-          <div>
-            <div class="sf-action-title">Connect</div>
-          </div>
-          <span class="sf-action-arrow">›</span>
-        </a>
       </div>
     </div>
   </div>
