@@ -423,6 +423,40 @@ button { font-family: inherit; cursor: pointer; }
 .sf-fit-list li { margin-bottom: 7px; }
 .sf-fit-list li:last-child { margin-bottom: 0; }
 
+.sf-skill-group {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sf-skill-category-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #706e6b;
+  margin-bottom: 6px;
+}
+
+.sf-skill-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sf-skill-bubble {
+  font-size: 0.74rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.sf-bubble-blue  { background: #e8f4fd; color: #0176d3; border: 1px solid #c9e5f8; }
+.sf-bubble-green { background: #ecfdf3; color: #16a34a; border: 1px solid #bbf7d0; }
+.sf-bubble-orange{ background: #fff3e8; color: #c65200; border: 1px solid #fad2a8; }
+
 .sf-stat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -882,14 +916,29 @@ button { font-family: inherit; cursor: pointer; }
       <div class="sf-panel sf-panel-details">
         <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
           <div class="sf-section-label">Sales Ops Fit Snapshot</div>
-          <ul class="sf-fit-list">
-            <li>Salesforce reporting and workflow automation</li>
-            <li>CRM cleanup, enrichment, and data quality</li>
-            <li>Account routing and ownership process support</li>
-            <li>Sales process documentation and governance</li>
-            <li>SDR workflow support and Salesforce troubleshooting</li>
-            <li>Google Sheets / Apps Script automation</li>
-          </ul>
+          <div class="sf-skill-group">
+            <div>
+              <div class="sf-skill-category-label">Salesforce</div>
+              <div class="sf-skill-bubbles">
+                <span class="sf-skill-bubble sf-bubble-blue">Reporting & Workflow Automation</span>
+                <span class="sf-skill-bubble sf-bubble-blue">SDR Workflow Support & Troubleshooting</span>
+              </div>
+            </div>
+            <div>
+              <div class="sf-skill-category-label">Data & Tooling</div>
+              <div class="sf-skill-bubbles">
+                <span class="sf-skill-bubble sf-bubble-green">CRM Cleanup & Enrichment</span>
+                <span class="sf-skill-bubble sf-bubble-green">Google Sheets / Apps Script Automation</span>
+              </div>
+            </div>
+            <div>
+              <div class="sf-skill-category-label">Governance</div>
+              <div class="sf-skill-bubbles">
+                <span class="sf-skill-bubble sf-bubble-orange">Account Routing & Ownership</span>
+                <span class="sf-skill-bubble sf-bubble-orange">Sales Process Documentation</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
