@@ -441,7 +441,8 @@ button { font-family: inherit; cursor: pointer; }
 
 .sf-skill-bubbles {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 6px;
 }
 
@@ -907,7 +908,7 @@ button { font-family: inherit; cursor: pointer; }
   </div>
 
   <!-- SALES OPS FIT SNAPSHOT (full width) -->
-  <div class="sf-record-layout" style="grid-template-columns: 2fr 3fr;">
+  <div class="sf-record-layout" style="grid-template-columns: auto 1fr;">
 
     <!-- LEFT: SALES OPS FOCUS -->
     <div class="sf-main">
