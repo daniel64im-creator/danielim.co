@@ -423,6 +423,35 @@ button { font-family: inherit; cursor: pointer; }
 .sf-fit-list li { margin-bottom: 7px; }
 .sf-fit-list li:last-child { margin-bottom: 0; }
 
+.sf-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sf-stat-card {
+  background: #f8f9fb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.sf-stat-number {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0176d3;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.sf-stat-label {
+  font-size: 0.72rem;
+  color: #706e6b;
+  line-height: 1.4;
+}
+
 
 /* ── PHILOSOPHY CARDS ── */
 
@@ -872,14 +901,24 @@ button { font-family: inherit; cursor: pointer; }
       <div class="sf-panel sf-panel-details">
         <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
           <div class="sf-section-label">About</div>
-          <div class="sf-description">
-            <p>Sales Operations professional with 7 years in B2B SaaS. I build the CRM systems, workflow automation, and governance infrastructure that revenue teams depend on. My background is in quota-carrying sales roles, which gives me direct insight into where operational gaps hurt reps most.</p>
-            <ul>
-              <li>Designed Salesforce reporting infrastructure that eliminated ~3 hours of manual account qualification work per SDR per day across a 14-person team.</li>
-              <li>Led a 9,000-account CRM enrichment initiative, restoring segmentation accuracy and reporting reliability across the full database.</li>
-              <li>Established Rules of Engagement and CRM governance standards across four product lines, reducing ownership conflicts and improving pipeline integrity.</li>
-              <li>Built account routing and ownership automation using Google Sheets and Apps Script, preventing duplicate outreach at scale.</li>
-            </ul>
+          <p style="font-size:0.85rem; color:#181818; line-height:1.6; margin-top:12px;">Sales Operations professional with 7 years in B2B SaaS, building the CRM systems, workflow automation, and governance infrastructure that revenue teams depend on.</p>
+          <div class="sf-stat-grid">
+            <div class="sf-stat-card">
+              <div class="sf-stat-number">7 yrs</div>
+              <div class="sf-stat-label">B2B SaaS experience</div>
+            </div>
+            <div class="sf-stat-card">
+              <div class="sf-stat-number">~3 hrs</div>
+              <div class="sf-stat-label">Daily manual work eliminated per SDR</div>
+            </div>
+            <div class="sf-stat-card">
+              <div class="sf-stat-number">9,000</div>
+              <div class="sf-stat-label">CRM accounts enriched</div>
+            </div>
+            <div class="sf-stat-card">
+              <div class="sf-stat-number">4</div>
+              <div class="sf-stat-label">Product lines governed</div>
+            </div>
           </div>
         </div>
       </div>
