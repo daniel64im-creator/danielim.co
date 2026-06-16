@@ -251,6 +251,37 @@
   flex-shrink: 0;
 }
 
+/* STAT CARDS */
+
+.sf-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sf-stat-card {
+  background: #f8f9fb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.sf-stat-number {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0176d3;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.sf-stat-label {
+  font-size: 0.72rem;
+  color: #706e6b;
+  line-height: 1.4;
+}
+
 /* MOBILE */
 
 @media (max-width: 720px) {
@@ -335,7 +366,24 @@
     <div class="sf-contact-right">
       <div class="sf-body-card">
         <div class="sf-section-label">About</div>
-        <p class="sf-wh-summary">7 years in B2B SaaS across quota-carrying and operational roles. Started as an Account Executive at Xerox, then moved into early SDR positions at SpecTrust, Arkose Labs, and Miarec, where I built outbound infrastructure from scratch at each company. At YuJa, I stepped into a team lead role and shifted focus toward building the systems behind the team: Salesforce reporting, workflow automation, CRM governance, and account routing. That work became the foundation for a full transition into Sales Operations.</p>
+        <div class="sf-stat-grid">
+          <div class="sf-stat-card">
+            <div class="sf-stat-number">7 yrs</div>
+            <div class="sf-stat-label">B2B SaaS experience</div>
+          </div>
+          <div class="sf-stat-card">
+            <div class="sf-stat-number">~3 hrs</div>
+            <div class="sf-stat-label">Daily manual work eliminated per SDR</div>
+          </div>
+          <div class="sf-stat-card">
+            <div class="sf-stat-number">9,000</div>
+            <div class="sf-stat-label">CRM accounts enriched</div>
+          </div>
+          <div class="sf-stat-card">
+            <div class="sf-stat-number">11</div>
+            <div class="sf-stat-label">Projects completed</div>
+          </div>
+        </div>
       </div>
     </div>
 
