@@ -456,6 +456,47 @@ button { font-family: inherit; cursor: pointer; }
   font-weight: 500;
 }
 
+.sf-tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 14px;
+}
+
+.sf-tool-column {
+  min-width: 100px;
+}
+
+.sf-tool-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #16325c;
+  margin-bottom: 8px;
+}
+
+.sf-tool-subs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sf-tool-sub {
+  font-size: 0.72rem;
+  color: #706e6b;
+  padding-left: 10px;
+  position: relative;
+  line-height: 1.4;
+}
+.sf-tool-sub::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #b0adab;
+}
+
 .sf-stat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -905,74 +946,60 @@ button { font-family: inherit; cursor: pointer; }
     </div>
   </div>
 
-  <!-- ROW 1: SKILLS | TOOLS -->
-  <div class="sf-record-layout" style="grid-template-columns: 65fr 35fr; margin-bottom:16px;">
-
-    <!-- SKILLS -->
-    <div class="sf-main">
-      <div class="sf-panel sf-panel-details">
-        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div class="sf-section-label">Skills</div>
-          <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:16px;">
-            <div class="sf-skills-category" style="margin-bottom:0;">
-              <div class="sf-skills-category-label">CRM &amp; Automation</div>
-              <ul class="sf-skills-list">
-                <li class="sf-skill-tag">Salesforce Flow Builder</li>
-                <li class="sf-skill-tag">Record-Triggered Flows</li>
-                <li class="sf-skill-tag">Scheduled Flows</li>
-                <li class="sf-skill-tag">Custom Objects</li>
-                <li class="sf-skill-tag">CRM Governance</li>
-                <li class="sf-skill-tag">Salesforce Reports &amp; Dashboards</li>
-              </ul>
-            </div>
-            <div class="sf-skills-category" style="margin-bottom:0;">
-              <div class="sf-skills-category-label">Data &amp; Reporting</div>
-              <ul class="sf-skills-list">
-                <li class="sf-skill-tag">Google Sheets</li>
-                <li class="sf-skill-tag">Apps Script</li>
-                <li class="sf-skill-tag">Data Enrichment</li>
-                <li class="sf-skill-tag">Segmentation</li>
-              </ul>
-            </div>
-            <div class="sf-skills-category" style="margin-bottom:0;">
-              <div class="sf-skills-category-label">Sales Operations</div>
-              <ul class="sf-skills-list">
-                <li class="sf-skill-tag">GTM Process Design</li>
-                <li class="sf-skill-tag">Rules of Engagement</li>
-                <li class="sf-skill-tag">Pipeline Management</li>
-                <li class="sf-skill-tag">ICP Targeting</li>
-                <li class="sf-skill-tag">Account Routing</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOOLS -->
+  <!-- TOOLS -->
+  <div class="sf-record-layout" style="grid-template-columns: 1fr; margin-bottom:16px;">
     <div class="sf-col-1">
       <div class="sf-panel sf-panel-details">
         <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
           <div class="sf-section-label">Tools</div>
-          <div style="margin-top:14px;">
-            <ul class="sf-skills-list">
-              <li class="sf-skill-tag">Salesforce</li>
-              <li class="sf-skill-tag">HubSpot</li>
-              <li class="sf-skill-tag">Outreach</li>
-              <li class="sf-skill-tag">ZoomInfo</li>
-              <li class="sf-skill-tag">Sales Navigator</li>
-              <li class="sf-skill-tag">Google Sheets</li>
-              <li class="sf-skill-tag">Apps Script</li>
-              <li class="sf-skill-tag">Slack</li>
-            </ul>
+          <div class="sf-tools-grid">
+            <div class="sf-tool-column">
+              <div class="sf-tool-name">Salesforce</div>
+              <ul class="sf-tool-subs">
+                <li class="sf-tool-sub">Flow Builder</li>
+                <li class="sf-tool-sub">Record-Triggered Flows</li>
+                <li class="sf-tool-sub">Scheduled Flows</li>
+                <li class="sf-tool-sub">Custom Objects</li>
+                <li class="sf-tool-sub">CRM Governance</li>
+                <li class="sf-tool-sub">Reports &amp; Dashboards</li>
+              </ul>
+            </div>
+            <div class="sf-tool-column">
+              <div class="sf-tool-name">Google Sheets</div>
+              <ul class="sf-tool-subs">
+                <li class="sf-tool-sub">Apps Script</li>
+                <li class="sf-tool-sub">Automation</li>
+                <li class="sf-tool-sub">Data Enrichment</li>
+                <li class="sf-tool-sub">Segmentation</li>
+              </ul>
+            </div>
+            <div class="sf-tool-column">
+              <div class="sf-tool-name">Outreach</div>
+              <ul class="sf-tool-subs">
+                <li class="sf-tool-sub">Cadence Building</li>
+              </ul>
+            </div>
+            <div class="sf-tool-column">
+              <div class="sf-tool-name">ZoomInfo</div>
+            </div>
+            <div class="sf-tool-column">
+              <div class="sf-tool-name">Sales Navigator</div>
+              <ul class="sf-tool-subs">
+                <li class="sf-tool-sub">InMail</li>
+                <li class="sf-tool-sub">Prospect Sourcing</li>
+                <li class="sf-tool-sub">Connect / Message</li>
+              </ul>
+            </div>
+            <div class="sf-tool-column">
+              <div class="sf-tool-name">Slack</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 
-  <!-- ROW 2: FEATURED PROJECTS -->
+  <!-- FEATURED PROJECTS -->
   <div class="sf-record-layout" style="grid-template-columns: 1fr;">
 
     <div class="sf-col-1">
