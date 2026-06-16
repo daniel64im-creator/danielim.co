@@ -426,8 +426,8 @@ button { font-family: inherit; cursor: pointer; }
 .sf-skill-group {
   margin-top: 12px;
   display: flex;
-  flex-direction: row;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .sf-skill-category-label {
@@ -441,8 +441,7 @@ button { font-family: inherit; cursor: pointer; }
 
 .sf-skill-bubbles {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 6px;
 }
 
@@ -916,21 +915,21 @@ button { font-family: inherit; cursor: pointer; }
         <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
           <div class="sf-section-label">Sales Ops Focus</div>
           <div class="sf-skill-group">
-            <div style="flex:1">
+            <div>
               <div class="sf-skill-category-label">CRM & Automation</div>
               <div class="sf-skill-bubbles">
                 <span class="sf-skill-bubble sf-bubble-blue">Reporting & Workflow Automation</span>
                 <span class="sf-skill-bubble sf-bubble-blue">SDR Workflow Support & Troubleshooting</span>
               </div>
             </div>
-            <div style="flex:1">
+            <div>
               <div class="sf-skill-category-label">Data & Tooling</div>
               <div class="sf-skill-bubbles">
                 <span class="sf-skill-bubble sf-bubble-green">CRM Cleanup & Enrichment</span>
                 <span class="sf-skill-bubble sf-bubble-green">Google Sheets / Apps Script Automation</span>
               </div>
             </div>
-            <div style="flex:1">
+            <div>
               <div class="sf-skill-category-label">Governance</div>
               <div class="sf-skill-bubbles">
                 <span class="sf-skill-bubble sf-bubble-orange">Account Routing & Ownership</span>
