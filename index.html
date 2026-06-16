@@ -423,40 +423,38 @@ button { font-family: inherit; cursor: pointer; }
 .sf-fit-list li { margin-bottom: 7px; }
 .sf-fit-list li:last-child { margin-bottom: 0; }
 
-.sf-skill-group {
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.sf-skills-category {
+  margin-bottom: 18px;
 }
+.sf-skills-category:last-child { margin-bottom: 0; }
 
-.sf-skill-category-label {
-  font-size: 0.65rem;
+.sf-skills-category-label {
+  font-size: 0.72rem;
   font-weight: 700;
+  color: #181818;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: #706e6b;
-  margin-bottom: 6px;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
 }
 
-.sf-skill-bubbles {
+.sf-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 6px;
 }
 
-.sf-skill-bubble {
-  font-size: 0.74rem;
+.sf-skill-tag {
+  background: #f3f2f2;
+  border: 1px solid #dddbda;
+  border-radius: 3px;
+  padding: 3px 9px;
+  font-size: 0.75rem;
+  color: #181818;
   font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 20px;
-  white-space: nowrap;
 }
-
-.sf-bubble-blue  { background: #e8f4fd; color: #0176d3; border: 1px solid #c9e5f8; }
-.sf-bubble-green { background: #ecfdf3; color: #16a34a; border: 1px solid #bbf7d0; }
-.sf-bubble-orange{ background: #fff3e8; color: #c65200; border: 1px solid #fad2a8; }
 
 .sf-stat-grid {
   display: grid;
@@ -910,33 +908,42 @@ button { font-family: inherit; cursor: pointer; }
   <!-- SALES OPS FIT SNAPSHOT (full width) -->
   <div class="sf-record-layout" style="grid-template-columns: auto 1fr;">
 
-    <!-- LEFT: SALES OPS FOCUS -->
+    <!-- LEFT: SKILLS -->
     <div class="sf-main">
 
       <div class="sf-panel sf-panel-details">
         <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div class="sf-section-label">Sales Ops Focus</div>
-          <div class="sf-skill-group">
-            <div>
-              <div class="sf-skill-category-label">CRM & Automation</div>
-              <div class="sf-skill-bubbles">
-                <span class="sf-skill-bubble sf-bubble-blue">Reporting & Workflow Automation</span>
-                <span class="sf-skill-bubble sf-bubble-blue">SDR Workflow Support & Troubleshooting</span>
-              </div>
+          <div class="sf-section-label">Skills</div>
+          <div style="margin-top:14px;">
+            <div class="sf-skills-category">
+              <div class="sf-skills-category-label">CRM &amp; Automation</div>
+              <ul class="sf-skills-list">
+                <li class="sf-skill-tag">Salesforce Flow Builder</li>
+                <li class="sf-skill-tag">Record-Triggered Flows</li>
+                <li class="sf-skill-tag">Scheduled Flows</li>
+                <li class="sf-skill-tag">Custom Objects</li>
+                <li class="sf-skill-tag">CRM Governance</li>
+                <li class="sf-skill-tag">Salesforce Reports &amp; Dashboards</li>
+              </ul>
             </div>
-            <div>
-              <div class="sf-skill-category-label">Data & Tooling</div>
-              <div class="sf-skill-bubbles">
-                <span class="sf-skill-bubble sf-bubble-green">CRM Cleanup & Enrichment</span>
-                <span class="sf-skill-bubble sf-bubble-green">Google Sheets / Apps Script Automation</span>
-              </div>
+            <div class="sf-skills-category">
+              <div class="sf-skills-category-label">Data &amp; Reporting</div>
+              <ul class="sf-skills-list">
+                <li class="sf-skill-tag">Google Sheets</li>
+                <li class="sf-skill-tag">Apps Script</li>
+                <li class="sf-skill-tag">Data Enrichment</li>
+                <li class="sf-skill-tag">Segmentation</li>
+              </ul>
             </div>
-            <div>
-              <div class="sf-skill-category-label">Governance</div>
-              <div class="sf-skill-bubbles">
-                <span class="sf-skill-bubble sf-bubble-orange">Account Routing & Ownership</span>
-                <span class="sf-skill-bubble sf-bubble-orange">Sales Process Documentation</span>
-              </div>
+            <div class="sf-skills-category">
+              <div class="sf-skills-category-label">Sales Operations</div>
+              <ul class="sf-skills-list">
+                <li class="sf-skill-tag">GTM Process Design</li>
+                <li class="sf-skill-tag">Rules of Engagement</li>
+                <li class="sf-skill-tag">Pipeline Management</li>
+                <li class="sf-skill-tag">ICP Targeting</li>
+                <li class="sf-skill-tag">Account Routing</li>
+              </ul>
             </div>
           </div>
         </div>
