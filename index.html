@@ -905,28 +905,65 @@ button { font-family: inherit; cursor: pointer; }
     </div>
   </div>
 
-  <!-- STATS + EXPERIENCE -->
-  <div style="display:grid; grid-template-columns: 42% 1fr; gap:16px; margin-bottom:16px;">
+  <!-- AT A GLANCE -->
+  <div class="sf-panel sf-panel-details" style="margin-bottom:16px;">
+    <div class="sf-section-label">At a Glance</div>
+    <div style="margin-top:14px; display:grid; grid-template-columns: repeat(4, 1fr); gap:12px;">
+      <div class="sf-stat-card">
+        <div class="sf-stat-number">7 yrs</div>
+        <div class="sf-stat-label">B2B SaaS experience</div>
+      </div>
+      <div class="sf-stat-card">
+        <div class="sf-stat-number">~3 hrs</div>
+        <div class="sf-stat-label">Daily manual work eliminated per SDR</div>
+      </div>
+      <div class="sf-stat-card">
+        <div class="sf-stat-number">9,000</div>
+        <div class="sf-stat-label">CRM accounts enriched</div>
+      </div>
+      <div class="sf-stat-card">
+        <div class="sf-stat-number">11</div>
+        <div class="sf-stat-label">Projects completed</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Stats -->
-    <div class="sf-panel sf-panel-details" style="margin-bottom:0; display:flex; flex-direction:column;">
-      <div class="sf-section-label">At a Glance</div>
-      <div style="margin-top:14px; flex:1; display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap:12px;">
-        <div class="sf-stat-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
-          <div class="sf-stat-number">7 yrs</div>
-          <div class="sf-stat-label">B2B SaaS experience</div>
+  <!-- SKILLS + EXPERIENCE -->
+  <div style="display:grid; grid-template-columns: 3fr 2fr; gap:16px; margin-bottom:16px;">
+
+    <!-- Skills -->
+    <div class="sf-panel sf-panel-details" style="margin-bottom:0;">
+      <div class="sf-section-label">Skills</div>
+      <div style="margin-top:14px; display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+        <div class="sf-skills-category" style="margin-bottom:0;">
+          <div class="sf-skills-category-label">CRM &amp; Automation</div>
+          <ul class="sf-skills-list">
+            <li class="sf-skill-tag">Salesforce Flow Builder</li>
+            <li class="sf-skill-tag">Record-Triggered Flows</li>
+            <li class="sf-skill-tag">Scheduled Flows</li>
+            <li class="sf-skill-tag">Custom Objects</li>
+            <li class="sf-skill-tag">CRM Governance</li>
+            <li class="sf-skill-tag">Salesforce Reports &amp; Dashboards</li>
+          </ul>
         </div>
-        <div class="sf-stat-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
-          <div class="sf-stat-number">~3 hrs</div>
-          <div class="sf-stat-label">Daily manual work eliminated per SDR</div>
+        <div class="sf-skills-category" style="margin-bottom:0;">
+          <div class="sf-skills-category-label">Data &amp; Reporting</div>
+          <ul class="sf-skills-list">
+            <li class="sf-skill-tag">Google Sheets</li>
+            <li class="sf-skill-tag">Apps Script</li>
+            <li class="sf-skill-tag">Data Enrichment</li>
+            <li class="sf-skill-tag">Segmentation</li>
+          </ul>
         </div>
-        <div class="sf-stat-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
-          <div class="sf-stat-number">9,000</div>
-          <div class="sf-stat-label">CRM accounts enriched</div>
-        </div>
-        <div class="sf-stat-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
-          <div class="sf-stat-number">11</div>
-          <div class="sf-stat-label">Projects completed</div>
+        <div class="sf-skills-category" style="margin-bottom:0;">
+          <div class="sf-skills-category-label">Sales Operations</div>
+          <ul class="sf-skills-list">
+            <li class="sf-skill-tag">GTM Process Design</li>
+            <li class="sf-skill-tag">Rules of Engagement</li>
+            <li class="sf-skill-tag">Pipeline Management</li>
+            <li class="sf-skill-tag">ICP Targeting</li>
+            <li class="sf-skill-tag">Account Routing</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -987,49 +1024,6 @@ button { font-family: inherit; cursor: pointer; }
       </div>
     </div>
 
-  </div>
-
-  <!-- SKILLS -->
-  <div class="sf-record-layout" style="grid-template-columns: 1fr; margin-bottom:16px;">
-    <div class="sf-col-1">
-      <div class="sf-panel sf-panel-details">
-        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div class="sf-section-label">Skills</div>
-          <div style="margin-top:14px; display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
-            <div class="sf-skills-category" style="margin-bottom:0;">
-              <div class="sf-skills-category-label">CRM &amp; Automation</div>
-              <ul class="sf-skills-list">
-                <li class="sf-skill-tag">Salesforce Flow Builder</li>
-                <li class="sf-skill-tag">Record-Triggered Flows</li>
-                <li class="sf-skill-tag">Scheduled Flows</li>
-                <li class="sf-skill-tag">Custom Objects</li>
-                <li class="sf-skill-tag">CRM Governance</li>
-                <li class="sf-skill-tag">Salesforce Reports &amp; Dashboards</li>
-              </ul>
-            </div>
-            <div class="sf-skills-category" style="margin-bottom:0;">
-              <div class="sf-skills-category-label">Data &amp; Reporting</div>
-              <ul class="sf-skills-list">
-                <li class="sf-skill-tag">Google Sheets</li>
-                <li class="sf-skill-tag">Apps Script</li>
-                <li class="sf-skill-tag">Data Enrichment</li>
-                <li class="sf-skill-tag">Segmentation</li>
-              </ul>
-            </div>
-            <div class="sf-skills-category" style="margin-bottom:0;">
-              <div class="sf-skills-category-label">Sales Operations</div>
-              <ul class="sf-skills-list">
-                <li class="sf-skill-tag">GTM Process Design</li>
-                <li class="sf-skill-tag">Rules of Engagement</li>
-                <li class="sf-skill-tag">Pipeline Management</li>
-                <li class="sf-skill-tag">ICP Targeting</li>
-                <li class="sf-skill-tag">Account Routing</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- FEATURED PROJECTS -->
