@@ -74,75 +74,47 @@
   flex-shrink: 0;
 }
 
-/* LIBRARY LAYOUT */
+/* TABS */
 
-.library-layout {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-/* LEFT CATEGORY NAV */
-
-.library-nav {
-  width: 220px;
-  flex-shrink: 0;
+.library-tabs {
   background: white;
   border: 1px solid #dddbda;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-  overflow: hidden;
-  position: sticky;
-  top: 108px;
-}
-
-.library-nav-header {
-  padding: 10px 14px;
-  background: #f3f2f2;
-  border-bottom: 1px solid #dddbda;
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #706e6b;
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
+  display: flex;
+  margin-bottom: 0;
 }
 
 .cat-btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 13px 14px;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: #181818;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #706e6b;
   background: none;
   border: none;
-  border-left: 3px solid transparent;
-  border-bottom: 1px solid #f3f2f2;
+  border-bottom: 3px solid transparent;
   cursor: pointer;
-  text-align: left;
-  transition: all 0.12s;
   font-family: inherit;
-  line-height: 1.3;
+  white-space: nowrap;
+  transition: all 0.15s;
+  line-height: 1;
 }
-.cat-btn:last-child { border-bottom: none; }
-.cat-btn:hover { background: #f8f8f8; color: #0176d3; }
+.cat-btn:hover { color: #181818; background: #f8f8f8; }
 .cat-btn.active {
-  background: #e8f4fd;
   color: #0176d3;
-  font-weight: 600;
-  border-left-color: #0176d3;
+  border-bottom-color: #0176d3;
 }
 
 .cat-count {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
   background: #e5e4e2;
   color: #706e6b;
   border-radius: 20px;
   padding: 2px 7px;
-  flex-shrink: 0;
 }
 .cat-btn.active .cat-count {
   background: #c9e5f8;
@@ -152,8 +124,11 @@
 /* RIGHT PANEL */
 
 .library-preview {
-  flex: 1;
-  min-width: 0;
+  background: white;
+  border: 1px solid #dddbda;
+  border-top: 1px solid #e5e4e2;
+  border-radius: 0 0 4px 4px;
+  padding: 20px;
 }
 
 /* PROJECT CARDS */
@@ -216,8 +191,8 @@
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
-  .library-layout { flex-direction: column; }
-  .library-nav { width: 100%; position: static; }
+  .library-tabs { overflow-x: auto; }
+  .cat-btn { padding: 10px 14px; font-size: 0.82rem; }
 }
 
 </style>
@@ -284,28 +259,16 @@
     </div>
   </div>
 
-  <!-- SPLIT LAYOUT -->
-  <div class="library-layout">
+  <!-- TABS -->
+  <div class="library-tabs">
+    <button class="cat-btn active" data-cat="crm">CRM &amp; Automation <span class="cat-count">3</span></button>
+    <button class="cat-btn" data-cat="governance">Governance Systems <span class="cat-count">4</span></button>
+    <button class="cat-btn" data-cat="data">Data Infrastructure <span class="cat-count">4</span></button>
+  </div>
 
-    <!-- LEFT: CATEGORY NAV -->
-    <div class="library-nav">
-      <div class="library-nav-header">Categories</div>
-      <button class="cat-btn active" data-cat="crm">
-        CRM &amp; Automation <span class="cat-count">3</span>
-      </button>
-      <button class="cat-btn" data-cat="governance">
-        Governance Systems <span class="cat-count">4</span>
-      </button>
-      <button class="cat-btn" data-cat="data">
-        Data Infrastructure <span class="cat-count">4</span>
-      </button>
-    </div>
-
-    <!-- RIGHT: PROJECT CARDS -->
-    <div class="library-preview">
-      <div id="proj-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;"></div>
-    </div>
-
+  <!-- CARD PANEL -->
+  <div class="library-preview">
+    <div id="proj-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;"></div>
   </div>
 
 </div>
