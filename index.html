@@ -916,55 +916,71 @@ button { font-family: inherit; cursor: pointer; }
   </div>
 
   <!-- FEATURED PROJECTS -->
-  <div class="sf-record-layout" style="grid-template-columns: 1fr;">
+  <div class="sf-panel sf-panel-details">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; padding-right:4px;">
+      <div class="sf-section-label" style="margin-bottom:0;">Featured Projects</div>
+      <a href="projects-library.html" class="sf-btn sf-btn-primary">View All →</a>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px;">
 
-    <div class="sf-col-1">
-      <div class="sf-panel sf-panel-details">
-        <div class="sf-detail-section" style="margin-bottom:0; padding-bottom:0; border-bottom:none;">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; padding-right:4px;">
-            <div class="sf-section-label" style="margin-bottom:0;">Featured Projects</div>
-            <a href="projects-library.html" class="sf-btn sf-btn-primary">View All →</a>
-          </div>
-          <table class="sf-table" style="border-top:1px solid #dddbda; border-radius:4px; margin-top:0; table-layout:auto;">
-            <thead>
-              <tr>
-                <th style="width:30%;">Project</th>
-                <th>Impact</th>
-                <th style="width:1%; white-space:nowrap;">Category</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="projects/expired-lead-digest.html" class="sf-link-cell">Expired Lead Follow-Up Automation</a></td>
-                <td style="color:#555; font-size:0.82rem;">Turned silent lead expiration events into a weekly re-engagement digest for every rep</td>
-                <td><span class="sf-tag sf-tag-automation">CRM & Automation</span></td>
-              </tr>
-              <tr>
-                <td><a href="projects/allocation-TL.html" class="sf-link-cell">Account Ownership &amp; Cross-Sell Rules</a></td>
-                <td style="color:#555; font-size:0.82rem;">Eliminated duplicate outreach across shared institutional accounts</td>
-                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
-              </tr>
-              <tr>
-                <td><a href="projects/pip-governance.html" class="sf-link-cell">Performance Intervention Framework</a></td>
-                <td style="color:#555; font-size:0.82rem;">Standardized performance intervention process with objective thresholds</td>
-                <td><span class="sf-tag sf-tag-governance">Governance</span></td>
-              </tr>
-              <tr>
-                <td><a href="projects/enrichment.html" class="sf-link-cell">9,000-Account CRM Enrichment</a></td>
-                <td style="color:#555; font-size:0.82rem;">Restored segmentation accuracy across ~9,000 Salesforce accounts</td>
-                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-              </tr>
-              <tr>
-                <td><a href="projects/fte-lookup.html" class="sf-link-cell">Account Data Lookup Tool</a></td>
-                <td style="color:#555; font-size:0.82rem;">Reduced enrollment lookup time from ~30 seconds to ~3 seconds</td>
-                <td><span class="sf-tag sf-tag-data">Data Infrastructure</span></td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Card 1: Expired Lead Follow-Up Automation -->
+      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
+        <div style="height:148px; background:linear-gradient(135deg, #e8f4fd 0%, #d0eafb 100%); display:flex; align-items:center; justify-content:center; border-bottom:1px solid #e5e4e2; flex-shrink:0;">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="8" y="8" width="32" height="32" rx="4" stroke="#0176d3" stroke-width="2" fill="none"/>
+            <path d="M16 20h16M16 26h10" stroke="#0176d3" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="36" cy="36" r="8" fill="#0176d3"/>
+            <path d="M33 36l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+          <span class="sf-tag sf-tag-automation">CRM &amp; Automation</span>
+          <div style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35;">Expired Lead Follow-Up Automation</div>
+          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Built a native Salesforce system that captures lead expiration events and delivers a personalized weekly digest to each rep, turning silent ownership losses into an active re-engagement channel.</p>
+          <a href="projects/expired-lead-digest.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
         </div>
       </div>
-    </div>
 
+      <!-- Card 2: 9,000-Account CRM Enrichment -->
+      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
+        <div style="height:148px; overflow:hidden; border-bottom:1px solid #e5e4e2; flex-shrink:0;">
+          <img src="images/enrichment-sheet.webp" alt="CRM Enrichment" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+        </div>
+        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+          <span class="sf-tag sf-tag-data">Data Infrastructure</span>
+          <div style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35;">9,000-Account CRM Enrichment</div>
+          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Audited and enriched 9,000 Salesforce accounts to restore segmentation accuracy, establishing clean data foundations that improved targeting and pipeline reporting across the team.</p>
+          <a href="projects/enrichment.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Account Ownership & Cross-Sell Rules -->
+      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
+        <div style="height:148px; overflow:hidden; border-bottom:1px solid #e5e4e2; flex-shrink:0;">
+          <img src="images/allocation-sheet.webp" alt="Account Ownership" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+        </div>
+        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+          <span class="sf-tag sf-tag-governance">Governance</span>
+          <div style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35;">Account Ownership &amp; Cross-Sell Rules</div>
+          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Designed account routing logic and ownership rules that eliminated duplicate outreach across shared institutional accounts and improved cross-sell coordination across product lines.</p>
+          <a href="projects/allocation-TL.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Card 4: Account Data Lookup Tool -->
+      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
+        <div style="height:148px; overflow:hidden; border-bottom:1px solid #e5e4e2; flex-shrink:0;">
+          <img src="images/fte-lookup-component.webp" alt="Account Data Lookup Tool" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+        </div>
+        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+          <span class="sf-tag sf-tag-data">Data Infrastructure</span>
+          <div style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35;">Account Data Lookup Tool</div>
+          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Built a Google Sheets tool that reduced SDR enrollment lookup time from 30 seconds to 3 seconds, eliminating a daily friction point and freeing up prospecting capacity across the team.</p>
+          <a href="projects/fte-lookup.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 
