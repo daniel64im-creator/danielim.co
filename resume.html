@@ -423,12 +423,13 @@
     </div>
   </div>
 
-  <!-- SKILLS | TOOLS -->
-  <div style="display:flex; gap:16px; margin-bottom:16px; align-items:flex-start;">
+  <!-- UNIFIED RESUME BODY -->
+  <div class="sf-resume-body">
 
-    <div class="sf-sidebar-card">
-      <div class="sf-sidebar-section-label">Skills</div>
-      <div class="sf-skills-category">
+    <!-- SKILLS -->
+    <div class="sf-resume-section-label">Skills</div>
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; margin-bottom:32px;">
+      <div class="sf-skills-category" style="margin-bottom:0;">
         <div class="sf-skills-category-label">CRM &amp; Automation</div>
         <ul class="sf-skills-list">
           <li class="sf-skill-tag">Salesforce Flow Builder</li>
@@ -439,7 +440,7 @@
           <li class="sf-skill-tag">Reports &amp; Dashboards</li>
         </ul>
       </div>
-      <div class="sf-skills-category">
+      <div class="sf-skills-category" style="margin-bottom:0;">
         <div class="sf-skills-category-label">Data &amp; Reporting</div>
         <ul class="sf-skills-list">
           <li class="sf-skill-tag">Google Sheets</li>
@@ -460,14 +461,9 @@
       </div>
     </div>
 
-  </div>
-
-  <!-- WORK EXPERIENCE -->
-  <div class="sf-resume-body" style="margin-bottom:16px;">
-
+    <!-- WORK EXPERIENCE -->
     <div class="sf-resume-section-label">Work Experience</div>
-
-    <div class="sf-timeline">
+    <div class="sf-timeline" style="margin-bottom:32px;">
 
       <!-- CURRENT -->
       <div class="sf-timeline-item current">
@@ -579,11 +575,8 @@
 
     </div>
 
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="sf-sidebar-card">
-    <div class="sf-sidebar-section-label">Education</div>
+    <!-- EDUCATION -->
+    <div class="sf-resume-section-label">Education</div>
     <div class="sf-edu-entry">
       <div class="sf-edu-icon">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -597,6 +590,7 @@
         <div class="sf-edu-school">University of California, Davis</div>
       </div>
     </div>
+
   </div>
 
 </div>
