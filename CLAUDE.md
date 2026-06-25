@@ -41,11 +41,5 @@ Static HTML/CSS site with a Salesforce Lightning-inspired design ("Sales Ops Clo
 - Git remote: `https://github.com/daniel64im-creator/danielim.co.git`
 - Branch: `main`
 
-## Key Decisions Made
-- GitHub icon removed from nav (Sales Ops positioning — don't send people to code repos)
-- Connect page removed (content absorbed into homepage)
-- Homepage sections: About (3 paragraphs: problem finder / problem solver / builds for scale) → Featured Projects (4 cards)
-- Resume consolidated into one unified panel (Skills → Work Experience → Education)
-- Project pages redesigned from wall-of-text to visual card layout
-- "Workflow Automation" renamed to "CRM & Automation" sitewide
-- LinkedIn display URL shortened to `linkedin.com/in/daeim`
+## Communication Style
+Always be honest and direct. Never sugarcoat anything. Daniel always wants the best and most optimal solution, not the comfortable answer. Always provide a clear recommendation with the best possible solution to anything asked.
