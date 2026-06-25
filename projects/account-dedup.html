@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Salesforce Account Deduplication & Ownership Cleanup | Sales Operations Project</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="description" content="Salesforce Account deduplication project resolving duplicate records, standardizing naming conventions, cleaning ownership conflicts, and creating CRM governance standards." />
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon%2016x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon%2032x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
+<link rel="stylesheet" href="../assets/css/sf-theme.css">
+</head>
+<body>
+
+<div id="sf-nav-placeholder"></div>
+
+<!-- CONTEXT BAR -->
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box projects">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
+        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <a href="/projects-library.html" class="sf-breadcrumb-link">Projects</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">Salesforce Account Deduplication & Ownership Cleanup</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE -->
+<div class="sf-page">
+<div class="sf-container">
+
+  <!-- PROJECT RECORD HEADER -->
+  <div class="sf-proj-header">
+    <div class="sf-proj-header-top">
+      <span class="sf-tag sf-tag-data">Data Infrastructure</span>
+      <h1 class="sf-proj-title">Salesforce Account Deduplication & Ownership Cleanup</h1>
+      <p class="sf-proj-impact">Resolved duplicate Account records across Salesforce by building a structured review process using name normalization, confidence-level grouping, and a merge decision framework - then created CRM governance standards to prevent future duplication.</p>
+    </div>
+  </div>
+
+  <!-- PROJECT BODY -->
+  <div class="sf-proj-body">
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">System Overview</div>
+      <div class="sf-proj-content">
+        <p>Over time, the Salesforce Account database had accumulated duplicate records. The same institution or company could appear under different names, different owners, or different statuses. Reps were unsure which record to work, ownership disputes were common, and reporting was harder to trust because the underlying Account data was inconsistent.</p>
+        <p>The project built a structured cleanup process in Google Sheets to identify duplicate candidates, review ownership conflicts, make merge decisions, and validate the results back in Salesforce. It ended with documented CRM governance standards so the same problems would not accumulate again.</p>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Duplicate Account records existed across the CRM with no structured process to identify or resolve them.</li>
+          <li>Inconsistent Account naming made duplicate detection unreliable using simple name matching alone.</li>
+          <li>Ownership conflicts existed where the same account was assigned to different reps across duplicate records.</li>
+          <li>No governance standards existed to prevent reps from creating new duplicate records.</li>
+          <li>Reporting outputs were harder to trust because duplicate records inflated account counts and split activity history.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Process</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li><strong>Salesforce Data Audit</strong> - Exported Account records and reviewed where duplication was concentrated, focusing on Account Name, Website, Owner, Billing State, Created Date, Last Activity Date, and related Contacts and Opportunities.</li>
+          <li><strong>Name Normalization</strong> - Cleaned Account names by removing extra spaces, punctuation differences, abbreviations, rep-added notes, and inconsistent formatting so records could be compared accurately regardless of how they were originally entered.</li>
+          <li><strong>Duplicate Detection</strong> - Identified duplicate candidates using multiple criteria: normalized Account Name, website domain, billing location, owner, activity history, and related record counts. Relying on name matching alone would have missed a large portion of actual duplicates.</li>
+          <li><strong>Confidence Grouping</strong> - Grouped duplicate candidates into High, Medium, and Low confidence tiers. High confidence records were clear merge candidates. Medium confidence required manual review. Low confidence records were flagged but left separate to avoid incorrect merges.</li>
+          <li><strong>Merge Decision Framework</strong> - For each duplicate group, determined which record should survive based on field completeness, correct ownership, recent activity, related Contacts, Opportunity history, and alignment with current routing rules.</li>
+          <li><strong>Ownership Cleanup</strong> - Resolved ownership conflicts where duplicate records had different assigned owners by reviewing against current assignment rules, rep account books, and recent account activity.</li>
+          <li><strong>QA Validation</strong> - After cleanup decisions, validated results in Salesforce by reviewing Account ownership, field completeness, Contact preservation, and Opportunity history to confirm no useful CRM data was lost.</li>
+          <li><strong>CRM Governance Standards</strong> - Documented naming conventions, Account creation rules, and a structured search process reps should follow before creating any new Account record.</li>
+        </ul>
+        <div class="sf-arch-box">
+Salesforce Account Export
+  → Name Normalization (remove abbreviations, punctuation, rep notes)
+  → Duplicate Detection (name, domain, location, owner, activity)
+  → Confidence Grouping (High / Medium / Low)
+  → Merge Decision Review (field completeness, ownership, history)
+  → Ownership Conflict Resolution
+  → QA Validation (ownership, contacts, opportunities, reports)
+  → CRM Governance Standards Documented
+        </div>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Tools &amp; Skills</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Salesforce CRM (Account records, Salesforce Reports)</li>
+          <li>Google Sheets (duplicate review, normalization logic, merge tracking)</li>
+          <li>Google Apps Script (matching workflows, review automation)</li>
+          <li>Salesforce Flow (process consistency improvements)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Operational Impact</div>
+      <div class="sf-proj-content">
+        <ul>
+          <li>Reduced duplicate Account confusion across the CRM, making it easier for reps to find and work the correct record.</li>
+          <li>Resolved ownership conflicts so Account assignments were clear and consistent with routing rules.</li>
+          <li>Improved Account-level reporting reliability by removing duplicate records that were inflating counts and splitting activity history.</li>
+          <li>Created CRM governance standards giving reps clear rules for Account naming, creation, and duplicate prevention going forward.</li>
+          <li>Built a repeatable cleanup process that can be rerun as new data quality issues surface.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sf-proj-footer">
+      <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+<script>
+fetch("../components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){
+  var el=document.getElementById("sf-nav-placeholder");
+  el.innerHTML=d;
+  el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});
+});
+</script>
+
+</body>
+</html>

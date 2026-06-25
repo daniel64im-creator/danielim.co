@@ -241,7 +241,7 @@
   <div class="library-tabs">
     <button class="cat-btn active" data-cat="crm">CRM &amp; Automation <span class="cat-count">3</span></button>
     <button class="cat-btn" data-cat="governance">Governance Systems <span class="cat-count">4</span></button>
-    <button class="cat-btn" data-cat="data">Data Infrastructure <span class="cat-count">4</span></button>
+    <button class="cat-btn" data-cat="data">Data Infrastructure <span class="cat-count">5</span></button>
   </div>
 
   <!-- CARD PANEL -->
@@ -258,7 +258,8 @@
 var categories = {
   crm: ['expireddigest', 'demoemail', 'notifications'],
   governance: ['allocation', 'pip', 'allocationinfra', 'roe'],
-  data: ['enrichment', 'fte', 'conference', 'advisory']
+  data: ['enrichment', 'fte', 'dedup', 'conference', 'advisory']
+
 };
 
 var projectData = {
@@ -342,6 +343,17 @@ var projectData = {
     image: 'images/fte-lookup-component.webp',
     link: 'projects/fte-lookup.html',
     summary: 'Built a Google Sheets tool that reduced SDR enrollment lookup time from 30 seconds to 3 seconds, eliminating a daily friction point and freeing up prospecting capacity across the team.'
+  },
+
+  dedup: {
+    title: 'Salesforce Account Deduplication & Ownership Cleanup',
+    category: 'Data Infrastructure',
+    categoryClass: 'sf-tag-data',
+    image: null,
+    placeholderBg: 'linear-gradient(135deg, #e8f4fd 0%, #c9e5f8 100%)',
+    placeholderColor: '#0176d3',
+    link: 'projects/account-dedup.html',
+    summary: 'Resolved duplicate Salesforce Account records through name normalization, confidence-level grouping, and a structured merge decision framework, then created CRM governance standards to prevent future duplication.'
   },
 
   conference: {
