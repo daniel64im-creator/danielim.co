@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Page Not Found | Daniel Im</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon%2016x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon%2032x32.png">
+<link rel="stylesheet" href="assets/css/sf-theme.css">
+</head>
+<body>
+
+<div id="sf-nav-placeholder"></div>
+
+<div class="sf-context-bar">
+  <div class="sf-object-chip">
+    <div class="sf-object-icon-box" style="background:#706e6b;">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M6 2v4M6 8.5v.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="sf-breadcrumb">
+      <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
+      <span class="sf-breadcrumb-sep">›</span>
+      <span class="sf-breadcrumb-current">Page Not Found</span>
+    </div>
+  </div>
+</div>
+
+<div class="sf-page">
+<div class="sf-container">
+  <div style="background:white; border:1px solid #dddbda; border-radius:4px; box-shadow:0 2px 5px rgba(0,0,0,0.06); padding:48px 32px; text-align:center; max-width:480px; margin:40px auto;">
+    <div style="font-size:3rem; font-weight:700; color:#dddbda; line-height:1; margin-bottom:16px;">404</div>
+    <div style="font-size:1.1rem; font-weight:600; color:#16325c; margin-bottom:8px;">Page not found</div>
+    <p style="font-size:0.88rem; color:#706e6b; line-height:1.6; margin-bottom:24px;">The page you're looking for doesn't exist or may have moved.</p>
+    <a href="/index.html" class="sf-btn sf-btn-primary">Go to Homepage</a>
+  </div>
+</div>
+</div>
+
+<script>
+fetch("components/sf-nav.html")
+.then(function(r){return r.text();})
+.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
+</script>
+
+</body>
+</html>
