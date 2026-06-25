@@ -138,9 +138,11 @@
   flex-direction: column;
   background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
-.proj-card:hover { transform: scale(1.05); }
+.proj-card:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+.proj-card:hover .proj-card-thumb img { transform: scale(1.05); }
+.proj-card-thumb img { transition: transform 0.3s ease; }
 
 .proj-card-thumb {
   height: 190px;
