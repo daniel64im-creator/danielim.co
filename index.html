@@ -45,7 +45,6 @@ body {
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.15s;
-  letter-spacing: 0.01em;
 }
 
 .sf-object-icon-box {
@@ -64,11 +63,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-.sf-container {
-  padding: 16px 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 
 /* ── RECORD HEADER ── */
@@ -111,31 +105,6 @@ body {
 }
 .sf-hl-value a { color: #0176d3; font-weight: 500; }
 
-/* ── TABS ── */
-
-.sf-tabs {
-  background: white;
-  border: 1px solid #dddbda;
-  border-bottom: none;
-  border-radius: 4px 4px 0 0;
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.sf-tabs::-webkit-scrollbar { display: none; }
-
-.sf-tab-btn {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #706e6b;
-  padding: 11px 20px;
-  border: none;
-  background: none;
-  border-bottom: 3px solid transparent;
-  white-space: nowrap;
-  transition: all 0.15s;
-  letter-spacing: 0.01em;
-}
 /* ── DETAIL FIELDS ── */
 
 .sf-detail-section {
@@ -321,16 +290,6 @@ body {
 
 .sf-related-list { overflow: hidden; }
 
-.sf-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border: 1px solid #dddbda;
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  overflow: hidden;
-  font-size: 0.9rem;
-}
 
 .sf-work-table td:first-child { width: 62px; vertical-align: top; }
 
@@ -768,17 +727,6 @@ body {
 
 
 <script>
-function showTab(tabId) {
-  document.querySelectorAll('.sf-tab-panel').forEach(function(p) {
-    p.classList.add('hidden');
-  });
-  document.querySelectorAll('.sf-tab-btn').forEach(function(b) {
-    b.classList.remove('active');
-  });
-  document.getElementById('tab-' + tabId).classList.remove('hidden');
-  document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
-}
-
 var hamburger = document.getElementById('sf-hamburger');
 var mobileNav = document.getElementById('sf-mobile-nav');
 if (hamburger && mobileNav) {
