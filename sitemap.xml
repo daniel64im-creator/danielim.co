@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://danielim.co/</loc></url>
-  <url><loc>https://danielim.co/about.html</loc></url>
-  <url><loc>https://danielim.co/resume.html</loc></url>
-  <url><loc>https://danielim.co/contact.html</loc></url>
-  <url><loc>https://danielim.co/projects-library.html</loc></url>
-  <url><loc>https://danielim.co/projects/allocation-TL.html</loc></url>
-  <url><loc>https://danielim.co/projects/allocation-SDR.html</loc></url>
-  <url><loc>https://danielim.co/projects/pip-governance.html</loc></url>
-  <url><loc>https://danielim.co/projects/roe-compliance-reporting.html</loc></url>
-  <url><loc>https://danielim.co/projects/enrichment.html</loc></url>
-  <url><loc>https://danielim.co/projects/fte-lookup.html</loc></url>
-  <url><loc>https://danielim.co/projects/lead-cleanup.html</loc></url>
-  <url><loc>https://danielim.co/projects/executive-advisory-targeting.html</loc></url>
-  <url><loc>https://danielim.co/projects/demo-email.html</loc></url>
-  <url><loc>https://danielim.co/projects/demo-notifications.html</loc></url>
+  <url><loc>https://danielim.co/</loc><priority>1.0</priority></url>
+  <url><loc>https://danielim.co/resume.html</loc><priority>0.9</priority></url>
+  <url><loc>https://danielim.co/projects-library.html</loc><priority>0.9</priority></url>
+  <url><loc>https://danielim.co/projects/expired-lead-digest.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/enrichment.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/allocation-TL.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/fte-lookup.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/pip-governance.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/allocation-SDR.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/roe-compliance-reporting.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/demo-email.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/demo-notifications.html</loc><priority>0.8</priority></url>
+  <url><loc>https://danielim.co/projects/account-dedup.html</loc><priority>0.8</priority></url>
 </urlset>
