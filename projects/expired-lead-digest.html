@@ -91,6 +91,7 @@
 
 @media (max-width: 680px) {
   .proj-card-grid { grid-template-columns: 1fr; }
+  .proj-two-col { grid-template-columns: 1fr !important; }
 }
 
 </style>
@@ -136,51 +137,39 @@
   <!-- BODY -->
   <div class="sf-proj-body">
 
-    <!-- THUMBNAIL -->
+    <!-- IMAGE + PSO -->
     <div class="sf-proj-section">
-      <img src="../images/expired-lead-digest.jpg" alt="Weekly Expired Lead Digest Email" class="proj-thumbnail">
-    </div>
+      <div class="proj-two-col" style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start;">
 
-    <!-- PROBLEM / SOLUTION / OUTCOME -->
-    <div class="sf-proj-section">
-      <div class="proj-card-grid">
+        <img src="../images/expired-lead-digest.jpg" alt="Weekly Expired Lead Digest Email" class="proj-thumbnail" style="margin-top:0;">
 
-        <div class="proj-card-col proj-card-col-problem">
-          <div class="proj-card-col-label">
-            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>
-            Problem
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="proj-card-col proj-card-col-problem">
+            <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>Problem</div>
+            <div class="proj-bubbles">
+              <span class="proj-bubble proj-bubble-problem">Silent lead ownership loss</span>
+              <span class="proj-bubble proj-bubble-problem">No expiration feedback loop</span>
+              <span class="proj-bubble proj-bubble-problem">Prior owner value lost on transfer</span>
+              <span class="proj-bubble proj-bubble-problem">No re-engagement channel</span>
+            </div>
           </div>
-          <div class="proj-bubbles">
-            <span class="proj-bubble proj-bubble-problem">Silent lead ownership loss</span>
-            <span class="proj-bubble proj-bubble-problem">No expiration feedback loop</span>
-            <span class="proj-bubble proj-bubble-problem">Prior owner value lost on transfer</span>
-            <span class="proj-bubble proj-bubble-problem">No re-engagement channel</span>
+          <div class="proj-card-col proj-card-col-solution">
+            <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Solution</div>
+            <div class="proj-bubbles">
+              <span class="proj-bubble proj-bubble-solution">Custom logging object</span>
+              <span class="proj-bubble proj-bubble-solution">Record-Triggered Flow (immediate + async)</span>
+              <span class="proj-bubble proj-bubble-solution">Weekly digest email per rep</span>
+              <span class="proj-bubble proj-bubble-solution">Log cleanup Scheduled Flow</span>
+            </div>
           </div>
-        </div>
-
-        <div class="proj-card-col proj-card-col-solution">
-          <div class="proj-card-col-label">
-            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-            Solution
-          </div>
-          <div class="proj-bubbles">
-            <span class="proj-bubble proj-bubble-solution">Custom logging object</span>
-            <span class="proj-bubble proj-bubble-solution">Record-Triggered Flow (immediate + async)</span>
-            <span class="proj-bubble proj-bubble-solution">Weekly digest email per rep</span>
-            <span class="proj-bubble proj-bubble-solution">Log cleanup Scheduled Flow</span>
-          </div>
-        </div>
-
-        <div class="proj-card-col proj-card-col-outcome">
-          <div class="proj-card-col-label">
-            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Outcome
-          </div>
-          <div class="proj-bubbles">
-            <span class="proj-bubble proj-bubble-outcome">Weekly expired lead digest per rep</span>
-            <span class="proj-bubble proj-bubble-outcome">Re-engagement channel activated</span>
-            <span class="proj-bubble proj-bubble-outcome">All expiration events logged</span>
-            <span class="proj-bubble proj-bubble-outcome">Zero manual effort required</span>
+          <div class="proj-card-col proj-card-col-outcome">
+            <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Outcome</div>
+            <div class="proj-bubbles">
+              <span class="proj-bubble proj-bubble-outcome">Weekly expired lead digest per rep</span>
+              <span class="proj-bubble proj-bubble-outcome">Re-engagement channel activated</span>
+              <span class="proj-bubble proj-bubble-outcome">All expiration events logged</span>
+              <span class="proj-bubble proj-bubble-outcome">Zero manual effort required</span>
+            </div>
           </div>
         </div>
 
