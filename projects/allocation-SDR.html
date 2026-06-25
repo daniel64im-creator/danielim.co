@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <title>SDR Account Allocation System | Sales Operations Project</title>
@@ -10,21 +10,30 @@
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
 <link rel="stylesheet" href="../assets/css/sf-theme.css">
+<style>
+.proj-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+.proj-card-col { border: 1px solid #dddbda; border-radius: 4px; padding: 16px; background: #fafaf9; }
+.proj-card-col-problem  { border-top: 3px solid #e45c3a; }
+.proj-card-col-solution { border-top: 3px solid #0176d3; }
+.proj-card-col-outcome  { border-top: 3px solid #2e844a; }
+.proj-card-col-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: #706e6b; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e5e4e2; display: flex; align-items: center; gap: 6px; }
+.proj-bubbles { display: flex; flex-direction: column; gap: 7px; }
+.proj-bubble { font-size: 0.8rem; color: #181818; border-radius: 4px; padding: 6px 10px; line-height: 1.4; border: 1px solid; }
+.proj-bubble-problem  { background: #fef3ef; border-color: #f5c4b0; }
+.proj-bubble-solution { background: #e8f4fd; border-color: #a8cff0; }
+.proj-bubble-outcome  { background: #edf7ee; border-color: #a2d0aa; }
+.proj-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
+.proj-thumbnail { width: 100%; border: 1px solid #dddbda; border-radius: 4px; display: block; margin-top: 4px; }
+@media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-
 <div id="sf-nav-placeholder"></div>
-
-<!-- CONTEXT BAR -->
 <div class="sf-context-bar">
   <div class="sf-object-chip">
     <div class="sf-object-icon-box projects">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
-      </svg>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/></svg>
     </div>
     <div class="sf-breadcrumb">
       <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
@@ -35,126 +44,86 @@
     </div>
   </div>
 </div>
-
-<!-- PAGE -->
 <div class="sf-page">
 <div class="sf-container">
-
-  <!-- PROJECT RECORD HEADER -->
   <div class="sf-proj-header">
     <div class="sf-proj-header-top">
       <span class="sf-tag sf-tag-governance">Governance Systems</span>
       <h1 class="sf-proj-title">SDR Account Allocation System</h1>
-      <p class="sf-proj-impact">Established the foundational ownership model for SDR account allocation - a simple, centralized sheet shared across three team leads that later evolved into a full cross-product governance system.</p>
+      <p class="sf-proj-impact">Built the foundational account ownership model for three team leads working a shared institutional account list - introducing hold state logic, structured reassignment, and a single source of truth that later scaled into a full cross-product governance system.</p>
     </div>
   </div>
-
-  <!-- PROJECT BODY -->
   <div class="sf-proj-body">
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">System Overview</div>
-      <div class="sf-proj-content">
-        <p>Centralized Google Sheets system built to give three team leads shared visibility into account ownership across ~500 institutional accounts. Simple by design, this was the first structured allocation system built for the SDR organization and served as the foundation for later governance work.</p>
-        <p>Early in the SDR buildout, three team leads were working from a shared list of roughly 500 institutional accounts. Without a centralized system, account ownership was tracked informally, making it difficult to coordinate during reassignment and identify which accounts were available for reallocation.</p>
-        <p>This project introduced a single Google Sheets ownership layer - simple by design - that gave all three team leads a shared view of account status and introduced the hold state model that would later become the foundation for more complex allocation governance.</p>
+      <img src="../images/allocation-sheet-thumbnail.png" alt="SDR Account Allocation System" class="proj-thumbnail">
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="proj-card-grid">
+        <div class="proj-card-col proj-card-col-problem">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>Problem</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-problem">No shared record of account ownership</span>
+            <span class="proj-bubble proj-bubble-problem">No process for marking inactive accounts</span>
+            <span class="proj-bubble proj-bubble-problem">Reassignment happened informally</span>
+            <span class="proj-bubble proj-bubble-problem">Account availability unclear without manual check</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-solution">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Solution</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-solution">Master account sheet (shared across 3 TLs)</span>
+            <span class="proj-bubble proj-bubble-solution">Ownership assignment per account</span>
+            <span class="proj-bubble proj-bubble-solution">Hold state for inactive accounts</span>
+            <span class="proj-bubble proj-bubble-solution">Structured reassignment review</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-outcome">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Outcome</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-outcome">Shared ownership visibility for all TLs</span>
+            <span class="proj-bubble proj-bubble-outcome">Structured release and redistribution process</span>
+            <span class="proj-bubble proj-bubble-outcome">Reduced ownership disputes</span>
+            <span class="proj-bubble proj-bubble-outcome">Foundation for cross-product governance system</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-section-title">How It Works</div>
       <div class="sf-proj-content">
-        <ul>
-          <li>No shared record of which team lead owned which account.</li>
-          <li>No defined process for marking accounts as inactive or available for reallocation.</li>
-          <li>Reassignment decisions happened informally with no documented handoff.</li>
-          <li>Account availability was unclear without checking manually with each team lead.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Architecture</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li><strong>Master Account Sheet</strong> - Single centralized spreadsheet visible to all three team leads with ownership status per account.</li>
-          <li><strong>Ownership Assignment</strong> - Each account assigned to a specific team lead with clear accountability.</li>
-          <li><strong>Hold State</strong> - Neutral status for accounts a team lead was no longer working, flagging them as available for reallocation to another owner.</li>
-          <li><strong>Reassignment Review</strong> - Brief review step before a held account transferred to a new team lead, preserving context and preventing premature reassignment.</li>
-        </ul>
         <div class="sf-arch-box">
-Customer Allocation Workflow
-
-Account Identified → Team Lead Ownership Assigned → Hold State (No Longer Being Worked) → Reassignment Review → New Owner Assigned
-        </div>
-        <div class="sf-screenshot">
-          <div class="sf-screenshot-label">Google Sheets - SDR Allocation Framework (Status, Territory, Account, Products, Ownership Routing)</div>
-          <img src="../images/allocation-sheet.webp" alt="SDR Allocation Framework Google Sheets">
+Account Identified
+  → Team Lead Ownership Assigned
+  → Hold State Applied (no longer being worked)
+  → Reassignment Review
+  → New Owner Assigned
         </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Tools</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Google Sheets</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Scale</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Primary users: 3 team leads</li>
-          <li>Account scope: ~500 institutional accounts</li>
-          <li>Objective: establish shared ownership visibility and structured reassignment process</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Operational Impact</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Gave three team leads a shared, reliable view of account ownership for the first time.</li>
-          <li>Introduced a structured process for releasing and redistributing accounts via hold states.</li>
-          <li>Reduced informal ownership disputes across the early SDR team.</li>
-          <li>Created the foundational allocation model that later evolved into a full cross-product governance system.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Future Improvements</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Expand to support individual rep-level ownership as the team grows.</li>
-          <li>Add timestamps to hold state transitions for better ownership tracking.</li>
-          <li>Migrate into a more structured system as account volume and team size increase.</li>
-        </ul>
+      <div class="sf-proj-section-title">Tools &amp; Skills</div>
+      <div class="proj-tools">
+        <span class="proj-tool-tag">Google Sheets</span>
+        <span class="proj-tool-tag">Account Ownership Design</span>
+        <span class="proj-tool-tag">Hold State Logic</span>
+        <span class="proj-tool-tag">Governance Framework Design</span>
       </div>
     </div>
 
     <div class="sf-proj-footer">
       <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
     </div>
-
   </div>
-
 </div>
 </div>
-
 <script>
 fetch("../components/sf-nav.html")
 .then(function(r){return r.text();})
-.then(function(d){
-  var el=document.getElementById("sf-nav-placeholder");
-  el.innerHTML=d;
-  el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});
-});
+.then(function(d){var el=document.getElementById("sf-nav-placeholder");el.innerHTML=d;el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});});
 </script>
-
 </body>
 </html>

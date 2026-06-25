@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <title>CRM Outreach Eligibility Reporting | Sales Operations Project</title>
@@ -10,21 +10,29 @@
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
 <link rel="stylesheet" href="../assets/css/sf-theme.css">
+<style>
+.proj-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+.proj-card-col { border: 1px solid #dddbda; border-radius: 4px; padding: 16px; background: #fafaf9; }
+.proj-card-col-problem  { border-top: 3px solid #e45c3a; }
+.proj-card-col-solution { border-top: 3px solid #0176d3; }
+.proj-card-col-outcome  { border-top: 3px solid #2e844a; }
+.proj-card-col-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: #706e6b; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e5e4e2; display: flex; align-items: center; gap: 6px; }
+.proj-bubbles { display: flex; flex-direction: column; gap: 7px; }
+.proj-bubble { font-size: 0.8rem; color: #181818; border-radius: 4px; padding: 6px 10px; line-height: 1.4; border: 1px solid; }
+.proj-bubble-problem  { background: #fef3ef; border-color: #f5c4b0; }
+.proj-bubble-solution { background: #e8f4fd; border-color: #a8cff0; }
+.proj-bubble-outcome  { background: #edf7ee; border-color: #a2d0aa; }
+.proj-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
+@media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-
 <div id="sf-nav-placeholder"></div>
-
-<!-- CONTEXT BAR -->
 <div class="sf-context-bar">
   <div class="sf-object-chip">
     <div class="sf-object-icon-box projects">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
-      </svg>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/></svg>
     </div>
     <div class="sf-breadcrumb">
       <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
@@ -35,161 +43,107 @@
     </div>
   </div>
 </div>
-
-<!-- PAGE -->
 <div class="sf-page">
 <div class="sf-container">
-
-  <!-- PROJECT RECORD HEADER -->
   <div class="sf-proj-header">
     <div class="sf-proj-header-top">
       <span class="sf-tag sf-tag-governance">Governance Systems</span>
       <h1 class="sf-proj-title">CRM Outreach Eligibility Reporting</h1>
-      <p class="sf-proj-impact">Eliminated duplicate demo bookings, reduced cross-team ownership disputes, and shifted the SDR organization from informal interpretation to enforceable outreach rules across four product lines.</p>
+      <p class="sf-proj-impact">Eliminated duplicate demo bookings and cross-team ownership disputes by building an enforceable outreach eligibility framework across four product lines - combining Salesforce automation, decision workflow documentation, and published training materials.</p>
     </div>
   </div>
-
-  <!-- PROJECT BODY -->
   <div class="sf-proj-body">
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">System Overview</div>
-      <div class="sf-proj-content">
-        <p>Comprehensive governance framework built to control lead ownership, define cross-product outreach boundaries, and standardize outreach eligibility evaluation across an 11–15 person SDR team. Enforced through a combination of Salesforce automation, decision framework documentation, and Confluence-hosted training materials.</p>
-        <p>As the sole Team Lead overseeing 11–15 SDRs supporting 7–15 Account Executives across four product lines - Verity, Panorama, Lumina, and EqualGround - and two regions (San Jose and Toronto), no enforceable governance structure existed to control lead ownership lifecycle, cross-product outreach boundaries, or demo booking conflicts.</p>
-        <p>As team size and product complexity increased, ambiguity created real operational risk: duplicate demo bookings, internal AE/SDR disputes, revenue attribution confusion, and unenforceable performance standards. This project introduced a structured governance layer combining Salesforce automation, decision framework documentation, and published training materials to shift the organization from informal interpretation to enforced rules.</p>
-        <p>The PIP framework was developed as part of this initiative. See: <a href="pip-governance.html">Performance Intervention Framework</a>.</p>
+      <div class="proj-card-grid">
+        <div class="proj-card-col proj-card-col-problem">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>Problem</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-problem">No outreach eligibility process</span>
+            <span class="proj-bubble proj-bubble-problem">SDRs could self-assign leads indefinitely</span>
+            <span class="proj-bubble proj-bubble-problem">Cross-product teams conflicted on same accounts</span>
+            <span class="proj-bubble proj-bubble-problem">Duplicate demo bookings occurring</span>
+            <span class="proj-bubble proj-bubble-problem">No enforceable accountability framework</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-solution">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Solution</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-solution">14-day lead ownership enforcement (Salesforce Flow)</span>
+            <span class="proj-bubble proj-bubble-solution">Opportunity guardrail decision tree</span>
+            <span class="proj-bubble proj-bubble-solution">Cross-product outreach logic</span>
+            <span class="proj-bubble proj-bubble-solution">Escalation layer for disputed accounts</span>
+            <span class="proj-bubble proj-bubble-solution">Published to Confluence + Canvas onboarding</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-outcome">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Outcome</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-outcome">Duplicate demo bookings eliminated</span>
+            <span class="proj-bubble proj-bubble-outcome">Reduced ownership disputes</span>
+            <span class="proj-bubble proj-bubble-outcome">Standardized eligibility process</span>
+            <span class="proj-bubble proj-bubble-outcome">Enforceable lead ownership boundaries</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Governance Decision Framework</div>
-      <div class="sf-proj-content">
-        <p>Rules of Engagement policies were operationalized through a structured decision framework used by SDRs to determine whether outreach into an account or lead was permitted.</p>
-        <p>The framework standardized how representatives evaluated account status, existing opportunities, and lead ownership before initiating prospecting activity. Workflows were documented, reviewed with upper management, and published to Confluence as official organizational reference material.</p>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">ROE Decision Workflows</div>
+      <div class="sf-proj-section-title">Decision Workflows</div>
       <div class="sf-proj-content">
         <div class="sf-screenshot-grid">
           <div class="sf-screenshot">
             <div class="sf-screenshot-label">Account Qualification Workflow</div>
-            <p>Process used when evaluating whether an account is eligible for prospecting based on customer status and opportunity activity.</p>
             <img src="../images/roe-account-qualification.png" alt="Account Qualification Workflow">
           </div>
           <div class="sf-screenshot">
             <div class="sf-screenshot-label">Opportunity Conflict Analysis</div>
-            <p>Decision framework used when an account already contains open opportunities. SDRs must evaluate product alignment and avoid engaging contacts actively involved in ongoing deals.</p>
             <img src="../images/roe-opportunity-analysis.png" alt="Opportunity Analysis Workflow">
           </div>
-          <div class="sf-screenshot">
-            <div class="sf-screenshot-label">Lead Ownership Evaluation</div>
-            <p>Lead ownership rules govern which representatives may contact a prospect. Ownership and recent activity must be verified before initiating outreach.</p>
-            <img src="../images/roe-lead-ownership.png" alt="Lead Ownership Workflow">
-          </div>
+        </div>
+        <div class="sf-screenshot" style="margin-top:12px;">
+          <div class="sf-screenshot-label">Lead Ownership Evaluation</div>
+          <img src="../images/roe-lead-ownership.png" alt="Lead Ownership Workflow">
         </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-section-title">How It Works</div>
       <div class="sf-proj-content">
-        <ul>
-          <li>SDRs could self-assign leads indefinitely with no expiration or reassignment logic.</li>
-          <li>Multiple product teams could independently contact the same institutional accounts.</li>
-          <li>No standardized method existed for determining when outreach conflicted with active opportunities.</li>
-          <li>Contacts involved in open deals were sometimes contacted by other product teams.</li>
-          <li>No enforceable performance accountability framework existed for the SDR organization.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Architecture</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li><strong>14-Day Lead Ownership Enforcement</strong> - Salesforce record-triggered Flow monitored lead assignment timestamps. At day 14, ownership was automatically removed, the lead was labeled "Expired," and returned to the eligible pool. No manual override allowed before expiration.</li>
-          <li><strong>Opportunity Guardrail Rules</strong> - Formal decision tree governing open opportunity stage checks, Closed Won protections, active contact protection logic, and a 3-month recency activity rule for cross-product eligibility.</li>
-          <li><strong>Cross-Product Outreach Logic</strong> - Defined when Product B outreach was permitted into accounts with active Product A opportunities, including which contacts were protected and when AE alignment was required.</li>
-          <li><strong>Coordination Escalation Layer</strong> - SDRs escalate stale opportunities or ambiguous ownership cases to team leadership rather than making unilateral outreach decisions.</li>
-          <li><strong>Documentation & Training Layer</strong> - Full governance framework published to Confluence as official reference documentation and integrated into Canvas as a new hire onboarding module.</li>
-        </ul>
         <div class="sf-arch-box">
-ROE Evaluation Workflow
-
-Account Evaluated → Customer Status Verified → Opportunity Presence Checked → Active Contact Protection Applied → Lead Ownership Verified → Outreach Permitted or Escalated
+Account Evaluated
+  → Customer Status Verified
+  → Opportunity Presence Checked
+  → Active Contact Protection Applied
+  → Lead Ownership Verified (14-day expiration enforced)
+  → Outreach Permitted or Escalated
         </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Tools</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Salesforce CRM</li>
-          <li>Salesforce Flow Builder</li>
-          <li>Confluence (governance documentation)</li>
-          <li>Canvas (new hire onboarding integration)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Scale</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Team size: 11–15 SDRs, 7–15 Account Executives</li>
-          <li>Product lines: Verity, Panorama, Lumina, EqualGround</li>
-          <li>Regions: San Jose + Toronto</li>
-          <li>Objective: replace informal interpretation with enforceable outreach governance</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Operational Impact</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Eliminated duplicate demo booking incidents across product teams.</li>
-          <li>Reduced cross-team ownership disputes and AE/SDR escalations.</li>
-          <li>Standardized outreach eligibility evaluation across all four product lines.</li>
-          <li>Created enforceable lead ownership boundaries with system-level expiration logic.</li>
-          <li>Improved prospect experience through coordinated, non-conflicting outreach.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Future Improvements</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Automate opportunity activity detection to surface stale deals without manual review.</li>
-          <li>Introduce CRM flags for restricted contacts directly on account layouts.</li>
-          <li>Build outreach eligibility indicators surfaced in the SDR prospecting workflow.</li>
-        </ul>
+      <div class="sf-proj-section-title">Tools &amp; Skills</div>
+      <div class="proj-tools">
+        <span class="proj-tool-tag">Salesforce CRM</span>
+        <span class="proj-tool-tag">Salesforce Flow Builder</span>
+        <span class="proj-tool-tag">Confluence</span>
+        <span class="proj-tool-tag">Canvas (LMS)</span>
+        <span class="proj-tool-tag">Rules of Engagement Design</span>
+        <span class="proj-tool-tag">Cross-Product Governance</span>
       </div>
     </div>
 
     <div class="sf-proj-footer">
       <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
     </div>
-
   </div>
-
 </div>
 </div>
-
 <script>
 fetch("../components/sf-nav.html")
 .then(function(r){return r.text();})
-.then(function(d){
-  var el=document.getElementById("sf-nav-placeholder");
-  el.innerHTML=d;
-  el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});
-});
+.then(function(d){var el=document.getElementById("sf-nav-placeholder");el.innerHTML=d;el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});});
 </script>
-
 </body>
 </html>

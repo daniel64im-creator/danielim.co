@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <title>Performance Intervention Framework | Sales Operations Project</title>
@@ -10,21 +10,30 @@
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
 <link rel="stylesheet" href="../assets/css/sf-theme.css">
+<style>
+.proj-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+.proj-card-col { border: 1px solid #dddbda; border-radius: 4px; padding: 16px; background: #fafaf9; }
+.proj-card-col-problem  { border-top: 3px solid #e45c3a; }
+.proj-card-col-solution { border-top: 3px solid #0176d3; }
+.proj-card-col-outcome  { border-top: 3px solid #2e844a; }
+.proj-card-col-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: #706e6b; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e5e4e2; display: flex; align-items: center; gap: 6px; }
+.proj-bubbles { display: flex; flex-direction: column; gap: 7px; }
+.proj-bubble { font-size: 0.8rem; color: #181818; border-radius: 4px; padding: 6px 10px; line-height: 1.4; border: 1px solid; }
+.proj-bubble-problem  { background: #fef3ef; border-color: #f5c4b0; }
+.proj-bubble-solution { background: #e8f4fd; border-color: #a8cff0; }
+.proj-bubble-outcome  { background: #edf7ee; border-color: #a2d0aa; }
+.proj-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
+.proj-thumbnail { width: 100%; border: 1px solid #dddbda; border-radius: 4px; display: block; margin-top: 4px; }
+@media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-
 <div id="sf-nav-placeholder"></div>
-
-<!-- CONTEXT BAR -->
 <div class="sf-context-bar">
   <div class="sf-object-chip">
     <div class="sf-object-icon-box projects">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
-      </svg>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/></svg>
     </div>
     <div class="sf-breadcrumb">
       <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
@@ -35,128 +44,89 @@
     </div>
   </div>
 </div>
-
-<!-- PAGE -->
 <div class="sf-page">
 <div class="sf-container">
-
-  <!-- PROJECT RECORD HEADER -->
   <div class="sf-proj-header">
     <div class="sf-proj-header-top">
       <span class="sf-tag sf-tag-governance">Governance Systems</span>
       <h1 class="sf-proj-title">Performance Intervention Framework</h1>
-      <p class="sf-proj-impact">The first formalized PIP framework in the organization's history - drafted from scratch, refined with management, and adopted by leadership and HR. Published to Confluence and integrated into Canvas as a new hire onboarding module.</p>
+      <p class="sf-proj-impact">The first formalized PIP framework in the organization - drafted from scratch, refined with management, approved by HR, and integrated into new hire onboarding. Replaced inconsistent manager-by-manager interventions with objective trigger thresholds and a documented review process.</p>
     </div>
   </div>
-
-  <!-- PROJECT BODY -->
   <div class="sf-proj-body">
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">System Overview</div>
-      <div class="sf-proj-content">
-        <p>Governance framework defining objective trigger thresholds, structured intervention timelines, daily activity expectations, and documentation standards for performance improvement plans across the SDR organization. Initiated and drafted by me when no formal PIP process existed.</p>
-        <p>When I joined the organization, no formal PIP structure existed. Performance interventions were handled inconsistently across managers with no documented trigger criteria, timelines, or activity expectations - creating risk around fairness, accountability, and HR compliance.</p>
-        <p>I drafted the first PIP framework from scratch, worked through revisions with management, and drove it to publication. The finalized document was adopted by leadership and HR, published to Confluence as official organizational documentation, and integrated into Canvas as part of the new hire onboarding module.</p>
-        <p>This framework was developed as part of the broader SDR governance initiative. See: <a href="roe-compliance-reporting.html">CRM Outreach Eligibility Reporting</a>.</p>
-      </div>
+      <img src="../images/pip-governance.png" alt="Performance Intervention Framework Document" class="proj-thumbnail">
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Structural Gap</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>No formal PIP structure existed anywhere in the organization.</li>
-          <li>No objective quota threshold triggers defined when intervention was required.</li>
-          <li>Performance interventions varied by manager with no consistent standard.</li>
-          <li>No documented timeline, checkpoint structure, or activity expectations.</li>
-          <li>No written template to align manager, rep, and leadership expectations.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Framework Design</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li><strong>Trigger Thresholds</strong> - New-hire BDRs: 3-month ramp period at 50% quota expected; below 35% after ramp triggers a quarterly PIP. Established reps: below 50% quota triggers a Month-to-Month PIP; below 80% triggers a Quarterly PIP.</li>
-          <li><strong>PIP Duration Structure</strong> - 30, 60, or 90-day timelines depending on severity of the performance gap, with weekly and monthly checkpoint reviews built in.</li>
-          <li><strong>Daily Activity Expectations</strong> - BDRs on PIP required to meet: 80 outbound calls/day, 20 personalized emails/day, 2 meetings booked/week, daily activity report submission, and mandatory weekly 1-on-1 with Team Lead.</li>
-          <li><strong>Exit Criteria</strong> - BDR exits PIP by achieving at least 70% quota attainment and demonstrating consistent engagement with improvement initiatives.</li>
-          <li><strong>Aggravating & Mitigating Factors</strong> - Defined conditions for escalation to termination (e.g., two consecutive quarters below 50%, failure to engage) and documented mitigating exceptions (e.g., medical leave, market conditions, positive contributions outside quota).</li>
-          <li><strong>Documentation Package</strong> - Standard written template with signature requirements for BDR, manager, and director, aligning all parties on expectations and accountability.</li>
-        </ul>
-        <div class="sf-arch-box">
-PIP Governance Workflow
-
-Performance Monitoring → Trigger Threshold Reached → PIP Type Determined (M2M or Quarterly) → Timeline + Daily KPI Monitoring → Weekly Checkpoint Reviews → Exit Criteria Met or Escalation
+      <div class="proj-card-grid">
+        <div class="proj-card-col proj-card-col-problem">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>Problem</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-problem">No formal PIP structure existed</span>
+            <span class="proj-bubble proj-bubble-problem">No objective trigger thresholds</span>
+            <span class="proj-bubble proj-bubble-problem">Inconsistent manager interventions</span>
+            <span class="proj-bubble proj-bubble-problem">No timeline, checkpoints, or documentation standards</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-solution">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Solution</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-solution">Measurable quota trigger criteria</span>
+            <span class="proj-bubble proj-bubble-solution">30/60/90-day timeline structure</span>
+            <span class="proj-bubble proj-bubble-solution">Daily activity expectations</span>
+            <span class="proj-bubble proj-bubble-solution">Exit criteria and escalation paths</span>
+            <span class="proj-bubble proj-bubble-solution">Signed documentation package</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-outcome">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Outcome</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-outcome">Consistent interventions across managers</span>
+            <span class="proj-bubble proj-bubble-outcome">HR-aligned documentation</span>
+            <span class="proj-bubble proj-bubble-outcome">Published to Confluence</span>
+            <span class="proj-bubble proj-bubble-outcome">Integrated into new hire onboarding</span>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Tools</div>
+      <div class="sf-proj-section-title">How It Works</div>
       <div class="sf-proj-content">
-        <ul>
-          <li>Confluence (official documentation repository)</li>
-          <li>Canvas (new hire onboarding integration)</li>
-        </ul>
+        <div class="sf-arch-box">
+Performance Monitoring
+  → Trigger Threshold Reached (quota attainment below defined %)
+  → PIP Type Determined (Month-to-Month or Quarterly)
+  → Timeline Set + Daily KPI Monitoring Begins
+  → Weekly Checkpoint Reviews
+  → Exit Criteria Met or Escalation Path Activated
+        </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Scale</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Primary users: SDR leadership, management, and HR</li>
-          <li>Scope: team-wide performance governance across 11–15 BDRs/SDRs</li>
-          <li>Adoption: approved by leadership and HR, published to Confluence and Canvas</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Operational Impact</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Introduced the first objective, documented performance intervention standard in the organization.</li>
-          <li>Eliminated subjective manager-by-manager variation in escalation decisions.</li>
-          <li>Strengthened accountability for both reps and managers through written documentation.</li>
-          <li>Created an HR-aligned framework that could be enforced consistently across the team.</li>
-          <li>Integrated into new hire onboarding so performance expectations were set from day one.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Future Improvements</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Build a dashboard tracking active PIP timelines and checkpoint completion.</li>
-          <li>Automate quota attainment monitoring to surface trigger conditions without manual review.</li>
-          <li>Expand framework to cover AE and CS performance governance.</li>
-        </ul>
+      <div class="sf-proj-section-title">Tools &amp; Skills</div>
+      <div class="proj-tools">
+        <span class="proj-tool-tag">Confluence</span>
+        <span class="proj-tool-tag">Canvas (LMS)</span>
+        <span class="proj-tool-tag">Process Documentation</span>
+        <span class="proj-tool-tag">HR Governance</span>
+        <span class="proj-tool-tag">Performance Framework Design</span>
       </div>
     </div>
 
     <div class="sf-proj-footer">
       <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
     </div>
-
   </div>
-
 </div>
 </div>
-
 <script>
 fetch("../components/sf-nav.html")
 .then(function(r){return r.text();})
-.then(function(d){
-  var el=document.getElementById("sf-nav-placeholder");
-  el.innerHTML=d;
-  el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});
-});
+.then(function(d){var el=document.getElementById("sf-nav-placeholder");el.innerHTML=d;el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});});
 </script>
-
 </body>
 </html>

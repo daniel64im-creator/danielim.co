@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <title>9,000-Account CRM Enrichment | Sales Operations Project</title>
@@ -10,21 +10,30 @@
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
 <link rel="stylesheet" href="../assets/css/sf-theme.css">
+<style>
+.proj-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+.proj-card-col { border: 1px solid #dddbda; border-radius: 4px; padding: 16px; background: #fafaf9; }
+.proj-card-col-problem  { border-top: 3px solid #e45c3a; }
+.proj-card-col-solution { border-top: 3px solid #0176d3; }
+.proj-card-col-outcome  { border-top: 3px solid #2e844a; }
+.proj-card-col-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: #706e6b; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e5e4e2; display: flex; align-items: center; gap: 6px; }
+.proj-bubbles { display: flex; flex-direction: column; gap: 7px; }
+.proj-bubble { font-size: 0.8rem; color: #181818; border-radius: 4px; padding: 6px 10px; line-height: 1.4; border: 1px solid; }
+.proj-bubble-problem  { background: #fef3ef; border-color: #f5c4b0; }
+.proj-bubble-solution { background: #e8f4fd; border-color: #a8cff0; }
+.proj-bubble-outcome  { background: #edf7ee; border-color: #a2d0aa; }
+.proj-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
+.proj-thumbnail { width: 100%; border: 1px solid #dddbda; border-radius: 4px; display: block; margin-top: 4px; }
+@media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-
 <div id="sf-nav-placeholder"></div>
-
-<!-- CONTEXT BAR -->
 <div class="sf-context-bar">
   <div class="sf-object-chip">
     <div class="sf-object-icon-box projects">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/>
-        <rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/>
-      </svg>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="1" width="4" height="4" rx="0.5" fill="white"/><rect x="1" y="7" width="4" height="4" rx="0.5" fill="white"/><rect x="7" y="7" width="4" height="4" rx="0.5" fill="white"/></svg>
     </div>
     <div class="sf-breadcrumb">
       <a href="/index.html" class="sf-breadcrumb-link">Daniel Im</a>
@@ -35,12 +44,8 @@
     </div>
   </div>
 </div>
-
-<!-- PAGE -->
 <div class="sf-page">
 <div class="sf-container">
-
-  <!-- PROJECT RECORD HEADER -->
   <div class="sf-proj-header">
     <div class="sf-proj-header-top">
       <span class="sf-tag sf-tag-data">Data Infrastructure</span>
@@ -48,55 +53,67 @@
       <p class="sf-proj-impact">Restored firmographic accuracy across ~9,000 Salesforce accounts by sourcing institutional data from IPEDS, normalizing it in Google Sheets, and re-importing by Account ID - improving segmentation, territory reporting, and CRM reliability.</p>
     </div>
   </div>
-
-  <!-- PROJECT BODY -->
   <div class="sf-proj-body">
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">System Overview</div>
-      <div class="sf-proj-content">
-        <p>Large-scale firmographic cleanup and structured re-import designed to restore CRM reliability for segmentation, reporting, and outbound targeting across thousands of institutional accounts.</p>
-        <p>The Salesforce account base contained thousands of records with missing or inconsistent firmographic data. Critical targeting fields such as institutional size, domain, geographic location, and time zone were unreliable. Firmographic data was sourced from IPEDS - the Integrated Postsecondary Education Data System - exported as CSV, normalized in Google Sheets, and re-imported to Salesforce by Account ID to restore CRM data integrity.</p>
+      <img src="../images/enrichment-sheet.webp" alt="CRM Enrichment Google Sheets Dataset" class="proj-thumbnail">
+    </div>
+
+    <div class="sf-proj-section">
+      <div class="proj-card-grid">
+        <div class="proj-card-col proj-card-col-problem">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>Problem</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-problem">Firmographic fields missing across thousands of accounts</span>
+            <span class="proj-bubble proj-bubble-problem">Inconsistent naming and website formatting</span>
+            <span class="proj-bubble proj-bubble-problem">Time zone inaccuracies affecting outreach timing</span>
+            <span class="proj-bubble proj-bubble-problem">Unreliable segmentation and territory reporting</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-solution">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Solution</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-solution">Salesforce Account export</span>
+            <span class="proj-bubble proj-bubble-solution">IPEDS firmographic data pull</span>
+            <span class="proj-bubble proj-bubble-solution">Google Sheets normalization</span>
+            <span class="proj-bubble proj-bubble-solution">ID-based record mapping</span>
+            <span class="proj-bubble proj-bubble-solution">Pre-import QA validation</span>
+          </div>
+        </div>
+        <div class="proj-card-col proj-card-col-outcome">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Outcome</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-outcome">~9,000 accounts enriched</span>
+            <span class="proj-bubble proj-bubble-outcome">Restored segmentation accuracy</span>
+            <span class="proj-bubble proj-bubble-outcome">Reliable territory reporting</span>
+            <span class="proj-bubble proj-bubble-outcome">CRM as a trusted data layer</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-section-title">How It Works</div>
       <div class="sf-proj-content">
-        <ul>
-          <li>Firmographic fields missing across thousands of accounts.</li>
-          <li>Inconsistent institution naming and website formatting.</li>
-          <li>Time zone inaccuracies impacting SDR outreach timing.</li>
-          <li>Reporting dashboards producing unreliable segmentation data.</li>
-          <li>No defined enrichment cadence or QA process.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Architecture</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li><strong>Salesforce Account Export</strong> - Pulled the complete account dataset to identify which records were missing firmographic fields.</li>
-          <li><strong>IPEDS Data Pull</strong> - Sourced institutional firmographic data (FTE, domain, geographic fields, time zone) from the IPEDS public database via CSV export.</li>
-          <li><strong>Google Sheets Normalization</strong> - Cleaned, standardized, and mapped IPEDS data to Salesforce Account IDs, normalizing institution names, domains, and geographic values.</li>
-          <li><strong>ID-Based Mapping</strong> - All updates keyed exclusively by Salesforce Account ID to eliminate record mismatch risk.</li>
-          <li><strong>Structured Re-Import</strong> - Coordinated staged re-upload with internal systems owners to avoid overwrite conflicts.</li>
-          <li><strong>Pre-Import QA Validation</strong> - Sampled dataset segments to validate formatting consistency and duplication risks.</li>
-        </ul>
         <div class="sf-arch-box">
-Enrichment Workflow
+Salesforce Account Export
+  → IPEDS Data Pull (FTE, domain, geography, time zone)
+  → Google Sheets Normalization
+  → QA Sampling
+  → CSV Export
+  → Salesforce Re-Import by Account ID
+  → Clean CRM Dataset
+        </div>
+      </div>
+    </div>
 
-Salesforce Account Export → IPEDS Data Pull → Google Sheets Normalization → QA Sampling → CSV Export → Salesforce Re-Import → Clean CRM Dataset
-        </div>
-        <div class="sf-screenshot">
-          <div class="sf-screenshot-label">Google Sheets - Enrichment Dataset (Account Name, ID, Website, Country, Region, State, Time Zone, FTE)</div>
-          <img src="../images/enrichment-sheet.webp" alt="Enrichment Google Sheets Dataset">
-        </div>
+    <div class="sf-proj-section">
+      <div class="sf-proj-section-title">Screenshots</div>
+      <div class="sf-proj-content">
         <div class="sf-screenshot-grid">
           <div class="sf-screenshot">
             <div class="sf-screenshot-label">Salesforce Data Import Wizard - Import Configuration</div>
-            <img src="../images/enrichment-import-wizard.webp" alt="Salesforce Import Wizard Configuration">
+            <img src="../images/enrichment-import-wizard.webp" alt="Salesforce Import Wizard">
           </div>
           <div class="sf-screenshot">
             <div class="sf-screenshot-label">Salesforce Data Import Wizard - Field Mapping</div>
@@ -107,68 +124,27 @@ Salesforce Account Export → IPEDS Data Pull → Google Sheets Normalization �
     </div>
 
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Tools</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>IPEDS (Integrated Postsecondary Education Data System)</li>
-          <li>Google Sheets</li>
-          <li>Salesforce CRM + Data Import Wizard</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Scale</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Accounts impacted: ~9,000</li>
-          <li>Primary users: SDR team + sales leadership</li>
-          <li>Key fields normalized: FTE, domain, state, country, timezone</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Operational Impact</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Improved segmentation accuracy across the entire CRM.</li>
-          <li>Restored reliability of territory and vertical reporting.</li>
-          <li>Reduced SDR friction when researching account context.</li>
-          <li>Strengthened CRM as a trustworthy operational data layer.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Future Improvements</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Implement recurring quarterly enrichment cadence.</li>
-          <li>Add automated validation rules for required firmographic fields.</li>
-          <li>Build lightweight QA sampling dashboard.</li>
-        </ul>
+      <div class="sf-proj-section-title">Tools &amp; Skills</div>
+      <div class="proj-tools">
+        <span class="proj-tool-tag">IPEDS</span>
+        <span class="proj-tool-tag">Google Sheets</span>
+        <span class="proj-tool-tag">Salesforce CRM</span>
+        <span class="proj-tool-tag">Salesforce Data Import Wizard</span>
+        <span class="proj-tool-tag">Data Normalization</span>
+        <span class="proj-tool-tag">QA Validation</span>
       </div>
     </div>
 
     <div class="sf-proj-footer">
       <a href="../projects-library.html" class="sf-btn sf-btn-secondary">← Back to Projects</a>
     </div>
-
   </div>
-
 </div>
 </div>
-
 <script>
 fetch("../components/sf-nav.html")
 .then(function(r){return r.text();})
-.then(function(d){
-  var el=document.getElementById("sf-nav-placeholder");
-  el.innerHTML=d;
-  el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});
-});
+.then(function(d){var el=document.getElementById("sf-nav-placeholder");el.innerHTML=d;el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});});
 </script>
-
 </body>
 </html>
