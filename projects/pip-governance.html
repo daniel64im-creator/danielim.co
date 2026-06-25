@@ -25,7 +25,7 @@
 .proj-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 .proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
 .proj-thumbnail { width: 100%; border: 1px solid #dddbda; border-radius: 4px; display: block; margin-top: 4px; }
-@media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } .proj-two-col { grid-template-columns: 1fr !important; } }
+@media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } .proj-two-col { grid-template-columns: 1fr !important; } .sf-proj-header-top { grid-template-columns: 1fr !important; } }
 </style>
 </head>
 <body>
@@ -47,45 +47,45 @@
 <div class="sf-page">
 <div class="sf-container">
   <div class="sf-proj-header">
-    <div class="sf-proj-header-top">
-      <span class="sf-tag sf-tag-governance">Governance Systems</span>
-      <h1 class="sf-proj-title">Performance Intervention Framework</h1>
-      <p class="sf-proj-impact">The first formalized PIP framework in the organization - drafted from scratch, refined with management, approved by HR, and integrated into new hire onboarding. Replaced inconsistent manager-by-manager interventions with objective trigger thresholds and a documented review process.</p>
+    <div class="sf-proj-header-top" style="display:grid; grid-template-columns: 1fr 280px; gap:24px; align-items:start;">
+      <div>
+        <span class="sf-tag sf-tag-governance">Governance Systems</span>
+        <h1 class="sf-proj-title">Performance Intervention Framework</h1>
+        <p class="sf-proj-impact">The first formalized PIP framework in the organization - drafted from scratch, refined with management, approved by HR, and integrated into new hire onboarding. Replaced inconsistent manager-by-manager interventions with objective trigger thresholds and a documented review process.</p>
+      </div>
+      <img src="../images/pip-governance.png" alt="Performance Intervention Framework Document" style="width:100%; border-radius:4px; border:1px solid #e5e4e2; margin-top:4px;">
     </div>
   </div>
   <div class="sf-proj-body">
 
     <div class="sf-proj-section">
-      <div class="proj-two-col" style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start;">
-        <img src="../images/pip-governance.png" alt="Performance Intervention Framework Document" class="proj-thumbnail">
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <div class="proj-card-col proj-card-col-problem">
-            <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>Problem</div>
-            <div class="proj-bubbles">
-              <span class="proj-bubble proj-bubble-problem">No formal PIP structure existed</span>
-              <span class="proj-bubble proj-bubble-problem">No objective trigger thresholds</span>
-              <span class="proj-bubble proj-bubble-problem">Inconsistent manager interventions</span>
-              <span class="proj-bubble proj-bubble-problem">No timeline, checkpoints, or documentation standards</span>
-            </div>
+      <div class="proj-card-grid">
+        <div class="proj-card-col proj-card-col-problem">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>Problem</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-problem">No formal PIP structure existed</span>
+            <span class="proj-bubble proj-bubble-problem">No objective trigger thresholds</span>
+            <span class="proj-bubble proj-bubble-problem">Inconsistent manager interventions</span>
+            <span class="proj-bubble proj-bubble-problem">No timeline, checkpoints, or documentation standards</span>
           </div>
-          <div class="proj-card-col proj-card-col-solution">
-            <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Solution</div>
-            <div class="proj-bubbles">
-              <span class="proj-bubble proj-bubble-solution">Measurable quota trigger criteria</span>
-              <span class="proj-bubble proj-bubble-solution">30/60/90-day timeline structure</span>
-              <span class="proj-bubble proj-bubble-solution">Daily activity expectations</span>
-              <span class="proj-bubble proj-bubble-solution">Exit criteria and escalation paths</span>
-              <span class="proj-bubble proj-bubble-solution">Signed documentation package</span>
-            </div>
+        </div>
+        <div class="proj-card-col proj-card-col-solution">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Solution</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-solution">Measurable quota trigger criteria</span>
+            <span class="proj-bubble proj-bubble-solution">30/60/90-day timeline structure</span>
+            <span class="proj-bubble proj-bubble-solution">Daily activity expectations</span>
+            <span class="proj-bubble proj-bubble-solution">Exit criteria and escalation paths</span>
+            <span class="proj-bubble proj-bubble-solution">Signed documentation package</span>
           </div>
-          <div class="proj-card-col proj-card-col-outcome">
-            <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Outcome</div>
-            <div class="proj-bubbles">
-              <span class="proj-bubble proj-bubble-outcome">Consistent interventions across managers</span>
-              <span class="proj-bubble proj-bubble-outcome">HR-aligned documentation</span>
-              <span class="proj-bubble proj-bubble-outcome">Published to Confluence</span>
-              <span class="proj-bubble proj-bubble-outcome">Integrated into new hire onboarding</span>
-            </div>
+        </div>
+        <div class="proj-card-col proj-card-col-outcome">
+          <div class="proj-card-col-label"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Outcome</div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-outcome">Consistent interventions across managers</span>
+            <span class="proj-bubble proj-bubble-outcome">HR-aligned documentation</span>
+            <span class="proj-bubble proj-bubble-outcome">Published to Confluence</span>
+            <span class="proj-bubble proj-bubble-outcome">Integrated into new hire onboarding</span>
           </div>
         </div>
       </div>
