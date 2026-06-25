@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <title>Expired Lead Follow-Up Automation | Sales Operations Project</title>
@@ -10,6 +10,90 @@
 <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon%2048x48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon%2096x96.png">
 <link rel="stylesheet" href="../assets/css/sf-theme.css">
+
+<style>
+
+.proj-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.proj-card-col {
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  padding: 16px;
+  background: #fafaf9;
+}
+
+.proj-card-col-problem  { border-top: 3px solid #e45c3a; }
+.proj-card-col-solution { border-top: 3px solid #0176d3; }
+.proj-card-col-outcome  { border-top: 3px solid #2e844a; }
+
+.proj-card-col-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #706e6b;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e4e2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.proj-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.proj-bubble {
+  font-size: 0.8rem;
+  color: #181818;
+  border-radius: 4px;
+  padding: 6px 10px;
+  line-height: 1.4;
+  border: 1px solid;
+}
+
+.proj-bubble-problem  { background: #fef3ef; border-color: #f5c4b0; }
+.proj-bubble-solution { background: #e8f4fd; border-color: #a8cff0; }
+.proj-bubble-outcome  { background: #edf7ee; border-color: #a2d0aa; }
+
+.proj-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.proj-tool-tag {
+  background: #f3f2f2;
+  border: 1px solid #dddbda;
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  color: #181818;
+  font-weight: 500;
+}
+
+.proj-thumbnail {
+  width: 100%;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  display: block;
+  margin-top: 4px;
+}
+
+@media (max-width: 680px) {
+  .proj-card-grid { grid-template-columns: 1fr; }
+}
+
+</style>
 </head>
 <body>
 
@@ -40,99 +124,99 @@
 <div class="sf-page">
 <div class="sf-container">
 
-  <!-- PROJECT RECORD HEADER -->
+  <!-- HEADER -->
   <div class="sf-proj-header">
     <div class="sf-proj-header-top">
-      <span class="sf-tag sf-tag-automation">CRM & Automation</span>
+      <span class="sf-tag sf-tag-automation">CRM &amp; Automation</span>
       <h1 class="sf-proj-title">Expired Lead Follow-Up Automation</h1>
-      <p class="sf-proj-impact">Turned a silent lead ownership loss point into an active re-engagement channel by building a fully native Salesforce system that emails each rep a weekly digest of their expired leads - complete with lead name, company, and a direct record link.</p>
+      <p class="sf-proj-impact">When leads expired out of rep ownership after the 14-day window, they disappeared silently - no notification, no log, and no way to re-engage. This project built a native Salesforce system that captures every expiration event and delivers a personalized weekly digest to each rep every Monday.</p>
     </div>
   </div>
 
-  <!-- PROJECT BODY -->
+  <!-- BODY -->
   <div class="sf-proj-body">
 
+    <!-- THUMBNAIL -->
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">System Overview</div>
-      <div class="sf-proj-content">
-        <p>When a rep claimed a lead, they had a 14-day ownership window to work it. If the lead expired before conversion, ownership moved back to a queue - silently. No notification, no record of what was lost, and no path to follow up. Leads just disappeared from rep names with no trace.</p>
-        <p>This project built a four-component native Salesforce system on top of the existing expiration Flow. It captures each expiration event at the moment it happens, stores it in a custom logging object, and delivers a personalized weekly email digest to every affected rep every Monday morning.</p>
+      <img src="../images/expired-lead-digest.jpg" alt="Weekly Expired Lead Digest Email" class="proj-thumbnail">
+    </div>
+
+    <!-- PROBLEM / SOLUTION / OUTCOME -->
+    <div class="sf-proj-section">
+      <div class="proj-card-grid">
+
+        <div class="proj-card-col proj-card-col-problem">
+          <div class="proj-card-col-label">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="4" x2="7" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="9.5" r="0.75" fill="currentColor"/></svg>
+            Problem
+          </div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-problem">Silent lead ownership loss</span>
+            <span class="proj-bubble proj-bubble-problem">No expiration feedback loop</span>
+            <span class="proj-bubble proj-bubble-problem">Prior owner value lost on transfer</span>
+            <span class="proj-bubble proj-bubble-problem">No re-engagement channel</span>
+          </div>
+        </div>
+
+        <div class="proj-card-col proj-card-col-solution">
+          <div class="proj-card-col-label">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M11.07 2.93l-1.06 1.06M3.99 10.01l-1.06 1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Solution
+          </div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-solution">Custom logging object</span>
+            <span class="proj-bubble proj-bubble-solution">Record-Triggered Flow (immediate + async)</span>
+            <span class="proj-bubble proj-bubble-solution">Weekly digest email per rep</span>
+            <span class="proj-bubble proj-bubble-solution">Log cleanup Scheduled Flow</span>
+          </div>
+        </div>
+
+        <div class="proj-card-col proj-card-col-outcome">
+          <div class="proj-card-col-label">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Outcome
+          </div>
+          <div class="proj-bubbles">
+            <span class="proj-bubble proj-bubble-outcome">Weekly expired lead digest per rep</span>
+            <span class="proj-bubble proj-bubble-outcome">Re-engagement channel activated</span>
+            <span class="proj-bubble proj-bubble-outcome">All expiration events logged</span>
+            <span class="proj-bubble proj-bubble-outcome">Zero manual effort required</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
+    <!-- HOW IT WORKS -->
     <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Structural Gap</div>
+      <div class="sf-proj-section-title">How It Works</div>
       <div class="sf-proj-content">
-        <ul>
-          <li>No feedback loop existed when a lead expired out of a rep's name.</li>
-          <li>Flow cannot query Lead field history directly, so prior owner values were lost the moment ownership transferred.</li>
-          <li>Reps had no visibility into leads slipping out of their pipeline.</li>
-          <li>No automation existed to surface expiration events or enable re-engagement.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Architecture</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li><strong>Custom Logging Object</strong> - Created a custom Salesforce object to capture each expiration event: prior owner, lead name, company, and record ID. Required because Flow cannot query Lead history directly - the prior owner value had to be captured at the moment of expiration before it was overwritten.</li>
-          <li><strong>Record-Triggered Flow (Immediate + Async)</strong> - Built on top of the existing expiration Flow with a split immediate/async path. The immediate path reads and stores the prior owner before the record updates. The async path handles bulk expirations without hitting Salesforce governor limits. Fault paths ensure a logging failure never blocks the core expiration process.</li>
-          <li><strong>Scheduled Flow - Weekly Digest Email</strong> - Runs every Monday, queries the logging object for each rep's prior-week expirations, and emails a personalized digest with lead name, company, and a direct Salesforce record link for each expired lead.</li>
-          <li><strong>Scheduled Flow - Log Cleanup</strong> - Runs on a trailing schedule to delete old log records and keep the custom object from accumulating unbounded data over time.</li>
-        </ul>
         <div class="sf-arch-box">
 Lead Expiration Flow Trigger
-  → Immediate path captures prior owner value
+  → Immediate path captures prior owner before record updates
   → Async path writes log record (Lead name, Company, Prior Owner, Record ID)
-  → Fault path: logging failure isolated from core expiration process
+  → Fault path isolates logging failure from core expiration process
 
 Every Monday (Scheduled Flow)
-  → Query log object for prior-week expirations by rep
-  → Generate personalized digest email per rep
-  → Email delivered with lead name, company, direct record link
+  → Queries log object for each rep's prior-week expirations
+  → Emails personalized digest with lead name, company, direct record link
 
 Trailing Cleanup (Scheduled Flow)
-  → Delete log records older than retention window
+  → Deletes log records older than retention window
         </div>
       </div>
     </div>
 
+    <!-- TOOLS -->
     <div class="sf-proj-section">
       <div class="sf-proj-section-title">Tools &amp; Skills</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Salesforce Flow Builder</li>
-          <li>Record-Triggered Flows (immediate + async split architecture)</li>
-          <li>Scheduled Flows</li>
-          <li>Custom Objects (expiration logging)</li>
-          <li>Salesforce governor limit handling</li>
-          <li>Built and tested in sandbox, then deployed to production</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Scale</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Primary users: all SDRs with active lead ownership</li>
-          <li>Digest frequency: weekly, every Monday</li>
-          <li>Trigger frequency: every lead expiration event</li>
-          <li>Architecture designed to handle bulk expiration events without governor limit failures</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sf-proj-section">
-      <div class="sf-proj-section-title">Operational Impact</div>
-      <div class="sf-proj-content">
-        <ul>
-          <li>Gave every rep a standing weekly feedback loop on expired leads.</li>
-          <li>Reps now use the digest to re-engage leads that previously disappeared with no trace.</li>
-          <li>Expiration events fully logged with prior owner, lead name, company, and direct record link.</li>
-          <li>Turned a silent ownership loss point into an active re-engagement channel with no manual effort required.</li>
-        </ul>
+      <div class="proj-tools">
+        <span class="proj-tool-tag">Salesforce Flow Builder</span>
+        <span class="proj-tool-tag">Record-Triggered Flows</span>
+        <span class="proj-tool-tag">Scheduled Flows</span>
+        <span class="proj-tool-tag">Custom Objects</span>
+        <span class="proj-tool-tag">Governor Limit Handling</span>
+        <span class="proj-tool-tag">Sandbox to Production Deployment</span>
       </div>
     </div>
 
