@@ -246,8 +246,8 @@
 
   <!-- TABS -->
   <div class="library-tabs">
-    <button class="cat-btn active" data-cat="crm">CRM &amp; Automation <span class="cat-count">3</span></button>
-    <button class="cat-btn" data-cat="governance">Governance Systems <span class="cat-count">4</span></button>
+    <button class="cat-btn active" data-cat="crm">CRM &amp; Automation <span class="cat-count">2</span></button>
+    <button class="cat-btn" data-cat="governance">Governance Systems <span class="cat-count">3</span></button>
     <button class="cat-btn" data-cat="data">Data Infrastructure <span class="cat-count">3</span></button>
   </div>
 
@@ -263,8 +263,8 @@
 <script>
 
 var categories = {
-  crm: ['expireddigest', 'demoemail', 'notifications'],
-  governance: ['allocation', 'pip', 'allocationinfra', 'roe'],
+  crm: ['expireddigest', 'demoemail'],
+  governance: ['allocation', 'pip', 'roe'],
   data: ['enrichment', 'fte', 'dedup']
 };
 
@@ -288,15 +288,6 @@ var projectData = {
     summary: 'Built a Record-Triggered Flow that automatically copies contact email data to Opportunity records at the moment of demo booking, eliminating enrollment failures in marketing automation.'
   },
 
-  notifications: {
-    title: 'Real-Time Demo Booking Alerts',
-    category: 'CRM & Automation',
-    categoryClass: 'sf-tag-automation',
-    image: 'images/demo-notifications-flow.webp',
-    link: 'projects/demo-notifications.html',
-    summary: 'Designed an event-based Salesforce notification system that automatically alerts leadership when qualifying demo bookings are logged, replacing manual CRM monitoring entirely.'
-  },
-
   allocation: {
     title: 'Account Ownership & Cross-Sell Rules',
     category: 'Governance Systems',
@@ -307,21 +298,12 @@ var projectData = {
   },
 
   pip: {
-    title: 'Performance Intervention Framework',
+    title: 'Quota-Based Performance Governance Framework',
     category: 'Governance Systems',
     categoryClass: 'sf-tag-governance',
     image: 'images/pip-governance.png',
     link: 'projects/pip-governance.html',
     summary: 'Built a structured performance intervention system with measurable trigger criteria, standardized timelines, and documentation templates that made the review process objective and repeatable.'
-  },
-
-  allocationinfra: {
-    title: 'SDR Account Allocation System',
-    category: 'Governance Systems',
-    categoryClass: 'sf-tag-governance',
-    image: 'images/allocation-sheet-thumbnail.png',
-    link: 'projects/allocation-SDR.html',
-    summary: 'Built a centralized account ownership tracking system with hold state logic and exception handling, giving Team Leads full visibility into current customer outreach and preventing duplicate assignments.'
   },
 
   roe: {
@@ -359,28 +341,6 @@ var projectData = {
     link: 'projects/account-dedup.html',
     summary: 'Resolved duplicate Salesforce Account records through name normalization, confidence-level grouping, and a structured merge decision framework, then created CRM governance standards to prevent future duplication.'
   },
-
-  conference: {
-    title: 'Event Lead Cleanup & Reassignment',
-    category: 'Data Infrastructure',
-    categoryClass: 'sf-tag-data',
-    image: null,
-    placeholderBg: 'linear-gradient(135deg, #e8f4fd 0%, #c9e5f8 100%)',
-    placeholderColor: '#0176d3',
-    link: 'projects/lead-cleanup.html',
-    summary: 'Built a repeatable intake process for event lead CSVs that normalizes formatting, deduplicates records, and routes leads by product category to the right SDR automatically.'
-  },
-
-  advisory: {
-    title: 'Customer Advisory Target Account List',
-    category: 'Data Infrastructure',
-    categoryClass: 'sf-tag-data',
-    image: null,
-    placeholderBg: 'linear-gradient(135deg, #e8f4fd 0%, #c9e5f8 100%)',
-    placeholderColor: '#0176d3',
-    link: 'projects/executive-advisory-targeting.html',
-    summary: 'Replaced informal advisory invite selection with a structured segmentation workflow and criteria-based scoring system, making the targeting process transparent and repeatable.'
-  }
 
 };
 
