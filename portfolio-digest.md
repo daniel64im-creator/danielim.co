@@ -860,10 +860,7 @@ No SLDS component library is imported or linked; all CSS is bespoke.
 ## 7. STATE AND GAPS
 
 **Broken / encoding issues:**
-- `projects/lead-cleanup.html` and `projects/executive-advisory-targeting.html` have corrupted breadcrumb separator characters. The `›` arrow renders as `?` (a replacement character) in these two files, indicating they were saved with encoding inconsistency. All other pages use the correct `›` HTML entity.
-- In `projects/lead-cleanup.html`, the "← Back to Projects" button text renders as `? Back to Projects` for the same reason.
-- In `projects/executive-advisory-targeting.html`, the same corruption affects both breadcrumb separators and the Back button.
-- In `projects/lead-cleanup.html`, the arch-box flow diagram arrow (`→`) is corrupted and appears as `?` (`Raw Event CSV ? Data Normalization ? ...`)
+- Previously, `projects/lead-cleanup.html` and `projects/executive-advisory-targeting.html` had corrupted arrow characters rendering as `?`. These have been fixed: arch-box `→` arrows and `←` Back to Projects buttons now render correctly.
 
 **Pages not in sitemap.xml:**
 - `projects/lead-cleanup.html` — NOT in sitemap.xml
