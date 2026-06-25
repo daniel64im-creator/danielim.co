@@ -446,6 +446,75 @@ body {
   flex-shrink: 0;
 }
 
+/* ── KPI METRIC STRIP ── */
+
+.sf-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sf-kpi-tile {
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  padding: 22px 24px;
+  text-align: center;
+}
+
+.sf-kpi-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16325c;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.sf-kpi-label {
+  font-size: 0.75rem;
+  color: #706e6b;
+  line-height: 1.55;
+}
+
+/* ── FEATURED PROJECT CARDS ── */
+
+.hp-proj-card {
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  transition: box-shadow 0.18s, border-color 0.18s;
+}
+
+.hp-proj-card:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.11);
+  border-color: #b0adab;
+}
+
+.hp-proj-thumb {
+  display: block;
+  height: 160px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e4e2;
+  flex-shrink: 0;
+}
+
+.hp-proj-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.hp-proj-card:hover .hp-proj-thumb img {
+  transform: scale(1.04);
+}
+
 /* ── RESPONSIVE ── */
 
 /* Tablet / large phone */
@@ -463,6 +532,9 @@ body {
 @media (max-width: 580px) {
   /* Container padding */
   .sf-container { padding: 10px 14px; }
+
+  /* KPI strip: stack to single column */
+  .sf-kpi-strip { grid-template-columns: 1fr; }
 
   /* Name and icon */
   .sf-record-name { font-size: 1.3rem; }
@@ -566,7 +638,7 @@ body {
 
 
   <!-- ═══ HEADER CARD 1: IDENTITY ═══ -->
-  <div class="sf-panel sf-record-header-panel">
+  <div class="sf-panel sf-record-header-panel" style="margin-bottom:20px;">
     <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:16px;">
       <div class="sf-rh-identity">
         <div class="sf-rh-name-row">
@@ -600,10 +672,27 @@ body {
     </div>
   </div>
 
+  <!-- KPI METRIC STRIP -->
+  <div class="sf-kpi-strip">
+    <div class="sf-kpi-tile">
+      <div class="sf-kpi-number">~3 hrs/day</div>
+      <div class="sf-kpi-label">Manual qualification work eliminated per SDR, 14-person team</div>
+    </div>
+    <div class="sf-kpi-tile">
+      <div class="sf-kpi-number">~9,000</div>
+      <div class="sf-kpi-label">Salesforce accounts enriched</div>
+    </div>
+    <div class="sf-kpi-tile">
+      <div class="sf-kpi-number">30s to 3s</div>
+      <div class="sf-kpi-label">SDR account lookup time</div>
+    </div>
+  </div>
+
   <!-- ABOUT -->
-  <div class="sf-panel sf-panel-details" style="margin-bottom:16px;">
+  <div class="sf-panel sf-panel-details" style="margin-bottom:24px;">
     <div class="sf-section-label">About</div>
-    <div style="margin-top:14px; display:flex; flex-direction:column; gap:16px; font-size:0.88rem; color:#181818; line-height:1.75;">
+    <p style="margin-top:14px; margin-bottom:20px; font-size:0.88rem; font-weight:600; color:#16325c; line-height:1.5;">I find broken processes, fix them at the root, and build solutions that hold up over time.</p>
+    <div style="display:flex; flex-direction:column; gap:20px; font-size:0.88rem; color:#181818; line-height:1.8;">
       <p><strong>I am a problem finder.</strong> Most inefficiencies don't announce themselves. They hide in repetitive manual steps, in CRM fields that nobody trusts, in processes that quietly break down over time. I look for them before they become someone else's fire drill. Whether it's a data gap causing silent automation failures, a lead ownership model creating duplicate outreach, or a lookup that costs every rep 30 seconds per account, I dig into the root cause rather than the symptom.</p>
       <p><strong>I am a problem solver.</strong> Once I find the problem, I build the fix. My toolkit spans Salesforce Flow Builder, Google Sheets, Apps Script, CRM governance design, and data enrichment workflows. I don't patch around issues. I build systems that eliminate them. The 9,000-account CRM enrichment didn't just clean bad data; it restored the reporting accuracy the team was making decisions from. The expired lead automation didn't just send emails; it turned a silent ownership loss point into a structured re-engagement channel.</p>
       <p><strong>I build for scale.</strong> Every solution I build is documented, repeatable, and designed to outlast my involvement. If the system breaks when I'm not in the room, I haven't done my job.</p>
@@ -616,57 +705,57 @@ body {
       <div class="sf-section-label" style="margin-bottom:0;">Featured Projects</div>
       <a href="projects-library.html" class="sf-btn sf-btn-primary">View All →</a>
     </div>
-    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px;">
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; align-items:stretch;">
 
       <!-- Card 1: Expired Lead Follow-Up Automation -->
-      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
-        <a href="projects/expired-lead-digest.html" style="display:block; height:148px; overflow:hidden; border-bottom:1px solid #e5e4e2; flex-shrink:0; transition:opacity 0.15s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
-          <img src="images/expired-lead-digest.jpg" alt="Expired Lead Follow-Up Automation" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+      <div class="hp-proj-card">
+        <a href="projects/expired-lead-digest.html" class="hp-proj-thumb">
+          <img src="images/expired-lead-digest.jpg" alt="Expired Lead Follow-Up Automation">
         </a>
-        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
           <span class="sf-tag sf-tag-automation">CRM &amp; Automation</span>
           <a href="projects/expired-lead-digest.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">Expired Lead Follow-Up Automation</a>
-          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Built a native Salesforce system that captures lead expiration events and delivers a personalized weekly digest to each rep, turning silent ownership losses into an active re-engagement channel.</p>
-          <a href="projects/expired-lead-digest.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
+          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Built a native Salesforce system that captures lead expiration events and delivers a personalized weekly digest to each rep, turning silent ownership losses into an active re-engagement channel.</p>
+          <a href="projects/expired-lead-digest.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
         </div>
       </div>
 
       <!-- Card 2: 9,000-Account CRM Enrichment -->
-      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
-        <a href="projects/enrichment.html" style="display:block; height:148px; overflow:hidden; border-bottom:1px solid #e5e4e2; flex-shrink:0; transition:opacity 0.15s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
-          <img src="images/enrichment-sheet.webp" alt="CRM Enrichment" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+      <div class="hp-proj-card">
+        <a href="projects/enrichment.html" class="hp-proj-thumb">
+          <img src="images/enrichment-sheet.webp" alt="9,000-Account CRM Enrichment">
         </a>
-        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
           <span class="sf-tag sf-tag-data">Data Infrastructure</span>
           <a href="projects/enrichment.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">9,000-Account CRM Enrichment</a>
-          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Audited and enriched 9,000 Salesforce accounts to restore segmentation accuracy, establishing clean data foundations that improved targeting and pipeline reporting across the team.</p>
-          <a href="projects/enrichment.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
+          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Audited and enriched 9,000 Salesforce accounts to restore segmentation accuracy, establishing clean data foundations that improved targeting and pipeline reporting across the team.</p>
+          <a href="projects/enrichment.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
         </div>
       </div>
 
       <!-- Card 3: Account Ownership & Cross-Sell Rules -->
-      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
-        <a href="projects/allocation-TL.html" style="display:block; height:148px; overflow:hidden; border-bottom:1px solid #e5e4e2; flex-shrink:0; transition:opacity 0.15s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
-          <img src="images/account-ownership-thumbnail.png" alt="Account Ownership" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+      <div class="hp-proj-card">
+        <a href="projects/allocation-TL.html" class="hp-proj-thumb">
+          <img src="images/account-ownership-thumbnail.png" alt="Account Ownership and Cross-Sell Rules">
         </a>
-        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
           <span class="sf-tag sf-tag-governance">Governance</span>
           <a href="projects/allocation-TL.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">Account Ownership &amp; Cross-Sell Rules</a>
-          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Designed account routing logic and ownership rules that eliminated duplicate outreach across shared institutional accounts and improved cross-sell coordination across product lines.</p>
-          <a href="projects/allocation-TL.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
+          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Designed account routing logic and ownership rules that eliminated duplicate outreach across shared institutional accounts and improved cross-sell coordination across product lines.</p>
+          <a href="projects/allocation-TL.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
         </div>
       </div>
 
       <!-- Card 4: Account Data Lookup Tool -->
-      <div style="border:1px solid #dddbda; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; background:white;">
-        <a href="projects/fte-lookup.html" style="display:block; height:148px; overflow:hidden; border-bottom:1px solid #e5e4e2; flex-shrink:0; transition:opacity 0.15s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
-          <img src="images/fte-lookup-component.webp" alt="Account Data Lookup Tool" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+      <div class="hp-proj-card">
+        <a href="projects/fte-lookup.html" class="hp-proj-thumb">
+          <img src="images/fte-lookup-component.webp" alt="Account Data Lookup Tool">
         </a>
-        <div style="padding:14px; display:flex; flex-direction:column; gap:8px; flex:1;">
+        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
           <span class="sf-tag sf-tag-data">Data Infrastructure</span>
           <a href="projects/fte-lookup.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">Account Data Lookup Tool</a>
-          <p style="font-size:0.78rem; color:#706e6b; line-height:1.6; flex:1; margin:0;">Built a Google Sheets tool that reduced SDR enrollment lookup time from 30 seconds to 3 seconds, eliminating a daily friction point and freeing up prospecting capacity across the team.</p>
-          <a href="projects/fte-lookup.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>
+          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Built a Google Sheets tool that reduced SDR enrollment lookup time from 30 seconds to 3 seconds, eliminating a daily friction point and freeing up prospecting capacity across the team.</p>
+          <a href="projects/fte-lookup.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
         </div>
       </div>
 
