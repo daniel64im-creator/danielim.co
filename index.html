@@ -28,7 +28,7 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  background: #f3f2f2;
+  background: #eef1f6;
   color: #181818;
   min-height: 100%;
   overflow-x: hidden;
@@ -487,6 +487,95 @@ body {
   .sf-related-list { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
+/* ── HOMEPAGE REDESIGN (hp- prefix) ── */
+
+:root {
+  --hp-navy: #032d60;
+  --hp-title-navy: #16325c;
+  --hp-blue: #0176d3;
+  --hp-muted: #56657a;
+  --hp-card-border: #e3e6eb;
+}
+
+.hp-main { max-width: 1220px; margin: 0 auto; padding: clamp(16px,2.2vw,22px) clamp(16px,3vw,30px) 60px; display: flex; flex-direction: column; gap: clamp(20px,3vw,30px); }
+.hp-panel { background: #fff; border: 1px solid var(--hp-card-border); border-radius: 14px; box-shadow: 0 1px 2px rgba(16,32,64,.05), 0 8px 22px rgba(16,32,64,.05); }
+.hp-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--hp-blue); }
+.hp-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #5a6b80; }
+
+.hp-record { padding: clamp(20px,2.4vw,28px) clamp(20px,3vw,32px); display: flex; gap: clamp(16px,2.6vw,28px); flex-wrap: wrap; align-items: flex-start; }
+.hp-avatar { width: 70px; height: 70px; border-radius: 16px; background: var(--hp-blue); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 26px; font-weight: 700; flex: none; }
+.hp-record-main { flex: 1 1 320px; min-width: 240px; }
+.hp-record-main h1 { margin: 5px 0 0; font-size: clamp(27px,3.4vw,34px); font-weight: 700; color: var(--hp-title-navy); letter-spacing: -.015em; line-height: 1.05; }
+.hp-record-role { margin-top: 7px; font-size: 15px; color: #4a5a6e; font-weight: 500; }
+.hp-record-fields { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 14px 26px; }
+.hp-field-label { font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: #8a98a8; }
+.hp-field-val { font-size: 14px; color: var(--hp-title-navy); font-weight: 600; margin-top: 4px; display: block; }
+a.hp-field-val { color: var(--hp-blue); text-decoration: none; }
+a.hp-field-val:hover { text-decoration: underline; }
+.hp-record-actions { display: flex; flex-direction: column; gap: 9px; min-width: 160px; }
+.hp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all .15s ease; white-space: nowrap; }
+.hp-btn-primary { background: var(--hp-blue); color: #fff; }
+.hp-btn-primary:hover { background: #0a6abf; color: #fff; text-decoration: none; }
+.hp-btn-secondary { background: #fff; color: #0a3a72; border: 1px solid #c9d3e0; }
+.hp-btn-secondary:hover { background: #f3f7fc; border-color: #9cc6f0; text-decoration: none; }
+
+.hp-highlights-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: clamp(12px,1.6vw,18px); margin-top: 12px; }
+.hp-tile { position: relative; border-radius: 14px; padding: clamp(18px,2.4vw,24px); background: linear-gradient(160deg,#f4faff,#e9f2fc); border: 1px solid #d6e6f7; box-shadow: 0 1px 2px rgba(16,32,64,.05), 0 6px 16px rgba(16,32,64,.04); overflow: hidden; }
+.hp-tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--hp-blue); }
+.hp-tile-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--hp-blue); }
+.hp-tile-num { margin-top: 12px; font-size: clamp(30px,4.6vw,42px); font-weight: 700; color: var(--hp-title-navy); letter-spacing: -.025em; line-height: 1; }
+.hp-tile-desc { margin-top: 11px; font-size: 13px; color: var(--hp-muted); line-height: 1.5; }
+
+.hp-columns { display: flex; gap: clamp(16px,2vw,22px); flex-wrap: wrap; align-items: flex-start; }
+.hp-col-main { flex: 1 1 560px; min-width: 300px; display: flex; flex-direction: column; gap: clamp(16px,2vw,22px); }
+.hp-col-side { flex: 1 1 290px; min-width: 262px; display: flex; flex-direction: column; gap: clamp(16px,2vw,22px); position: sticky; top: 92px; }
+
+.hp-about { padding: clamp(30px,3.8vw,46px); }
+.hp-about-headline { margin: 18px 0 0; font-size: clamp(30px,4.6vw,50px); font-weight: 700; color: var(--hp-title-navy); line-height: 1.03; letter-spacing: -.03em; max-width: 15ch; }
+.hp-about-points { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 24px; }
+.hp-point-num { font-size: 13px; font-weight: 700; color: var(--hp-blue); }
+.hp-point-text { margin-top: 7px; font-size: 14.5px; color: #34404f; font-weight: 500; line-height: 1.5; }
+
+.hp-projects { padding: clamp(28px,3.4vw,42px); }
+.hp-projects-head { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
+.hp-projects-head h2 { font-size: 18px; font-weight: 700; color: var(--hp-title-navy); letter-spacing: -.01em; }
+.hp-projects-count { font-size: 13px; color: #8a98a8; font-weight: 600; }
+.hp-projects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
+.hp-proj-card { display: flex; flex-direction: column; gap: 11px; padding: 18px; border: 1px solid var(--hp-card-border); border-radius: 12px; text-decoration: none; background: #fff; box-shadow: 0 1px 2px rgba(16,32,64,.03); transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
+.hp-proj-card:hover { border-color: #9cc6f0; box-shadow: 0 10px 26px rgba(1,118,211,.13); transform: translateY(-2px); }
+.hp-tag { align-self: flex-start; font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; }
+.hp-tag.crm { color: #2e7d4f; background: #e7f6ec; }
+.hp-tag.gov { color: #b5651d; background: #fbeede; }
+.hp-tag.data { color: var(--hp-blue); background: #eaf3fd; }
+.hp-proj-title { font-size: 15px; font-weight: 700; color: var(--hp-title-navy); letter-spacing: -.01em; line-height: 1.3; }
+.hp-proj-desc { font-size: 13.5px; color: var(--hp-muted); line-height: 1.55; flex: 1; }
+.hp-proj-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--hp-blue); }
+
+.hp-skills { padding: 22px; }
+.hp-skills-list { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; }
+.hp-skill { display: flex; align-items: center; gap: 12px; }
+.hp-skill span.dot { width: 7px; height: 7px; border-radius: 2px; background: var(--hp-blue); flex: none; }
+.hp-skill span.txt { font-size: 14px; color: var(--hp-title-navy); font-weight: 600; }
+
+.hp-cta { background: #032d60; color: #fff; border-radius: 14px; box-shadow: 0 10px 26px rgba(3,18,40,.25); padding: 22px; }
+.hp-cta h2 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
+.hp-cta p { margin: 9px 0 16px; font-size: 13.5px; color: #bcd4ef; line-height: 1.55; }
+.hp-cta a { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 8px; background: #fff; color: #053a78; font-size: 13px; font-weight: 700; text-decoration: none; width: 100%; transition: background .15s ease; }
+.hp-cta a:hover { background: #eaf3fd; }
+
+.hp-footer { border-top: 1px solid #e3e6eb; background: #fff; }
+.hp-footer-inner { max-width: 1220px; margin: 0 auto; padding: 20px clamp(16px,3vw,28px); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.hp-footer-meta { font-size: 13px; color: #7a8aa0; }
+.hp-footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.hp-footer-links a { font-size: 13px; color: var(--hp-blue); font-weight: 600; text-decoration: none; }
+.hp-footer-links a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .hp-record-actions { width: 100%; }
+  .hp-about-headline { font-size: clamp(28px,8vw,40px); }
+  .hp-col-side { position: static; }
+}
+
 /* Mobile phone */
 @media (max-width: 580px) {
   /* Container padding */
@@ -589,142 +678,140 @@ body {
   <div class="sf-record-id">003Dn00000REVOPS</div>
 </div>
 
-<!-- ═══════════════════════════════════
-     PAGE
-═══════════════════════════════════ -->
-<div class="sf-page">
-<div class="sf-container">
+<main class="hp-main">
 
-
-  <!-- ═══ HEADER CARD 1: IDENTITY ═══ -->
-  <div class="sf-panel sf-record-header-panel" style="margin-bottom:20px;">
-    <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:16px;">
-      <div class="sf-rh-identity">
-        <div class="sf-rh-name-row">
-          <div class="sf-contact-record-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="8" r="4" fill="white"/>
-              <path d="M3 21c0-4.971 4.029-9 9-9s9 4.029 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-            </svg>
-          </div>
-          <div class="sf-record-name">Daniel Im</div>
-        </div>
-      </div>
-      <div class="sf-rh-fields">
-        <div class="sf-hl-field">
-          <div class="sf-hl-label">Email</div>
-          <div class="sf-hl-value"><a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
-        </div>
-        <div class="sf-hl-field">
-          <div class="sf-hl-label">Location</div>
-          <div class="sf-hl-value">San Jose, CA</div>
-        </div>
-        <div class="sf-hl-field">
-          <div class="sf-hl-label">LinkedIn</div>
-          <div class="sf-hl-value"><a href="https://www.linkedin.com/in/daeim/" target="_blank" rel="noopener">linkedin.com/in/daeim</a></div>
-        </div>
-        <div class="sf-hl-field">
-          <div class="sf-hl-label">Education</div>
-          <div class="sf-hl-value">B.S. Economics, UC Davis</div>
-        </div>
+  <!-- RECORD HEADER -->
+  <section class="hp-panel hp-record">
+    <div class="hp-avatar">DI</div>
+    <div class="hp-record-main">
+      <div class="hp-eyebrow">Operator Profile</div>
+      <h1>Daniel Im</h1>
+      <div class="hp-record-role">Sales Operations</div>
+      <div class="hp-record-fields">
+        <div><div class="hp-field-label">Location</div><div class="hp-field-val">San Jose, CA</div></div>
+        <div><div class="hp-field-label">Education</div><div class="hp-field-val">B.S. Economics, UC Davis</div></div>
+        <div><div class="hp-field-label">Email</div><a class="hp-field-val" href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
       </div>
     </div>
+    <div class="hp-record-actions">
+      <a class="hp-btn hp-btn-primary" href="mailto:daniel64im@gmail.com">Email Daniel</a>
+      <a class="hp-btn hp-btn-secondary" href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="hp-btn hp-btn-secondary" href="resume.html">View Resume</a>
+    </div>
+  </section>
+
+  <!-- KEY HIGHLIGHTS -->
+  <section>
+    <div class="hp-label">Key Highlights</div>
+    <div class="hp-highlights-grid">
+      <div class="hp-tile">
+        <div class="hp-tile-label">Time Saved</div>
+        <div class="hp-tile-num">~3 hrs/day</div>
+        <div class="hp-tile-desc">saved per SDR across a 14-person team</div>
+      </div>
+      <div class="hp-tile">
+        <div class="hp-tile-label">Data Enriched</div>
+        <div class="hp-tile-num">~9,000</div>
+        <div class="hp-tile-desc">Salesforce accounts enriched</div>
+      </div>
+      <div class="hp-tile">
+        <div class="hp-tile-label">Lookup Time</div>
+        <div class="hp-tile-num">30s to 3s</div>
+        <div class="hp-tile-desc">SDR account lookup time</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO COLUMN BODY -->
+  <div class="hp-columns">
+    <div class="hp-col-main">
+
+      <!-- ABOUT -->
+      <section class="hp-panel hp-about">
+        <div class="hp-label">About</div>
+        <p class="hp-about-headline">I build the systems sales teams run on.</p>
+        <div class="hp-about-points">
+          <div><div class="hp-point-num">01</div><div class="hp-point-text">I find broken processes.</div></div>
+          <div><div class="hp-point-num">02</div><div class="hp-point-text">I fix them at the root.</div></div>
+          <div><div class="hp-point-num">03</div><div class="hp-point-text">I build systems that outlast my involvement.</div></div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section class="hp-panel hp-projects" id="projects">
+        <div class="hp-projects-head">
+          <h2>Featured Projects</h2>
+          <span class="hp-projects-count">(4)</span>
+          <a href="projects-library.html" class="hp-btn hp-btn-primary" style="margin-left:auto; font-size:12px; padding:7px 14px;">View All</a>
+        </div>
+        <div class="hp-projects-grid">
+          <a class="hp-proj-card" href="projects/expired-lead-digest.html">
+            <span class="hp-tag crm">CRM and Automation</span>
+            <div class="hp-proj-title">Expired Lead Follow Up Automation</div>
+            <div class="hp-proj-desc">Native Salesforce automation that gives SDRs a weekly digest of expired leads and turns silent ownership losses into active re-engagement.</div>
+            <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+          </a>
+          <a class="hp-proj-card" href="projects/enrichment.html">
+            <span class="hp-tag data">Data Infrastructure</span>
+            <div class="hp-proj-title">9,000 Account CRM Enrichment</div>
+            <div class="hp-proj-desc">Enriched roughly 9,000 Salesforce accounts with clean, structured data to restore segmentation accuracy and reporting reliability.</div>
+            <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+          </a>
+          <a class="hp-proj-card" href="projects/allocation-TL.html">
+            <span class="hp-tag gov">Governance</span>
+            <div class="hp-proj-title">Account Ownership and Cross Sell Rules</div>
+            <div class="hp-proj-desc">Set clear account ownership and cross sell rules that eliminated duplicate outreach across the team.</div>
+            <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+          </a>
+          <a class="hp-proj-card" href="projects/fte-lookup.html">
+            <span class="hp-tag data">Data Infrastructure</span>
+            <div class="hp-proj-title">Account Data Lookup Tool</div>
+            <div class="hp-proj-desc">Brought SDR account lookup down from 30 seconds to 3 by embedding enrollment data directly into the workflow.</div>
+            <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="hp-col-side">
+      <!-- SKILLS -->
+      <section class="hp-panel hp-skills">
+        <div class="hp-label">Skills and Tools</div>
+        <div class="hp-skills-list">
+          <div class="hp-skill"><span class="dot"></span><span class="txt">Salesforce Flow Builder</span></div>
+          <div class="hp-skill"><span class="dot"></span><span class="txt">Record-Triggered Flows</span></div>
+          <div class="hp-skill"><span class="dot"></span><span class="txt">Reports and Dashboards</span></div>
+          <div class="hp-skill"><span class="dot"></span><span class="txt">CRM Governance</span></div>
+          <div class="hp-skill"><span class="dot"></span><span class="txt">Salesforce Administration</span></div>
+          <div class="hp-skill"><span class="dot"></span><span class="txt">Data Enrichment</span></div>
+          <div class="hp-skill"><span class="dot"></span><span class="txt">Google Apps Script</span></div>
+          <div class="hp-skill"><span class="dot"></span><span class="txt">Process Design</span></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="hp-cta">
+        <h2>Get in touch</h2>
+        <p>I am open to roles where I can build clean, documented, scalable operations.</p>
+        <a href="mailto:daniel64im@gmail.com">Email Daniel</a>
+      </section>
+    </aside>
   </div>
 
-  <!-- KPI METRIC STRIP -->
-  <div class="sf-kpi-strip">
-    <div class="sf-kpi-tile">
-      <div class="sf-kpi-number">~3 hrs/day</div>
-      <div class="sf-kpi-label">Manual qualification work eliminated per SDR, 14-person team</div>
-    </div>
-    <div class="sf-kpi-tile">
-      <div class="sf-kpi-number">~9,000</div>
-      <div class="sf-kpi-label">Salesforce accounts enriched</div>
-    </div>
-    <div class="sf-kpi-tile">
-      <div class="sf-kpi-number">30s to 3s</div>
-      <div class="sf-kpi-label">SDR account lookup time</div>
-    </div>
-  </div>
+  </main>
 
-  <!-- ABOUT -->
-  <div class="sf-panel sf-panel-details" style="margin-bottom:24px;">
-    <div class="sf-section-label">About</div>
-    <p style="margin-top:14px; margin-bottom:20px; font-size:0.88rem; font-weight:600; color:#16325c; line-height:1.5;">I find broken processes, fix them at the root, and build solutions that hold up over time.</p>
-    <div style="display:flex; flex-direction:column; gap:20px; font-size:0.88rem; color:#181818; line-height:1.8;">
-      <p><strong>I am a problem finder.</strong> Most inefficiencies don't announce themselves. They hide in repetitive manual steps, in CRM fields that nobody trusts, in processes that quietly break down over time. I look for them before they become someone else's fire drill. Whether it's a data gap causing silent automation failures, a lead ownership model creating duplicate outreach, or a lookup that costs every rep 30 seconds per account, I dig into the root cause rather than the symptom.</p>
-      <p><strong>I am a problem solver.</strong> Once I find the problem, I build the fix. My toolkit spans Salesforce Flow Builder, Google Sheets, Apps Script, CRM governance design, and data enrichment workflows. I don't patch around issues. I build systems that eliminate them. The 9,000-account CRM enrichment didn't just clean bad data; it restored the reporting accuracy the team was making decisions from. The expired lead automation didn't just send emails; it turned a silent ownership loss point into a structured re-engagement channel.</p>
-      <p><strong>I build for scale.</strong> Every solution I build is documented, repeatable, and designed to outlast my involvement. If the system breaks when I'm not in the room, I haven't done my job.</p>
-    </div>
-  </div>
-
-  <!-- FEATURED PROJECTS -->
-  <div class="sf-panel sf-panel-details">
-    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; padding-right:4px;">
-      <div class="sf-section-label" style="margin-bottom:0;">Featured Projects</div>
-      <a href="projects-library.html" class="sf-btn sf-btn-primary">View All →</a>
-    </div>
-    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; align-items:stretch;">
-
-      <!-- Card 1: Expired Lead Follow-Up Automation -->
-      <div class="hp-proj-card">
-        <a href="projects/expired-lead-digest.html" class="hp-proj-thumb">
-          <img src="images/expired-lead-digest.jpg" alt="Expired Lead Follow-Up Automation">
-        </a>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
-          <span class="sf-tag sf-tag-automation">CRM &amp; Automation</span>
-          <a href="projects/expired-lead-digest.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">Expired Lead Follow-Up Automation</a>
-          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Built a native Salesforce system that captures lead expiration events and delivers a personalized weekly digest to each rep, turning silent ownership losses into an active re-engagement channel.</p>
-          <a href="projects/expired-lead-digest.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
-        </div>
+  <footer class="hp-footer">
+    <div class="hp-footer-inner">
+      <div class="hp-footer-meta">Daniel Im &middot; Sales Operations &middot; San Jose, CA</div>
+      <div class="hp-footer-links">
+        <a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a>
+        <a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a>
+        <a href="projects-library.html">Projects</a>
+        <a href="resume.html">Resume</a>
       </div>
-
-      <!-- Card 2: 9,000-Account CRM Enrichment -->
-      <div class="hp-proj-card">
-        <a href="projects/enrichment.html" class="hp-proj-thumb">
-          <img src="images/enrichment-sheet.webp" alt="9,000-Account CRM Enrichment">
-        </a>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
-          <span class="sf-tag sf-tag-data">Data Infrastructure</span>
-          <a href="projects/enrichment.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">9,000-Account CRM Enrichment</a>
-          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Audited and enriched 9,000 Salesforce accounts to restore segmentation accuracy, establishing clean data foundations that improved targeting and pipeline reporting across the team.</p>
-          <a href="projects/enrichment.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
-        </div>
-      </div>
-
-      <!-- Card 3: Account Ownership & Cross-Sell Rules -->
-      <div class="hp-proj-card">
-        <a href="projects/allocation-TL.html" class="hp-proj-thumb">
-          <img src="images/account-ownership-thumbnail.png" alt="Account Ownership and Cross-Sell Rules">
-        </a>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
-          <span class="sf-tag sf-tag-governance">Governance</span>
-          <a href="projects/allocation-TL.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">Account Ownership &amp; Cross-Sell Rules</a>
-          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Designed account routing logic and ownership rules that eliminated duplicate outreach across shared institutional accounts and improved cross-sell coordination across product lines.</p>
-          <a href="projects/allocation-TL.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
-        </div>
-      </div>
-
-      <!-- Card 4: Account Data Lookup Tool -->
-      <div class="hp-proj-card">
-        <a href="projects/fte-lookup.html" class="hp-proj-thumb">
-          <img src="images/fte-lookup-component.webp" alt="Account Data Lookup Tool">
-        </a>
-        <div style="padding:16px; display:flex; flex-direction:column; gap:9px; flex:1;">
-          <span class="sf-tag sf-tag-data">Data Infrastructure</span>
-          <a href="projects/fte-lookup.html" style="font-size:0.86rem; font-weight:700; color:#16325c; line-height:1.35; text-decoration:none;">Account Data Lookup Tool</a>
-          <p style="font-size:0.79rem; color:#706e6b; line-height:1.65; flex:1; margin:0;">Built a Google Sheets tool that reduced SDR enrollment lookup time from 30 seconds to 3 seconds, eliminating a daily friction point and freeing up prospecting capacity across the team.</p>
-          <a href="projects/fte-lookup.html" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:6px;">View Project →</a>
-        </div>
-      </div>
-
     </div>
-  </div>
-
-
-</div>
-</div>
-
+  </footer>
 
 <script>
 var hamburger = document.getElementById('sf-hamburger');
