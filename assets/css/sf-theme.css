@@ -347,11 +347,11 @@ button { font-family: inherit; cursor: pointer; }
 .sf-proj-section:last-child { border-bottom: none; }
 
 .sf-proj-section-title {
-  font-size: 0.67rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  color: #706e6b;
+  color: #16325c;
   margin-bottom: 12px;
   padding-bottom: 6px;
   border-bottom: 1px solid #e5e4e2;
@@ -418,7 +418,7 @@ button { font-family: inherit; cursor: pointer; }
 .sf-flow-phase { margin-bottom: 18px; }
 .sf-flow-phase:last-child { margin-bottom: 0; }
 .sf-flow-phase-title {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: #16325c;
   margin-bottom: 8px;
