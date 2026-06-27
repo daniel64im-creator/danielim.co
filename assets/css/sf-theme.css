@@ -181,7 +181,7 @@ button { font-family: inherit; cursor: pointer; }
 
 .sf-btn {
   font-size: 0.77rem; font-weight: 600;
-  padding: 6px 16px;
+  padding: 8px 16px;
   border-radius: 4px;
   display: inline-flex; align-items: center; gap: 5px;
   transition: all 0.15s;
