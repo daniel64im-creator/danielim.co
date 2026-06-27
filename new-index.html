@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daniel Im | Sales Operations</title>
+<meta name="description" content="Daniel Im, Sales Operations professional with 7 years in B2B SaaS, building Salesforce automation, CRM governance, and reporting infrastructure." />
+<meta property="og:title" content="Daniel Im | Sales Operations" />
+<meta property="og:url" content="https://danielim.co/" />
+<meta property="og:image" content="https://danielim.co/og-image.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /*
+    NOTE FOR MERGE: This file is self-contained on purpose so it previews correctly
+    in a browser. When merging into the repo, the app bar, context bar, and footer
+    below should be swapped to reuse the shared sf-theme.css classes so the homepage
+    chrome stays identical to every other page. The hp- prefixed styles are the new
+    homepage body and are meant to live in index.html's inline block.
+  */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy: #032d60;
+    --title-navy: #16325c;
+    --blue: #0176d3;
+    --blue-bright: #1b96ff;
+    --body: #181818;
+    --muted: #56657a;
+    --card-border: #e3e6eb;
+    --page-bg: #eef1f6;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--page-bg);
+    color: var(--body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+  }
+  a { color: inherit; }
+
+  /* ===== APP BAR (matches existing flat navy chrome) ===== */
+  .hp-appbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--navy); color: #fff;
+    box-shadow: 0 1px 0 rgba(255,255,255,.06);
+  }
+  .hp-appbar-inner {
+    max-width: 1220px; margin: 0 auto;
+    padding: 0 clamp(16px,3vw,28px); height: 52px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hp-waffle { display: grid; grid-template-columns: repeat(3,4px); grid-template-rows: repeat(3,4px); gap: 3px; padding: 9px; border-radius: 8px; background: rgba(255,255,255,.09); }
+  .hp-waffle span { width: 4px; height: 4px; border-radius: 1px; background: #cfe0f4; }
+  .hp-brand { display: flex; align-items: center; gap: 11px; }
+  .hp-brand-icon { width: 30px; height: 30px; border-radius: 7px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; color: #fff; }
+  .hp-brand-text { line-height: 1.15; }
+  .hp-brand-text .t1 { font-size: 14px; font-weight: 600; }
+  .hp-brand-text .t2 { font-size: 11px; color: #a9c6ea; font-weight: 500; }
+  .hp-nav { margin-left: auto; display: flex; gap: 4px; align-items: center; }
+  .hp-nav a { padding: 8px 13px; border-radius: 7px; font-size: 13px; font-weight: 500; text-decoration: none; color: #dce8f6; transition: background .15s ease; }
+  .hp-nav a:hover { background: rgba(255,255,255,.10); }
+  .hp-nav a.active { font-weight: 600; color: #fff; background: rgba(255,255,255,.15); }
+
+  /* ===== CONTEXT BAR ===== */
+  .hp-context { background: #fff; border-bottom: 1px solid var(--card-border); }
+  .hp-context-inner { max-width: 1220px; margin: 0 auto; padding: 9px clamp(16px,3vw,28px); display: flex; align-items: center; gap: 10px; }
+  .hp-obj-icon { width: 22px; height: 22px; border-radius: 5px; background: var(--blue); display: flex; align-items: center; justify-content: center; }
+  .hp-obj-icon span { width: 9px; height: 9px; border-radius: 2px; background: #fff; }
+  .hp-crumb-1 { font-size: 12.5px; color: #7a8aa0; font-weight: 500; }
+  .hp-crumb-sep { color: #b6c1d0; font-size: 13px; }
+  .hp-crumb-2 { font-size: 12.5px; color: var(--title-navy); font-weight: 700; }
+  .hp-record-pill { margin-left: auto; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); background: #eaf3fd; border: 1px solid #d6e6f7; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+
+  /* ===== MAIN LAYOUT ===== */
+  .hp-main { max-width: 1220px; margin: 0 auto; padding: clamp(16px,2.2vw,22px) clamp(16px,3vw,30px) 60px; display: flex; flex-direction: column; gap: clamp(20px,3vw,30px); }
+  .hp-panel { background: #fff; border: 1px solid var(--card-border); border-radius: 14px; box-shadow: 0 1px 2px rgba(16,32,64,.05), 0 8px 22px rgba(16,32,64,.05); }
+  .hp-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+  .hp-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #5a6b80; }
+
+  /* ===== RECORD HEADER ===== */
+  .hp-record { padding: clamp(20px,2.4vw,28px) clamp(20px,3vw,32px); display: flex; gap: clamp(16px,2.6vw,28px); flex-wrap: wrap; align-items: flex-start; }
+  .hp-avatar { width: 70px; height: 70px; border-radius: 16px; background: var(--blue); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 26px; font-weight: 700; flex: none; }
+  .hp-record-main { flex: 1 1 320px; min-width: 240px; }
+  .hp-record-main h1 { margin: 5px 0 0; font-size: clamp(27px,3.4vw,34px); font-weight: 700; color: var(--title-navy); letter-spacing: -.015em; line-height: 1.05; }
+  .hp-record-role { margin-top: 7px; font-size: 15px; color: #4a5a6e; font-weight: 500; }
+  .hp-record-fields { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 14px 26px; }
+  .hp-field-label { font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: #8a98a8; }
+  .hp-field-val { font-size: 14px; color: var(--title-navy); font-weight: 600; margin-top: 4px; }
+  a.hp-field-val { color: var(--blue); text-decoration: none; display: inline-block; }
+  a.hp-field-val:hover { text-decoration: underline; }
+  .hp-record-actions { display: flex; flex-direction: column; gap: 9px; min-width: 160px; }
+  .hp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all .15s ease; }
+  .hp-btn-primary { background: var(--blue); color: #fff; }
+  .hp-btn-primary:hover { background: #0a6abf; }
+  .hp-btn-secondary { background: #fff; color: #0a3a72; border: 1px solid #c9d3e0; }
+  .hp-btn-secondary:hover { background: #f3f7fc; border-color: #9cc6f0; }
+
+  /* ===== KEY HIGHLIGHTS ===== */
+  .hp-highlights-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: clamp(12px,1.6vw,18px); margin-top: 12px; }
+  .hp-tile { position: relative; border-radius: 14px; padding: clamp(18px,2.4vw,24px); background: linear-gradient(160deg,#f4faff,#e9f2fc); border: 1px solid #d6e6f7; box-shadow: 0 1px 2px rgba(16,32,64,.05), 0 6px 16px rgba(16,32,64,.04); overflow: hidden; }
+  .hp-tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--blue); }
+  .hp-tile-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); }
+  .hp-tile-num { margin-top: 12px; font-size: clamp(30px,4.6vw,42px); font-weight: 700; color: var(--title-navy); letter-spacing: -.025em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .hp-tile-desc { margin-top: 11px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* ===== TWO COLUMN BODY ===== */
+  .hp-columns { display: flex; gap: clamp(16px,2vw,22px); flex-wrap: wrap; align-items: flex-start; }
+  .hp-col-main { flex: 1 1 560px; min-width: 300px; display: flex; flex-direction: column; gap: clamp(16px,2vw,22px); }
+  .hp-col-side { flex: 1 1 290px; min-width: 262px; display: flex; flex-direction: column; gap: clamp(16px,2vw,22px); position: sticky; top: 70px; }
+
+  /* ===== ABOUT ===== */
+  .hp-about { padding: clamp(30px,3.8vw,46px); }
+  .hp-about-headline { margin: 18px 0 0; font-size: clamp(30px,4.6vw,50px); font-weight: 700; color: var(--title-navy); line-height: 1.03; letter-spacing: -.03em; max-width: 15ch; }
+  .hp-about-points { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 24px; }
+  .hp-point-num { font-size: 13px; font-weight: 700; color: var(--blue); }
+  .hp-point-text { margin-top: 7px; font-size: 14.5px; color: #34404f; font-weight: 500; line-height: 1.5; }
+
+  /* ===== FEATURED PROJECTS ===== */
+  .hp-projects { padding: clamp(28px,3.4vw,42px); }
+  .hp-projects-head { display: flex; align-items: baseline; gap: 8px; }
+  .hp-projects-head h2 { font-size: 18px; font-weight: 700; color: var(--title-navy); letter-spacing: -.01em; }
+  .hp-projects-count { font-size: 13px; color: #8a98a8; font-weight: 600; }
+  .hp-projects-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 16px; }
+  .hp-proj-card { display: flex; flex-direction: column; gap: 11px; padding: 18px; border: 1px solid var(--card-border); border-radius: 12px; text-decoration: none; background: #fff; box-shadow: 0 1px 2px rgba(16,32,64,.03); transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
+  .hp-proj-card:hover { border-color: #9cc6f0; box-shadow: 0 10px 26px rgba(1,118,211,.13); transform: translateY(-2px); }
+  .hp-tag { align-self: flex-start; font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; }
+  .hp-tag.crm { color: #2e7d4f; background: #e7f6ec; }
+  .hp-tag.gov { color: #b5651d; background: #fbeede; }
+  .hp-tag.data { color: var(--blue); background: #eaf3fd; }
+  .hp-proj-title { font-size: 16px; font-weight: 700; color: var(--title-navy); letter-spacing: -.01em; line-height: 1.3; }
+  .hp-proj-desc { font-size: 13.5px; color: var(--muted); line-height: 1.55; flex: 1; }
+  .hp-proj-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--blue); }
+  .hp-proj-link .arrow { font-size: 15px; }
+
+  /* ===== SKILLS PANEL ===== */
+  .hp-skills { padding: 22px; }
+  .hp-skills h2 { margin-bottom: 18px; }
+  .hp-skills-list { display: flex; flex-direction: column; gap: 14px; }
+  .hp-skill { display: flex; align-items: center; gap: 12px; }
+  .hp-skill span.dot { width: 7px; height: 7px; border-radius: 2px; background: var(--blue); flex: none; }
+  .hp-skill span.txt { font-size: 14.5px; color: var(--title-navy); font-weight: 600; }
+
+  /* ===== CTA ===== */
+  .hp-cta { background: var(--navy); color: #fff; border-radius: 14px; box-shadow: 0 10px 26px rgba(3,18,40,.25); padding: 22px; }
+  .hp-cta h2 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
+  .hp-cta p { margin: 9px 0 16px; font-size: 13.5px; color: #bcd4ef; line-height: 1.55; }
+  .hp-cta a { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 8px; background: #fff; color: #053a78; font-size: 13px; font-weight: 700; text-decoration: none; width: 100%; transition: background .15s ease; }
+  .hp-cta a:hover { background: #eaf3fd; }
+
+  /* ===== FOOTER ===== */
+  .hp-footer { border-top: 1px solid var(--card-border); background: #fff; }
+  .hp-footer-inner { max-width: 1220px; margin: 0 auto; padding: 20px clamp(16px,3vw,28px); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+  .hp-footer-meta { font-size: 13px; color: #7a8aa0; }
+  .hp-footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+  .hp-footer-links a { font-size: 13px; color: var(--blue); font-weight: 600; text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .hp-record-actions { width: 100%; }
+    .hp-about-headline { font-size: clamp(28px,8vw,40px); }
+  }
+</style>
+</head>
+<body>
+
+  <!-- APP BAR -->
+  <header class="hp-appbar">
+    <div class="hp-appbar-inner">
+      <div class="hp-waffle"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="hp-brand">
+        <div class="hp-brand-icon">DI</div>
+        <div class="hp-brand-text">
+          <div class="t1">Sales Operations</div>
+          <div class="t2">Portfolio</div>
+        </div>
+      </div>
+      <nav class="hp-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects-library.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEXT BAR -->
+  <div class="hp-context">
+    <div class="hp-context-inner">
+      <div class="hp-obj-icon"><span></span></div>
+      <span class="hp-crumb-1">Portfolio</span>
+      <span class="hp-crumb-sep">/</span>
+      <span class="hp-crumb-2">Daniel Im</span>
+      <span class="hp-record-pill">Operator Record</span>
+    </div>
+  </div>
+
+  <main class="hp-main">
+
+    <!-- RECORD HEADER -->
+    <section class="hp-panel hp-record">
+      <div class="hp-avatar">DI</div>
+      <div class="hp-record-main">
+        <div class="hp-eyebrow">Operator Profile</div>
+        <h1>Daniel Im</h1>
+        <div class="hp-record-role">Sales Operations</div>
+        <div class="hp-record-fields">
+          <div><div class="hp-field-label">Location</div><div class="hp-field-val">San Jose, CA</div></div>
+          <div><div class="hp-field-label">Education</div><div class="hp-field-val">B.S. Economics, UC Davis</div></div>
+          <div><div class="hp-field-label">Email</div><a class="hp-field-val" href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="hp-record-actions">
+        <a class="hp-btn hp-btn-primary" href="mailto:daniel64im@gmail.com">Email Daniel</a>
+        <a class="hp-btn hp-btn-secondary" href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="hp-btn hp-btn-secondary" href="resume.html">View Resume</a>
+      </div>
+    </section>
+
+    <!-- KEY HIGHLIGHTS -->
+    <section>
+      <div class="hp-label">Key Highlights</div>
+      <div class="hp-highlights-grid">
+        <div class="hp-tile">
+          <div class="hp-tile-label">Time Saved</div>
+          <div class="hp-tile-num">~3 hrs/day</div>
+          <div class="hp-tile-desc">saved per SDR across a 14 person team</div>
+        </div>
+        <div class="hp-tile">
+          <div class="hp-tile-label">Data Enriched</div>
+          <div class="hp-tile-num">~9,000</div>
+          <div class="hp-tile-desc">Salesforce accounts enriched</div>
+        </div>
+        <div class="hp-tile">
+          <div class="hp-tile-label">Lookup Time</div>
+          <div class="hp-tile-num">30s to 3s</div>
+          <div class="hp-tile-desc">SDR account lookup time</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWO COLUMN BODY -->
+    <div class="hp-columns">
+      <div class="hp-col-main">
+
+        <!-- ABOUT -->
+        <section class="hp-panel hp-about">
+          <div class="hp-label">About</div>
+          <p class="hp-about-headline">I build the systems sales teams run on.</p>
+          <div class="hp-about-points">
+            <div><div class="hp-point-num">01</div><div class="hp-point-text">I find broken processes.</div></div>
+            <div><div class="hp-point-num">02</div><div class="hp-point-text">I fix them at the root.</div></div>
+            <div><div class="hp-point-num">03</div><div class="hp-point-text">I build systems that outlast my involvement.</div></div>
+          </div>
+        </section>
+
+        <!-- FEATURED PROJECTS -->
+        <section class="hp-panel hp-projects" id="projects">
+          <div class="hp-projects-head">
+            <h2>Featured Projects</h2>
+            <span class="hp-projects-count">(4)</span>
+          </div>
+          <div class="hp-projects-grid">
+            <a class="hp-proj-card" href="projects/expired-lead-digest.html">
+              <span class="hp-tag crm">CRM and Automation</span>
+              <div class="hp-proj-title">Expired Lead Follow Up Automation</div>
+              <div class="hp-proj-desc">Native Salesforce automation that gives SDRs back hours each day on expired leads.</div>
+              <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+            </a>
+            <a class="hp-proj-card" href="projects/enrichment.html">
+              <span class="hp-tag data">Data Infrastructure</span>
+              <div class="hp-proj-title">9,000 Account CRM Enrichment</div>
+              <div class="hp-proj-desc">Enriched roughly 9,000 Salesforce accounts with clean, structured data.</div>
+              <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+            </a>
+            <a class="hp-proj-card" href="projects/allocation-TL.html">
+              <span class="hp-tag gov">Governance</span>
+              <div class="hp-proj-title">Account Ownership and Cross Sell Rules</div>
+              <div class="hp-proj-desc">Set clear account ownership and cross sell rules across the team.</div>
+              <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+            </a>
+            <a class="hp-proj-card" href="projects/fte-lookup.html">
+              <span class="hp-tag data">Data Infrastructure</span>
+              <div class="hp-proj-title">Account Data Lookup Tool</div>
+              <div class="hp-proj-desc">Brought SDR account lookup down from 30 seconds to 3.</div>
+              <span class="hp-proj-link">View Project <span class="arrow">&rsaquo;</span></span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="hp-col-side">
+        <!-- SKILLS -->
+        <section class="hp-panel hp-skills">
+          <div class="hp-label">Skills and Tools</div>
+          <div class="hp-skills-list">
+            <div class="hp-skill"><span class="dot"></span><span class="txt">Salesforce Flow Builder</span></div>
+            <div class="hp-skill"><span class="dot"></span><span class="txt">Record-Triggered Flows</span></div>
+            <div class="hp-skill"><span class="dot"></span><span class="txt">Reports and dashboards</span></div>
+            <div class="hp-skill"><span class="dot"></span><span class="txt">CRM governance</span></div>
+            <div class="hp-skill"><span class="dot"></span><span class="txt">Salesforce administration</span></div>
+            <div class="hp-skill"><span class="dot"></span><span class="txt">Data enrichment</span></div>
+            <div class="hp-skill"><span class="dot"></span><span class="txt">Google Apps Script</span></div>
+            <div class="hp-skill"><span class="dot"></span><span class="txt">Process design</span></div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="hp-cta">
+          <h2>Get in touch</h2>
+          <p>I am open to roles where I can build clean, documented, scalable operations.</p>
+          <a href="mailto:daniel64im@gmail.com">Email Daniel</a>
+        </section>
+      </aside>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="hp-footer">
+    <div class="hp-footer-inner">
+      <div class="hp-footer-meta">Daniel Im &middot; Sales Operations &middot; San Jose, CA</div>
+      <div class="hp-footer-links">
+        <a href="mailto:daniel64im@gmail.com">daniel64im@gmail.com</a>
+        <a href="https://linkedin.com/in/daeim" target="_blank" rel="noopener">linkedin.com/in/daeim</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
