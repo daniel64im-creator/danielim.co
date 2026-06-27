@@ -397,7 +397,7 @@ body {
   width: 44px;
   height: 44px;
   background: #7B5EA7;
-  border-radius: 8px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,11 +493,11 @@ body {
   --hp-title-navy: #16325c;
   --hp-blue: #0176d3;
   --hp-muted: #56657a;
-  --hp-card-border: #e3e6eb;
+  --hp-card-border: #dddbda;
 }
 
 .hp-main { max-width: 1200px; margin: 0 auto; padding: calc(92px + clamp(16px,2.2vw,22px)) clamp(16px,3vw,30px) 60px; display: flex; flex-direction: column; gap: clamp(20px,3vw,30px); }
-.hp-panel { background: #fff; border: 1px solid var(--hp-card-border); border-radius: 14px; box-shadow: 0 1px 2px rgba(16,32,64,.05), 0 8px 22px rgba(16,32,64,.05); }
+.hp-panel { background: #fff; border: 1px solid var(--hp-card-border); border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.06); }
 .hp-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--hp-blue); }
 .hp-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #5a6b80; }
 
@@ -512,14 +512,14 @@ body {
 a.hp-field-val { color: var(--hp-blue); text-decoration: none; }
 a.hp-field-val:hover { text-decoration: underline; }
 .hp-record-actions { display: flex; flex-direction: column; gap: 9px; min-width: 160px; }
-.hp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all .15s ease; white-space: nowrap; }
+.hp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 16px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all .15s ease; white-space: nowrap; }
 .hp-btn-primary { background: var(--hp-blue); color: #fff; }
 .hp-btn-primary:hover { background: #0a6abf; color: #fff; text-decoration: none; }
 .hp-btn-secondary { background: #fff; color: #0a3a72; border: 1px solid #c9d3e0; }
 .hp-btn-secondary:hover { background: #f3f7fc; border-color: #9cc6f0; text-decoration: none; }
 
 .hp-highlights-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: clamp(12px,1.6vw,18px); margin-top: 12px; }
-.hp-tile { position: relative; border-radius: 14px; padding: clamp(18px,2.4vw,24px); background: linear-gradient(160deg,#f4faff,#e9f2fc); border: 1px solid #d6e6f7; box-shadow: 0 1px 2px rgba(16,32,64,.05), 0 6px 16px rgba(16,32,64,.04); overflow: hidden; }
+.hp-tile { position: relative; border-radius: 4px; padding: clamp(18px,2.4vw,24px); background: linear-gradient(160deg,#f4faff,#e9f2fc); border: 1px solid #d6e6f7; box-shadow: 0 2px 5px rgba(0,0,0,0.06); overflow: hidden; }
 .hp-tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--hp-blue); }
 .hp-tile-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--hp-blue); }
 .hp-tile-num { margin-top: 12px; font-size: clamp(30px,4.6vw,42px); font-weight: 700; color: var(--hp-title-navy); letter-spacing: -.025em; line-height: 1; }
@@ -540,7 +540,7 @@ a.hp-field-val:hover { text-decoration: underline; }
 .hp-projects-head h2 { font-size: 18px; font-weight: 700; color: var(--hp-title-navy); letter-spacing: -.01em; }
 .hp-projects-count { font-size: 13px; color: #8a98a8; font-weight: 600; }
 .hp-projects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
-.hp-proj-card { display: flex; flex-direction: column; gap: 11px; padding: 18px; border: 1px solid var(--hp-card-border); border-radius: 12px; text-decoration: none; background: #fff; box-shadow: 0 1px 2px rgba(16,32,64,.03); transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
+.hp-proj-card { display: flex; flex-direction: column; gap: 11px; padding: 18px; border: 1px solid var(--hp-card-border); border-radius: 4px; text-decoration: none; background: #fff; box-shadow: 0 1px 2px rgba(16,32,64,.03); transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
 .hp-proj-card:hover { border-color: #9cc6f0; box-shadow: 0 10px 26px rgba(1,118,211,.13); transform: translateY(-2px); }
 .hp-tag { align-self: flex-start; font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; }
 .hp-tag.crm { color: #2e7d4f; background: #e7f6ec; }
@@ -556,13 +556,13 @@ a.hp-field-val:hover { text-decoration: underline; }
 .hp-skill span.dot { width: 7px; height: 7px; border-radius: 2px; background: var(--hp-blue); flex: none; }
 .hp-skill span.txt { font-size: 14px; color: var(--hp-title-navy); font-weight: 600; }
 
-.hp-cta { background: #032d60; color: #fff; border-radius: 14px; box-shadow: 0 10px 26px rgba(3,18,40,.25); padding: 22px; }
+.hp-cta { background: #032d60; color: #fff; border-radius: 4px; box-shadow: 0 10px 26px rgba(3,18,40,.25); padding: 22px; }
 .hp-cta h2 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
 .hp-cta p { margin: 9px 0 16px; font-size: 13.5px; color: #bcd4ef; line-height: 1.55; }
-.hp-cta a { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 8px; background: #fff; color: #053a78; font-size: 13px; font-weight: 700; text-decoration: none; width: 100%; transition: background .15s ease; }
+.hp-cta a { display: inline-flex; align-items: center; justify-content: center; padding: 6px 16px; border-radius: 4px; background: #fff; color: #053a78; font-size: 13px; font-weight: 700; text-decoration: none; width: 100%; transition: background .15s ease; }
 .hp-cta a:hover { background: #eaf3fd; }
 
-.hp-footer { border-top: 1px solid #e3e6eb; background: #fff; }
+.hp-footer { border-top: 1px solid #dddbda; background: #fff; }
 .hp-footer-inner { max-width: 1200px; margin: 0 auto; padding: 20px clamp(16px,3vw,28px); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
 .hp-footer-meta { font-size: 13px; color: #7a8aa0; }
 .hp-footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
@@ -831,4 +831,5 @@ if (hamburger && mobileNav) {
 
 </body>
 </html>
+
 
