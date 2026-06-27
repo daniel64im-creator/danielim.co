@@ -26,47 +26,77 @@
 .proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
 @media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } .proj-two-col { grid-template-columns: 1fr !important; } .sf-proj-header-top { grid-template-columns: 1fr !important; } }
 
-/* ── Decision workflow diagrams ── */
-.roe-diagram-img {
-  max-width: 760px;
+/* ── Decision workflow thumbnail row ── */
+.roe-thumb-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.roe-thumb-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.roe-thumb-item img {
+  max-width: 240px;
   width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto;
   cursor: zoom-in;
   border: 1px solid #dddbda;
   border-radius: 4px;
+  display: block;
 }
-.sf-screenshot + .sf-screenshot { margin-top: 20px; }
+@media (max-width: 640px) {
+  .roe-thumb-row { flex-direction: column; }
+  .roe-thumb-item img { max-width: 100%; }
+}
 
-/* ── Lightbox ── */
+/* ── Gallery lightbox ── */
 #roe-lightbox {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.82);
+  background: rgba(0,0,0,0.86);
   z-index: 9999;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 12px;
 }
 #roe-lightbox.open { display: flex; }
-#roe-lightbox img {
+#roe-lightbox-img {
   max-width: 92vw;
-  max-height: 92vh;
+  max-height: 88vh;
   object-fit: contain;
   border-radius: 4px;
+  display: block;
 }
 #roe-lightbox-close {
   position: absolute;
-  top: 16px; right: 20px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 4px 8px;
+  top: 14px; right: 18px;
+  background: none; border: none;
+  color: #fff; font-size: 2rem; line-height: 1;
+  cursor: pointer; padding: 4px 8px; font-family: inherit;
+}
+.roe-lb-arrow {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.12); border: none;
+  color: #fff; font-size: 2rem; line-height: 1;
+  cursor: pointer; padding: 10px 14px; border-radius: 4px;
+  font-family: inherit; transition: background .15s;
+}
+.roe-lb-arrow:hover { background: rgba(255,255,255,0.24); }
+#roe-lb-prev { left: 14px; }
+#roe-lb-next { right: 14px; }
+#roe-lb-counter {
+  position: absolute;
+  bottom: 18px;
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
   font-family: inherit;
+  letter-spacing: .04em;
 }
 </style>
 </head>
@@ -137,17 +167,19 @@
     <div class="sf-proj-section">
       <div class="sf-proj-section-title">Decision Workflows</div>
       <div class="sf-proj-content">
-        <div class="sf-screenshot">
-          <div class="sf-screenshot-label">Account Qualification Workflow</div>
-          <img class="roe-diagram-img" src="../images/roe-account-qualification.png" alt="Account Qualification Workflow">
-        </div>
-        <div class="sf-screenshot">
-          <div class="sf-screenshot-label">Opportunity Conflict Analysis</div>
-          <img class="roe-diagram-img" src="../images/roe-opportunity-analysis.png" alt="Opportunity Analysis Workflow">
-        </div>
-        <div class="sf-screenshot">
-          <div class="sf-screenshot-label">Lead Ownership Evaluation</div>
-          <img class="roe-diagram-img" src="../images/roe-lead-ownership.png" alt="Lead Ownership Workflow">
+        <div class="roe-thumb-row">
+          <div class="roe-thumb-item">
+            <div class="sf-screenshot-label">Account Qualification Workflow</div>
+            <img src="../images/roe-account-qualification.png" alt="Account Qualification Workflow" data-roe-idx="0">
+          </div>
+          <div class="roe-thumb-item">
+            <div class="sf-screenshot-label">Opportunity Conflict Analysis</div>
+            <img src="../images/roe-opportunity-analysis.png" alt="Opportunity Analysis Workflow" data-roe-idx="1">
+          </div>
+          <div class="roe-thumb-item">
+            <div class="sf-screenshot-label">Lead Ownership Evaluation</div>
+            <img src="../images/roe-lead-ownership.png" alt="Lead Ownership Workflow" data-roe-idx="2">
+          </div>
         </div>
       </div>
     </div>
@@ -190,7 +222,10 @@
 </div>
 <div id="roe-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
   <button id="roe-lightbox-close" aria-label="Close">&times;</button>
+  <button class="roe-lb-arrow" id="roe-lb-prev" aria-label="Previous">&#8249;</button>
   <img id="roe-lightbox-img" src="" alt="">
+  <button class="roe-lb-arrow" id="roe-lb-next" aria-label="Next">&#8250;</button>
+  <div id="roe-lb-counter"></div>
 </div>
 
 <script>
@@ -201,36 +236,57 @@ fetch("../components/sf-nav.html")
 
 <script>
 (function() {
-  var lb = document.getElementById('roe-lightbox');
-  var lbImg = document.getElementById('roe-lightbox-img');
-  var lbClose = document.getElementById('roe-lightbox-close');
+  var images = [
+    { src: '../images/roe-account-qualification.png', alt: 'Account Qualification Workflow' },
+    { src: '../images/roe-opportunity-analysis.png',  alt: 'Opportunity Analysis Workflow' },
+    { src: '../images/roe-lead-ownership.png',        alt: 'Lead Ownership Workflow' }
+  ];
+  var current = 0;
 
-  function openLightbox(src, alt) {
-    lbImg.src = src;
-    lbImg.alt = alt || '';
+  var lb       = document.getElementById('roe-lightbox');
+  var lbImg    = document.getElementById('roe-lightbox-img');
+  var lbClose  = document.getElementById('roe-lightbox-close');
+  var lbPrev   = document.getElementById('roe-lb-prev');
+  var lbNext   = document.getElementById('roe-lb-next');
+  var lbCounter = document.getElementById('roe-lb-counter');
+
+  function show(idx) {
+    current = (idx + images.length) % images.length;
+    lbImg.src = images[current].src;
+    lbImg.alt = images[current].alt;
+    lbCounter.textContent = (current + 1) + ' / ' + images.length;
+  }
+
+  function open(idx) {
+    show(idx);
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
     lbClose.focus();
   }
 
-  function closeLightbox() {
+  function close() {
     lb.classList.remove('open');
     document.body.style.overflow = '';
     lbImg.src = '';
   }
 
-  document.querySelectorAll('.roe-diagram-img').forEach(function(img) {
-    img.addEventListener('click', function() { openLightbox(this.src, this.alt); });
+  document.querySelectorAll('[data-roe-idx]').forEach(function(img) {
+    img.addEventListener('click', function() { open(parseInt(this.getAttribute('data-roe-idx'), 10)); });
   });
 
-  lbClose.addEventListener('click', closeLightbox);
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', function() { show(current - 1); });
+  lbNext.addEventListener('click', function() { show(current + 1); });
 
   lb.addEventListener('click', function(e) {
-    if (e.target === lb) closeLightbox();
+    if (e.target === lb) close();
   });
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     close();
+    if (e.key === 'ArrowLeft')  show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
   });
 })();
 </script>
