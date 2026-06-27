@@ -94,14 +94,18 @@
     <div class="sf-proj-section">
       <div class="sf-proj-section-title">How It Works</div>
       <div class="sf-proj-content">
-        <div class="sf-arch-box">
-Salesforce Account Export
-  → IPEDS Data Pull (FTE, domain, geography, time zone)
-  → Google Sheets Normalization
-  → QA Sampling
-  → CSV Export
-  → Salesforce Re-Import by Account ID
-  → Clean CRM Dataset
+        <div class="sf-flow">
+          <div class="sf-flow-phase">
+            <div class="sf-flow-phase-title">Salesforce Account Export</div>
+            <ul class="sf-flow-steps">
+              <li>IPEDS Data Pull (FTE, domain, geography, time zone)</li>
+              <li>Google Sheets Normalization</li>
+              <li>QA Sampling</li>
+              <li>CSV Export</li>
+              <li>Salesforce Re-Import by <code>Account ID</code></li>
+              <li>Clean CRM Dataset</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -147,4 +151,6 @@ fetch("../components/sf-nav.html")
 </script>
 </body>
 </html>
+
+
 
