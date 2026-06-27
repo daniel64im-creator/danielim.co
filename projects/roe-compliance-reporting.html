@@ -25,6 +25,49 @@
 .proj-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 .proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
 @media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } .proj-two-col { grid-template-columns: 1fr !important; } .sf-proj-header-top { grid-template-columns: 1fr !important; } }
+
+/* ── Decision workflow diagrams ── */
+.roe-diagram-img {
+  max-width: 760px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: zoom-in;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+}
+.sf-screenshot + .sf-screenshot { margin-top: 20px; }
+
+/* ── Lightbox ── */
+#roe-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+#roe-lightbox.open { display: flex; }
+#roe-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+#roe-lightbox-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: inherit;
+}
 </style>
 </head>
 <body>
@@ -94,19 +137,17 @@
     <div class="sf-proj-section">
       <div class="sf-proj-section-title">Decision Workflows</div>
       <div class="sf-proj-content">
-        <div class="sf-screenshot-grid">
-          <div class="sf-screenshot">
-            <div class="sf-screenshot-label">Account Qualification Workflow</div>
-            <img src="../images/roe-account-qualification.png" alt="Account Qualification Workflow">
-          </div>
-          <div class="sf-screenshot">
-            <div class="sf-screenshot-label">Opportunity Conflict Analysis</div>
-            <img src="../images/roe-opportunity-analysis.png" alt="Opportunity Analysis Workflow">
-          </div>
+        <div class="sf-screenshot">
+          <div class="sf-screenshot-label">Account Qualification Workflow</div>
+          <img class="roe-diagram-img" src="../images/roe-account-qualification.png" alt="Account Qualification Workflow">
         </div>
-        <div class="sf-screenshot" style="margin-top:12px;">
+        <div class="sf-screenshot">
+          <div class="sf-screenshot-label">Opportunity Conflict Analysis</div>
+          <img class="roe-diagram-img" src="../images/roe-opportunity-analysis.png" alt="Opportunity Analysis Workflow">
+        </div>
+        <div class="sf-screenshot">
           <div class="sf-screenshot-label">Lead Ownership Evaluation</div>
-          <img src="../images/roe-lead-ownership.png" alt="Lead Ownership Workflow">
+          <img class="roe-diagram-img" src="../images/roe-lead-ownership.png" alt="Lead Ownership Workflow">
         </div>
       </div>
     </div>
@@ -147,10 +188,51 @@
   </div>
 </div>
 </div>
+<div id="roe-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button id="roe-lightbox-close" aria-label="Close">&times;</button>
+  <img id="roe-lightbox-img" src="" alt="">
+</div>
+
 <script>
 fetch("../components/sf-nav.html")
 .then(function(r){return r.text();})
 .then(function(d){var el=document.getElementById("sf-nav-placeholder");el.innerHTML=d;el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});});
+</script>
+
+<script>
+(function() {
+  var lb = document.getElementById('roe-lightbox');
+  var lbImg = document.getElementById('roe-lightbox-img');
+  var lbClose = document.getElementById('roe-lightbox-close');
+
+  function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  document.querySelectorAll('.roe-diagram-img').forEach(function(img) {
+    img.addEventListener('click', function() { openLightbox(this.src, this.alt); });
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+
+  lb.addEventListener('click', function(e) {
+    if (e.target === lb) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
+  });
+})();
 </script>
 </body>
 </html>
