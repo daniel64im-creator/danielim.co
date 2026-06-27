@@ -423,8 +423,9 @@ button { font-family: inherit; cursor: pointer; }
   color: #16325c;
   margin-bottom: 8px;
 }
-.sf-flow-steps { list-style: none; margin: 0; padding: 0; }
+.sf-flow-steps { list-style: none; list-style-type: none; margin: 0; padding: 0; }
 .sf-flow-steps li {
+  list-style: none;
   position: relative;
   padding-left: 20px;
   margin-bottom: 6px;
