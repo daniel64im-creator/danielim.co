@@ -438,9 +438,14 @@ button { font-family: inherit; cursor: pointer; }
   content: "›";
   position: absolute;
   left: 4px;
-  top: 0;
+  top: 0.05em;
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
   color: #0176d3;
   font-weight: 700;
+  line-height: 1.6;
 }
 .sf-flow code,
 .sf-flow .sf-flow-ref {
