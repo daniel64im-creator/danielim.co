@@ -196,6 +196,9 @@ button { font-family: inherit; cursor: pointer; }
 .sf-btn-ghost { background: none; color: #706e6b; border-color: #dddbda; }
 .sf-btn-ghost:hover { background: #f3f2f2; text-decoration: none; color: #181818; }
 
+.sf-btn-back-top { font-size: 0.85rem; padding: 9px 18px; border-color: #0176d3; border-width: 1.5px; }
+.sf-btn-back-top:hover { background: #e8f4fd; }
+
 
 /* ── BADGES & TAGS ── */
 
