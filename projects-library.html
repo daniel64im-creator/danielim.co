@@ -101,7 +101,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #706e6b;
   background: none;
@@ -116,6 +116,7 @@
 .cat-btn:hover { color: #181818; background: #f8f8f8; }
 .cat-btn.active {
   color: #0176d3;
+  background: #eef6fd;
   border-bottom-color: #0176d3;
 }
 
@@ -162,6 +163,7 @@
   height: 190px;
   overflow: hidden;
   border-bottom: 1px solid #e5e4e2;
+  border-top: 3px solid transparent;
   flex-shrink: 0;
 }
 .proj-card-thumb img {
@@ -362,6 +364,12 @@ var projectData = {
 
 };
 
+var categoryBorderColor = {
+  'sf-tag-automation': '#16a34a',
+  'sf-tag-governance': '#c65200',
+  'sf-tag-data': '#0176d3'
+};
+
 function placeholderIcon(color) {
   return '<svg width="40" height="40" viewBox="0 0 40 40" fill="none">' +
     '<rect x="6" y="6" width="28" height="28" rx="3" stroke="' + color + '" stroke-width="1.8" fill="none"/>' +
@@ -378,9 +386,11 @@ function renderCards(catKey) {
       ? '<img src="' + d.image + '" alt="' + d.title + '">'
       : '<div class="proj-card-thumb-placeholder" style="background:' + d.placeholderBg + ';">' + placeholderIcon(d.placeholderColor) + '</div>';
     var thumb = '<a href="' + d.link + '" style="display:block; height:100%; transition:opacity 0.15s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">' + thumbInner + '</a>';
+    var borderColor = categoryBorderColor[d.categoryClass] || 'transparent';
     return '<div class="proj-card">' +
-      '<div class="proj-card-thumb">' + thumb + '</div>' +
+      '<div class="proj-card-thumb" style="border-top-color:' + borderColor + ';">' + thumb + '</div>' +
       '<div class="proj-card-body">' +
+        '<span class="sf-tag ' + d.categoryClass + '" style="align-self:flex-start;">' + d.category + '</span>' +
         '<a href="' + d.link + '" class="proj-card-title" style="text-decoration:none; color:#16325c;">' + d.title + '</a>' +
         '<p class="proj-card-desc">' + d.summary + '</p>' +
         '<a href="' + d.link + '" class="sf-btn sf-btn-secondary" style="align-self:flex-start; margin-top:4px;">View Project →</a>' +
