@@ -37,7 +37,7 @@
 | `projects-library.html` | `/projects-library.html` | Tabbed project library with 3 category tabs; cards rendered by JavaScript |
 | `404.html` | (GitHub Pages 404 fallback) | Custom 404 error page |
 | `projects/expired-lead-digest.html` | `/projects/expired-lead-digest.html` | Project: Expired Lead Follow-Up Automation |
-| `projects/enrichment.html` | `/projects/enrichment.html` | Project: 9,000-Account CRM Enrichment |
+| `projects/enrichment.html` | `/projects/enrichment.html` | Project: 10,000-Account CRM Enrichment |
 | `projects/allocation-TL.html` | `/projects/allocation-TL.html` | Project: Account Ownership & Cross-Sell Rules |
 | `projects/fte-lookup.html` | `/projects/fte-lookup.html` | Project: Account Data Lookup Tool |
 | `projects/demo-email.html` | `/projects/demo-email.html` | Project: Salesforce Demo Email Capture Workflow |
@@ -71,7 +71,7 @@ Note: `lead-cleanup.html` and `executive-advisory-targeting.html` are NOT listed
 
 > I am a problem finder. Most inefficiencies don't announce themselves. They hide in repetitive manual steps, in CRM fields that nobody trusts, in processes that quietly break down over time. I look for them before they become someone else's fire drill. Whether it's a data gap causing silent automation failures, a lead ownership model creating duplicate outreach, or a lookup that costs every rep 30 seconds per account, I dig into the root cause rather than the symptom.
 
-> I am a problem solver. Once I find the problem, I build the fix. My toolkit spans Salesforce Flow Builder, Google Sheets, Apps Script, CRM governance design, and data enrichment workflows. I don't patch around issues. I build systems that eliminate them. The 9,000-account CRM enrichment didn't just clean bad data; it restored the reporting accuracy the team was making decisions from. The expired lead automation didn't just send emails; it turned a silent ownership loss point into a structured re-engagement channel.
+> I am a problem solver. Once I find the problem, I build the fix. My toolkit spans Salesforce Flow Builder, Google Sheets, Apps Script, CRM governance design, and data enrichment workflows. I don't patch around issues. I build systems that eliminate them. The 10,000-account CRM enrichment didn't just clean bad data; it restored the reporting accuracy the team was making decisions from. The expired lead automation didn't just send emails; it turned a silent ownership loss point into a structured re-engagement channel.
 
 > I build for scale. Every solution I build is documented, repeatable, and designed to outlast my involvement. If the system breaks when I'm not in the room, I haven't done my job.
 
@@ -83,8 +83,8 @@ Button: View All →
 > Built a native Salesforce system that captures lead expiration events and delivers a personalized weekly digest to each rep, turning silent ownership losses into an active re-engagement channel.
 Button: View Project →
 
-**Card 2: 9,000-Account CRM Enrichment** (tag: Data Infrastructure)
-> Audited and enriched 9,000 Salesforce accounts to restore segmentation accuracy, establishing clean data foundations that improved targeting and pipeline reporting across the team.
+**Card 2: 10,000-Account CRM Enrichment** (tag: Data Infrastructure)
+> Audited and enriched 10,000 Salesforce accounts to restore segmentation accuracy, establishing clean data foundations that improved targeting and pipeline reporting across the team.
 Button: View Project →
 
 **Card 3: Account Ownership & Cross-Sell Rules** (tag: Governance)
@@ -135,7 +135,7 @@ Focus: Salesforce administration, CRM governance, and GTM process automation
 - Designed Salesforce reporting infrastructure that reduced manual account qualification work by approximately 38% per SDR across a 14-person team.
 - Built Salesforce Record-Triggered Flows automating notifications on new meetings booked and opportunity data population, improving CRM data consistency.
 - Established CRM governance standards and Rules of Engagement across four product lines, reducing ownership conflicts and improving pipeline integrity.
-- Led a 9,000-account Salesforce data enrichment initiative, improving segmentation accuracy and reporting reliability.
+- Led a 10,000-account Salesforce data enrichment initiative, improving segmentation accuracy and reporting reliability.
 - Developed account routing and ownership automation using Google Sheets and Apps Script, preventing duplicate outreach and improving operational efficiency.
 
 **Founding SDR — Miarec** Jul '23 – Jun '24
@@ -175,7 +175,7 @@ B.S. Economics — University of California, Davis
 - CRM Outreach Eligibility Reporting
 
 **Tab 3: Data Infrastructure** (count: 3)
-- 9,000-Account CRM Enrichment
+- 10,000-Account CRM Enrichment
 - Account Data Lookup Tool
 - Salesforce Account Deduplication & Ownership Cleanup
 
@@ -244,10 +244,10 @@ Trailing Cleanup (Scheduled Flow)
 
 ---
 
-### Project 2: 9,000-Account CRM Enrichment
+### Project 2: 10,000-Account CRM Enrichment
 **File:** `projects/enrichment.html`
 **Category:** Data Infrastructure
-**Impact statement:** Restored firmographic accuracy across ~9,000 Salesforce accounts by sourcing institutional data from IPEDS, normalizing it in Google Sheets, and re-importing by Account ID — improving segmentation, territory reporting, and CRM reliability.
+**Impact statement:** Restored firmographic accuracy across ~10,000 Salesforce accounts by sourcing institutional data from IPEDS, normalizing it in Google Sheets, and re-importing by Account ID — improving segmentation, territory reporting, and CRM reliability.
 
 **Problem bubbles:**
 - Firmographic fields missing across thousands of accounts
@@ -263,7 +263,7 @@ Trailing Cleanup (Scheduled Flow)
 - Pre-import QA validation
 
 **Outcome bubbles:**
-- ~9,000 accounts enriched
+- ~10,000 accounts enriched
 - Restored segmentation accuracy
 - Reliable territory reporting
 - CRM as a trusted data layer
@@ -279,7 +279,7 @@ Salesforce Account Export
   → Clean CRM Dataset
 ```
 
-**Metrics cited:** ~9,000 accounts enriched
+**Metrics cited:** ~10,000 accounts enriched
 
 **Tools:** IPEDS, Google Sheets, Salesforce CRM, Salesforce Data Import Wizard, Data Normalization, QA Validation
 

@@ -25,7 +25,7 @@ Static HTML/CSS site with a Salesforce Lightning-inspired design ("Sales Ops Clo
 ### Project Categories
 - **CRM & Automation:** Expired Lead Follow-Up Automation, Demo Email Capture Workflow, Real-Time Demo Booking Alerts
 - **Governance Systems:** Account Ownership & Cross-Sell Rules, Performance Intervention Framework, SDR Account Allocation System, CRM Outreach Eligibility Reporting
-- **Data Infrastructure:** 9,000-Account CRM Enrichment, Account Data Lookup Tool, Salesforce Account Deduplication & Ownership Cleanup, (Event Lead Cleanup, Customer Advisory List — removed from library)
+- **Data Infrastructure:** 10,000-Account CRM Enrichment, Account Data Lookup Tool, Salesforce Account Deduplication & Ownership Cleanup, (Event Lead Cleanup, Customer Advisory List — removed from library)
 
 ## Design Conventions
 - Salesforce Lightning color palette: `#0176d3` (blue), `#16325c` (dark navy), `#706e6b` (gray), `#f3f2f2` (background)
