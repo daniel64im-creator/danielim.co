@@ -132,7 +132,7 @@ Sales Operations:
 
 **Sales Development Team Lead — YuJa, Inc.** (tag: Current) Jun '24 – Present
 Focus: Salesforce administration, CRM governance, and GTM process automation
-- Designed Salesforce reporting infrastructure that eliminated approximately 3 hours of manual account qualification work per SDR per day across a 14-person team.
+- Designed Salesforce reporting infrastructure that reduced manual account qualification work by approximately 38% per SDR across a 14-person team.
 - Built Salesforce Record-Triggered Flows automating notifications on new meetings booked and opportunity data population, improving CRM data consistency.
 - Established CRM governance standards and Rules of Engagement across four product lines, reducing ownership conflicts and improving pipeline integrity.
 - Led a 9,000-account Salesforce data enrichment initiative, improving segmentation accuracy and reporting reliability.
