@@ -33,7 +33,7 @@
 | File path | URL path | Purpose |
 |---|---|---|
 | `index.html` | `/` | **Home / landing page.** Identity card, About section, 4 Featured Projects cards |
-| `resume.html` | `/resume.html` | Resume with Skills, Work Experience timeline, Education, Download PDF button |
+| `resume.html` | `/resume.html` | Resume with Skills, Work Experience timeline, Education |
 | `projects-library.html` | `/projects-library.html` | Tabbed project library with 3 category tabs; cards rendered by JavaScript |
 | `404.html` | (GitHub Pages 404 fallback) | Custom 404 error page |
 | `projects/expired-lead-digest.html` | `/projects/expired-lead-digest.html` | Project: Expired Lead Follow-Up Automation |
@@ -100,8 +100,6 @@ Button: View Project →
 ### resume.html — Resume
 
 **Page title (h1):** Resume
-
-**Button:** Download PDF
 
 **Header fields:** Location: San Jose, CA | Email: daniel64im@gmail.com | LinkedIn: linkedin.com/in/daeim
 
@@ -669,12 +667,6 @@ Leadership wanted to host a client dinner during EDUCAUSE to deepen relationship
 | https://www.linkedin.com/in/daeim/ | App bar (all pages via nav component), index.html header fields |
 | mailto:daniel64im@gmail.com | index.html header fields, resume.html header fields |
 | https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap | index.html `<link>` (inline); also `@import` in sf-theme.css |
-
-**Resume PDF:**
-- Path: `Resume.pdf` (repo root)
-- Served as: `Resume.pdf`
-- Download attribute on button: `Daniel-Im-Resume.pdf`
-- The file is present in the repo root
 
 **OG image:**
 - Path: `og-image.png` (repo root)
