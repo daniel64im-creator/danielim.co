@@ -41,11 +41,10 @@
 | `projects/allocation-TL.html` | `/projects/allocation-TL.html` | Project: Account Ownership & Cross-Sell Rules |
 | `projects/fte-lookup.html` | `/projects/fte-lookup.html` | Project: Account Data Lookup Tool |
 | `projects/demo-email.html` | `/projects/demo-email.html` | Project: Salesforce Demo Email Capture Workflow |
-| `projects/demo-notifications.html` | `/projects/demo-notifications.html` | Project: Real-Time Demo Booking Alerts |
 | `projects/pip-governance.html` | `/projects/pip-governance.html` | Project: Performance Intervention Framework |
-| `projects/allocation-SDR.html` | `/projects/allocation-SDR.html` | Project: SDR Account Allocation System |
 | `projects/roe-compliance-reporting.html` | `/projects/roe-compliance-reporting.html` | Project: CRM Outreach Eligibility Reporting |
 | `projects/account-dedup.html` | `/projects/account-dedup.html` | Project: Salesforce Account Deduplication & Ownership Cleanup |
+| `projects/team-lead-dashboard.html` | `/projects/team-lead-dashboard.html` | Project: Team Lead Performance Dashboard |
 | `projects/lead-cleanup.html` | `/projects/lead-cleanup.html` | Project: Event Lead Cleanup & Reassignment |
 | `projects/executive-advisory-targeting.html` | `/projects/executive-advisory-targeting.html` | Project: Customer Advisory Target Account List |
 
@@ -161,15 +160,13 @@ B.S. Economics — University of California, Davis
 
 **Page title (h1):** Project Library
 
-**Tab 1: CRM & Automation** (count: 3)
+**Tab 1: CRM & Automation** (count: 2)
 - Expired Lead Follow-Up Automation
 - Salesforce Demo Email Capture Workflow
-- Real-Time Demo Booking Alerts
 
-**Tab 2: Governance Systems** (count: 4)
+**Tab 2: Governance Systems** (count: 3)
 - Account Ownership & Cross-Sell Rules
 - Performance Intervention Framework
-- SDR Account Allocation System
 - CRM Outreach Eligibility Reporting
 
 **Tab 3: Data Infrastructure** (count: 3)
@@ -399,43 +396,6 @@ Demo Event Created
 
 ---
 
-### Project 6: Real-Time Demo Booking Alerts
-**File:** `projects/demo-notifications.html`
-**Category:** CRM & Automation
-**Impact statement:** Gave leadership real-time visibility into qualifying demo bookings by replacing manual CRM monitoring with an event-triggered Salesforce Flow that routed filtered alerts to the right stakeholders.
-
-**Problem bubbles:**
-- Manual CRM monitoring for bookings
-- No automated booking alerts
-- Leadership visibility gaps
-- Risk of unfiltered notification noise
-
-**Solution bubbles:**
-- Event-based trigger logic
-- Qualification filters (valid demos only)
-- Targeted stakeholder routing
-- Duplicate alert prevention
-
-**Outcome bubbles:**
-- Real-time booking visibility
-- No manual monitoring needed
-- High-quality alert signals only
-- Improved leadership transparency
-
-**How It Works (arch-box):**
-```
-Demo Booked
-  → Qualification Logic Evaluated
-  → Notification Conditions Met
-  → Targeted Stakeholder Alert Sent
-```
-
-**Metrics cited:** none verbatim
-
-**Tools:** Salesforce CRM, Salesforce Flow Builder, Event-Triggered Automation, Notification Routing Logic
-
----
-
 ### Project 7: Performance Intervention Framework
 **File:** `projects/pip-governance.html`
 **Category:** Governance Systems
@@ -473,44 +433,6 @@ Performance Monitoring
 **Metrics cited:** 30/60/90-day timeline structure; quota attainment below defined % (specific % NOT FOUND in page text)
 
 **Tools:** Confluence, Canvas (LMS), Process Documentation, HR Governance, Performance Framework Design
-
----
-
-### Project 8: SDR Account Allocation System
-**File:** `projects/allocation-SDR.html`
-**Category:** Governance Systems
-**Impact statement:** Built the foundational account ownership model for three team leads working a shared institutional account list — introducing hold state logic, structured reassignment, and a single source of truth that later scaled into a full cross-product governance system.
-
-**Problem bubbles:**
-- No shared record of account ownership
-- No process for marking inactive accounts
-- Reassignment happened informally
-- Account availability unclear without manual check
-
-**Solution bubbles:**
-- Master account sheet (shared across 3 TLs)
-- Ownership assignment per account
-- Hold state for inactive accounts
-- Structured reassignment review
-
-**Outcome bubbles:**
-- Shared ownership visibility for all TLs
-- Structured release and redistribution process
-- Reduced ownership disputes
-- Foundation for cross-product governance system
-
-**How It Works (arch-box):**
-```
-Account Identified
-  → Team Lead Ownership Assigned
-  → Hold State Applied (no longer being worked)
-  → Reassignment Review
-  → New Owner Assigned
-```
-
-**Metrics cited:** 3 team leads sharing the system
-
-**Tools:** Google Sheets, Account Ownership Design, Hold State Logic, Governance Framework Design
 
 ---
 
@@ -689,14 +611,12 @@ Leadership wanted to host a client dinner during EDUCAUSE to deepen relationship
 | `images/account-ownership-thumbnail.png` | allocation-TL.html header; index.html featured card |
 | `images/fte-lookup-component.webp` | fte-lookup.html header; index.html featured card |
 | `images/demo-email-flow.webp` | demo-email.html header |
-| `images/demo-notifications-flow.webp` | demo-notifications.html header |
 | `images/pip-governance.png` | pip-governance.html header |
-| `images/allocation-sheet-thumbnail.png` | allocation-SDR.html header |
-| `images/allocation-sheet.png` | present in repo, NOT referenced in any HTML file |
 | `images/dedupe-thumbnail.png` | account-dedup.html header |
 | `images/roe-lead-ownership.png` | roe-compliance-reporting.html header + screenshot |
 | `images/roe-account-qualification.png` | roe-compliance-reporting.html screenshots section |
 | `images/roe-opportunity-analysis.png` | roe-compliance-reporting.html screenshots section |
+| `images/team-lead-dashboard.png` | team-lead-dashboard.html header; projects-library.html card |
 
 **Company logo images (used in resume.html timeline):**
 

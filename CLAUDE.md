@@ -23,8 +23,8 @@ Static HTML/CSS site with a Salesforce Lightning-inspired design ("Sales Ops Clo
 - `components/sf-nav.html` — Shared nav component (loaded via fetch)
 
 ### Project Categories
-- **CRM & Automation:** Expired Lead Follow-Up Automation, Demo Email Capture Workflow, Real-Time Demo Booking Alerts
-- **Governance Systems:** Account Ownership & Cross-Sell Rules, Performance Intervention Framework, SDR Account Allocation System, CRM Outreach Eligibility Reporting
+- **CRM & Automation:** Expired Lead Follow-Up Automation, Demo Email Capture Workflow
+- **Governance Systems:** Account Ownership & Cross-Sell Rules, Performance Intervention Framework, CRM Outreach Eligibility Reporting
 - **Data Infrastructure:** 10,000-Account CRM Enrichment, Account Data Lookup Tool, Salesforce Account Deduplication & Ownership Cleanup, (Event Lead Cleanup, Customer Advisory List — removed from library)
 
 ## Design Conventions
