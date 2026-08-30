@@ -50,7 +50,11 @@
 <script>
 fetch("components/sf-nav.html")
 .then(function(r){return r.text();})
-.then(function(d){document.getElementById("sf-nav-placeholder").innerHTML=d;});
+.then(function(d){
+  var el=document.getElementById("sf-nav-placeholder");
+  el.innerHTML=d;
+  el.querySelectorAll("script").forEach(function(s){var n=document.createElement("script");n.textContent=s.textContent;document.head.appendChild(n);});
+});
 </script>
 
 </body>
