@@ -232,32 +232,6 @@ button { font-family: inherit; cursor: pointer; }
 .sf-status-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; }
 
 
-/* ── TABS ── */
-
-.sf-tabs {
-  background: white;
-  border: 1px solid #dddbda; border-top: none; border-bottom: none;
-  display: flex; overflow-x: auto; scrollbar-width: none;
-}
-.sf-tabs::-webkit-scrollbar { display: none; }
-
-.sf-tab-btn {
-  font-size: 0.78rem; font-weight: 600; color: #706e6b;
-  padding: 11px 20px; border: none; background: none;
-  border-bottom: 3px solid transparent;
-  white-space: nowrap; transition: all 0.15s;
-}
-.sf-tab-btn:hover { color: #181818; background: #f8f8f8; }
-.sf-tab-btn.active { color: #0176d3; border-bottom-color: #0176d3; }
-
-.sf-tab-panel {
-  background: white;
-  border: 1px solid #dddbda; border-top: 1px solid #e5e4e2;
-  border-radius: 0 0 4px 4px; padding: 22px 20px;
-}
-.sf-tab-panel.hidden { display: none; }
-
-
 /* ── RELATED LIST / TABLE ── */
 
 .sf-related-header {
@@ -343,6 +317,23 @@ button { font-family: inherit; cursor: pointer; }
   overflow: hidden;
   height: fit-content;
 }
+
+/* Problem / Solution / Outcome card grid (shared across project detail pages) */
+.proj-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+.proj-card-col { border: 1px solid #dddbda; border-radius: 4px; padding: 16px; background: #fafaf9; }
+.proj-card-col-problem  { border-top: 3px solid #e45c3a; }
+.proj-card-col-solution { border-top: 3px solid #0176d3; }
+.proj-card-col-outcome  { border-top: 3px solid #2e844a; }
+.proj-card-col-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: #706e6b; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e5e4e2; display: flex; align-items: center; gap: 6px; }
+.proj-bubbles { display: flex; flex-direction: column; gap: 7px; }
+.proj-bubble { font-size: 0.8rem; color: #181818; border-radius: 4px; padding: 6px 10px; line-height: 1.4; border: 1px solid; }
+.proj-bubble-problem  { background: #fef3ef; border-color: #f5c4b0; }
+.proj-bubble-solution { background: #e8f4fd; border-color: #a8cff0; }
+.proj-bubble-outcome  { background: #edf7ee; border-color: #a2d0aa; }
+.proj-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
+.proj-thumbnail { width: 100%; border: 1px solid #dddbda; border-radius: 4px; display: block; margin-top: 4px; }
+@media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } .proj-two-col { grid-template-columns: 1fr !important; } .sf-proj-header-top { grid-template-columns: 1fr !important; } }
 
 .sf-proj-section {
   padding: 18px 0;
