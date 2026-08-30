@@ -550,15 +550,15 @@ a.hp-field-val:hover { text-decoration: underline; }
 .hp-proj-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--hp-blue); }
 
 .hp-skills-full { padding: clamp(24px,3vw,34px); }
-.hp-skills-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 28px; margin-top: 18px; }
+.hp-skills-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 18px; }
 .hp-skills-group { min-width: 0; }
 .hp-skills-subhead { font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #8b98aa; margin-bottom: 12px; }
-.hp-skills-list { display: flex; flex-direction: column; gap: 12px; }
-.hp-skill { display: flex; align-items: center; gap: 12px; }
-.hp-skill span.dot { width: 7px; height: 7px; border-radius: 2px; background: var(--hp-blue); flex: none; }
-.hp-skill span.txt { font-size: 14px; color: var(--hp-title-navy); font-weight: 600; }
+.hp-skills-list { display: flex; flex-wrap: wrap; gap: 9px; }
+.hp-skill { display: inline-flex; align-items: center; gap: 7px; background: #f3f5f8; border: 1px solid #e3e8ef; border-radius: 5px; padding: 6px 12px; }
+.hp-skill span.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--hp-blue); flex: none; }
+.hp-skill span.txt { font-size: 13px; color: var(--hp-title-navy); font-weight: 600; }
 .hp-skill.hubspot span.dot { background: #ff7a59; }
-.hp-ai-note { margin-top: 24px; padding-top: 18px; border-top: 1px solid #e5e9f0; max-width: 62ch; font-size: 13.5px; line-height: 1.65; color: #34404f; }
+.hp-ai-note { margin-top: 24px; padding-top: 18px; border-top: 1px solid #e5e9f0; max-width: 80ch; font-size: 13.5px; line-height: 1.65; color: #34404f; }
 .hp-ai-note-label { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #8b98aa; margin-bottom: 8px; }
 
 .hp-cta { background: #032d60; color: #fff; border-radius: 4px; box-shadow: 0 10px 26px rgba(3,18,40,.25); padding: 22px; }
@@ -577,8 +577,12 @@ a.hp-field-val:hover { text-decoration: underline; }
 .hp-footer-links a { font-size: 13px; color: var(--hp-blue); font-weight: 600; text-decoration: none; }
 .hp-footer-links a:hover { text-decoration: underline; }
 
+@media (max-width: 860px) {
+  .hp-skills-row { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 640px) {
   .hp-record-actions { width: 100%; }
+  .hp-skills-row { grid-template-columns: 1fr; }
 }
 
 /* Mobile phone */
