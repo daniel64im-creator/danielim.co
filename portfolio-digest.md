@@ -64,7 +64,7 @@ Note: `lead-cleanup.html` and `executive-advisory-targeting.html` are NOT listed
 - Email: daniel64im@gmail.com
 - Location: San Jose, CA
 - LinkedIn: linkedin.com/in/daeim
-- Education: B.S. Economics, UC Davis
+- Education: B.A. Economics, UC Davis
 
 **Section label:** About
 
@@ -153,7 +153,7 @@ Focus: Salesforce administration, CRM governance, and GTM process automation
 
 **Section: Education**
 
-B.S. Economics — University of California, Davis
+B.A. Economics — University of California, Davis
 
 ---
 
