@@ -129,11 +129,12 @@ Sales Operations:
 
 **Sales Development Team Lead — YuJa, Inc.** (tag: Current) Jun '24 – Present
 Focus: Salesforce administration, CRM governance, and GTM process automation
-- Designed Salesforce reporting infrastructure that reduced manual account qualification work by approximately 38% per SDR across a 14-person team.
-- Built Salesforce Record-Triggered Flows automating notifications on new meetings booked and opportunity data population, improving CRM data consistency.
-- Established CRM governance standards and Rules of Engagement across four product lines, reducing ownership conflicts and improving pipeline integrity.
-- Led a 10,000-account Salesforce data enrichment initiative, improving segmentation accuracy and reporting reliability.
-- Developed account routing and ownership automation using Google Sheets and Apps Script, preventing duplicate outreach and improving operational efficiency.
+- Rebuilt Salesforce account data foundation across ~10,000 accounts, mapping IPEDS firmographic data by Account ID to restore segmentation accuracy and improve targeting precision across the SDR team.
+- Designed and published a Rules of Engagement framework across 4 product lines in Salesforce Flow Builder, enforcing a 14 day lead ownership window and improving account targeting quality, cutting duplicate demo bookings and resolving cross team conflicts.
+- Resolved 800 duplicate account records within the 10,000 account CRM base using a tiered confidence grouping and merge framework, then documented governance standards to prevent recurrence.
+- Built a 4 component native Salesforce automation (Record Triggered Flow, Scheduled Flow, custom logging object) delivering a personalized weekly expired lead digest to reps, replacing a silent, unlogged ownership loss point.
+- Embedded IPEDS enrollment data into the SDR workflow via a Google Sheets and Apps Script lookup tool integrated into the Salesforce Lead page, cutting account research time from 30 seconds to 3 seconds.
+- Built a cross team performance dashboard in Salesforce Reports & Dashboards consolidating demos held, no shows, reschedules, and quota attainment, giving team leads a single source of truth each quarter.
 
 **Founding SDR — Miarec** Jul '23 – Jun '24
 - Sole SDR responsible for all top-of-funnel activity, executing 150+ manual dials per day while independently sourcing leads through LinkedIn and ZoomInfo.
