@@ -151,16 +151,15 @@ a.hp-field-val:hover { text-decoration: underline; }
 .hp-proj-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--hp-blue); }
 
 .hp-skills-full { padding: clamp(24px,3vw,34px); }
-.hp-skills-row { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 90px; margin-top: 18px; }
-.hp-skills-group { flex: 0 1 240px; min-width: 0; }
-.hp-skills-subhead { font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #8b98aa; margin-bottom: 12px; }
-.hp-skills-list { display: flex; flex-wrap: wrap; gap: 9px; }
-.hp-skill { display: inline-flex; align-items: center; gap: 7px; background: #f3f5f8; border: 1px solid #e3e8ef; border-radius: 5px; padding: 6px 12px; }
-.hp-skill span.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--hp-blue); flex: none; }
-.hp-skill span.txt { font-size: 13px; color: var(--hp-title-navy); font-weight: 600; }
-.hp-skill.hubspot span.dot { background: #ff7a59; }
-.hp-ai-note { margin-top: 24px; padding-top: 18px; border-top: 1px solid #e5e9f0; max-width: 80ch; font-size: 13.5px; line-height: 1.65; color: #34404f; }
-.hp-ai-note-label { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #8b98aa; margin-bottom: 8px; }
+.hp-skills-tiles { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); align-items: start; gap: clamp(12px,1.6vw,18px); margin-top: 12px; }
+.hp-skills-tile-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--hp-blue); }
+.hp-skills-tile.hubspot::before { background: #ff7a59; }
+.hp-skills-tile.hubspot .hp-skills-tile-label { color: #ff7a59; }
+.hp-skills-tile-list { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+.hp-skills-tile-item { display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--hp-title-navy); font-weight: 600; line-height: 1.3; }
+.hp-skills-tile-item .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--hp-blue); flex: none; }
+.hp-skills-tile.hubspot .hp-skills-tile-item .dot { background: #ff7a59; }
+.hp-skills-tile-note { margin-top: 14px; font-size: 13px; color: var(--hp-muted); line-height: 1.65; }
 
 .hp-cta { background: #032d60; color: #fff; border-radius: 4px; box-shadow: 0 10px 26px rgba(3,18,40,.25); padding: 22px; }
 .hp-cta h2 { font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
@@ -187,7 +186,7 @@ a.hp-field-val:hover { text-decoration: underline; }
   .hp-projects-head { flex-direction: column; align-items: flex-start; gap: 12px; }
   .hp-projects-head .hp-btn { margin-left: 0 !important; }
   .hp-projects-grid { grid-template-columns: 1fr; }
-  .hp-skills-row { gap: 28px; }
+  .hp-skills-tiles { grid-template-columns: 1fr; }
   .hp-footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hp-footer-links { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
@@ -275,42 +274,42 @@ a.hp-field-val:hover { text-decoration: underline; }
   <!-- SKILLS AND TOOLS -->
   <section class="hp-panel hp-skills-full">
     <div class="hp-label">Skills and Tools</div>
-    <div class="hp-skills-row">
+    <div class="hp-skills-tiles">
 
-      <div class="hp-skills-group">
-        <div class="hp-skills-subhead">Salesforce</div>
-        <div class="hp-skills-list">
-          <div class="hp-skill"><span class="dot"></span><span class="txt">Salesforce Flow Builder</span></div>
-          <div class="hp-skill"><span class="dot"></span><span class="txt">Record-Triggered Flows</span></div>
-          <div class="hp-skill"><span class="dot"></span><span class="txt">Reports and Dashboards</span></div>
-          <div class="hp-skill"><span class="dot"></span><span class="txt">CRM Governance</span></div>
-          <div class="hp-skill"><span class="dot"></span><span class="txt">Salesforce Administration</span></div>
+      <div class="hp-tile hp-skills-tile">
+        <div class="hp-skills-tile-label">Salesforce</div>
+        <div class="hp-skills-tile-list">
+          <div class="hp-skills-tile-item"><span class="dot"></span>Salesforce Flow Builder</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>Record-Triggered Flows</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>Reports and Dashboards</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>CRM Governance</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>Salesforce Administration</div>
         </div>
       </div>
 
-      <div class="hp-skills-group">
-        <div class="hp-skills-subhead">HubSpot Academy Certified</div>
-        <div class="hp-skills-list">
-          <div class="hp-skill hubspot"><span class="dot"></span><span class="txt">HubSpot Reporting Certified</span></div>
-          <div class="hp-skill hubspot"><span class="dot"></span><span class="txt">HubSpot Revenue Operations Certified</span></div>
-          <div class="hp-skill hubspot"><span class="dot"></span><span class="txt">HubSpot Sales Hub Software Certified</span></div>
+      <div class="hp-tile hp-skills-tile hubspot">
+        <div class="hp-skills-tile-label">HubSpot Academy Certified</div>
+        <div class="hp-skills-tile-list">
+          <div class="hp-skills-tile-item"><span class="dot"></span>HubSpot Reporting Certified</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>HubSpot Revenue Operations Certified</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>HubSpot Sales Hub Software Certified</div>
         </div>
       </div>
 
-      <div class="hp-skills-group">
-        <div class="hp-skills-subhead">Process and Reporting</div>
-        <div class="hp-skills-list">
-          <div class="hp-skill"><span class="dot"></span><span class="txt">Data Enrichment</span></div>
-          <div class="hp-skill"><span class="dot"></span><span class="txt">Google Apps Script</span></div>
-          <div class="hp-skill"><span class="dot"></span><span class="txt">Process Design</span></div>
+      <div class="hp-tile hp-skills-tile">
+        <div class="hp-skills-tile-label">Process and Reporting</div>
+        <div class="hp-skills-tile-list">
+          <div class="hp-skills-tile-item"><span class="dot"></span>Data Enrichment</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>Google Apps Script</div>
+          <div class="hp-skills-tile-item"><span class="dot"></span>Process Design</div>
         </div>
       </div>
 
-    </div>
+      <div class="hp-tile hp-skills-tile">
+        <div class="hp-skills-tile-label">AI-Assisted Workflow</div>
+        <div class="hp-skills-tile-note">I use AI as a build-and-QA layer, not a strategy layer. It pressure-tests automation logic, catches edge cases, and validates data before deployment. Every process decision and idea originates from my own analysis.</div>
+      </div>
 
-    <div class="hp-ai-note">
-      <span class="hp-ai-note-label">AI-Assisted Workflow</span>
-      I use AI as a build-and-QA layer, not a strategy layer. It pressure-tests automation logic, catches edge cases, and validates data before deployment. Every process decision and idea originates from my own analysis.
     </div>
   </section>
 
