@@ -108,6 +108,7 @@ body {
 
 .hp-main { max-width: 1200px; margin: 0 auto; padding: calc(92px + clamp(16px,2.2vw,22px)) clamp(16px,3vw,30px) 60px; display: flex; flex-direction: column; gap: clamp(20px,3vw,30px); }
 .hp-panel { background: #fff; border: 1px solid var(--hp-card-border); border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.06); }
+.hp-highlights-full { padding: clamp(24px,3vw,34px); }
 .hp-label { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #5a6b80; }
 
 .hp-record { padding: clamp(20px,2.4vw,28px) clamp(20px,3vw,32px); display: flex; gap: clamp(16px,2.6vw,28px); flex-wrap: wrap; align-items: flex-start; }
@@ -320,7 +321,7 @@ a.hp-field-val:hover { text-decoration: underline; }
   </section>
 
   <!-- KEY HIGHLIGHTS -->
-  <section>
+  <section class="hp-panel hp-highlights-full">
     <div class="hp-label">Key Highlights</div>
     <div class="hp-highlights-grid">
       <div class="hp-tile">
