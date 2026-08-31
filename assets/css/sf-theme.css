@@ -240,6 +240,14 @@ button { font-family: inherit; cursor: pointer; }
 .proj-tool-tag { background: #f3f2f2; border: 1px solid #dddbda; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; color: #181818; font-weight: 500; }
 @media (max-width: 680px) { .proj-card-grid { grid-template-columns: 1fr; } .sf-proj-header-top { grid-template-columns: 1fr !important; } }
 
+/* Impact stat tiles (same visual language as homepage Key Highlights) */
+.proj-stat-row { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 14px; margin: 4px 0 20px; }
+.proj-stat-tile { position: relative; border-radius: 4px; padding: 18px 20px; background: linear-gradient(160deg,#f4faff,#e9f2fc); border: 1px solid #d6e6f7; overflow: hidden; }
+.proj-stat-tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #0176d3; }
+.proj-stat-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0176d3; }
+.proj-stat-num { margin-top: 8px; font-size: 1.9rem; font-weight: 700; color: #16325c; letter-spacing: -0.02em; line-height: 1; }
+.proj-stat-desc { margin-top: 7px; font-size: 0.78rem; color: #56657a; line-height: 1.4; }
+
 .sf-proj-section {
   padding: 18px 0;
   border-bottom: 1px solid #f3f2f2;
