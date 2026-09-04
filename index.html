@@ -150,17 +150,23 @@ a.hp-field-val:hover { text-decoration: underline; }
 .hp-proj-desc { font-size: 13.5px; color: var(--hp-muted); line-height: 1.55; flex: 1; }
 .hp-proj-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--hp-blue); }
 
+.hp-cert-section { padding: clamp(24px,3vw,34px); }
+.hp-cert-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: clamp(12px,1.6vw,18px); margin-top: 12px; }
+.hp-cert-tile { position: relative; border-radius: 4px; padding: 16px 18px; background: #f9fbfd; border: 1px solid #e3e8ef; overflow: hidden; }
+.hp-cert-tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--hp-blue); }
+.hp-cert-tile.hubspot::before { background: #ff7a59; }
+.hp-cert-provider { font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--hp-blue); }
+.hp-cert-tile.hubspot .hp-cert-provider { color: #ff7a59; }
+.hp-cert-name { margin-top: 7px; font-size: 14px; font-weight: 600; color: var(--hp-title-navy); line-height: 1.35; }
+
 .hp-skills-full { padding: clamp(24px,3vw,34px); }
 .hp-skills-tiles { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); align-items: start; gap: clamp(12px,1.6vw,18px); margin-top: 12px; }
 .hp-skills-tile { background: #fff; border-color: var(--hp-card-border); box-shadow: none; }
 .hp-skills-tile::before { width: 3px; }
 .hp-skills-tile-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--hp-blue); }
-.hp-skills-tile.hubspot::before { background: #ff7a59; }
-.hp-skills-tile.hubspot .hp-skills-tile-label { color: #ff7a59; }
 .hp-skills-tile-list { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
 .hp-skills-tile-item { display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; color: var(--hp-title-navy); font-weight: 600; line-height: 1.3; }
 .hp-skills-tile-item .dot { width: 5px; height: 5px; margin-top: 5px; border-radius: 50%; background: var(--hp-blue); flex: none; }
-.hp-skills-tile.hubspot .hp-skills-tile-item .dot { background: #ff7a59; }
 
 .hp-cta { background: #032d60; color: #fff; border-radius: 4px; box-shadow: 0 10px 26px rgba(3,18,40,.25); padding: 22px; }
 .hp-cta h2 { font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
@@ -272,6 +278,29 @@ a.hp-field-val:hover { text-decoration: underline; }
     </div>
   </section>
 
+  <!-- CERTIFICATIONS -->
+  <section class="hp-panel hp-cert-section">
+    <div class="hp-label">Certifications</div>
+    <div class="hp-cert-grid">
+      <div class="hp-cert-tile">
+        <div class="hp-cert-provider">Salesforce</div>
+        <div class="hp-cert-name">Sales Operations Professional Certificate (Coursera/Pathstream)</div>
+      </div>
+      <div class="hp-cert-tile hubspot">
+        <div class="hp-cert-provider">HubSpot</div>
+        <div class="hp-cert-name">Reporting Certified</div>
+      </div>
+      <div class="hp-cert-tile hubspot">
+        <div class="hp-cert-provider">HubSpot</div>
+        <div class="hp-cert-name">Revenue Operations Certified</div>
+      </div>
+      <div class="hp-cert-tile hubspot">
+        <div class="hp-cert-provider">HubSpot</div>
+        <div class="hp-cert-name">Sales Hub Software Certified</div>
+      </div>
+    </div>
+  </section>
+
   <!-- SKILLS AND TOOLS -->
   <section class="hp-panel hp-skills-full">
     <div class="hp-label">Skills and Tools</div>
@@ -285,15 +314,6 @@ a.hp-field-val:hover { text-decoration: underline; }
           <div class="hp-skills-tile-item"><span class="dot"></span>Reports and Dashboards</div>
           <div class="hp-skills-tile-item"><span class="dot"></span>CRM Governance</div>
           <div class="hp-skills-tile-item"><span class="dot"></span>Salesforce Administration</div>
-        </div>
-      </div>
-
-      <div class="hp-tile hp-skills-tile hubspot">
-        <div class="hp-skills-tile-label">HubSpot Academy Certified</div>
-        <div class="hp-skills-tile-list">
-          <div class="hp-skills-tile-item"><span class="dot"></span>HubSpot Reporting Certified</div>
-          <div class="hp-skills-tile-item"><span class="dot"></span>HubSpot Revenue Operations Certified</div>
-          <div class="hp-skills-tile-item"><span class="dot"></span>HubSpot Sales Hub Software Certified</div>
         </div>
       </div>
 
