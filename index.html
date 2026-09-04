@@ -163,6 +163,7 @@ a.hp-field-val:hover { text-decoration: underline; }
 .hp-cert-name { margin-top: 7px; font-size: 14px; font-weight: 600; color: var(--hp-title-navy); line-height: 1.35; }
 .hp-cert-issuer { margin-top: 6px; font-size: 12.5px; color: var(--hp-muted); }
 .hp-cert-list { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.hp-cert-list-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
 .hp-cert-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--hp-title-navy); line-height: 1.3; }
 .hp-cert-item .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--hp-blue); flex: none; }
 .hp-cert-tile.hubspot .hp-cert-item .dot { background: #ff7a59; }
@@ -203,6 +204,7 @@ a.hp-field-val:hover { text-decoration: underline; }
   .hp-projects-grid { grid-template-columns: 1fr; }
   .hp-skills-tiles { grid-template-columns: 1fr; }
   .hp-cert-columns { grid-template-columns: 1fr; }
+  .hp-cert-list-cols { grid-template-columns: 1fr; }
   .hp-footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hp-footer-links { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
@@ -350,7 +352,7 @@ a.hp-field-val:hover { text-decoration: underline; }
       <div class="hp-cert-col">
         <div class="hp-label">Tools</div>
         <div class="hp-cert-tile">
-          <div class="hp-cert-list" style="margin-top:0;">
+          <div class="hp-cert-list hp-cert-list-cols" style="margin-top:0;">
             <div class="hp-cert-item"><span class="dot"></span>Salesforce</div>
             <div class="hp-cert-item"><span class="dot"></span>HubSpot</div>
             <div class="hp-cert-item"><span class="dot"></span>ChatGPT</div>
