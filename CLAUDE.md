@@ -18,14 +18,14 @@ Static HTML/CSS site with a Salesforce Lightning-inspired design ("Sales Ops Clo
 - `index.html` — Homepage (About, Featured Projects)
 - `resume.html` — Resume with timeline, skills, education
 - `projects-library.html` — Project library with 3-tab category filter
-- `projects/*.html` — Individual project detail pages (11 projects)
+- `projects/*.html` — Individual project detail pages (9 projects)
 - `assets/css/sf-theme.css` — Shared CSS (max-width: 1200px)
 - `components/sf-nav.html` — Shared nav component (loaded via fetch)
 
 ### Project Categories
 - **CRM & Automation:** Expired Lead Follow-Up Automation, Demo Email Capture Workflow
 - **Governance Systems:** Account Ownership & Cross-Sell Rules, Performance Intervention Framework, CRM Outreach Eligibility Reporting
-- **Data Infrastructure:** 10,000-Account CRM Enrichment, Account Data Lookup Tool, Salesforce Account Deduplication & Ownership Cleanup, (Event Lead Cleanup, Customer Advisory List — removed from library)
+- **Data Infrastructure:** 10,000-Account CRM Enrichment, Account Data Lookup Tool, Salesforce Account Deduplication & Ownership Cleanup, Team Lead Performance Dashboard, (Event Lead Cleanup, Customer Advisory List — removed from library)
 
 ## Design Conventions
 - Salesforce Lightning color palette: `#0176d3` (blue), `#16325c` (dark navy), `#706e6b` (gray), `#f3f2f2` (background)
