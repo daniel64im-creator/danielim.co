@@ -116,7 +116,7 @@ body {
 .hp-record-main { flex: 1 1 320px; min-width: 240px; }
 .hp-record-main h1 { margin: 5px 0 0; font-size: clamp(30px,4.4vw,44px); font-weight: 700; color: var(--hp-title-navy); letter-spacing: -.015em; line-height: 1.05; }
 .hp-record-role { margin-top: 7px; font-size: 17px; color: var(--hp-title-navy); font-weight: 700; }
-.hp-record-fields { margin-top: 6px; display: flex; flex-direction: column; gap: 10px; }
+.hp-record-fields { margin-top: 14px; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
 .hp-field-row { display: flex; align-items: center; gap: 8px; }
 .hp-field-icon { width: 26px; height: 26px; flex: none; background-color: var(--hp-muted); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; }
 .hp-field-icon-location { -webkit-mask-image: url('images/icon-location.png'); mask-image: url('images/icon-location.png'); }
@@ -125,8 +125,6 @@ body {
 .hp-field-val { font-size: 14px; color: var(--hp-title-navy); font-weight: 600; display: block; }
 a.hp-field-val { color: var(--hp-blue); text-decoration: none; }
 a.hp-field-val:hover { text-decoration: underline; }
-.hp-record-actions { display: flex; flex-direction: column; gap: 9px; min-width: 160px; max-width: 380px; }
-.hp-record-actions > .hp-btn { align-self: flex-end; }
 .hp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 16px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all .15s ease; white-space: nowrap; }
 .hp-btn-primary { background: var(--hp-blue); color: #fff; }
 .hp-btn-primary:hover { background: #0a6abf; color: #fff; text-decoration: none; }
@@ -203,7 +201,6 @@ a.hp-field-val:hover { text-decoration: underline; }
 }
 
 @media (max-width: 640px) {
-  .hp-record-actions { flex: 0 0 100%; width: auto; min-width: 0; max-width: none; }
   .hp-avatar { width: 64px; height: 64px; font-size: 30px; }
   .hp-record-main { min-width: 0; flex-basis: 180px; }
   .hp-record-fields { flex-direction: column; gap: 12px; }
@@ -285,12 +282,10 @@ a.hp-field-val:hover { text-decoration: underline; }
       <div class="hp-label">Operator Profile</div>
       <h1>Daniel Im</h1>
       <div class="hp-record-role">Sales Operations</div>
-    </div>
-    <div class="hp-record-actions">
-      <a class="hp-btn hp-btn-primary" href="mailto:daniel64im@gmail.com">Email Daniel</a>
       <div class="hp-record-fields">
         <div class="hp-field-row"><div class="hp-field-icon hp-field-icon-location" aria-hidden="true"></div><div class="hp-field-val">San Jose, CA</div></div>
         <div class="hp-field-row"><div class="hp-field-icon hp-field-icon-education" aria-hidden="true"></div><div class="hp-field-val">B.A. Economics (Int'l Macro-Finance) · UC Davis</div></div>
+        <a class="hp-btn hp-btn-primary" href="mailto:daniel64im@gmail.com">Email Daniel</a>
       </div>
     </div>
   </section>
