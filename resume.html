@@ -27,10 +27,6 @@
 
 <style>
 
-/* RESUME-ONLY CONTAINER PADDING (wider than the site default) */
-
-.sf-container { padding: 16px 48px; }
-
 /* PAGE HEADER */
 
 .sf-page-header {
@@ -38,7 +34,7 @@
   border: 1px solid #dddbda;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-  padding: 20px 24px;
+  padding: 20px 40px;
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -102,7 +98,7 @@
   border: 1px solid #dddbda;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-  padding: 24px;
+  padding: 24px 40px;
 }
 
 .sf-resume-section-label {
@@ -305,8 +301,8 @@
 }
 
 @media (max-width: 580px) {
-  .sf-container { padding: 10px 14px; }
-  .sf-page-header { flex-direction: column; gap: 12px; }
+  .sf-page-header { flex-direction: column; gap: 12px; padding: 20px 20px; }
+  .sf-resume-body { padding: 24px 20px; }
   .sf-contact-row { gap: 10px; }
   .sf-timeline-meta { flex-direction: column; gap: 2px; }
 }
