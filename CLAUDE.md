@@ -4,7 +4,8 @@
 This is Daniel Im's personal portfolio website, built to support a job search targeting **Sales Operations** and **Revenue Operations / Deal Desk** roles. The site serves as a portfolio of real work built during his time as a Sales Development Team Lead at YuJa, Inc. It is hosted at danielim.co and deployed via GitHub.
 
 ## About Daniel
-- **Current role:** Sales Development Team Lead, YuJa, Inc. (Jun '24 – Jun '26)
+- **Most recent role:** Sales Development Team Lead, YuJa, Inc. (Jun '24 – Jun '26)
+- **Status:** Actively job searching (not currently employed)
 - **Background:** 7 years in B2B SaaS, started as an SDR/AE, transitioned into Sales Ops work
 - **Target roles:** Sales Operations, Revenue Operations, Deal Desk
 - **Location:** San Jose, CA
