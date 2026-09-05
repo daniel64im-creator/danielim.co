@@ -133,7 +133,7 @@ Focus: Salesforce administration, CRM governance, and GTM process automation
 - Designed and published a Rules of Engagement framework across 4 product lines in Salesforce Flow Builder, enforcing a 14 day lead ownership window and improving account targeting quality, cutting duplicate demo bookings and resolving cross team conflicts.
 - Resolved 800 duplicate account records within the 10,000 account CRM base using a tiered confidence grouping and merge framework, then documented governance standards to prevent recurrence.
 - Built a 4 component native Salesforce automation (Record Triggered Flow, Scheduled Flow, custom logging object) delivering a personalized weekly expired lead digest to reps, replacing a silent, unlogged ownership loss point.
-- Embedded IPEDS enrollment data into the SDR workflow via a Google Sheets and Apps Script lookup tool integrated into the Salesforce Lead page, cutting account research time from 30 seconds to 3 seconds.
+- Built a custom Lightning component on the Salesforce Lead page giving SDRs instant institution size lookups and AE routing guidance, cutting account research time from 30 seconds to 3 seconds.
 - Built a cross team performance dashboard in Salesforce Reports & Dashboards consolidating demos held, no shows, reschedules, and quota attainment, giving team leads a single source of truth each quarter.
 
 **Founding SDR — Miarec** Jul '23 – Jun '24
