@@ -1,0 +1,4 @@
+# Keep internal notes out of the published site
+exclude:
+  - CLAUDE.md
+  - portfolio-digest.md
